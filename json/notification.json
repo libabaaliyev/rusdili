@@ -1,0 +1,116 @@
+{
+	"en":
+	{
+		"confirmText"		: "Ok",
+		"cancel"			: "Cancel",
+		"confirmDelete"		: "Yes, delete it!",
+
+		"notUserMail"		: {"message"	: "Wrong email or password.",	"info"	: "error"},
+		"notUser"			: {"message" 	: "Wrong username or password.","info"	: "error"},
+		"yesUser"			: {"message"	: "Login success!!!", "info":"success"},
+		"registryOk"		: {"message"	: "Congratulations, your account has been successfully created.",	"info":"success"},
+		"registryError"		: {"message"	: "Something went wrong during the registration process. Please try again.","info":"error"},
+		"existUsername"		: {"message"	: "Sorry, username already exists. Please enter another username.","info":"error"},
+		"existEmail"		: {"message"	: "Sorry, email already exists. Please enter another email.","info":"error"},
+		"emailvalidate"		: {"message"	: "You have entered an invalid e-mail address. Please try again.","info":"error"},
+		"errorsomething"	: {"message"	: "Something went wrong. Please try again.", "info": "error"},
+
+		"emptymsg"			: {"message"	: "Cannot send empty messages", "info": "error"},
+
+		"deletemsg"			: {"message"	: "Are you sure want to delete messages?", "info": "warning"},
+		"deletesuccess"		: {"message"	: "Messages have been deleted.", "info": "success"},
+
+
+		"notenoughCoin"		: {"message"	:"Not enough coin.", "info": "error"},
+
+		"add-coin-success"	: {"message"	: "You get coins", "info": "success"},
+
+		"opening-msg"		: {"message"	: "VIP chat is opening", "info": "success"}
+
+
+	},
+	"tr":
+	{
+		"confirmText"		: "Tamam",
+		"cancel"			: "İptal",
+		"confirmDelete"		: "Eminim, sil!",
+
+		"notUserMail"		: {"message"	: "Yanlış e-posta veya şifre.", "info": "error"},
+		"notUser"			: {"message"	: "Yanlış kullanıcı adı veya şifre.", "info": "error"},
+		"yesUser"			: {"message"	: "Giriş başarılı !!!", "info": "success"},
+		"registryOk"		: {"message"	: "Tebrikler, hesabınız başarıyla oluşturuldu.", "info": "success"},
+		"registryError"		: {"message"	: "Kayıt işlemi sırasında bir şeyler ters gitti. Lütfen tekrar deneyin.", "info": "error"},
+		"existUsername"		: {"message"	: "Üzgünüz, kullanıcı adı zaten mevcut. Lütfen başka bir kullanıcı adı girin.", "info": "error"},
+		"existingEmail"		: {"message"	: "Üzgünüz, e-posta zaten var. Lütfen başka bir e-posta girin.", "info": "error"},
+		"emailvalidate"		: {"message"	: "Geçersiz bir e-posta adresi girdiniz. Lütfen tekrar deneyin.", "info": "error"},
+
+		"errorsomething"	: {"message"	: "Bir şeyler ters gitti. Lütfen tekrar deneyin.", "info": "error"},
+
+		"emptymsg"			: {"message"	: "Boş mesaj gönderilemez", "info": "error"},
+
+		"deletemsg"			: {"message"	: "Mesajları silmek istediğinizden emin misiniz?", "info": "warning"},
+		"deletesuccess"		: {"message"	: "Mesajlar silindi.", "info": "success"},
+
+		"notenoughCoin"		: {"message"	:"Yeterki koininiz yok.", "info": "error"},
+
+		"add-coin-success"	: {"message"	: "Koin aldınız.", "info": "success"},
+
+		"opening-msg"		: {"message"	: "VIP söhbet başladı.", "info": "success"}
+	},
+	"az":
+	{
+		"confirmText"		: "Tamam",
+		"cancel"			: "İmtina",
+		"confirmDelete"		: "Əminəm, sil!",
+		"notUserMail"		: {"message"	: "Yanlış e-poçt və ya şifrə.", "info": "error"},
+		"notUser"			: {"message"	: "Yanlış istifadəçi adı və ya şifrə.", "info": "error"},
+		"yesUser"			: {"message"	: "Giriş uğurla həyata keçirildi !!!", "info": "uğur"},
+		"registerOk"		: {"message"	: "Təbrik edirik, hesabınız uğurla yaradıldı.", "info": "uğur"},
+		"registerError"		: {"message"	: "Qeydiyyatı zamanı bir şey səhv oldu. Xahiş edirik yenidən cəhd edin.", "info": "error"},
+		"existUsername"		: {"message"	: "Bağışlayın, istifadəçi adı artıq mövcuddur. Xahiş edirik başqa istifadəçi adı daxil edin.", "info": "error"},
+		"existEmail"		: {"message"	: "Bağışlayın, e-poçt artıq mövcuddur. Xahiş edirik başqa bir e-poçt daxil edin.", "info": "error"},
+		"emailvalidate"		: {"message"	: "Yanlış bir e-poçt ünvanı daxil etmisiniz. Yenidən cəhd edin.", "info": "error"},
+
+		"errorsomething"	: {"message"	: "Xahiş edirik təkrar cəhd edin.", "info": "error"},
+
+		"emptymsg"			: {"message"	: "Boş mesaj göndərə bilməzsiniz.", "info": "error"},
+
+		"deletemsg"			: {"message"	: "Mesajları silmək istədiyinizdən əminsiniz?", "info": "warning"},
+		"deletesuccess"		: {"message"	: "Mesajlar silindi.", "info": "success"},
+
+		"notenoughCoin"		: {"message"	: "Yetərli koininiz yoxdur", "info": "error"},
+
+		"add-coin-success"	: {"message"	: "Koin əldə etdiniz.", "info": "success"},
+
+		"opening-msg"		: {"message"	: "VIP söhbət açıldı.", "info": "success"}
+	},
+	"ru":
+	{
+		"confirmText"		: "ОК",
+		"cancel"			: "Отмена",
+		"confirmDelete"		: "Да удалите!",
+
+		"notUserMail"		: {"message"	: "Неверный адрес электронной почты или пароль.", "info": "error"},
+		"notUser"			: {"message"	: "Неверное прозвище или пароль.", "info": "error"},
+		"yesUser"			: {"message"	: "Успешный вход !!!", "info": "success"},
+		"registryOk"		: {"message"	: "Поздравляем, ваш аккаунт был успешно создан.", "info": "success"},
+		"registryError"		: {"message"	: "Во время регистрации произошла ошибка. Повторите попытку.", "info": "error"},
+		"existUsername"		: {"message"	: "Извините, прозвище уже существует. Введите другое прозвище.", "info": "error"},
+		"existEmail"		: {"message"	: "Извините, адрес электронной почты уже существует. Введите другой адрес электронной почты.", "info": "error"},
+		"emailvalidate"		: {"message"	: "Вы ввели неверный адрес электронной почты. Повторите попытку.", "info": "error"},
+
+		"errorsomething"	: {"message"	: "Что-то пошло не так. Пожалуйста, попробуйте еще раз.", "info": "error"},
+
+		"emptymsg"			: {"message"	: "Невозможно отправить пустые сообщения", "info": "error"},
+
+		"deletemsg"			: {"message"	: "Вы действительно хотите удалить сообщения?", "info": "warning"},
+		"deletesuccess"		: {"message"	: "Сообщения были удалены.", "info": "success"},
+
+		"notenoughCoin"		: {"message"	: "Недостаточно монеты.", "info": "error"},
+
+		"add-coin-success"	: {"message"	: "Вы получаете монеты", "info": "success"},
+
+		"opening-msg"		: {"message"	: "Началась VIP-беседа.", "info": "success"}
+	}
+
+}

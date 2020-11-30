@@ -1,0 +1,4 @@
+1.index.html
+	- logo
+	- açılış
+	- keçid

@@ -1,0 +1,79 @@
+{
+	"en":
+	{
+		"nicknameInfo" 		: "This is your nickname what view by users",
+		"coinInfo" 			: "This is your coin for using",
+		"mailInfo" 			: "This is your e-mail for recory your account",
+		"genderInfo" 		: "Your gender",
+		"countryInfo" 		: "Your country for find friend or dating",
+		"phoneInfo" 		: "Your phone number",
+
+		"nickname" 			: "Enter nickname",
+		"mail" 				: "Enter e-mail address",
+		"gender" 			: "Select gender",
+		"location" 			: "Select country",
+		"phonenumber" 		: "Enter phone number",
+		"confirmUpdate"		: "Confirm",
+		"cancelUpdate"		: "Cancel"
+
+	},
+
+	"tr":
+	{
+		
+		"nicknameInfo"		: "Kullanıcıların gördüğü takma adınızdır",
+		"coinInfo"			: "Jeton daha serbest hareketiniz içindir",
+		"mailInfo"			: "Hesabınızı kurtarmak için gereklidir",
+		"genderInfo"		: "Cinsiyetiniz",
+		"countryInfo"		: "Arkadaş bulmak veya flört etmek için",
+		"phoneInfo"			: "Telefon numaranız",
+
+		"nickname"			: "Takma ad girin",
+		"mail"				: "E-posta adresini girin",
+		"gender"			: "Cinsiyet seçin",
+		"location"			: "Ülke seçin",
+		"phonenumber"		: "Telefon numarasını girin",
+		"confirmUpdate"		: "Onayla",
+		"cancelUpdate"		: "İptal",
+
+		
+		
+	},
+	"az":
+	{
+		"nicknameInfo"		: "İstifadəçilərin gördüyü ləqəbiniz",
+		"coinInfo"			: "Sikkə sərbəst hərəkət etməyiniz üçündür",
+		"mailInfo"			: "Hesabınızı bərpa etmək üçün tələb olunur",
+		"genderInfo"		: "Cinsiniz",
+		"countryInfo"		: "Dostlar tapmaq və ya flört etmək",
+		"phoneInfo"			: "Telefon nömrəniz",
+
+		"nickname"			: "Ləqəb daxil edin",
+		"mail"				: "Elektron poçtunuzu daxil edin",
+		"gender"			: "cinsi seçin",
+		"location"			: "Ölkəni seçin",
+		"phonenumber"		: "Telefon nömrəsini daxil edin",
+		"confirmUpdate"		: "Təsdiq et",
+		"cancelUpdate"		: "Ləğv et"
+		
+	},
+	"ru":
+	{
+		"nicknameInfo"		: "Ваш ник, который видят пользователи",
+		"coinInfo"			: "Монета для вашего свободного передвижения",
+		"mailInfo"			: "Требуется для восстановления вашей учетной записи",
+		"genderInfo"		: "Ваш пол",
+		"countryInfo"		: "Чтобы найти друзей или пофлиртовать",
+		"phoneInfo"			: "Ваш номер телефона",
+
+		"nickname"			: "Введите ник",
+		"mail"				: "Введите свой адрес электронной почты",
+		"gender"			: "Выберите пол",
+		"location"			: "Выберите страну",
+		"phonenumber"		: "Введите номер телефона",
+		"confirmUpdate"		: "Подтвердить",
+		"cancelUpdate"		: "Отменить"
+		
+	}
+
+}

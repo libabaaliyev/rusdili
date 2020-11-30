@@ -1,0 +1,270 @@
+{
+	"en":
+	{
+		"loginPageTitle" 		: "Login",
+		"registrTitle" 			: "Registration",
+		"loginTitle" 			: "Login",
+		"nickInput" 			: "Username",
+		"nickMailInput" 		: "Username or e-mail",
+		"passInput" 			: "Password",
+		"passInputPlaceholder" 	: "Password",
+		"emailInput" 			: "E-mail",
+		"emailInputPlaceholder" : "E-mail address",
+		"genderInput" 			: "Gender",
+		"male" 					: "Male",
+		"female" 				: "Female",
+		"countryInput" 			: "Country",
+		"signupButton" 			: "Sign Up",
+		"signinButton" 			: "Sign In",
+
+
+		"users" 				: "Users",
+		"messages"				: "Messages",
+		"profile" 				: "Profile",
+		"settings" 				: "Settings",
+		"rating" 				: "Rating App",
+		"search" 				: "Search...",
+		"no-msg"				: "You don't have any chats yet",
+		
+		"public"				: "Public",
+		"vip"					: "VIP",
+		"appearance"			: "Account appearance",
+		"privacy"				: "Privacy Policy",
+		"privacyTxt"			: "App Privacy Policy",
+		"theme"					: "Theme",
+		"dark"					: "Dark",
+		"light"					: "Light",
+		"help"					: "Help",
+		"helpTxt"				: "How do I help you?",
+
+
+		
+		"nicknameInfo" 			: "This is your nickname what view by users",
+		"coinInfo" 				: "This is your coin for using",
+		"mailInfo" 				: "This is your e-mail for recory your account",
+		"genderInfo" 			: "Your gender",
+		"countryInfo" 			: "Your country for find friend or dating",
+		"phoneInfo" 			: "Your phone number",
+		
+
+		"nickname" 				: "Enter nickname",
+		"mail" 					: "Enter e-mail address",
+		"gender" 				: "Select gender",
+		"location" 				: "Select country",
+		"phonenumber" 			: "Enter phone number",
+		"confirmUpdate"			: "Confirm",
+		"cancelUpdate"			: "Cancel",
+		"galery"				: "Photo Galery",
+
+
+		"passwordInfo"			: "Your account password",
+		"password"				: "Enter password",
+
+		"otherprofileview"		: "View account",
+		"clearmessages"			: "Clear all messages",
+		"ignore"				: "Ignore user",
+
+		"writemsg-vip"			: "Write message",
+		"get-coin"				: "Get coin"
+
+
+	},
+
+	"tr":
+	{
+		"loginPageTitle" 		: "Giriş",
+		"registrTitle" 			: "Kayıt",
+		"loginTitle" 			: "Giriş",
+		"nickInput" 			: "Takma ad",
+		"nickMailInput" 		: "Takma ad veya eposta adresi",
+		"passInput" 			: "Şifre",
+		"passInputPlaceholder" 	: "Şifre yazın...",
+		"emailInput" 			: "E-posta",
+		"emailInputPlaceholder" : "E-posta adresi",
+		"genderInput" 			: "Cinsiyyet",
+		"male" 					: "Erkek",
+		"female" 				: "Kadın",
+		"countryInput" 			: "Ülke",
+		"signupButton" 			: "Kayıt ol",
+		"signinButton" 			: "Giriş yap",
+
+		"users" 				: "Kullanıcılar",
+		"messages"				: "Mesajlar",
+		"profile" 				: "Hesap",
+		"settings" 				: "Ayarlar",
+		"rating" 				: "Puanlama",
+		"search" 				: "Ara...",
+		"no-msg"				: "Henüz hiç mesajınız yok",
+
+		"public"				: "Herkese Açık",
+		"vip"					: "VIP",
+		"appearance"			: "Hesab gizliliği",
+		"privacy"				: "Gizlilik Politikası",
+		"privacyTxt"			: "Uygulama Gizlilik Politikası",
+		"theme"					: "Tema",
+		"dark"					: "Karanlık",
+		"light"					: "Parlak",
+		"help"					: "Yardım",
+		"helpTxt"				: "Nasıl yardım ede bilirim?",
+
+		
+
+		"nicknameInfo"			: "Kullanıcıların gördüğü takma adınızdır",
+		"coinInfo"				: "Jeton daha serbest hareketiniz içindir",
+		"mailInfo"				: "Hesabınızı kurtarmak için gereklidir",
+		"genderInfo"			: "Cinsiyetiniz",
+		"countryInfo"			: "Arkadaş bulmak veya flört etmek için",
+		"phoneInfo"				: "Telefon numaranız",
+
+		"nickname"				: "Takma ad girin",
+		"mail"					: "E-posta adresini girin",
+		"gender"				: "Cinsiyet seçin",
+		"location"				: "Ülke seçin",
+		"phonenumber"			: "Telefon numarasını girin",
+		"confirmUpdate"			: "Onayla",
+		"cancelUpdate"			: "İptal",
+		"galery"				: "Fotoğraf Galerisi",
+
+		"passwordInfo"			: "Hesap şifreniz",
+		"password"				: "Şifre yazın",
+
+		"otherprofileview"		: "Hesaba bak",
+		"clearmessages"			: "Tüm mesajları sil",
+		"ignore"				: "Engelle",
+
+		"writemsg-vip"			: "Mesaj yaz",
+		"get-coin"				: "Coin al"
+	},
+	"az":
+	{
+		"loginPageTitle"		: "Giriş",
+		"registrTitle"			: "Qeydiyyat",
+		"loginTitle"			: "Giriş",
+		"nickInput"				: "İstifadəçi adı",
+		"nickMailInput"			: "İstifadəçi adı və ya e-poçt",
+		"passInput"				: "Şifrə",
+		"passInputPlaceholder"	: "Şifrə",
+		"emailInput"			: "E-poçt",
+		"emailInputPlaceholder"	: "E-poçt ünvanı",
+		"genderInput"			: "Cinsiyyət",
+		"male"					: "Kişi",
+		"female"				: "Qadın",
+		"countryInput"			: "Ölkə",
+		"signupButton"			: "Qeydiyyatdan keçin",
+		"signinButton"			: "Giriş",
+
+		"users" 				: "İstifadəçilər",
+		"messages"				: "Mesajlar",
+		"profile" 				: "Hesab",
+		"settings" 				: "Tənzimləmələr",
+		"rating" 				: "Dərəcələndir",
+		"search" 				: "Axtar...",
+		"no-msg"				: "Hazırda söhbət yoxdur",
+
+		"public"				: "Hər kəsə açıq",
+		"vip"					: "VIP",
+		"appearance"			: "Hesabın məxfiliyi",
+		"privacy"				: "Məxfilik Siyasəti",
+		"privacyTxt"			: "Tətbiqin məxfilik siyasəti",
+		"theme"					: "Tema",
+		"dark"					: "Qaranlıq",
+		"light"					: "Parlaq",
+		"help"					: "kömək",
+		"helpTxt"				: "Sizə necə kömək edə bilərəm?",
+
+		"nicknameInfo"			: "İstifadəçilərin gördüyü ləqəbiniz",
+		"coinInfo"				: "Sikkə sərbəst hərəkət etməyiniz üçündür",
+		"mailInfo"				: "Hesabınızı bərpa etmək üçün tələb olunur",
+		"genderInfo"			: "Cinsiniz",
+		"countryInfo"			: "Dostlar tapmaq və ya flört etmək",
+		"phoneInfo"				: "Telefon nömrəniz",
+
+		"nickname"				: "Ləqəb daxil edin",
+		"mail"					: "Elektron poçtunuzu daxil edin",
+		"gender"				: "cinsi seçin",
+		"location"				: "Ölkəni seçin",
+		"phonenumber"			: "Telefon nömrəsini daxil edin",
+		"confirmUpdate"			: "Təsdiq et",
+		"cancelUpdate"			: "Ləğv et",
+		"galery"				: "Foto qalereya",
+
+
+		"passwordInfo"			: "Hesab şifrəniz",
+		"password"				: "Yeni şifrə daxil edin",
+
+		"otherprofileview"		: "Hesaba bax",
+		"clearmessages"			: "Mesajları sil",
+		"ignore"				: "Əngəllə",
+
+		"writemsg-vip"			: "Mesaj yaz",
+		"get-coin"				: "Koin al"
+
+
+	},
+	"ru":
+	{
+		"loginPageTitle"		: "Вход",
+		"registrTitle"			: "Регистрация",
+		"loginTitle"			: "Логин",
+		"nickInput"				: "Прозвище",
+		"nickMailInput"			: "Прозвище или адрес электронной почты",
+		"passInput"				: "Пароль",
+		"passInputPlaceholder"	: "Пароль",
+		"emailInput"			: "Электронная почта",
+		"emailInputPlaceholder"	: "Адрес электронной почты",
+		"genderInput"			: "Пол",
+		"male"					: "Mужчина",
+		"female"				: "Женщина",
+		"countryInput"			: "Страна",
+		"signupButton"			: "Зарегистрироваться",
+		"signinButton"			: "Войти",
+
+		"users"					: "Пользователи",
+		"messages"				: "Сообщения",
+		"profile"				: "Account",
+		"settings"				: "Настройки",
+		"rating"				: "Ранг",
+		"search"				: "Поиск ...",
+		"no-msg"				: "У вас еще нет чатов",
+
+		"public"				: "Открыт для всех",
+		"vip"					: "VIP",
+		"appearance"			: "Конфиденциальность аккаунта",
+		"privacy"				: "Политика конфиденциальности",
+		"privacyTxt"			: "Политика конфиденциальности приложений",
+		"theme"					: "Тема",
+		"dark"					: "Темно",
+		"light"					: "Яркий",
+		"help"					: "Помогите",
+		"helpTxt"				: "Чем я могу вам помочь?",
+
+
+		"nicknameInfo"			: "Ваш ник, который видят пользователи",
+		"coinInfo"				: "Монета для вашего свободного передвижения",
+		"mailInfo"				: "Требуется для восстановления вашей учетной записи",
+		"genderInfo"			: "Ваш пол",
+		"countryInfo"			: "Чтобы найти друзей или пофлиртовать",
+		"phoneInfo"				: "Ваш номер телефона",
+
+		"nickname"				: "Введите ник",
+		"mail"					: "Введите свой адрес электронной почты",
+		"gender"				: "Выберите пол",
+		"location"				: "Выберите страну",
+		"phonenumber"			: "Введите номер телефона",
+		"confirmUpdate"			: "Подтвердить",
+		"cancelUpdate"			: "Отменить",
+		"galery"				: "Фотогалерея",
+
+
+		"passwordInfo"			: "Пароль вашей учетной записи",
+		"password"				: "Введите новый пароль",
+
+		"otherprofileview"		: "Просмотреть аккаунт",
+		"clearmessages"			: "Очистить все сообщения",
+		"ignore"				: "Игнорировать пользователя",
+
+		"writemsg-vip"			: "Напиши сообщение",
+		"get-coin"				: "Получить монету"
+	}
+
+}
