@@ -1,0 +1,72 @@
+$(document).ready(function()
+{
+	title = 
+	{
+		az : "Rus dili tədrisi",
+		tr : "Rusça eğitim",
+		ru : "Русское Oбразование",
+		en : "Russian Education"
+	}
+	
+	const startFunc = 
+	{
+		jsonfiles: function()
+		{
+			$(".main-name h4").html(title[lang]);
+			
+			$.getJSON("json/notification.json", function(data){
+				
+				notificationData 			= data;
+				localStorage.notifications 	= JSON.stringify(notificationData);
+				
+			});
+			setTimeout(function() {
+				window.location = "main.html";
+
+			},3000);
+		},
+		language: function()
+		{
+			const { value: language } = Swal.fire({
+			  title: 'Dil seçin',
+			  input: 'select',
+			  inputOptions: {
+			    
+			      az: 'Azərbaycan dili',
+			      tr: 'Türkçe',
+			      en: 'English',
+			      ru: 'Pусский'
+			    
+			  },
+			  inputPlaceholder: 'Bir dil seçin',
+			  showCancelButton: true,
+			  inputValidator: (value) => {
+			    return new Promise((resolve) => {
+			      if (value) {
+			      	localStorage.applang 	= JSON.stringify(value);
+			      	lang 					= JSON.parse(localStorage.applang)
+			      	Swal.close();
+			      	this.jsonfiles();
+			        
+			      } else {
+
+			        resolve('Birini seçməlisiniz.');
+			      }
+			    })
+			  }
+			})
+
+			
+		}
+	}
+
+	
+	if(localStorage.getItem("applang")===null)
+		startFunc.language();
+	else{
+		lang = JSON.parse(localStorage.applang);
+		startFunc.jsonfiles();
+	}
+	
+
+});

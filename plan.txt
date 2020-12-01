@@ -1,4 +1,10 @@
 1.index.html
-	- logo
-	- açılış
-	- keçid
+	- logo 		+
+	- açılış 	+
+	- keçid 	+
+
+2.main.html
+	- menu acilma baglanma	+
+	- touch ile menu		+
+	- seviyye secim			-
+	- seviyyeye uygun plan	-

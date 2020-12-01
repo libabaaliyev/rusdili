@@ -1,0 +1,4406 @@
+{
+  "tr":[
+                {
+                  "orginal" : "авто́бус ",
+                  "translate" : " otobüs"
+                },
+                {
+                  "orginal" : "ба́бушка ",
+                  "translate" : " nine, anneanne, büyük anne"
+                },
+                {
+                  "orginal" : "ваш ",
+                  "translate" : " sizin"
+                },
+                {
+                  "orginal" : "газе́та ",
+                  "translate" : " gazete"
+                },
+                {
+                  "orginal" : "дава́ть / дать кому? что? ",
+                  "translate" : " kime, ne vermek"
+                },
+                {
+                  "orginal" : "его́ / её ",
+                  "translate" : " onun (eril / dişil)"
+                },
+                {
+                  "orginal" : "ждать / подожда́ть кого? что? ",
+                  "translate" : " kimi, ne beklemek"
+                },
+                {
+                  "orginal" : "иде́я ",
+                  "translate" : " fikir"
+                },
+                {
+                  "orginal" : "а ",
+                  "translate" : " ise"
+                },
+                {
+                  "orginal" : "в ",
+                  "translate" : " içinde, da/de"
+                },
+                {
+                  "orginal" : "за грани́цей ",
+                  "translate" : " yurt dışı"
+                },
+                {
+                  "orginal" : "кабине́т ",
+                  "translate" : " çalışma odası"
+                },
+                {
+                  "orginal" : "ла́дно ",
+                  "translate" : " tamam"
+                },
+                {
+                  "orginal" : "магази́н ",
+                  "translate" : " market, dükkan, mağaza"
+                },
+                {
+                  "orginal" : "чай ",
+                  "translate" : " çay"
+                },
+                {
+                  "orginal" : "да ",
+                  "translate" : " evet"
+                },
+                {
+                  "orginal" : "за ",
+                  "translate" : " için/arkasında"
+                },
+                {
+                  "orginal" : "и ",
+                  "translate" : " ve"
+                },
+                {
+                  "orginal" : "к ",
+                  "translate" : " – e doğru"
+                },
+                {
+                  "orginal" : "как ",
+                  "translate" : " nasıl"
+                },
+                {
+                  "orginal" : "извиня́ть / извини́ть ",
+                  "translate" : " affetmek"
+                },
+                {
+                  "orginal" : "кафе́ ",
+                  "translate" : " kafe"
+                },
+                {
+                  "orginal" : "меша́ть/ помеша́ть ",
+                  "translate" : " engellemek, rahatsız etmek"
+                },
+                {
+                  "orginal" : "рабо́та ",
+                  "translate" : " iş"
+                },
+                {
+                  "orginal" : "де́лать / сде́лать ",
+                  "translate" : " yapmak"
+                },
+                {
+                  "orginal" : "я ",
+                  "translate" : " ben"
+                },
+                {
+                  "orginal" : "мой / моя́ / моё́ / мои́ ",
+                  "translate" : " benim"
+                },
+                {
+                  "orginal" : "меня́ ",
+                  "translate" : "beni"
+                },
+                {
+                  "orginal" : "у меня́ ",
+                  "translate" : "bende, benim"
+                },
+                {
+                  "orginal" : "мне ",
+                  "translate" : "bana"
+                },
+                {
+                  "orginal" : "ко мне ",
+                  "translate" : " bana doğru"
+                },
+                {
+                  "orginal" : "обо мне ",
+                  "translate" : " benim hakkımda"
+                },
+                {
+                  "orginal" : "на мне ",
+                  "translate" : "üzerimde"
+                },
+                {
+                  "orginal" : "мной ",
+                  "translate" : " benimle"
+                },
+                {
+                  "orginal" : "со мной ",
+                  "translate" : " benimle beraber"
+                },
+                {
+                  "orginal" : "писа́ть / написа́ть ",
+                  "translate" : " yazmak / yazıp bitirmek"
+                },
+                {
+                  "orginal" : "писа́тель ",
+                  "translate" : " yazar"
+                },
+                {
+                  "orginal" : "чита́ть / прочита́ть ",
+                  "translate" : " okumak / okuyup bitirmek"
+                },
+                {
+                  "orginal" : "чита́тель ",
+                  "translate" : " okuyucu, okur"
+                },
+                {
+                  "orginal" : "кни́га ",
+                  "translate" : " kitap"
+                },
+                {
+                  "orginal" : "ты ",
+                  "translate" : " sen"
+                },
+                {
+                  "orginal" : "твой / твоя́ / твоё / твои́ ",
+                  "translate" : " senin"
+                },
+                {
+                  "orginal" : "тебя́ ",
+                  "translate" : " seni"
+                },
+                {
+                  "orginal" : "у тебя́ ",
+                  "translate" : " sende, senin"
+                },
+                {
+                  "orginal" : "тебе́ ",
+                  "translate" : " sana"
+                },
+                {
+                  "orginal" : "к тебе́ ",
+                  "translate" : " sana doğru"
+                },
+                {
+                  "orginal" : "о тебе́ ",
+                  "translate" : " senin hakkıNda"
+                },
+                {
+                  "orginal" : "на тебе́ ",
+                  "translate" : " üzerinde"
+                },
+                {
+                  "orginal" : "тобо́й ",
+                  "translate" : " seninle"
+                },
+                {
+                  "orginal" : "с тобо́й ",
+                  "translate" : " seninle beraber"
+                },
+                {
+                  "orginal" : "смотре́ть / посмотре́ть ",
+                  "translate" : " bakmak"
+                },
+                {
+                  "orginal" : "жизнь ",
+                  "translate" : " hayat, yaşam"
+                },
+                {
+                  "orginal" : "журна́л ",
+                  "translate" : " dergi"
+                },
+                {
+                  "orginal" : "банк ",
+                  "translate" : " banka"
+                },
+                {
+                  "orginal" : "ба́нка ",
+                  "translate" : " kavonoz"
+                },
+                {
+                  "orginal" : "вы ",
+                  "translate" : " siz"
+                },
+                {
+                  "orginal" : "ваш / ва́ша / ва́ше / ва́ши ",
+                  "translate" : " sizin"
+                },
+                {
+                  "orginal" : "вас ",
+                  "translate" : " sizi"
+                },
+                {
+                  "orginal" : "у вас ",
+                  "translate" : " sizde"
+                },
+                {
+                  "orginal" : "о вас ",
+                  "translate" : " hakkınızda"
+                },
+                {
+                  "orginal" : "на вас ",
+                  "translate" : " üzerinizde"
+                },
+                {
+                  "orginal" : "вам ",
+                  "translate" : " size"
+                },
+                {
+                  "orginal" : "к вам ",
+                  "translate" : " size doğru"
+                },
+                {
+                  "orginal" : "ва́ми ",
+                  "translate" : " sizinle"
+                },
+                {
+                  "orginal" : "с ва́ми ",
+                  "translate" : " sizinle beraber/birlikte"
+                },
+                {
+                  "orginal" : "ма́ма ",
+                  "translate" : " anne"
+                },
+                {
+                  "orginal" : "па́па ",
+                  "translate" : " baba"
+                },
+                {
+                  "orginal" : "фо́то / фотогра́фия ",
+                  "translate" : " fotoğraf"
+                },
+                {
+                  "orginal" : "ла́мпа ",
+                  "translate" : " lamba"
+                },
+                {
+                  "orginal" : "там / тут ",
+                  "translate" : " orada / burada"
+                },
+                {
+                  "orginal" : "он ",
+                  "translate" : " o (eril)"
+                },
+                {
+                  "orginal" : "его́ ",
+                  "translate" : " onun"
+                },
+                {
+                  "orginal" : "его́ ",
+                  "translate" : " onu"
+                },
+                {
+                  "orginal" : "у него́ ",
+                  "translate" : " onda, onun var"
+                },
+                {
+                  "orginal" : "ему́ ",
+                  "translate" : " ona"
+                },
+                {
+                  "orginal" : "к нему́ ",
+                  "translate" : " ona doğru"
+                },
+                {
+                  "orginal" : "о нём ",
+                  "translate" : " onun hakkında"
+                },
+                {
+                  "orginal" : "на нём ",
+                  "translate" : "onun üzerinizde"
+                },
+                {
+                  "orginal" : "им ",
+                  "translate" : "onunla (ilgili bir şey yapmak)"
+                },
+                {
+                  "orginal" : "с ним ",
+                  "translate" : " onunla (beraber olmak)"
+                },
+                {
+                  "orginal" : "ру́сский ",
+                  "translate" : " Rus (sıfat)"
+                },
+                {
+                  "orginal" : "слу́шать / послу́шать ",
+                  "translate" : " dinlemek"
+                },
+                {
+                  "orginal" : "повторя́ть / повтори́ть ",
+                  "translate" : " tekrarlamak, tekrar etmek"
+                },
+                {
+                  "orginal" : "уро́к ",
+                  "translate" : " ders"
+                },
+                {
+                  "orginal" : "алфави́т ",
+                  "translate" : " alfabe"
+                },
+                {
+                  "orginal" : "она́ ",
+                  "translate" : "o (dişil)"
+                },
+                {
+                  "orginal" : "её ",
+                  "translate" : " onun"
+                },
+                {
+                  "orginal" : "её́ ",
+                  "translate" : " onu"
+                },
+                {
+                  "orginal" : "у неё ",
+                  "translate" : " onda, onun var"
+                },
+                {
+                  "orginal" : "ей ",
+                  "translate" : " ona"
+                },
+                {
+                  "orginal" : "к ней́ ",
+                  "translate" : " ona doğru, onun yanına"
+                },
+                {
+                  "orginal" : "о ней ",
+                  "translate" : " onun hakkında"
+                },
+                {
+                  "orginal" : "на ней ",
+                  "translate" : " onun üzerinizde"
+                },
+                {
+                  "orginal" : "е́ю ",
+                  "translate" : " onunla (ilgili bir şey yapmak)"
+                },
+                {
+                  "orginal" : "с ней ",
+                  "translate" : " onunla (beraber olmak)"
+                },
+                {
+                  "orginal" : "бу́ква ",
+                  "translate" : " harf"
+                },
+                {
+                  "orginal" : "звук ",
+                  "translate" : " ses"
+                },
+                {
+                  "orginal" : "гла́сный ",
+                  "translate" : " ünlü, sesli harf"
+                },
+                {
+                  "orginal" : "согла́сный ",
+                  "translate" : " ünsüz, sessiz harf"
+                },
+                {
+                  "orginal" : "петь ",
+                  "translate" : " şarkı söylemek"
+                },
+                {
+                  "orginal" : "мы ",
+                  "translate" : " biz"
+                },
+                {
+                  "orginal" : "наш / на́ша / на́ше / на́ши ",
+                  "translate" : " bizim"
+                },
+                {
+                  "orginal" : "нас ",
+                  "translate" : "bizi"
+                },
+                {
+                  "orginal" : "у нас ",
+                  "translate" : "bizde, bizin"
+                },
+                {
+                  "orginal" : "о нас ",
+                  "translate" : " hakkımızda"
+                },
+                {
+                  "orginal" : "на нас ",
+                  "translate" : "üzerimizde"
+                },
+                {
+                  "orginal" : "нам ",
+                  "translate" : "bize"
+                },
+                {
+                  "orginal" : "к нам ",
+                  "translate" : " bize doğru, yanımıza"
+                },
+                {
+                  "orginal" : "на́ми ",
+                  "translate" : "bizimle"
+                },
+                {
+                  "orginal" : "с на́ми ",
+                  "translate" : " bizimle beraber/birlikte"
+                },
+                {
+                  "orginal" : "хо́лодно ",
+                  "translate" : " soğuk (belirteç)"
+                },
+                {
+                  "orginal" : "пло́хо ",
+                  "translate" : " kötü (belirteç)"
+                },
+                {
+                  "orginal" : "когда́ ",
+                  "translate" : " ne zaman, – iken "
+                },
+                {
+                  "orginal" : "дом ",
+                  "translate" : " ev"
+                },
+                {
+                  "orginal" : "ко́мната ",
+                  "translate" : " oda"
+                },
+                {
+                  "orginal" : "окно́ ",
+                  "translate" : " pencere"
+                },
+                {
+                  "orginal" : "кот ",
+                  "translate" : " erkek kedi"
+                },
+                {
+                  "orginal" : "молоко́ ",
+                  "translate" : " süt"
+                },
+                {
+                  "orginal" : "оно́ ",
+                  "translate" : " o (nötr), bu zamirin hal çekimi 'он' zamiri ile aynı"
+                },
+                {
+                  "orginal" : "они́ ",
+                  "translate" : " onlar"
+                },
+                {
+                  "orginal" : "вода́ ",
+                  "translate" : " su"
+                },
+                {
+                  "orginal" : "ка́рта ",
+                  "translate" : " harita"
+                },
+                {
+                  "orginal" : "ры́ба ",
+                  "translate" : " balık"
+                },
+                {
+                  "orginal" : "торт ",
+                  "translate" : " pasta"
+                },
+                {
+                  "orginal" : "пого́да ",
+                  "translate" : " hava (durumu)"
+                },
+                {
+                  "orginal" : "у́тро",
+                  "translate" : " sabah"
+                },
+                {
+                  "orginal" : "парк ",
+                  "translate" : " park"
+                },
+                {
+                  "orginal" : "го́род ",
+                  "translate" : " şehir"
+                },
+                {
+                  "orginal" : "клуб ",
+                  "translate" : " kulüp"
+                },
+                {
+                  "orginal" : "стол ",
+                  "translate" : " masa"
+                },
+                {
+                  "orginal" : "брат ",
+                  "translate" : " erkek kardeş / ağabey"
+                },
+                {
+                  "orginal" : "друг ",
+                  "translate" : " arkadaş (eril)"
+                },
+                {
+                  "orginal" : "подру́га ",
+                  "translate" : " kız arkadaş (hem arkadaş hem sevgili anlamında kullanılır)"
+                },
+                {
+                  "orginal" : "стул ",
+                  "translate" : " sandalye"
+                },
+                {
+                  "orginal" : "заво́д ",
+                  "translate" : " kendi enerjisini üreten fabrika"
+                },
+                {
+                  "orginal" : "гру́ппа ",
+                  "translate" : " grup, sınıf"
+                },
+                {
+                  "orginal" : "сын ",
+                  "translate" : " oğul"
+                },
+                {
+                  "orginal" : "соба́ка ",
+                  "translate" : " köpek"
+                },
+                {
+                  "orginal" : "расска́з ",
+                  "translate" : " hikaye"
+                },
+                {
+                  "orginal" : "су́мка ",
+                  "translate" : " çanta"
+                },
+                {
+                  "orginal" : "мо́ре",
+                  "translate" : " deniz"
+                },
+                {
+                  "orginal" : "мужчи́на ",
+                  "translate" : " adam (erkek)"
+                },
+                {
+                  "orginal" : "музе́й ",
+                  "translate" : " müze"
+                },
+                {
+                  "orginal" : "семья́ ",
+                  "translate" : " aile"
+                },
+                {
+                  "orginal" : "ночь ",
+                  "translate" : " gece"
+                },
+                {
+                  "orginal" : "со́лнце ",
+                  "translate" : " güneş"
+                },
+                {
+                  "orginal" : "рестора́н ",
+                  "translate" : " restoran"
+                },
+                {
+                  "orginal" : "дире́ктор ",
+                  "translate" : " müdür"
+                },
+                {
+                  "orginal" : "стол ",
+                  "translate" : " masa"
+                },
+                {
+                  "orginal" : "письмо́ ",
+                  "translate" : " mektup"
+                },
+                {
+                  "orginal" : "маши́на",
+                  "translate" : " araba"
+                },
+                {
+                  "orginal" : "компью́тер ",
+                  "translate" : " bilgisayar"
+                },
+                {
+                  "orginal" : "стюарде́сса ",
+                  "translate" : " hostes"
+                },
+                {
+                  "orginal" : "актёр / актри́са ",
+                  "translate" : " oyuncu erkek / bayan"
+                },
+                {
+                  "orginal" : "ду́мать / поду́мать ",
+                  "translate" : " düşünmek (bitmemiş / bitmiş hali)"
+                },
+                {
+                  "orginal" : "пра́вда / непра́вда ",
+                  "translate" : " doğru / yalan, doğru değil"
+                },
+                {
+                  "orginal" : "знать / узна́ть ",
+                  "translate" : " bilmek / öğrenmek; tanımak"
+                },
+                {
+                  "orginal" : "мно́го ",
+                  "translate" : " çok (miktar için söylenir)"
+                },
+                {
+                  "orginal" : "рабо́тать ",
+                  "translate" : " çalışmak"
+                },
+                {
+                  "orginal" : "за́втра ",
+                  "translate" : " yarın"
+                },
+                {
+                  "orginal" : "говори́ть / поговори́ть ",
+                  "translate" : " söylemek, konuşmak"
+                },
+                {
+                  "orginal" : "обе́дать / пообе́дать ",
+                  "translate" : " öğle yemeğini yemek"
+                },
+                {
+                  "orginal" : "обе́д ",
+                  "translate" : " öğle yemeği"
+                },
+                {
+                  "orginal" : "курит́ь / покури́ть ",
+                  "translate" : " sigara içmek"
+                },
+                {
+                  "orginal" : "сигаре́та ",
+                  "translate" : " sigara"
+                },
+                {
+                  "orginal" : "игра́ть / поигра́ть / сыгра́ть ",
+                  "translate" : " oyun oynamak, müzik aletini"
+                },
+                {
+                  "orginal" : "игра́ ",
+                  "translate" : " oyun, çalma"
+                },
+                {
+                  "orginal" : "за́втракать / поза́втракать ",
+                  "translate" : " kahvaltı etmek"
+                },
+                {
+                  "orginal" : "за́втрак ",
+                  "translate" : " kahvaltı"
+                },
+                {
+                  "orginal" : "у́жинать / поу́жинать ",
+                  "translate" : " akşam yemeğini yemek"
+                },
+                {
+                  "orginal" : "у́жин ",
+                  "translate" : " akşam yemeği"
+                },
+                {
+                  "orginal" : "уже́ ",
+                  "translate" : " artık, bile"
+                },
+                {
+                  "orginal" : "спра́шивать / спроси́ть ",
+                  "translate" : " sormak"
+                },
+                {
+                  "orginal" : "отвеча́ть / отве́тить ",
+                  "translate" : " cevap vermek"
+                },
+                {
+                  "orginal" : "отве́т ",
+                  "translate" : " cevap"
+                },
+                {
+                  "orginal" : "отдыха́ть / отдохну́ть ",
+                  "translate" : " dinlenmek, tatil yapmak, istirahat yapmak"
+                },
+                {
+                  "orginal" : "о́тдых ",
+                  "translate" : " dinlenme, tatil, istirahat"
+                },
+                {
+                  "orginal" : "понима́ть / поня́ть ",
+                  "translate" : " anlamak"
+                },
+                {
+                  "orginal" : "студе́нт / студе́нтка ",
+                  "translate" : " üniversite öğrencisi erkek / kız"
+                },
+                {
+                  "orginal" : "учени́к / учени́ца ",
+                  "translate" : " öğrenci erkek / kız"
+                },
+                {
+                  "orginal" : "проси́ть / попроси́ть ",
+                  "translate" : " rica etmek"
+                },
+                {
+                  "orginal" : "проси́ть / попроси́ть проще́ния ",
+                  "translate" : " özür dilemek"
+                },
+                {
+                  "orginal" : "учи́тель / учи́тельница ",
+                  "translate" : " öğretmen erkek / bayan"
+                },
+                {
+                  "orginal" : "изуча́ть / изучи́ть ",
+                  "translate" : " öğrenmek, okumak"
+                },
+                {
+                  "orginal" : "сад ",
+                  "translate" : " bahçe"
+                },
+                {
+                  "orginal" : "гуля́ть / погуля́ть ",
+                  "translate" : " dolaşmak"
+                },
+                {
+                  "orginal" : "телеви́зор ",
+                  "translate" : " televizyon"
+                },
+                {
+                  "orginal" : "по́мнить / вспо́мнить ",
+                  "translate" : " hatırlamak"
+                },
+                {
+                  "orginal" : "спеши́ть / поспеши́ть ",
+                  "translate" : " acele etmek"
+                },
+                {
+                  "orginal" : "кино",
+                  "translate" : "sinema, film"
+                },
+                {
+                  "orginal" : "футбо́л ",
+                  "translate" : " futbol, maç"
+                },
+                {
+                  "orginal" : "футболи́ст ",
+                  "translate" : " futbolcu"
+                },
+                {
+                  "orginal" : "стадио́н ",
+                  "translate" : " stadyum"
+                },
+                {
+                  "orginal" : "футбо́льный мяч ",
+                  "translate" : " futbol topu"
+                },
+                {
+                  "orginal" : "футбо́льная кома́нда ",
+                  "translate" : " futbol takımı"
+                },
+                {
+                  "orginal" : "люби́мый ",
+                  "translate" : " en sevdiğim"
+                },
+                {
+                  "orginal" : "экономи́ст ",
+                  "translate" : " ekonomist"
+                },
+                {
+                  "orginal" : "му́зыка ",
+                  "translate" : " müzik"
+                },
+                {
+                  "orginal" : "музыка́нт ",
+                  "translate" : " müzisyen"
+                },
+                {
+                  "orginal" : "звать / позвать ",
+                  "translate" : " çağırmak"
+                },
+                {
+                  "orginal" : "адвока́т ",
+                  "translate" : " avukat"
+                },
+                {
+                  "orginal" : "журнали́ст ",
+                  "translate" : " gazeteci"
+                },
+                {
+                  "orginal" : "о́чень ",
+                  "translate" : " çok"
+                },
+                {
+                  "orginal" : "прия́тный ",
+                  "translate" : " hoş, cana yakın, tatlı, sevimli"
+                },
+                {
+                  "orginal" : "прия́тно ",
+                  "translate" : " hoştur, memnun / sevimli olma durumu"
+                },
+                {
+                  "orginal" : "челове́к ",
+                  "translate" : " insan"
+                },
+                {
+                  "orginal" : "вме́сте ",
+                  "translate" : " beraber"
+                },
+                {
+                  "orginal" : "сейча́с ",
+                  "translate" : " şimdi"
+                },
+                {
+                  "orginal" : "сего́дня ",
+                  "translate" : " bugün"
+                },
+                {
+                  "orginal" : "спаси́бо ",
+                  "translate" : " teşekkürler, teşekkür ederim"
+                },
+                {
+                  "orginal" : "вот ",
+                  "translate" : " işte"
+                },
+                {
+                  "orginal" : "здра́вствуй / здра́вствуйте ",
+                  "translate" : " merhaba (sen / siz)"
+                },
+                {
+                  "orginal" : "до свида́ния ",
+                  "translate" : " hoşça kal"
+                },
+                {
+                  "orginal" : "коне́чно ",
+                  "translate" : " tabii ki"
+                },
+                {
+                  "orginal" : "здесь ",
+                  "translate" : " burada"
+                },
+                {
+                  "orginal" : "у́лица ",
+                  "translate" : " sokak"
+                },
+                {
+                  "orginal" : "бе́рег ",
+                  "translate" : " kıyı"
+                },
+                {
+                  "orginal" : "лес ",
+                  "translate" : " orman"
+                },
+                {
+                  "orginal" : "река́ ",
+                  "translate" : " nehir"
+                },
+                {
+                  "orginal" : "о́стров ",
+                  "translate" : " ada"
+                },
+                {
+                  "orginal" : "де́рево ",
+                  "translate" : " ağaç"
+                },
+                {
+                  "orginal" : "лист ",
+                  "translate" : " yaprak, kağıt yaprağı / sayfası"
+                },
+                {
+                  "orginal" : "вре́мя ",
+                  "translate" : " zaman"
+                },
+                {
+                  "orginal" : "ле́то ",
+                  "translate" : " yaz"
+                },
+                {
+                  "orginal" : "зима́ ",
+                  "translate" : " kış"
+                },
+                {
+                  "orginal" : "год ",
+                  "translate" : " yıl, sene"
+                },
+                {
+                  "orginal" : "чёрт ",
+                  "translate" : " şeytan"
+                },
+                {
+                  "orginal" : "по́езд ",
+                  "translate" : " tren"
+                },
+                {
+                  "orginal" : "ве́чер ",
+                  "translate" : " akşam"
+                },
+                {
+                  "orginal" : "по́вар ",
+                  "translate" : " aşçı"
+                },
+                {
+                  "orginal" : "до́ктор ",
+                  "translate" : " doktor"
+                },
+                {
+                  "orginal" : "муж ",
+                  "translate" : " koca"
+                },
+                {
+                  "orginal" : "жена́ ",
+                  "translate" : " karı"
+                },
+                {
+                  "orginal" : "ма́ть ",
+                  "translate" : " anne"
+                },
+                {
+                  "orginal" : "оте́ц ",
+                  "translate" : " baba"
+                },
+                {
+                  "orginal" : "ребёнок ",
+                  "translate" : " çocuk"
+                },
+                {
+                  "orginal" : "и́мя ",
+                  "translate" : "isim"
+                },
+                {
+                  "orginal" : "фами́лия ",
+                  "translate" : " soyadı"
+                },
+                {
+                  "orginal" : "о́тчество ",
+                  "translate" : " baba adı"
+                },
+                {
+                  "orginal" : "день ",
+                  "translate" : " gün, öğlen"
+                },
+                {
+                  "orginal" : "су́тки ",
+                  "translate" : " tam gün, 24 saat"
+                },
+                {
+                  "orginal" : "неде́ля ",
+                  "translate" : " hafta"
+                },
+                {
+                  "orginal" : "ме́сяц ",
+                  "translate" : " ay"
+                },
+                {
+                  "orginal" : "год ",
+                  "translate" : " sene, yıl"
+                },
+                {
+                  "orginal" : "о́сень ",
+                  "translate" : " sonbahar"
+                },
+                {
+                  "orginal" : "весна́ ",
+                  "translate" : " ilkbahar"
+                },
+                {
+                  "orginal" : "слова́рь ",
+                  "translate" : " sözlük"
+                },
+                {
+                  "orginal" : "теа́тр ",
+                  "translate" : " tiyatro"
+                },
+                {
+                  "orginal" : "кио́ск ",
+                  "translate" : " büfe"
+                },
+                {
+                  "orginal" : "такси́ст ",
+                  "translate" : " taksici"
+                },
+                {
+                  "orginal" : "спортсме́н / спортсме́нка ",
+                  "translate" : " erkek / kadın sporcu"
+                },
+                {
+                  "orginal" : "гид ",
+                  "translate" : " rehber"
+                },
+                {
+                  "orginal" : "капита́н ",
+                  "translate" : " kaptan"
+                },
+                {
+                  "orginal" : "же́нщина ",
+                  "translate" : " kadın"
+                },
+                {
+                  "orginal" : "поли́тик ",
+                  "translate" : " siyasetçi"
+                },
+                {
+                  "orginal" : "инжене́р ",
+                  "translate" : " mühendis"
+                },
+                {
+                  "orginal" : "очки́ ",
+                  "translate" : " gözlük"
+                },
+                {
+                  "orginal" : "брю́ки ",
+                  "translate" : " pantolon"
+                },
+                {
+                  "orginal" : "джинсы ",
+                  "translate" : " kot pantolon"
+                },
+                {
+                  "orginal" : "но́жницы ",
+                  "translate" : " makas"
+                },
+                {
+                  "orginal" : "часы́ ",
+                  "translate" : " saat"
+                },
+                {
+                  "orginal" : "вы́боры ",
+                  "translate" : " seçim (siyaset alanında)"
+                },
+                {
+                  "orginal" : "кани́кулы ",
+                  "translate" : " okul tatili"
+                },
+                {
+                  "orginal" : "де́ньги ",
+                  "translate" : " para"
+                },
+                {
+                  "orginal" : "фина́нсы ",
+                  "translate" : " maliye, para"
+                },
+                {
+                  "orginal" : "воро́та ",
+                  "translate" : " avlu kapısı/kale (futbol terimi)"
+                },
+                {
+                  "orginal" : "солда́т ",
+                  "translate" : " asker"
+                },
+                {
+                  "orginal" : "бизнесме́н ",
+                  "translate" : " iş adamı"
+                },
+                {
+                  "orginal" : "текст ",
+                  "translate" : " metin"
+                },
+                {
+                  "orginal" : "роди́тели ",
+                  "translate" : " ebeveynler, veliler, ana baba"
+                },
+                {
+                  "orginal" : "сестра́ ",
+                  "translate" : " kız kardeş"
+                },
+                {
+                  "orginal" : "дочь / до́чка ",
+                  "translate" : " kız çocuk"
+                },
+                {
+                  "orginal" : "дед / де́душка ",
+                  "translate" : " dede, büyük baba"
+                },
+                {
+                  "orginal" : "портре́т ",
+                  "translate" : " portre"
+                },
+                {
+                  "orginal" : "внук / вну́чка ",
+                  "translate" : " torun / kız torun"
+                },
+                {
+                  "orginal" : "телефо́н ",
+                  "translate" : " telefon"
+                },
+                {
+                  "orginal" : "ро́за ",
+                  "translate" : " gül"
+                },
+                {
+                  "orginal" : "пото́м ",
+                  "translate" : " sonra"
+                },
+                {
+                  "orginal" : "проспе́кт ",
+                  "translate" : " ana cadde"
+                },
+                {
+                  "orginal" : "сосе́д ",
+                  "translate" : " komşu"
+                },
+                {
+                  "orginal" : "профе́ссор ",
+                  "translate" : " profesör"
+                },
+                {
+                  "orginal" : "копе́йка ",
+                  "translate" : " kuruş, Rus demir parasının adı"
+                },
+                {
+                  "orginal" : "колле́га ",
+                  "translate" : " 1.iş arkadaşı, /meslektaş"
+                },
+                {
+                  "orginal" : "пробле́ма ",
+                  "translate" : " sorun"
+                },
+                {
+                  "orginal" : "докуме́нт ",
+                  "translate" : " evrak, belge"
+                },
+                {
+                  "orginal" : "вино́ ",
+                  "translate" : " şarap"
+                },
+                {
+                  "orginal" : "бюро́ ",
+                  "translate" : " büro"
+                },
+                {
+                  "orginal" : "назва́ние ",
+                  "translate" : " bir objenin adı (и́мя – bir insanın adı, кли́чка – bir hayvanın adı veya lakap)"
+                },
+                {
+                  "orginal" : "буты́лка ",
+                  "translate" : " şişe"
+                },
+                {
+                  "orginal" : "гита́ра / гитари́ст ",
+                  "translate" : " gitar / gitarist"
+                },
+                {
+                  "orginal" : "пиани́но / пиани́ст ",
+                  "translate" : " piyano / piyanist"
+                },
+                {
+                  "orginal" : "скри́пка / скрипа́ч ",
+                  "translate" : " keman / kemancı"
+                },
+                {
+                  "orginal" : "конце́рт ",
+                  "translate" : " konser, resital"
+                },
+                {
+                  "orginal" : "ме́сто ",
+                  "translate" : " yer, mekan, araçlarda koltuk, bagajlarda parça"
+                },
+                {
+                  "orginal" : "класс ",
+                  "translate" : " sınıf"
+                },
+                {
+                  "orginal" : "шко́льник ",
+                  "translate" : " ana ve orta okul öğrencisi"
+                },
+                {
+                  "orginal" : "вопро́с ",
+                  "translate" : " soru, konu"
+                },
+                {
+                  "orginal" : "биле́т ",
+                  "translate" : " bilet"
+                },
+                {
+                  "orginal" : "приве́т ",
+                  "translate" : " selam"
+                },
+                {
+                  "orginal" : "пока́ ",
+                  "translate" : " bye"
+                },
+                {
+                  "orginal" : "страна́ ",
+                  "translate" : " ülke"
+                },
+                {
+                  "orginal" : "ро́дина / Ро́дина ",
+                  "translate" : " memleket / Vatan"
+                },
+                {
+                  "orginal" : "дере́вня ",
+                  "translate" : " köy"
+                },
+                {
+                  "orginal" : "столи́ца ",
+                  "translate" : " başkent"
+                },
+                {
+                  "orginal" : "флаг ",
+                  "translate" : " bayrak"
+                },
+                {
+                  "orginal" : "гимн ",
+                  "translate" : " marş"
+                },
+                {
+                  "orginal" : "ку́ртка ",
+                  "translate" : " kaban, mont"
+                },
+                {
+                  "orginal" : "чемода́н ",
+                  "translate" : " valiz"
+                },
+                {
+                  "orginal" : "пло́щадь ",
+                  "translate" : " meydan"
+                },
+                {
+                  "orginal" : "а́рмия ",
+                  "translate" : " ordu, askerlik"
+                },
+                {
+                  "orginal" : "служи́ть в а́рмии ",
+                  "translate" : " askerlik yapmak"
+                },
+                {
+                  "orginal" : "ключ ",
+                  "translate" : " anahtar"
+                },
+                {
+                  "orginal" : "дверь ",
+                  "translate" : " kapı"
+                },
+                {
+                  "orginal" : "шкаф ",
+                  "translate" : " dolap"
+                },
+                {
+                  "orginal" : "мост ",
+                  "translate" : " köprü"
+                },
+                {
+                  "orginal" : "порт ",
+                  "translate" : " liman"
+                },
+                {
+                  "orginal" : "у́гол ",
+                  "translate" : " köşe"
+                },
+                {
+                  "orginal" : "аэропо́рт ",
+                  "translate" : " havalimanı"
+                },
+                {
+                  "orginal" : "жить / прожи́ть ",
+                  "translate" : " yaşamak, oturmak"
+                },
+                {
+                  "orginal" : "быва́ть / быть ",
+                  "translate" : " olmak"
+                },
+                {
+                  "orginal" : "вчера́ ",
+                  "translate" : " dün"
+                },
+                {
+                  "orginal" : "ра́ньше ",
+                  "translate" : " eskiden, önce"
+                },
+                {
+                  "orginal" : "больни́ца ",
+                  "translate" : " hastane"
+                },
+                {
+                  "orginal" : "жа́рко ",
+                  "translate" : " sıcak"
+                },
+                {
+                  "orginal" : "снег ",
+                  "translate" : " kar"
+                },
+                {
+                  "orginal" : "дождь ",
+                  "translate" : " yağmur"
+                },
+                {
+                  "orginal" : "тепло́ ",
+                  "translate" : " ılık"
+                },
+                {
+                  "orginal" : "путеше́ствие ",
+                  "translate" : " seyahat, yolculuk"
+                },
+                {
+                  "orginal" : "брать / взять ",
+                  "translate" : " almak"
+                },
+                {
+                  "orginal" : "экску́рсия ",
+                  "translate" : " gezi, tur"
+                },
+                {
+                  "orginal" : "юг ",
+                  "translate" : " güney"
+                },
+                {
+                  "orginal" : "восто́к ",
+                  "translate" : " doğu"
+                },
+                {
+                  "orginal" : "за́пад ",
+                  "translate" : " batı"
+                },
+                {
+                  "orginal" : "се́вер ",
+                  "translate" : " kuzey"
+                },
+                {
+                  "orginal" : "спать ",
+                  "translate" : " uyumak"
+                },
+                {
+                  "orginal" : "встава́ть / встать ",
+                  "translate" : " kalkmak"
+                },
+                {
+                  "orginal" : "ложи́ться / лечь ",
+                  "translate" : " yatmak"
+                },
+                {
+                  "orginal" : "купа́ться / покупа́ться ",
+                  "translate" : " yıkanmak"
+                },
+                {
+                  "orginal" : "принима́ть душ / ва́нну ",
+                  "translate" : " duş almak / banyo yapmak"
+                },
+                {
+                  "orginal" : "принима́ть табле́тки ",
+                  "translate" : " ilaç almak/kullanmak"
+                },
+                {
+                  "orginal" : "принима́ть госте́й ",
+                  "translate" : " misafirleri ağırlamak"
+                },
+                {
+                  "orginal" : "продава́ть / прода́ть что? кому? ",
+                  "translate" : " neyi, kime satmak"
+                },
+                {
+                  "orginal" : "снача́ла ",
+                  "translate" : " önce"
+                },
+                {
+                  "orginal" : "по́лдень ",
+                  "translate" : " öğleyin, öğle vakti"
+                },
+                {
+                  "orginal" : "по́сле полу́дня ",
+                  "translate" : " öğleden sonra"
+                },
+                {
+                  "orginal" : "по́лночь ",
+                  "translate" : " gece yarısı"
+                },
+                {
+                  "orginal" : "никогда́ ",
+                  "translate" : " hiçbir zaman, asla"
+                },
+                {
+                  "orginal" : "иногда́ ",
+                  "translate" : " bazen, ara sıra"
+                },
+                {
+                  "orginal" : "бухга́лтер ",
+                  "translate" : " muhasebeci"
+                },
+                {
+                  "orginal" : "сно́ва ",
+                  "translate" : " yine"
+                },
+                {
+                  "orginal" : "обы́чно ",
+                  "translate" : " genellikle"
+                },
+                {
+                  "orginal" : "пе́рвый ",
+                  "translate" : " birinci"
+                },
+                {
+                  "orginal" : "после́дний ",
+                  "translate" : " son"
+                },
+                {
+                  "orginal" : "молодо́й ",
+                  "translate" : " genç"
+                },
+                {
+                  "orginal" : "ста́рый ",
+                  "translate" : " yaşlı/eski"
+                },
+                {
+                  "orginal" : "дорого́й ",
+                  "translate" : " pahalı"
+                },
+                {
+                  "orginal" : "дешёвый ",
+                  "translate" : " ucuz"
+                },
+                {
+                  "orginal" : "ры́нок ",
+                  "translate" : " pazar"
+                },
+                {
+                  "orginal" : "но́вый ",
+                  "translate" : " yeni"
+                },
+                {
+                  "orginal" : "но́вости ",
+                  "translate" : " haber"
+                },
+                {
+                  "orginal" : "о́зеро ",
+                  "translate" : " göl"
+                },
+                {
+                  "orginal" : "большо́й ",
+                  "translate" : " büyük"
+                },
+                {
+                  "orginal" : "час ",
+                  "translate" : " saat (zaman birimi)"
+                },
+                {
+                  "orginal" : "мину́та ",
+                  "translate" : " dakika"
+                },
+                {
+                  "orginal" : "бога́тый ",
+                  "translate" : " zengin"
+                },
+                {
+                  "orginal" : "бе́дный ",
+                  "translate" : " fakir"
+                },
+                {
+                  "orginal" : "горя́чий ",
+                  "translate" : " sıcak"
+                },
+                {
+                  "orginal" : "холо́дный ",
+                  "translate" : " soğuk"
+                },
+                {
+                  "orginal" : "лёгкий ",
+                  "translate" : " hafif, kolay"
+                },
+                {
+                  "orginal" : "тру́дный ",
+                  "translate" : "zor"
+                },
+                {
+                  "orginal" : "интере́сный ",
+                  "translate" : " ilginç"
+                },
+                {
+                  "orginal" : "ску́чный ",
+                  "translate" : " sıkıcı"
+                },
+                {
+                  "orginal" : "све́тлый ",
+                  "translate" : " açık renk, aydınlık"
+                },
+                {
+                  "orginal" : "тёмный ",
+                  "translate" : " koyu renk"
+                },
+                {
+                  "orginal" : "дли́нный ",
+                  "translate" : " uzun"
+                },
+                {
+                  "orginal" : "коро́ткий ",
+                  "translate" : " kısa"
+                },
+                {
+                  "orginal" : "хоро́ший ",
+                  "translate" : " iyi"
+                },
+                {
+                  "orginal" : "плохо́й ",
+                  "translate" : " kötü"
+                },
+                {
+                  "orginal" : "бы́стро ",
+                  "translate" : " hızlı"
+                },
+                {
+                  "orginal" : "ме́дленно ",
+                  "translate" : " yavaş"
+                },
+                {
+                  "orginal" : "хорошо́ ",
+                  "translate" : " iyi bir şekilde"
+                },
+                {
+                  "orginal" : "гро́мко ",
+                  "translate" : " yüksek sesle"
+                },
+                {
+                  "orginal" : "ти́хо ",
+                  "translate" : " sessiz bir şekilde, alçak sesle"
+                },
+                {
+                  "orginal" : "интере́сно ",
+                  "translate" : " ilginç, acaba"
+                },
+                {
+                  "orginal" : "ску́чно ",
+                  "translate" : " sıkıcı"
+                },
+                {
+                  "orginal" : "краси́во ",
+                  "translate" : " güzel"
+                },
+                {
+                  "orginal" : "некраси́во ",
+                  "translate" : " hoş olmayan bir şekilde, güzel değil, çirkin"
+                },
+                {
+                  "orginal" : "ра́но ",
+                  "translate" : " erken"
+                },
+                {
+                  "orginal" : "по́здно ",
+                  "translate" : " geç"
+                },
+                {
+                  "orginal" : "ча́сто ",
+                  "translate" : " sık sık"
+                },
+                {
+                  "orginal" : "ре́дко ",
+                  "translate" : " nadiren"
+                },
+                {
+                  "orginal" : "мало ",
+                  "translate" : " az"
+                },
+                {
+                  "orginal" : "пра́вильно ",
+                  "translate" : " doğru"
+                },
+                {
+                  "orginal" : "прекра́сно ",
+                  "translate" : " çok güzel! fevkalade! mükemmel!"
+                },
+                {
+                  "orginal" : "ужа́сно ",
+                  "translate" : " korkunç, müthiş (‘aşırı’ anlamında)"
+                },
+                {
+                  "orginal" : "центр ",
+                  "translate" : " merkez"
+                },
+                {
+                  "orginal" : "центра́льный ",
+                  "translate" : " merkezi"
+                },
+                {
+                  "orginal" : "во́лосы / во́лос ",
+                  "translate" : " saçlar / saç teli"
+                },
+                {
+                  "orginal" : "глаза́ / глаз ",
+                  "translate" : " gözler / göz"
+                },
+                {
+                  "orginal" : "лицо́ ",
+                  "translate" : " yüz"
+                },
+                {
+                  "orginal" : "фигу́ра ",
+                  "translate" : " endam, boy pos (estetik anlamda vücut)"
+                },
+                {
+                  "orginal" : "пла́тье ",
+                  "translate" : " bayan elbisesi"
+                },
+                {
+                  "orginal" : "руба́шка ",
+                  "translate" : " gömlek"
+                },
+                {
+                  "orginal" : "же́нский ",
+                  "translate" : " kadın (sıfat)"
+                },
+                {
+                  "orginal" : "мужско́й ",
+                  "translate" : " erkek (sıfat)"
+                },
+                {
+                  "orginal" : "ту́фли / ту́фля ",
+                  "translate" : " mevsim ayakkabısı (ayakkabıları) / ayakkabının teki"
+                },
+                {
+                  "orginal" : "сапоги́ / сапо́г ",
+                  "translate" : " çizme(ler) / çizmenin teki"
+                },
+                {
+                  "orginal" : "цвет / цвета́ ",
+                  "translate" : " renk renkler"
+                },
+                {
+                  "orginal" : "бе́лый ",
+                  "translate" : " beyaz"
+                },
+                {
+                  "orginal" : "чёрный ",
+                  "translate" : " siyah"
+                },
+                {
+                  "orginal" : "кра́сный ",
+                  "translate" : " kırmızı"
+                },
+                {
+                  "orginal" : "жёлтый ",
+                  "translate" : " sarı"
+                },
+                {
+                  "orginal" : "зелёный ",
+                  "translate" : " yeşil"
+                },
+                {
+                  "orginal" : "голубо́й ",
+                  "translate" : " mavi"
+                },
+                {
+                  "orginal" : "ро́зовый ",
+                  "translate" : " pembe"
+                },
+                {
+                  "orginal" : "ора́нжевый ",
+                  "translate" : " turuncu"
+                },
+                {
+                  "orginal" : "си́ний ",
+                  "translate" : " lacivert"
+                },
+                {
+                  "orginal" : "боти́нок / боти́нки ",
+                  "translate" : " bot / botlar"
+                },
+                {
+                  "orginal" : "шу́ба ",
+                  "translate" : " kürk"
+                },
+                {
+                  "orginal" : "ша́пка ",
+                  "translate" : " bere"
+                },
+                {
+                  "orginal" : "шарф ",
+                  "translate" : " atkı, eşarp"
+                },
+                {
+                  "orginal" : "медици́на ",
+                  "translate" : " tıp"
+                },
+                {
+                  "orginal" : "язы́к ",
+                  "translate" : " dil"
+                },
+                {
+                  "orginal" : "иска́ть ",
+                  "translate" : " aramak"
+                },
+                {
+                  "orginal" : "хоте́ть ",
+                  "translate" : " istemek"
+                },
+                {
+                  "orginal" : "есть / пое́сть / съесть ",
+                  "translate" : " yemek (yemek) / karın doyurmak / yiyip bitirmek"
+                },
+                {
+                  "orginal" : "пить / попи́ть / вы́пить ",
+                  "translate" : " içmek / bir şeyin bir miktarını içmek / içip bitirmek"
+                },
+                {
+                  "orginal" : "покупа́ть / купи́ть ",
+                  "translate" : " satın almak"
+                },
+                {
+                  "orginal" : "оде́жда ",
+                  "translate" : " giysi, kıyafet"
+                },
+                {
+                  "orginal" : "проду́кты ",
+                  "translate" : " yiyecekler, besin"
+                },
+                {
+                  "orginal" : "сто́ить ",
+                  "translate" : "fiyatı olmak"
+                },
+                {
+                  "orginal" : "оши́бка ",
+                  "translate" : " hata"
+                },
+                {
+                  "orginal" : "отли́чный ",
+                  "translate" : " harika (ön ad)"
+                },
+                {
+                  "orginal" : "мо́дный ",
+                  "translate" : " moda (ön ad)"
+                },
+                {
+                  "orginal" : "разме́р ",
+                  "translate" : " beden"
+                },
+                {
+                  "orginal" : "натура́льный ",
+                  "translate" : " doğal, gerçek"
+                },
+                {
+                  "orginal" : "приро́да ",
+                  "translate" : " doğa"
+                },
+                {
+                  "orginal" : "футбо́лка ",
+                  "translate" : " tişört"
+                },
+                {
+                  "orginal" : "сувени́р ",
+                  "translate" : " hediyelik eşya"
+                },
+                {
+                  "orginal" : "велосипе́д ",
+                  "translate" : " bisiklet"
+                },
+                {
+                  "orginal" : "мотоци́кл ",
+                  "translate" : " motor"
+                },
+                {
+                  "orginal" : "фотоаппара́т ",
+                  "translate" : " fotoğraf makinası"
+                },
+                {
+                  "orginal" : "магнитофо́н ",
+                  "translate" : " teyp"
+                },
+                {
+                  "orginal" : "ру́чка ",
+                  "translate" : " tükenmez kalem"
+                },
+                {
+                  "orginal" : "каранда́ш ",
+                  "translate" : " kurşun kalem"
+                },
+                {
+                  "orginal" : "цвето́к / цветы́ ",
+                  "translate" : " çiçek / çiçekler"
+                },
+                {
+                  "orginal" : "ша́хматы ",
+                  "translate" : " satranç"
+                },
+                {
+                  "orginal" : "знако́миться / познако́миться",
+                  "translate" : " kiminle tanışmak"
+                },
+                {
+                  "orginal" : "родны́е ",
+                  "translate" : "akrabalar"
+                },
+                {
+                  "orginal" : "приезжа́ть / прие́хать",
+                  "translate" : " araçla gelmek"
+                },
+                {
+                  "orginal" : "давно́ ",
+                  "translate" : " uzun zaman önce"
+                },
+                {
+                  "orginal" : "нра́виться / понра́виться",
+                  "translate" : " kimin hoşuna gitmek, sevmek"
+                },
+                {
+                  "orginal" : "за́мужем",
+                  "translate" : " evli (kadın için)"
+                },
+                {
+                  "orginal" : "жена́т",
+                  "translate" : " evli (erkek için)"
+                },
+                {
+                  "orginal" : "преподава́тель",
+                  "translate" : "öğretmen"
+                },
+                {
+                  "orginal" : "преподава́ть / препода́ть ",
+                  "translate" : " kime ne ders vermek"
+                },
+                {
+                  "orginal" : "учи́ть / научи́ть ",
+                  "translate" : " kime ne öğretmek"
+                },
+                {
+                  "orginal" : "оди́н / одна́ /одни́",
+                  "translate" : " tek başına"
+                },
+                {
+                  "orginal" : "помога́ть / помо́чь ",
+                  "translate" : " kime yardım etmek"
+                },
+                {
+                  "orginal" : "по́мощь",
+                  "translate" : "yardım"
+                },
+                {
+                  "orginal" : "помо́щник ",
+                  "translate" : " yardımcı"
+                },
+                {
+                  "orginal" : "прекра́сно",
+                  "translate" : " çok güzel"
+                },
+                {
+                  "orginal" : "отли́чно ",
+                  "translate" : "mükemmel"
+                },
+                {
+                  "orginal" : "норма́льно ",
+                  "translate" : " normal, orta şekerli"
+                },
+                {
+                  "orginal" : "ничего́",
+                  "translate" : " fena değil,hiç"
+                },
+                {
+                  "orginal" : "е́сли",
+                  "translate" : "eğer"
+                },
+                {
+                  "orginal" : "пото́м",
+                  "translate" : "sonra"
+                },
+                {
+                  "orginal" : "рад",
+                  "translate" : "mutlu"
+                },
+                {
+                  "orginal" : "приглаша́ть / пригласи́ть",
+                  "translate" : " kimi davet etmek?"
+                },
+                {
+                  "orginal" : "называ́ть / назва́ть",
+                  "translate" : " kime hitap etmek?"
+                },
+                {
+                  "orginal" : "разреша́ть / разреши́ть",
+                  "translate" : " kime izin vermek?"
+                },
+                {
+                  "orginal" : "ва́жный",
+                  "translate" : "önemli"
+                },
+                {
+                  "orginal" : "профе́ссия",
+                  "translate" : "meslek"
+                },
+                {
+                  "orginal" : "учёный",
+                  "translate" : " bilim adamı"
+                },
+                {
+                  "orginal" : "бесе́да",
+                  "translate" : "sohbet"
+                },
+                {
+                  "orginal" : "продолжа́ть / продо́лжить",
+                  "translate" : " neye devam etmek"
+                },
+                {
+                  "orginal" : "сле́дующий",
+                  "translate" : " bir sonraki"
+                },
+                {
+                  "orginal" : "расска́зывать / рассказа́ть",
+                  "translate" : " neyi anlatmak?"
+                },
+                {
+                  "orginal" : "ли",
+                  "translate" : " mı soru takısı"
+                },
+                {
+                  "orginal" : "па́спорт ",
+                  "translate" : " pasaport"
+                },
+                {
+                  "orginal" : "ко́фе ",
+                  "translate" : " kahve"
+                },
+                {
+                  "orginal" : "сэ́ндвич ",
+                  "translate" : " sandviç"
+                },
+                {
+                  "orginal" : "сло́во ",
+                  "translate" : " kelime, sözcük"
+                },
+                {
+                  "orginal" : "слы́шать / услы́шать кого́? что? ",
+                  "translate" : " kimi, neyi duymak"
+                },
+                {
+                  "orginal" : "конститу́ция ",
+                  "translate" : " Anayasa"
+                },
+                {
+                  "orginal" : "револю́ция ",
+                  "translate" : " devrim"
+                },
+                {
+                  "orginal" : "демокра́тия ",
+                  "translate" : " demokrasi"
+                },
+                {
+                  "orginal" : "конфли́кт ",
+                  "translate" : " anlaşmazlık, çatışma, ihtilaf"
+                },
+                {
+                  "orginal" : "настрое́ние ",
+                  "translate" : " ruh hali, moral, iç keyfi"
+                },
+                {
+                  "orginal" : "на про́шлом уро́ке ",
+                  "translate" : " geçen derste"
+                },
+                {
+                  "orginal" : "тогда́ ",
+                  "translate" : " o zaman"
+                },
+                {
+                  "orginal" : "возмо́жно ",
+                  "translate" : " mümkün, belki, olabilir"
+                },
+                {
+                  "orginal" : "лу́чше всего́ ",
+                  "translate" : " en iyisi"
+                },
+                {
+                  "orginal" : "до́брого вре́мени су́ток ",
+                  "translate" : " iyi günler (günün her saat dilimi için Rusça yaygın bir selamlaşma şekli, birebir çeviri – iyi zamanlar, iyi saatler)"
+                },
+                {
+                  "orginal" : "уда́чный ",
+                  "translate" : " başarılı, çok uygun"
+                },
+                {
+                  "orginal" : "приве́тствие ",
+                  "translate" : " selamlaşma"
+                },
+                {
+                  "orginal" : "уда́чное приве́тствие ",
+                  "translate" : " çok başarılı bir selamlaşma"
+                },
+                {
+                  "orginal" : "приходи́ть / прийти́ ",
+                  "translate" : " gelmek"
+                },
+                {
+                  "orginal" : "здоро́ваться / поздоро́ваться с кем? ",
+                  "translate" : " kiminle merhabalaşmak, selamlaşmak"
+                },
+                {
+                  "orginal" : "представля́ться / предста́виться кому́? ",
+                  "translate" : " kime kendini tanıtmak"
+                },
+                {
+                  "orginal" : "расска́зывать / рассказа́ть кому́? о ком? о чём? ",
+                  "translate" : " kime, neyi anlatmak"
+                },
+                {
+                  "orginal" : "молча́ть / замолча́ть ",
+                  "translate" : " susmak"
+                },
+                {
+                  "orginal" : "наве́рное ",
+                  "translate" : " galiba"
+                },
+                {
+                  "orginal" : "стесня́ться / застесня́ться кого́? чего́? ",
+                  "translate" : " çekinmek, utanmak"
+                },
+                {
+                  "orginal" : "похо́ж (-а,-е,-и) на кого́ ",
+                  "translate" : " kime benziyor"
+                },
+                {
+                  "orginal" : "замеча́тельно ",
+                  "translate" : " harika"
+                },
+                {
+                  "orginal" : "сме́лый ",
+                  "translate" : " cesur"
+                },
+                {
+                  "orginal" : "у́мный ",
+                  "translate" : " akıllı"
+                },
+                {
+                  "orginal" : "ра́зве ",
+                  "translate" : " yoksa"
+                },
+                {
+                  "orginal" : "перебива́ть / переби́ть кого́? ",
+                  "translate" : " kimin sözünü kesmek"
+                },
+                {
+                  "orginal" : "ско́ро ",
+                  "translate" : " pek yakında (zaman olarak)"
+                },
+                {
+                  "orginal" : "де́тский сад ",
+                  "translate" : " anaokulu"
+                },
+                {
+                  "orginal" : "це́лый день ",
+                  "translate" : " bütün gün"
+                },
+                {
+                  "orginal" : "маши́нка ",
+                  "translate" : " oyuncak araba"
+                },
+                {
+                  "orginal" : "ку́кла ",
+                  "translate" : " oyuncak bebek"
+                },
+                {
+                  "orginal" : "рисова́ть / нарисова́ть кого́? что? ",
+                  "translate" : " resim yapmak"
+                },
+                {
+                  "orginal" : "мечта́ть / помечта́ть о ком? о чём? ",
+                  "translate" : " hayal kurmak"
+                },
+                {
+                  "orginal" : "ребёнок / де́ти ",
+                  "translate" : " çocuk / çocuklar"
+                },
+                {
+                  "orginal" : "бо́льше не бу́ду ",
+                  "translate" : " bir daha yapmayacağım"
+                },
+                {
+                  "orginal" : "(то́лько) ме́жду на́ми ",
+                  "translate" : " aramızda kalsın"
+                },
+                {
+                  "orginal" : "скро́мный ",
+                  "translate" : " mütevazi"
+                },
+                {
+                  "orginal" : "на сле́дующем уро́ке ",
+                  "translate" : " bir sonraki derste"
+                },
+                {
+                  "orginal" : "гость ",
+                  "translate" : " misafir"
+                },
+                {
+                  "orginal" : "приглаша́ть / пригласи́ть в го́сти кого́? ",
+                  "translate" : " kimi misafirliğe çağırmak / davet etmek"
+                },
+                {
+                  "orginal" : "встре́ча ",
+                  "translate" : " buluşma"
+                },
+                {
+                  "orginal" : "До встре́чи! ",
+                  "translate" : " Görüşmek üzere."
+                },
+                {
+                  "orginal" : "уда́ча ",
+                  "translate" : " Iyi şans"
+                },
+                {
+                  "orginal" : "Уда́чи вам! ",
+                  "translate" : "Size iyi şanslar!"
+                },
+                {
+                  "orginal" : "ви́деть / уви́деть ",
+                  "translate" : "görmek"
+                },
+                {
+                  "orginal" : "рожда́ться / роди́ться ",
+                  "translate" : " doğmak"
+                },
+                {
+                  "orginal" : "что случи́лось? ",
+                  "translate" : " ne oldu?"
+                },
+                {
+                  "orginal" : "обеща́ть / пообеща́ть что? кому́? ",
+                  "translate" : " ne sözü, kime söz vermek"
+                },
+                {
+                  "orginal" : "за́нят / занята́ / за́нято / за́няты ",
+                  "translate" : " müsait değil, meşgul"
+                },
+                {
+                  "orginal" : "мне о́чень жаль ",
+                  "translate" : " çok üzgünüm"
+                },
+                {
+                  "orginal" : "мо́жет быть ",
+                  "translate" : " belki"
+                },
+                {
+                  "orginal" : "в друго́й раз ",
+                  "translate" : " başka zaman(da)"
+                },
+                {
+                  "orginal" : "всегда́ ",
+                  "translate" : " her zaman"
+                },
+                {
+                  "orginal" : "домохозя́йка ",
+                  "translate" : " ev hanımı"
+                },
+                {
+                  "orginal" : "лёгкий ",
+                  "translate" : " kolay, hafif"
+                },
+                {
+                  "orginal" : "убира́ть / убра́ть что? где? ",
+                  "translate" : " neyin temizliğini yapmak"
+                },
+                {
+                  "orginal" : "гла́дить / погла́дить что? ",
+                  "translate" : " neyin ütüsünü yapmak"
+                },
+                {
+                  "orginal" : "стира́ть / постира́ть что? ",
+                  "translate" : " ne yıkamak (çamaşır yapmak)"
+                },
+                {
+                  "orginal" : "уве́рен / уве́рена / уве́рены в чём? ",
+                  "translate" : " hangi konuda emin"
+                },
+                {
+                  "orginal" : "вку́сный ",
+                  "translate" : " lezzetli"
+                },
+                {
+                  "orginal" : "гото́вить / пригото́вить что? ",
+                  "translate" : " ne pişirmek"
+                },
+                {
+                  "orginal" : "все ",
+                  "translate" : " herkes, tüm"
+                },
+                {
+                  "orginal" : "всё ",
+                  "translate" : " her şey"
+                },
+                {
+                  "orginal" : "бо́льше всего́ ",
+                  "translate" : " en çok"
+                },
+                {
+                  "orginal" : "жа́реный ",
+                  "translate" : " kızarmış"
+                },
+                {
+                  "orginal" : "карто́шка ",
+                  "translate" : " patates"
+                },
+                {
+                  "orginal" : "котле́та ",
+                  "translate" : " köfte"
+                },
+                {
+                  "orginal" : "до́лжен / должна́ / должны́ ",
+                  "translate" : " zorunda"
+                },
+                {
+                  "orginal" : "си́льный ",
+                  "translate" : " güçlü"
+                },
+                {
+                  "orginal" : "ку́шать / поку́шать ",
+                  "translate" : " yemek yemek"
+                },
+                {
+                  "orginal" : "заня́тие ",
+                  "translate" : " uğraş, meşgale, ders,"
+                },
+                {
+                  "orginal" : "зоопа́рк ",
+                  "translate" : " hayvanat bahçesi"
+                },
+                {
+                  "orginal" : "как здо́рово! ",
+                  "translate" : " ne güzel! harika! süper!"
+                },
+                {
+                  "orginal" : "обяза́тельно ",
+                  "translate" : " mutlaka, kesinlikle"
+                },
+                {
+                  "orginal" : "сбыва́ться / сбы́ться что? чему́? ",
+                  "translate" : " ne gerçekleşmek"
+                },
+                {
+                  "orginal" : "шути́ть / пошути́ть ",
+                  "translate" : " şaka yapmak"
+                },
+                {
+                  "orginal" : "реша́ть / реши́ть что де́лать? ",
+                  "translate" : " karar vermek"
+                },
+                {
+                  "orginal" : "всё ещё ",
+                  "translate" : " hâlâ"
+                },
+                {
+                  "orginal" : "сам / сама́ / са́ми ",
+                  "translate" : " kendi başına"
+                },
+                {
+                  "orginal" : "свой ",
+                  "translate" : " kendi olan"
+                },
+                {
+                  "orginal" : "ничего́ себе́! ",
+                  "translate" : " vay canına!"
+                },
+                {
+                  "orginal" : "про́бовать / попро́бовать что? ",
+                  "translate" : " denemek, tatmak"
+                },
+                {
+                  "orginal" : "молоде́ц! ",
+                  "translate" : " aferin"
+                },
+                {
+                  "orginal" : "про́сто ",
+                  "translate" : " sadece"
+                },
+                {
+                  "orginal" : "прекра́сно ",
+                  "translate" : " çok güzel"
+                },
+                {
+                  "orginal" : "то́чно ",
+                  "translate" : " tam / kesin olarak"
+                },
+                {
+                  "orginal" : "поли́тика ",
+                  "translate" : " siyaset"
+                },
+                {
+                  "orginal" : "поня́тно ",
+                  "translate" : " anlaşıldı"
+                },
+                {
+                  "orginal" : "статья́ ",
+                  "translate" : " makale"
+                },
+                {
+                  "orginal" : "вспомина́ть / вспо́мнить ",
+                  "translate" : " aklına gelmek"
+                },
+                {
+                  "orginal" : "всего́ хоро́шего! ",
+                  "translate" : " her şey gönlünce olsun."
+                },
+                {
+                  "orginal" : "береги́те себя́! ",
+                  "translate" : " kendinize iyi bakınız veya kendinize dikkat ediniz."
+                },
+                {
+                  "orginal" : "премьер-мини́стр ",
+                  "translate" : " başbakan"
+                },
+                {
+                  "orginal" : "к сожале́нию ",
+                  "translate" : " maalesef"
+                },
+                {
+                  "orginal" : "набира́ть / набра́ть но́мер ",
+                  "translate" : " telefon numarasını çevirmek"
+                },
+                {
+                  "orginal" : "звони́ть / позвони́ть куда́? кому́? ",
+                  "translate" : " nereyi, kimi aramak"
+                },
+                {
+                  "orginal" : "ошиба́ться / ошиби́ться ",
+                  "translate" : " yanılmak, yanlış numara çevirmek"
+                },
+                {
+                  "orginal" : "кварти́ра ",
+                  "translate" : " ev (daire)"
+                },
+                {
+                  "orginal" : "не туда́ попада́ть / попа́сть ",
+                  "translate" : " yanlış bir yere gelmek/yanlış numara çevirmek"
+                },
+                {
+                  "orginal" : "нос / носы́ ",
+                  "translate" : " burun / burunlar"
+                },
+                {
+                  "orginal" : "рот / рты ",
+                  "translate" : " ağız / ağızlar"
+                },
+                {
+                  "orginal" : "зуб / зу́бы ",
+                  "translate" : " diş / dişler"
+                },
+                {
+                  "orginal" : "весёлый ",
+                  "translate" : " neşeli"
+                },
+                {
+                  "orginal" : "па́смурно ",
+                  "translate" : " hava kapanıktır / kapalıdır"
+                },
+                {
+                  "orginal" : "зонт ",
+                  "translate" : " şemsiye"
+                },
+                {
+                  "orginal" : "зна́чить ",
+                  "translate" : " anlam sahipi olmak"
+                },
+                {
+                  "orginal" : "смешно́й ",
+                  "translate" : " komik"
+                },
+                {
+                  "orginal" : "смея́ться / посмея́ться над кем? над чем? с кого? ",
+                  "translate" : " kime, neye, kime gülmek"
+                },
+                {
+                  "orginal" : "непого́да ",
+                  "translate" : " kötü hava"
+                },
+                {
+                  "orginal" : "интерье́р ",
+                  "translate" : " iç dekorasyon"
+                },
+                {
+                  "orginal" : "диза́йнер ",
+                  "translate" : " iç mimar"
+                },
+                {
+                  "orginal" : "пол ",
+                  "translate" : " zemin, taban"
+                },
+                {
+                  "orginal" : "потоло́к ",
+                  "translate" : " tavan"
+                },
+                {
+                  "orginal" : "стена́ ",
+                  "translate" : " duvar"
+                },
+                {
+                  "orginal" : "дверь ",
+                  "translate" : " kapı (dişil)"
+                },
+                {
+                  "orginal" : "таре́лка ",
+                  "translate" : " tabak"
+                },
+                {
+                  "orginal" : "фрукт ",
+                  "translate" : " meyve"
+                },
+                {
+                  "orginal" : "о́вощ ",
+                  "translate" : " sebze"
+                },
+                {
+                  "orginal" : "бана́н ",
+                  "translate" : " muz"
+                },
+                {
+                  "orginal" : "апельси́н ",
+                  "translate" : " portakal"
+                },
+                {
+                  "orginal" : "я́блоко ",
+                  "translate" : " elma"
+                },
+                {
+                  "orginal" : "сли́ва ",
+                  "translate" : " erik"
+                },
+                {
+                  "orginal" : "холоди́льник ",
+                  "translate" : " buzdolabı"
+                },
+                {
+                  "orginal" : "помидо́р ",
+                  "translate" : " domates"
+                },
+                {
+                  "orginal" : "огуре́ц ",
+                  "translate" : " salatalık"
+                },
+                {
+                  "orginal" : "морко́вь ",
+                  "translate" : " havuç"
+                },
+                {
+                  "orginal" : "фильм у́жасов ",
+                  "translate" : " korku filmi"
+                },
+                {
+                  "orginal" : "до́брый день ",
+                  "translate" : " iyi günler"
+                },
+                {
+                  "orginal" : "до́брый ве́чер ",
+                  "translate" : " iyi akşamlar"
+                },
+                {
+                  "orginal" : "до́брое вре́мя су́ток = до́брого вермени су́ток ",
+                  "translate" : " iyi günler"
+                },
+                {
+                  "orginal" : "как пожива́ете / пожива́ешь? ",
+                  "translate" : " hayatınız nasıl gidiyor?"
+                },
+                {
+                  "orginal" : "всё в поря́дке ",
+                  "translate" : " her şey yolunda"
+                },
+                {
+                  "orginal" : "передава́ть / переда́ть приве́т кому́? ",
+                  "translate" : " kime selam iletmek (söylemek)"
+                },
+                {
+                  "orginal" : "бу́дем знако́мы! ",
+                  "translate" : " (haydi) tanışalım"
+                },
+                {
+                  "orginal" : "о́чень прия́тно! ",
+                  "translate" : " tanıştığımıza memnun oldum"
+                },
+                {
+                  "orginal" : "рад (с Ва́ми) познако́миться! ",
+                  "translate" : " tanıştığımıza memnun oldum"
+                },
+                {
+                  "orginal" : "нельзя́ ",
+                  "translate" : "maz (-mez), olmaz, yasak"
+                },
+                {
+                  "orginal" : "представля́ть / предста́вить кого́? кому́? ",
+                  "translate" : " kimi, kime tanıtmak"
+                },
+                {
+                  "orginal" : "я́ркий ",
+                  "translate" : " parlak "
+                },
+                {
+                  "orginal" : "ещё ",
+                  "translate" : " henüz, daha; bir de"
+                },
+                {
+                  "orginal" : "тёплый ",
+                  "translate" : " ılık"
+                },
+                {
+                  "orginal" : "энерги́чный ",
+                  "translate" : " enerjik"
+                },
+                {
+                  "orginal" : "споко́йный ",
+                  "translate" : " sakin, huzurlu "
+                },
+                {
+                  "orginal" : "со́лнечный ",
+                  "translate" : " güneşli"
+                },
+                {
+                  "orginal" : "не́бо ",
+                  "translate" : " gökyüzü"
+                },
+                {
+                  "orginal" : "све́жий / несве́жий ",
+                  "translate" : " taze, temiz (hava için)"
+                },
+                {
+                  "orginal" : "гру́стный ",
+                  "translate" : " hüzünlü"
+                },
+                {
+                  "orginal" : "гру́ша ",
+                  "translate" : " armut"
+                },
+                {
+                  "orginal" : "виногра́д ",
+                  "translate" : " üzüm"
+                },
+                {
+                  "orginal" : "капу́ста ",
+                  "translate" : " lahana"
+                },
+                {
+                  "orginal" : "то́лько что ",
+                  "translate" : " demin"
+                },
+                {
+                  "orginal" : "узнава́ть / узна́ть ",
+                  "translate" : " öğrenmek; tanımak"
+                },
+                {
+                  "orginal" : "друг дру́га ",
+                  "translate" : " birbirini"
+                },
+                {
+                  "orginal" : "национа́льность ",
+                  "translate" : " milliyet"
+                },
+                {
+                  "orginal" : "Кто ты по национа́льности? ",
+                  "translate" : " milliyetin nedir?"
+                },
+                {
+                  "orginal" : "Кто ты по профе́ссии? ",
+                  "translate" : " mesleğin nedir?"
+                },
+                {
+                  "orginal" : "изве́стный ",
+                  "translate" : " ünlü, meşhur"
+                },
+                {
+                  "orginal" : "стро́ить / постро́ить ",
+                  "translate" : " inşa etmek"
+                },
+                {
+                  "orginal" : "инжене́р-строи́тель ",
+                  "translate" : " inşaat mühendisi"
+                },
+                {
+                  "orginal" : "бу́дущий (бу́дущий био́лог) ",
+                  "translate" : " aday (biyolog adayı)"
+                },
+                {
+                  "orginal" : "подготови́тельный факульте́т ",
+                  "translate" : " hazırlık fakültesi"
+                },
+                {
+                  "orginal" : "наза́д (год наза́д) ",
+                  "translate" : " geriye doğru; … önce (bir yıl önce)"
+                },
+                {
+                  "orginal" : "раз ",
+                  "translate" : " kere, defa; bir"
+                },
+                {
+                  "orginal" : "родно́й (родно́й го́род, родно́й язы́к) ",
+                  "translate" : " öz olan (memleket, ana dili)"
+                },
+                {
+                  "orginal" : "Ско́лько вре́мени Вы изуча́ете ру́сский язы́к? ",
+                  "translate" : "Rusça ne kadar zaman öğreniyorsun?"
+                },
+                {
+                  "orginal" : "счита́ть / посчита́ть ",
+                  "translate" : " saymak"
+                },
+                {
+                  "orginal" : "гла́вное ",
+                  "translate" : " önemli olan"
+                },
+                {
+                  "orginal" : "говори́ть на одно́м языке́ ",
+                  "translate" : " aynı dilde konuşmak"
+                },
+                {
+                  "orginal" : "прав / права́ / пра́вы ",
+                  "translate" : " haklı"
+                },
+                {
+                  "orginal" : "класси́ческий (класси́ческая му́зыка) ",
+                  "translate" : " klasik (klasik müzik)"
+                },
+                {
+                  "orginal" : "занима́ться / заня́ться чем? (занима́ться спо́ртом) ",
+                  "translate" : " ders çalışmak"
+                },
+                {
+                  "orginal" : "да́ча ",
+                  "translate" : " Rus tipi yazlık evi"
+                },
+                {
+                  "orginal" : "пе́нсия / быть на пе́нсии ",
+                  "translate" : " emekli maaş/emeklilik / emekli olmak"
+                },
+                {
+                  "orginal" : "пенсионе́р / пансионе́рка",
+                  "translate" : " emekli erkek / kadın"
+                },
+                {
+                  "orginal" : "бассе́йн",
+                  "translate" : " havuz"
+                },
+                {
+                  "orginal" : "билья́рд",
+                  "translate" : " bilardo"
+                },
+                {
+                  "orginal" : "гара́ж",
+                  "translate" : " garaj"
+                },
+                {
+                  "orginal" : "клубни́ка ",
+                  "translate" : " çilek"
+                },
+                {
+                  "orginal" : "фантази́ровать / пофантази́ровать о чём?",
+                  "translate" : " neyin fantezisini kurmak"
+                },
+                {
+                  "orginal" : "фанта́зия ",
+                  "translate" : " fantezi"
+                },
+                {
+                  "orginal" : "всё таки ",
+                  "translate" : " yine de"
+                },
+                {
+                  "orginal" : "стра́нный",
+                  "translate" : " garip, tuhaf"
+                },
+                {
+                  "orginal" : "плане́та ",
+                  "translate" : " gezegen"
+                },
+                {
+                  "orginal" : "океа́н ",
+                  "translate" : " okyanus"
+                },
+                {
+                  "orginal" : "контине́нт ",
+                  "translate" : " kıta, kara"
+                },
+                {
+                  "orginal" : "сейф ",
+                  "translate" : " para kasası"
+                },
+                {
+                  "orginal" : "кошелёк ",
+                  "translate" : " cüzdan"
+                },
+                {
+                  "orginal" : "луна́ ",
+                  "translate" : " dolunay"
+                },
+                {
+                  "orginal" : "звезда́ ",
+                  "translate" : " yıldız"
+                },
+                {
+                  "orginal" : "самолёт ",
+                  "translate" : " uçak"
+                },
+                {
+                  "orginal" : "карма́н ",
+                  "translate" : " cep"
+                },
+                {
+                  "orginal" : "ва́нная ",
+                  "translate" : " banyo odası"
+                },
+                {
+                  "orginal" : "везде́ ",
+                  "translate" : " her yerde"
+                },
+                {
+                  "orginal" : "по́лка ",
+                  "translate" : " raf"
+                },
+                {
+                  "orginal" : "дива́н ",
+                  "translate" : " kanepe"
+                },
+                {
+                  "orginal" : "подоко́нник ",
+                  "translate" : " denizlik pencere önü"
+                },
+                {
+                  "orginal" : "ку́хня ",
+                  "translate" : " mutfak"
+                },
+                {
+                  "orginal" : "зе́ркало ",
+                  "translate" : " ayna"
+                },
+                {
+                  "orginal" : "клие́нт ",
+                  "translate" : " müşteri"
+                },
+                {
+                  "orginal" : "бути́к ",
+                  "translate" : " butik"
+                },
+                {
+                  "orginal" : "неда́вно ",
+                  "translate" : " geçen gün, kısa süre önce, yeni ('yeni geldim' gibi ifadelerde)"
+                },
+                {
+                  "orginal" : "всё вре́мя ",
+                  "translate" : " sürekli"
+                },
+                {
+                  "orginal" : "пока́зывать / показа́ть кого́? что? кому́? ",
+                  "translate" : " kimi, neyi, kime göstermek"
+                },
+                {
+                  "orginal" : "шеф ",
+                  "translate" : " patron"
+                },
+                {
+                  "orginal" : "пе́рвый раз ",
+                  "translate" : " ilk defa"
+                },
+                {
+                  "orginal" : "ожида́ть ",
+                  "translate" : " ummak, beklemek (ummak anlamında)"
+                },
+                {
+                  "orginal" : "универма́г ",
+                  "translate" : " süpermarket"
+                },
+                {
+                  "orginal" : "счёт / счёт в ба́нке ",
+                  "translate" : " hesap, bankadaki hesab (banka hesabı)"
+                },
+                {
+                  "orginal" : "мно́гое ",
+                  "translate" : " çok şey"
+                },
+                {
+                  "orginal" : "иностра́нец ",
+                  "translate" : " yabancı (başka ülkenin vatandaşı)"
+                },
+                {
+                  "orginal" : "ста́нция ",
+                  "translate" : " istasyon"
+                },
+                {
+                  "orginal" : "райо́н ",
+                  "translate" : " semt"
+                },
+                {
+                  "orginal" : "так / не так ",
+                  "translate" : " böyle / böyle değil"
+                },
+                {
+                  "orginal" : "тео́рия ",
+                  "translate" : " varsayım, teori"
+                },
+                {
+                  "orginal" : "ра́зные / ра́зные тео́рии ",
+                  "translate" : " çeşitli / çeşitli varsayımlar"
+                },
+                {
+                  "orginal" : "вокру́г чего́? ",
+                  "translate" : " neyin etrafında"
+                },
+                {
+                  "orginal" : "худо́жник ",
+                  "translate" : " ressam"
+                },
+                {
+                  "orginal" : "моделье́р ",
+                  "translate" : " moda tasarımcısı"
+                },
+                {
+                  "orginal" : "большо́й оригина́л ",
+                  "translate" : " çok orijinal biri "
+                },
+                {
+                  "orginal" : "шампу́нь ",
+                  "translate" : " şampuan"
+                },
+                {
+                  "orginal" : "голова́ ",
+                  "translate" : " baş, kafa"
+                },
+                {
+                  "orginal" : "висе́ть ",
+                  "translate" : " asılı durmak"
+                },
+                {
+                  "orginal" : "лежа́ть ",
+                  "translate" : " yatmak"
+                },
+                {
+                  "orginal" : "сиде́ть ",
+                  "translate" : " oturmak"
+                },
+                {
+                  "orginal" : "стоя́ть ",
+                  "translate" : "ayakta durmak"
+                },
+                {
+                  "orginal" : "карти́на ",
+                  "translate" : " tablo"
+                },
+                {
+                  "orginal" : "рису́нок ",
+                  "translate" : " resim"
+                },
+                {
+                  "orginal" : "га́лстук ",
+                  "translate" : " kravat"
+                },
+                {
+                  "orginal" : "пиджа́к ",
+                  "translate" : " ceket"
+                },
+                {
+                  "orginal" : "крова́ть ",
+                  "translate" : " karyola (yatak)"
+                },
+                {
+                  "orginal" : "бри́тва ",
+                  "translate" : " tıraş bıçağı"
+                },
+                {
+                  "orginal" : "бри́ться / побри́ться чем? ",
+                  "translate" : " neyle tıraş olmak"
+                },
+                {
+                  "orginal" : "мы́ло ",
+                  "translate" : " sabun"
+                },
+                {
+                  "orginal" : "мыть / помы́ть что? чем? ",
+                  "translate" : " neyi neyle yıkamak"
+                },
+                {
+                  "orginal" : "щётка ",
+                  "translate" : " fırça"
+                },
+                {
+                  "orginal" : "зубна́я щётка ",
+                  "translate" : " diş fırçası"
+                },
+                {
+                  "orginal" : "командиро́вка ",
+                  "translate" : " iş seyahatı"
+                },
+                {
+                  "orginal" : "эконо́мика ",
+                  "translate" : " ekonomi"
+                },
+                {
+                  "orginal" : "психотерапе́вт ",
+                  "translate" : " psikoterapist"
+                },
+                {
+                  "orginal" : "популя́рный ",
+                  "translate" : " ünlü, meşhur"
+                },
+                {
+                  "orginal" : "разгова́ривать с кем? о чём? ",
+                  "translate" : " kiminle ne hakkında konuşmak, sohbet etmek (karşılıklı konuşmak)"
+                },
+                {
+                  "orginal" : "зарпла́та ",
+                  "translate" : " maaş"
+                },
+                {
+                  "orginal" : "весь ",
+                  "translate" : " tüm"
+                },
+                {
+                  "orginal" : "литерату́ра ",
+                  "translate" : " edebiyat"
+                },
+                {
+                  "orginal" : "любо́вь ",
+                  "translate" : " aşk, sevgi"
+                },
+                {
+                  "orginal" : "выслу́шивать / вы́слушать кого́? ",
+                  "translate" : " kimi baştan sonuna kadar dikkatli dinlemek"
+                },
+                {
+                  "orginal" : "сове́т / дать сове́т ",
+                  "translate" : " tavsiye / tavsiye vermek"
+                },
+                {
+                  "orginal" : "сча́стье ",
+                  "translate" : " mutluluk"
+                },
+                {
+                  "orginal" : "счастли́вый ",
+                  "translate" : " mutlu /şanslı"
+                },
+                {
+                  "orginal" : "зага́дка ",
+                  "translate" : " bulmaca"
+                },
+                {
+                  "orginal" : "зага́дывать / загада́ть зага́дку ",
+                  "translate" : " bulmaca sormak"
+                },
+                {
+                  "orginal" : "уга́дывать / угада́ть зага́дку ",
+                  "translate" : " bulmaca çözmek"
+                },
+                {
+                  "orginal" : "стомато́лог ",
+                  "translate" : " diş doktoru"
+                },
+                {
+                  "orginal" : "танцева́ть / станцева́ть ",
+                  "translate" : " dans etmek"
+                },
+                {
+                  "orginal" : "та́нец ",
+                  "translate" : " dans"
+                },
+                {
+                  "orginal" : "столо́вая ",
+                  "translate" : " yemekhane, lokanta"
+                },
+                {
+                  "orginal" : "еда́ ",
+                  "translate" : " yemek, yiyecek"
+                },
+                {
+                  "orginal" : "суп ",
+                  "translate" : " çorba"
+                },
+                {
+                  "orginal" : "мя́со ",
+                  "translate" : " et"
+                },
+                {
+                  "orginal" : "сала́т ",
+                  "translate" : " salata"
+                },
+                {
+                  "orginal" : "милиционе́р ",
+                  "translate" : " polis (Ukrayna'da)"
+                },
+                {
+                  "orginal" : "мили́ция ",
+                  "translate" : " polis teşkilatı, polis şubesi, karakola"
+                },
+                {
+                  "orginal" : "полице́йский ",
+                  "translate" : " polis (Rusya'da)"
+                },
+                {
+                  "orginal" : "поли́ция ",
+                  "translate" : " polis teşkilatı, polis şubesi, karakola"
+                },
+                {
+                  "orginal" : "банди́т ",
+                  "translate" : " eşkiya"
+                },
+                {
+                  "orginal" : "ба́нда",
+                  "translate" : " çete"
+                },
+                {
+                  "orginal" : "колле́га ",
+                  "translate" : " meslektaş, iş arkadaşı"
+                },
+                {
+                  "orginal" : "хулига́н ",
+                  "translate" : " holigan, kabadayı, zorba, sataşan kimse"
+                },
+                {
+                  "orginal" : "друго́й ",
+                  "translate" : " diğer, başka"
+                },
+                {
+                  "orginal" : "ничего́ плохо́го / ничего́ плохо́го не де́лать ",
+                  "translate" : " kötü bir şey yok / kötü bir şey yapmamak"
+                },
+                {
+                  "orginal" : "ничего́ хоро́шего / ничего́ хоро́шего не де́лать ",
+                  "translate" : " iyi bir şey yok / iyi bir şey yapmamak"
+                },
+                {
+                  "orginal" : "музыка́льный инструме́нт ",
+                  "translate" : " müzik aleti"
+                },
+                {
+                  "orginal" : "зал / конце́ртный зал ",
+                  "translate" : " salon / konser salonu"
+                },
+                {
+                  "orginal" : "приду́мывать / приду́мать что? ",
+                  "translate" : " bulmak, uydurmak, akıl etmek,"
+                },
+                {
+                  "orginal" : "приду́мывать ",
+                  "translate" : " kural koymak"
+                },
+                {
+                  "orginal" : "приду́мывать ",
+                  "translate" : " bir yol bulmak"
+                },
+                {
+                  "orginal" : "приду́мать и́мя ",
+                  "translate" : " isim koymak"
+                },
+                {
+                  "orginal" : "приду́мать план ",
+                  "translate" : " plan yapmak"
+                },
+                {
+                  "orginal" : "приду́мать оправда́ние ",
+                  "translate" : " bahane uydurmak"
+                },
+                {
+                  "orginal" : "приду́мать Интерне́т ",
+                  "translate" : " İnternet'i icat etmek"
+                },
+                {
+                  "orginal" : "приду́мать зага́дку ",
+                  "translate" : " bulmacayı oluşturmak"
+                },
+                {
+                  "orginal" : "что-нибу́дь приду́маем ",
+                  "translate" : " bir şekilde hallederiz"
+                },
+                {
+                  "orginal" : "понеде́льник ",
+                  "translate" : " Pazartesi"
+                },
+                {
+                  "orginal" : "вто́рник ",
+                  "translate" : " Salı"
+                },
+                {
+                  "orginal" : "среда́ ",
+                  "translate" : " Çarşamba"
+                },
+                {
+                  "orginal" : "четве́рг ",
+                  "translate" : " Perşembe"
+                },
+                {
+                  "orginal" : "пя́тница ",
+                  "translate" : " Cuma"
+                },
+                {
+                  "orginal" : "суббо́та ",
+                  "translate" : " Cumartesi"
+                },
+                {
+                  "orginal" : "воскресе́нье ",
+                  "translate" : " Pazar"
+                },
+                {
+                  "orginal" : "скуча́ть ",
+                  "translate" : " canı sıkılmak"
+                },
+                {
+                  "orginal" : "путь ",
+                  "translate" : " yolculuk, yol"
+                },
+                {
+                  "orginal" : "доро́га ",
+                  "translate" : " yol, yolculuk"
+                },
+                {
+                  "orginal" : "пра́вильный ",
+                  "translate" : " doğru olan"
+                },
+                {
+                  "orginal" : "ве́рный ",
+                  "translate" : " doğru olan"
+                },
+                {
+                  "orginal" : "успе́х ",
+                  "translate" : " başarı"
+                },
+                {
+                  "orginal" : "неуда́ча ",
+                  "translate" : " başarısızlık"
+                },
+                {
+                  "orginal" : "открыва́ть ",
+                  "translate" : " açmak"
+                },
+                {
+                  "orginal" : "закрыва́ть ",
+                  "translate" : "kapatmak "
+                },
+                {
+                  "orginal" : "ка́ждый ",
+                  "translate" : " her"
+                },
+                {
+                  "orginal" : "находи́ть ",
+                  "translate" : " bulmak"
+                },
+                {
+                  "orginal" : "ваго́н ",
+                  "translate" : " vagon"
+                },
+                {
+                  "orginal" : "о́бщий ваго́н ",
+                  "translate" : " oturma koltuklu vagon"
+                },
+                {
+                  "orginal" : "плацка́ртный ваго́н ",
+                  "translate" : " yataklı vagon"
+                },
+                {
+                  "orginal" : "купе́йный ваго́н ",
+                  "translate" : " kompartımanlı vagon"
+                },
+                {
+                  "orginal" : "спа́льный ваго́н ",
+                  "translate" : "yataklı vagon"
+                },
+                {
+                  "orginal" : "премиум ваго́н ",
+                  "translate" : " birinci sınıf vagon"
+                },
+                {
+                  "orginal" : "купе́ ",
+                  "translate" : " kompartıman"
+                },
+                {
+                  "orginal" : "улыба́ться ",
+                  "translate" : " gülümsemek"
+                },
+                {
+                  "orginal" : "происходи́ть ",
+                  "translate" : " meydana gelmek, yer almak, olmak"
+                },
+                {
+                  "orginal" : "тепле́ть / потепле́ть где? ",
+                  "translate" : " ne ısınmak"
+                },
+                {
+                  "orginal" : "та́ять / раста́ять ",
+                  "translate" : " erimek"
+                },
+                {
+                  "orginal" : "цвести́ / расцвести́ ",
+                  "translate" : " çiçek açmak"
+                },
+                {
+                  "orginal" : "пти́ца ",
+                  "translate" : " kuş"
+                },
+                {
+                  "orginal" : "свети́ть / посвети́ть ",
+                  "translate" : " ışık vermek, parlamak (güneş için)"
+                },
+                {
+                  "orginal" : "греть / согре́ть кого? что? ",
+                  "translate" : " kimi, neyi ısıtmak"
+                },
+                {
+                  "orginal" : "спеть/ поспе́ть ",
+                  "translate" : " olgunlaşmak, olmak (meyve, sebze için)"
+                },
+                {
+                  "orginal" : "вре́мя года ",
+                  "translate" : " mevsim"
+                },
+                {
+                  "orginal" : "торго́вый центр ",
+                  "translate" : " alışveriş merkezi"
+                },
+                {
+                  "orginal" : "универма́г ",
+                  "translate" : " süpermarket, alışveriş merkezi"
+                },
+                {
+                  "orginal" : "благодари́ть / поблагодари́ть за что? ",
+                  "translate" : " ne için teşekkür etmek"
+                },
+                {
+                  "orginal" : "про́сто замеча́тельно! ",
+                  "translate" : " harika valla!"
+                },
+                {
+                  "orginal" : "начина́ть / нача́ть что? ",
+                  "translate" : " neye başlamak (örneğin; derse başlamak)"
+                },
+                {
+                  "orginal" : "начина́ться / нача́ться ",
+                  "translate" : " ne başlamak (örneğin; ders başlıyor)"
+                },
+                {
+                  "orginal" : "нача́ло ",
+                  "translate" : " başlangıç"
+                },
+                {
+                  "orginal" : "зака́нчивать / зако́нчить что? ",
+                  "translate" : " neyi bitirmek"
+                },
+                {
+                  "orginal" : "зака́нчиваться / зако́нчиться ",
+                  "translate" : " bitmek"
+                },
+                {
+                  "orginal" : "коне́ц ",
+                  "translate" : " son"
+                },
+                {
+                  "orginal" : "мо́дный ",
+                  "translate" : " moda olan"
+                },
+                {
+                  "orginal" : "кру́то / круто́й ",
+                  "translate" : " harika / havalı"
+                },
+                {
+                  "orginal" : "тала́нт ",
+                  "translate" : " yetenek"
+                },
+                {
+                  "orginal" : "тала́нтливый ",
+                  "translate" : " yetenekli"
+                },
+                {
+                  "orginal" : "уда́чливый ",
+                  "translate" : " şanslı"
+                },
+                {
+                  "orginal" : "поня́тливый ",
+                  "translate" : " anlayışlı"
+                },
+                {
+                  "orginal" : "устава́ть / уста́ть ",
+                  "translate" : " yorulmak"
+                },
+                {
+                  "orginal" : "исто́рия ",
+                  "translate" : " tarih, kısa hikaye"
+                },
+                {
+                  "orginal" : "матема́тика ",
+                  "translate" : " matematik"
+                },
+                {
+                  "orginal" : "фи́зика ",
+                  "translate" : " fizik"
+                },
+                {
+                  "orginal" : "иностра́нный язы́к ",
+                  "translate" : " yabancı dil"
+                },
+                {
+                  "orginal" : "вещь (она́) ",
+                  "translate" : " eşya"
+                },
+                {
+                  "orginal" : "носо́к ",
+                  "translate" : " çorap"
+                },
+                {
+                  "orginal" : "ча́йник ",
+                  "translate" : " çaydanlık"
+                },
+                {
+                  "orginal" : "ча́шка ",
+                  "translate" : " fincan"
+                },
+                {
+                  "orginal" : "ви́лка ",
+                  "translate" : " çatal"
+                },
+                {
+                  "orginal" : "нож ",
+                  "translate" : " bıçak"
+                },
+                {
+                  "orginal" : "диск ",
+                  "translate" : " CD, disk"
+                },
+                {
+                  "orginal" : "кни́жный шкаф (она́) ",
+                  "translate" : " kitap dolabı"
+                },
+                {
+                  "orginal" : "дверно́й замо́к ",
+                  "translate" : " kapı kilidi"
+                },
+                {
+                  "orginal" : "шко́льные го́ды ",
+                  "translate" : " okul yılları"
+                },
+                {
+                  "orginal" : "копчёная колбаса́ ",
+                  "translate" : " sucuk"
+                },
+                {
+                  "orginal" : "варёная колбаса́ ",
+                  "translate" : " haşlanmış sosis"
+                },
+                {
+                  "orginal" : "сли́вочное ма́сло ",
+                  "translate" : " tereyağı"
+                },
+                {
+                  "orginal" : "расти́тельное ма́сло ",
+                  "translate" : " sıvı yağı"
+                },
+                {
+                  "orginal" : "варе́нье ",
+                  "translate" : " reçel"
+                },
+                {
+                  "orginal" : "ме́бель ",
+                  "translate" : " mobilya"
+                },
+                {
+                  "orginal" : "посу́да ",
+                  "translate" : " çanak çömlek, bulaşık"
+                },
+                {
+                  "orginal" : "ужа́сный ",
+                  "translate" : " korkunç, felaket, iğrenç"
+                },
+                {
+                  "orginal" : "высо́кий ",
+                  "translate" : " yüksek, uzun boylu"
+                },
+                {
+                  "orginal" : "сли́шком ",
+                  "translate" : " çok fazla, fazlasıyla"
+                },
+                {
+                  "orginal" : "цена́ ",
+                  "translate" : " fiyat"
+                },
+                {
+                  "orginal" : "Что с тобо́й происхо́дит? ",
+                  "translate" : " sana ne oluyor"
+                },
+                {
+                  "orginal" : "норма́льный челове́к ",
+                  "translate" : " normal, düzgün bir insan"
+                },
+                {
+                  "orginal" : "яйцо́ ",
+                  "translate" : " yumurta"
+                },
+                {
+                  "orginal" : "яи́чница ",
+                  "translate" : " sahanda yumurta"
+                },
+                {
+                  "orginal" : "дово́лен чем? ",
+                  "translate" : " ne ile memnun"
+                },
+                {
+                  "orginal" : "Будь дово́лен! ",
+                  "translate" : " keyfine bak memnun ol"
+                },
+                {
+                  "orginal" : "включа́ть ",
+                  "translate" : " açmak"
+                },
+                {
+                  "orginal" : "свет ",
+                  "translate" : " elektrik, ışık, lamba"
+                },
+                {
+                  "orginal" : "тра́тить / потра́тить что? на что? ",
+                  "translate" : " neyi ne için harcamak"
+                },
+                {
+                  "orginal" : "не́рвничать / разне́рвничаться ",
+                  "translate" : " sinirlenmek, sinir olmak"
+                },
+                {
+                  "orginal" : "мяч ",
+                  "translate" : " top"
+                },
+                {
+                  "orginal" : "опя́ть ",
+                  "translate" : " yine, tekrar"
+                },
+                {
+                  "orginal" : "пла́кать / запла́кать ",
+                  "translate" : " ağlamak / ağlamaya başlamak"
+                },
+                {
+                  "orginal" : "учи́ть наизу́сть / вы́учить наизу́сть ",
+                  "translate" : " ezberlemek"
+                },
+                {
+                  "orginal" : "консервато́рия ",
+                  "translate" : " konservatuar"
+                },
+                {
+                  "orginal" : "бараба́н ",
+                  "translate" : " davul, trampet"
+                },
+                {
+                  "orginal" : "фле́йта ",
+                  "translate" : " flüt"
+                },
+                {
+                  "orginal" : "культу́ра ",
+                  "translate" : " kültür"
+                },
+                {
+                  "orginal" : "хи́нди ",
+                  "translate" : " Hintçe, Hint dili"
+                },
+                {
+                  "orginal" : "род ",
+                  "translate" : " sülale, soy"
+                },
+                {
+                  "orginal" : "объясня́ть / объясни́ть кому́? что? ",
+                  "translate" : " kime ne açıklamak"
+                },
+                {
+                  "orginal" : "знако́мый ",
+                  "translate" : " tanıdık"
+                },
+                {
+                  "orginal" : "чужо́й ",
+                  "translate" : " yabancı"
+                },
+                {
+                  "orginal" : "капиталисти́ческий ",
+                  "translate" : " kapitalist sistemi ile ilgili"
+                },
+                {
+                  "orginal" : "рок-музыка́нт ",
+                  "translate" : " Rock müzisyen"
+                },
+                {
+                  "orginal" : "шоу-би́знес ",
+                  "translate" : " eğlence sektörü"
+                },
+                {
+                  "orginal" : "поэ́т ",
+                  "translate" : " şair"
+                },
+                {
+                  "orginal" : "стих, стихотворе́ние ",
+                  "translate" : " şiir"
+                },
+                {
+                  "orginal" : "юг, ю́жный (ю́жный ве́тер) ",
+                  "translate" : " Güney, Güney ile ilgili (Güney rüzgarı)"
+                },
+                {
+                  "orginal" : "се́вер, се́верный (Се́верный по́люс) ",
+                  "translate" : " Kuzey, Kuzey ile ilgili"
+                },
+                {
+                  "orginal" : "восто́к, восто́чный (восто́чный та́нец) ",
+                  "translate" : " Doğu, Doğu ile ilgili"
+                },
+                {
+                  "orginal" : "за́пад, за́падный (за́падная культу́ра) ",
+                  "translate" : " Batı, Batı ile ilgili (Batı"
+                },
+                {
+                  "orginal" : "Сове́тский Сою́з ",
+                  "translate" : " Sovyetler Birliği"
+                },
+                {
+                  "orginal" : "получа́ть ",
+                  "translate" : " (teslim) almak"
+                },
+                {
+                  "orginal" : "посы́лка ",
+                  "translate" : " kargo"
+                },
+                {
+                  "orginal" : "про́сто, то́лько ",
+                  "translate" : " sadece (basitçe), sadece (ancak)"
+                },
+                {
+                  "orginal" : "филосо́фия ",
+                  "translate" : " felsefi"
+                },
+                {
+                  "orginal" : "ге́ний ",
+                  "translate" : " deha"
+                },
+                {
+                  "orginal" : "(как?) гениа́льно / (какой?) гениа́льный ",
+                  "translate" : " dahice (belirteç (zarf) / sıfat)"
+                },
+                {
+                  "orginal" : "совреме́нный ",
+                  "translate" : " modern, günümüzde olan"
+                },
+                {
+                  "orginal" : "оптимисти́чно ",
+                  "translate" : " iyimserce"
+                },
+                {
+                  "orginal" : "оптимисти́чный челове́к ",
+                  "translate" : " iyimser insan"
+                },
+                {
+                  "orginal" : "неформа́льный ",
+                  "translate" : " gayriresmi"
+                },
+                {
+                  "orginal" : "колле́га ",
+                  "translate" : " meslektaş, iş arkadaşı"
+                },
+                {
+                  "orginal" : "колле́га по рабо́те ",
+                  "translate" : " iş arkadaşı"
+                },
+                {
+                  "orginal" : "колле́га по университе́ту ",
+                  "translate" : " üniversite arkadaşı"
+                },
+                {
+                  "orginal" : "колле́га по слу́жбе ",
+                  "translate" : " meslektaş"
+                },
+                {
+                  "orginal" : "мир ",
+                  "translate" : " dünya (Dünya deği); barış"
+                },
+                {
+                  "orginal" : "мир во всём ми́ре ",
+                  "translate" : " tüm dünyada barış"
+                },
+                {
+                  "orginal" : "потихо́ньку ",
+                  "translate" : " yavaş yavaş, idare eder"
+                },
+                {
+                  "orginal" : "как всегда́ ",
+                  "translate" : " her zamanki gibi"
+                },
+                {
+                  "orginal" : "как обы́чно ",
+                  "translate" : " her zamanki gibi"
+                },
+                {
+                  "orginal" : "забыва́ть / забы́ть кого? что? о ком? о чём? ",
+                  "translate" : " ne, kimi, ne hakkında, kim hakkında ututmak"
+                },
+                {
+                  "orginal" : "услы́шать в отве́т ",
+                  "translate" : " cevap olarak duymak "
+                },
+                {
+                  "orginal" : "боле́ть / заболе́ть чем? ",
+                  "translate" : " hasta yatmak / olmak, hastalanmak, ne hastalığıkapmak"
+                },
+                {
+                  "orginal" : "голова́ боли́т ",
+                  "translate" : " başı / m ağrıyor"
+                },
+                {
+                  "orginal" : "пло́хо учи́ться ",
+                  "translate" : " okulda başarılı olamamak, kötü notlara sahip olmak"
+                },
+                {
+                  "orginal" : "задава́ть / зада́ть вопро́с ",
+                  "translate" : " soru sormak"
+                },
+                {
+                  "orginal" : "отвеча́ть / отве́тить на вопро́с ",
+                  "translate" : " soruyu cevaplamak"
+                },
+                {
+                  "orginal" : "незнако́мый ",
+                  "translate" : " tanımadık, yabancı biri"
+                },
+                {
+                  "orginal" : "напро́тив чего́? ",
+                  "translate" : " nayin karşısında"
+                },
+                {
+                  "orginal" : "напро́тив друг дру́га ",
+                  "translate" : " karşı karşıya"
+                },
+                {
+                  "orginal" : "друг про́тив дру́га ",
+                  "translate" : " karşı karşıya"
+                },
+                {
+                  "orginal" : "возвраща́ться / верну́ться откуда? куда? ",
+                  "translate" : " nereden, nereye dönmek"
+                },
+                {
+                  "orginal" : "нача́ть что де́лать? ",
+                  "translate" : " ne yapmaya başlamak"
+                },
+                {
+                  "orginal" : "стать что де́лать? ",
+                  "translate" : " ne yapmaya başlamak"
+                },
+                {
+                  "orginal" : "продолжа́ть что де́лать? ",
+                  "translate" : " ne yapmaya devam etmek"
+                },
+                {
+                  "orginal" : "переста́ть что де́лать? ",
+                  "translate" : " ne yapmayı kesmek / durdurmak"
+                },
+                {
+                  "orginal" : "ко́нчить что де́лать? ",
+                  "translate" : " ne yapmayı bitirmek"
+                },
+                {
+                  "orginal" : "встреча́ть / встре́тить кого? ",
+                  "translate" : " kimi karşılamak, kime rastlamak, kiminle"
+                },
+                {
+                  "orginal" : "сра́зу ",
+                  "translate" : " hemen, o anda"
+                },
+                {
+                  "orginal" : "блонди́н / блонди́нка ",
+                  "translate" : " sarışın erkek / kadın"
+                },
+                {
+                  "orginal" : "брюне́т / брюне́тка ",
+                  "translate" : " esmer erkek / kadın"
+                },
+                {
+                  "orginal" : "теря́ть / потеря́ть кого́? что? ",
+                  "translate" : " kimi, ne kaybetmek"
+                },
+                {
+                  "orginal" : "коме́дия ",
+                  "translate" : " komedi"
+                },
+                {
+                  "orginal" : "траге́дия ",
+                  "translate" : " trajedi"
+                },
+                {
+                  "orginal" : "глу́пый ",
+                  "translate" : " budala, aptal"
+                },
+                {
+                  "orginal" : "нача́льник / нача́льница ",
+                  "translate" : " şef, başkan, amir, müdür erkek / kadın"
+                },
+                {
+                  "orginal" : "секрета́рь (секрета́рша) ",
+                  "translate" : " sekreter erkek / kadın (konuşma üslubu ile sekreter kadın)"
+                },
+                {
+                  "orginal" : "вечери́нка ",
+                  "translate" : " akşam partisi"
+                },
+                {
+                  "orginal" : "анекдо́т ",
+                  "translate" : " fıkra"
+                },
+                {
+                  "orginal" : "жениться на ком? ",
+                  "translate" : " kiminle evlenmek (erkek için söylenir)"
+                },
+                {
+                  "orginal" : "выходи́ть / вы́йти за́муж за кого́? ",
+                  "translate" : " kiminle evlenmek (kadın için söylenir)"
+                },
+                {
+                  "orginal" : "жени́ться / пожени́ться ",
+                  "translate" : " evlenmek (evlenen çift için söylenir)"
+                },
+                {
+                  "orginal" : "прести́ж ",
+                  "translate" : " saygınlık, itibar, prestij"
+                },
+                {
+                  "orginal" : "прести́жный / прести́жно ",
+                  "translate" : " saygın, itibarlı, prestijli (zarf/önad)"
+                },
+                {
+                  "orginal" : "детекти́в ",
+                  "translate" : " polis hafiyesi, polis hikayesi, polisiye"
+                },
+                {
+                  "orginal" : "кла́ссика ",
+                  "translate" : " klasik romanlar, dünya klasikleri"
+                },
+                {
+                  "orginal" : "име́ть что? ",
+                  "translate" : " neye sahip olmak"
+                },
+                {
+                  "orginal" : "легко́ ",
+                  "translate" : " kolayca"
+                },
+                {
+                  "orginal" : "почти́ ",
+                  "translate" : " neredeyse"
+                },
+                {
+                  "orginal" : "электро́нная кни́га ",
+                  "translate" : " elektronik kitap"
+                },
+                {
+                  "orginal" : "бума́га ",
+                  "translate" : " kağıt"
+                },
+                {
+                  "orginal" : "бума́жная кни́га ",
+                  "translate" : " kağıt kitap"
+                },
+                {
+                  "orginal" : "лю́ди поста́рше ",
+                  "translate" : " yaşça büyük insanlar"
+                },
+                {
+                  "orginal" : "обы́чный ",
+                  "translate" : " sıradan, alışılmış"
+                },
+                {
+                  "orginal" : "слы́шно кому́? кого́? как? ",
+                  "translate" : " kime, kimin sesi gelmek"
+                },
+                {
+                  "orginal" : "(мне вас) пло́хо / хорошо́ слы́шно ",
+                  "translate" : " (bana) sesiniz kötü / iyi geliyor"
+                },
+                {
+                  "orginal" : "то́чка ",
+                  "translate" : " nokta"
+                },
+                {
+                  "orginal" : "электро́нная по́чта ",
+                  "translate" : " elektronik posta"
+                },
+                {
+                  "orginal" : "ко́шка ",
+                  "translate" : " dişi kedi"
+                },
+                {
+                  "orginal" : "знак ",
+                  "translate" : " işaret"
+                },
+                {
+                  "orginal" : "обезья́на ",
+                  "translate" : " maymun"
+                },
+                {
+                  "orginal" : "несча́стный ",
+                  "translate" : " mutsuz, zavallı, talihsiz, bedbaht"
+                },
+                {
+                  "orginal" : "несча́стье ",
+                  "translate" : " mutsuzluk, talihsizlik, kötü bir olay"
+                },
+                {
+                  "orginal" : "впро́чем ",
+                  "translate" : " aslında, bununla beraber"
+                },
+                {
+                  "orginal" : "заче́м? / для чего́? ",
+                  "translate" : " ne için, ne diye"
+                },
+                {
+                  "orginal" : "да́же ",
+                  "translate" : " bile"
+                },
+                {
+                  "orginal" : "налива́ть / нали́ть что? куда́? ",
+                  "translate" : " ne nereye koymak (sıvı için söylenir)"
+                },
+                {
+                  "orginal" : "вертолёт ",
+                  "translate" : " helekopter"
+                },
+                {
+                  "orginal" : "всего́ лишь ",
+                  "translate" : " sadece, ancak (çok az anlamında)"
+                },
+                {
+                  "orginal" : "диа́гноз ",
+                  "translate" : " teşhis"
+                },
+                {
+                  "orginal" : "температу́ра ",
+                  "translate" : " ateş, vücut sıcaklığı"
+                },
+                {
+                  "orginal" : "ни́зкий ",
+                  "translate" : " düşük, alçak, kısa boylu"
+                },
+                {
+                  "orginal" : "ка́шель ",
+                  "translate" : " öksürük"
+                },
+                {
+                  "orginal" : "на́сморк ",
+                  "translate" : " burun akıntısı"
+                },
+                {
+                  "orginal" : "простужа́ться / простуди́ться ",
+                  "translate" : " nezle olmak, üşütmek"
+                },
+                {
+                  "orginal" : "просту́да ",
+                  "translate" : " nezle"
+                },
+                {
+                  "orginal" : "лека́рство ",
+                  "translate" : " ilaç"
+                },
+                {
+                  "orginal" : "выпи́сывать / вы́писать лека́рство ",
+                  "translate" : " ilaç yazmak"
+                },
+                {
+                  "orginal" : "чу́вствовать / почу́вствовать себя́ как? ",
+                  "translate" : " kendini nasıl hissetmek"
+                },
+                {
+                  "orginal" : "День рожде́ния ",
+                  "translate" : " Doğum Günü"
+                },
+                {
+                  "orginal" : "ура́! ",
+                  "translate" : " Yaşa! "
+                },
+                {
+                  "orginal" : "крича́ть / прокрича́ть что? ",
+                  "translate" : " bağırmak"
+                },
+                {
+                  "orginal" : "ско́рая по́мощь ",
+                  "translate" : " ambulans"
+                },
+                {
+                  "orginal" : "вызыва́ть / вы́звать кого́? что? ",
+                  "translate" : " kimi, ne çağırmak"
+                },
+                {
+                  "orginal" : "вы́звать мили́цию / поли́цию ",
+                  "translate" : " polis çağırmak"
+                },
+                {
+                  "orginal" : "вы́звать такси́ ",
+                  "translate" : " taksi çağırmak"
+                },
+                {
+                  "orginal" : "вы́звать врача́ ",
+                  "translate" : " doktor çağırmak"
+                },
+                {
+                  "orginal" : "вы́звать ско́рую по́мощь ",
+                  "translate" : " ambulans çağırmak"
+                },
+                {
+                  "orginal" : "молодёжь ",
+                  "translate" : " gençler (dişil)"
+                },
+                {
+                  "orginal" : "молодёжный ",
+                  "translate" : " genç, gençlikle ilgili"
+                },
+                {
+                  "orginal" : "молодёжный фо́рум ",
+                  "translate" : " gençlik fotumu"
+                },
+                {
+                  "orginal" : "молодёжное движе́ние ",
+                  "translate" : " gençlik harekatı"
+                },
+                {
+                  "orginal" : "молодёжная кома́нда ",
+                  "translate" : " genç takım"
+                },
+                {
+                  "orginal" : "дра́ма ",
+                  "translate" : " dram"
+                },
+                {
+                  "orginal" : "драмати́ческий ",
+                  "translate" : " dram ile ilgili, dramatik"
+                },
+                {
+                  "orginal" : "драмати́ческий теа́тр ",
+                  "translate" : " drama tiyatrosu"
+                },
+                {
+                  "orginal" : "драмати́ческий слу́чай ",
+                  "translate" : " dramatik olay"
+                },
+                {
+                  "orginal" : "сце́на ",
+                  "translate" : " sahne"
+                },
+                {
+                  "orginal" : "мно́гие ",
+                  "translate" : " birçok "
+                },
+                {
+                  "orginal" : "бале́т ",
+                  "translate" : " bale"
+                },
+                {
+                  "orginal" : "ремо́нт ",
+                  "translate" : " onarım, tamir, bakım, tamirat"
+                },
+                {
+                  "orginal" : "спекта́кль ",
+                  "translate" : " gösteri, sahne oyunu, temsil"
+                },
+                {
+                  "orginal" : "кста́ти ",
+                  "translate" : " bu arada"
+                },
+                {
+                  "orginal" : "бли́зко (как?) / бли́зкий (како́й?) ",
+                  "translate" : " yakın / yakında olan"
+                },
+                {
+                  "orginal" : "далеко́(как?) / далёкий (како́й?) ",
+                  "translate" : " uzak / uzakta olan"
+                },
+                {
+                  "orginal" : "ближа́йший ",
+                  "translate" : " en yakın olan"
+                },
+                {
+                  "orginal" : "немно́го да́льше ",
+                  "translate" : " biraz daha uzakta"
+                },
+                {
+                  "orginal" : "в оди́н прекра́сный день ",
+                  "translate" : " günğn birinde "
+                },
+                {
+                  "orginal" : "хлеб ",
+                  "translate" : " ekmek"
+                },
+                {
+                  "orginal" : "рис ",
+                  "translate" : " pirinç"
+                },
+                {
+                  "orginal" : "са́хар ",
+                  "translate" : " şeker"
+                },
+                {
+                  "orginal" : "сыр ",
+                  "translate" : " peynir"
+                },
+                {
+                  "orginal" : "соль ",
+                  "translate" : " tuz"
+                },
+                {
+                  "orginal" : "яи́чница ",
+                  "translate" : " sahanda yumurta"
+                },
+                {
+                  "orginal" : "ря́дом ",
+                  "translate" : " yakın(da) (mesafe için söylenir)"
+                },
+                {
+                  "orginal" : "до́брый (челове́к) ",
+                  "translate" : " iyi kalplı, hoş görülü "
+                },
+                {
+                  "orginal" : "боксёр ",
+                  "translate" : " boksör"
+                },
+                {
+                  "orginal" : "каки́е пробле́мы? ",
+                  "translate" : " sorun ne?"
+                },
+                {
+                  "orginal" : "бифште́кс ",
+                  "translate" : " biftek"
+                },
+                {
+                  "orginal" : "(как?) до́рого / недо́рого ",
+                  "translate" : " pahalı (belirteç)"
+                },
+                {
+                  "orginal" : "вдруг ",
+                  "translate" : " birden"
+                },
+                {
+                  "orginal" : "медсестра́ / медбра́т ",
+                  "translate" : " hemşire kadın / erkek"
+                },
+                {
+                  "orginal" : "врач ",
+                  "translate" : " hekim"
+                },
+                {
+                  "orginal" : "рука́ ",
+                  "translate" : " el, kol"
+                },
+                {
+                  "orginal" : "умне́ть / поумне́ть ",
+                  "translate" : " akıllanmak"
+                },
+                {
+                  "orginal" : "фило́соф ",
+                  "translate" : " filozof "
+                },
+                {
+                  "orginal" : "во́ля ",
+                  "translate" : " irade"
+                },
+                {
+                  "orginal" : "выбира́ть / вы́брать кого́? что? ",
+                  "translate" : " kimi, ne seçmek"
+                },
+                {
+                  "orginal" : "свобо́да ",
+                  "translate" : " özgürlük"
+                },
+                {
+                  "orginal" : "свобо́дный / свобо́ден ",
+                  "translate" : " özgür, müsait (tam sıfat / kısa sıfat)"
+                },
+                {
+                  "orginal" : "э́то ме́сто свобо́дное? ",
+                  "translate" : " burası (bu koltuk) müsait mi?"
+                },
+                {
+                  "orginal" : "я свобо́дный челове́к ",
+                  "translate" : " ben özgür bir insanım"
+                },
+                {
+                  "orginal" : "я сего́дня свобо́ден ",
+                  "translate" : " bugün müsaitim"
+                },
+                {
+                  "orginal" : "согла́сен / согла́сна / согла́сны с кем? с чем? ",
+                  "translate" : " kiminle aynı fikirde olmak, kime, neye katılmak"
+                },
+                {
+                  "orginal" : "кварти́ра ",
+                  "translate" : " apartman dairesi"
+                },
+                {
+                  "orginal" : "свобо́дное вре́мя ",
+                  "translate" : " boş zaman"
+                },
+                {
+                  "orginal" : "кре́сло ",
+                  "translate" : " koltuk"
+                },
+                {
+                  "orginal" : "фигу́ра ",
+                  "translate" : " insanın fiziği, boy pos"
+                },
+                {
+                  "orginal" : "ла́па ",
+                  "translate" : " pençe"
+                },
+                {
+                  "orginal" : "хвост ",
+                  "translate" : " kuyruk"
+                },
+                {
+                  "orginal" : "виля́ть / вильну́ть чем? ",
+                  "translate" : " sallamak, oynatmak, kıvıra kıvıra gitmek"
+                },
+                {
+                  "orginal" : "виля́ть хвосто́м ",
+                  "translate" : " kuyruk sallamak"
+                },
+                {
+                  "orginal" : "банки́р ",
+                  "translate" : " bankacı"
+                },
+                {
+                  "orginal" : "шпио́н ",
+                  "translate" : " ispiyoncu"
+                },
+                {
+                  "orginal" : "кло́ун ",
+                  "translate" : " palyaço"
+                },
+                {
+                  "orginal" : "продаве́ц ",
+                  "translate" : " satıcı"
+                },
+                {
+                  "orginal" : "опа́сный ",
+                  "translate" : " tehlikeli"
+                },
+                {
+                  "orginal" : "секре́т ",
+                  "translate" : " sır"
+                },
+                {
+                  "orginal" : "секре́тный ",
+                  "translate" : " gizli"
+                },
+                {
+                  "orginal" : "тяжёлый ",
+                  "translate" : " zor, zahmetli"
+                },
+                {
+                  "orginal" : "ци́фра ",
+                  "translate" : " rakam"
+                },
+                {
+                  "orginal" : "случа́йно ",
+                  "translate" : " tesadüfen, yanlışlıkla"
+                },
+                {
+                  "orginal" : "про́бка ",
+                  "translate" : " trafik, tıkaç"
+                },
+                {
+                  "orginal" : "пассажи́р ",
+                  "translate" : " yolcu "
+                },
+                {
+                  "orginal" : "моби́льный телефо́н ",
+                  "translate" : " cep telefon"
+                },
+                {
+                  "orginal" : "дорого́й ",
+                  "translate" : " canım "
+                },
+                {
+                  "orginal" : "опа́здывать / опозда́ть куда? на ско́лько? ",
+                  "translate" : " nereye, ne kadar süre geç kalmak"
+                },
+                {
+                  "orginal" : "крича́ть / накрича́ть на кого́ ",
+                  "translate" : " kime bağırmak, kimi azarlamak"
+                },
+                {
+                  "orginal" : "волнова́ться / переволнова́ться о чём? о ком? за кого? ",
+                  "translate" : " ne için, kimin için endişelenmek"
+                },
+                {
+                  "orginal" : "винова́т ",
+                  "translate" : " suçlu "
+                },
+                {
+                  "orginal" : "огро́мный ",
+                  "translate" : " kocaman, devasa, çok büyük"
+                },
+                {
+                  "orginal" : "целова́ть / поцелова́ть кого? куда? ",
+                  "translate" : " kimi nereden öpmek"
+                },
+                {
+                  "orginal" : "разгово́р ",
+                  "translate" : " sohbet, konuşma"
+                },
+                {
+                  "orginal" : "телефо́нный разгово́р ",
+                  "translate" : " telefon konuşması"
+                },
+                {
+                  "orginal" : "че́рез ско́лько вре́мени? ",
+                  "translate" : " ne kadar süre sonra"
+                },
+                {
+                  "orginal" : "без кого́? чего́? ",
+                  "translate" : " kim, ne olmadan"
+                },
+                {
+                  "orginal" : "удо́бный ",
+                  "translate" : " rahat, kullanışlı, elverişli"
+                },
+                {
+                  "orginal" : "удо́бная вещь ",
+                  "translate" : " kullanımı rahat bir şey / bir eşya"
+                },
+                {
+                  "orginal" : "деревя́нный ",
+                  "translate" : " ahşap"
+                },
+                {
+                  "orginal" : "ска́зка, ска́зочный ",
+                  "translate" : " masal, masal ile ilgili"
+                },
+                {
+                  "orginal" : "фаса́д ",
+                  "translate" : " cephe"
+                },
+                {
+                  "orginal" : "галере́я ",
+                  "translate" : " galeri"
+                },
+                {
+                  "orginal" : "прое́кт ",
+                  "translate" : " proje"
+                },
+                {
+                  "orginal" : "стиль ",
+                  "translate" : " tarz"
+                },
+                {
+                  "orginal" : "в како́м сти́ле ",
+                  "translate" : " hangi tarzda?"
+                },
+                {
+                  "orginal" : "в ру́сском сти́ле ",
+                  "translate" : " Rus tarzında"
+                },
+                {
+                  "orginal" : "запомина́ть ",
+                  "translate" : " aklında tutmak, hatırlmak"
+                },
+                {
+                  "orginal" : "переу́лок ",
+                  "translate" : " ara sokak"
+                },
+                {
+                  "orginal" : "жи́вопись ",
+                  "translate" : " resim sanatı"
+                },
+                {
+                  "orginal" : "живо́й ",
+                  "translate" : " canlı"
+                },
+                {
+                  "orginal" : "берёза ",
+                  "translate" : " huş ağacı"
+                },
+                {
+                  "orginal" : "си́мвол ",
+                  "translate" : " sembol "
+                },
+                {
+                  "orginal" : "анса́мбль ",
+                  "translate" : " topluluk, grup"
+                },
+                {
+                  "orginal" : "анса́мбль пе́сни и та́нца ",
+                  "translate" : " şarkı ve oyun topluluğu"
+                },
+                {
+                  "orginal" : "визи́тная ка́рточка ",
+                  "translate" : " kartvizit "
+                },
+                {
+                  "orginal" : "не́жный ",
+                  "translate" : " narin, nazlı, nazik, çıtkırıldım"
+                },
+                {
+                  "orginal" : "пе́сня ",
+                  "translate" : " şarkı "
+                },
+                {
+                  "orginal" : "ра́ньше всех ",
+                  "translate" : " hepsinden evvel, ilk olarak "
+                },
+                {
+                  "orginal" : "поле́зный ",
+                  "translate" : " faydalı "
+                },
+                {
+                  "orginal" : "не́которые ",
+                  "translate" : " bazıları "
+                },
+                {
+                  "orginal" : "здоро́вье ",
+                  "translate" : " sağlık "
+                },
+                {
+                  "orginal" : "си́ла ",
+                  "translate" : " güç "
+                },
+                {
+                  "orginal" : "стро́йный ",
+                  "translate" : " endamlı, boyulu poslu"
+                },
+                {
+                  "orginal" : "секре́т ",
+                  "translate" : " sır"
+                },
+                {
+                  "orginal" : "данти́ст ",
+                  "translate" : " diş hekimi"
+                },
+                {
+                  "orginal" : "выдава́ть / вы́дать кого́? что? ",
+                  "translate" : " kimi ele vermek, ispiyonlamak; ne açıklamak"
+                },
+                {
+                  "orginal" : "вы́дать секре́т ",
+                  "translate" : " sır açıklamak"
+                },
+                {
+                  "orginal" : "парикма́хер ",
+                  "translate" : " kuaför, berber"
+                },
+                {
+                  "orginal" : "держа́ть / продержа́ть кого? что? где? ",
+                  "translate" : " kimi, ne, nerede tutmak"
+                },
+                {
+                  "orginal" : "храни́ть / сохрани́ть что? где? ",
+                  "translate" : " ne, nerede saklamak, korumak"
+                },
+                {
+                  "orginal" : "пода́рок ",
+                  "translate" : " hediye"
+                },
+                {
+                  "orginal" : "духи́ ",
+                  "translate" : " parfüm"
+                },
+                {
+                  "orginal" : "кастрю́ля ",
+                  "translate" : " tencere"
+                },
+                {
+                  "orginal" : "сковорода́ ",
+                  "translate" : " tava"
+                },
+                {
+                  "orginal" : "лягу́шка ",
+                  "translate" : " kurbağa"
+                },
+                {
+                  "orginal" : "коллекциони́ровать ",
+                  "translate" : " biriktirmek, koleksiyon yapmak"
+                },
+                {
+                  "orginal" : "коллекционе́р ",
+                  "translate" : " koleksiyoncu"
+                },
+                {
+                  "orginal" : "Рождество́ ",
+                  "translate" : " Noel Bayramı"
+                },
+                {
+                  "orginal" : "Но́вый год ",
+                  "translate" : "Yeni Yıl"
+                },
+                {
+                  "orginal" : "пья́ный ",
+                  "translate" : " sarhoş"
+                },
+                {
+                  "orginal" : "эта́ж ",
+                  "translate" : " apartıman katı"
+                },
+                {
+                  "orginal" : "симпати́чный ",
+                  "translate" : " sempatik, hoş"
+                },
+                {
+                  "orginal" : "обнима́ть / обня́ть кого? ",
+                  "translate" : " kime sarılmak"
+                },
+                {
+                  "orginal" : "ситуа́ция ",
+                  "translate" : " durum"
+                }
+        ],
+  "az":[
+
+
+
+        ]
+
+}
