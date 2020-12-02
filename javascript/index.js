@@ -2,8 +2,8 @@ $(document).ready(function()
 {
 	body 			= $("body");
 	darkness		= $(".darkness");
-	menu 			= $(".navbar");
-	navbar 			= $(".main-header i");
+	navbar 			= $(".navbar");
+	menu 			= $("#menu");
 	menu_opening 	= false;
 
 
@@ -11,11 +11,11 @@ $(document).ready(function()
 	notifications 	= JSON.parse(localStorage.notifications);
 	lang 			= JSON.parse(localStorage.applang);
 
-	if(localStorage.getItem("level") === null){
+	if(localStorage.getItem("levels") === null){
 		notification('level-select','question');		
 	}
 
-	navbar.click(function()
+	menu.click(function()
 	{
 		menuFunction.menuToggle();
 	});
@@ -50,11 +50,11 @@ $(document).ready(function()
 		{
 			if(menu_opening){
 				darkness.hide();
-				menu.fadeOut();				
+				navbar.fadeOut();				
 				menu_opening = false;
 			}
 			else{
-				menu.fadeIn();
+				navbar.fadeIn();
 				darkness.show();
 				setTimeout(function()
 				{
@@ -79,11 +79,13 @@ $(document).ready(function()
 
 			const { code: value } = Swal.fire(
 			{
-			  title			: notifications[lang][event]['message'],
-			  icon			: notifications[lang][event]['info'],
-			  input 		: 'radio',
-			  inputOptions 	: inputOptions,
-			  
+			  title				: notifications[lang][event]['message'],
+			  icon				: notifications[lang][event]['info'],
+			  input 			: 'radio',
+			  inputOptions 		: inputOptions,
+			  backdrop			: true,
+			  allowOutsideClick	: false,
+			  allowEscapeKey	: false,
 			  inputValidator: (value) => {
 
 			    if (!value) {
@@ -104,6 +106,9 @@ $(document).ready(function()
 			  icon					: notifications[lang][event]['info'],
 			  title					: notifications[lang][event]['message'],
 			  showConfirmButton 	: true,
+			  backdrop				: true,
+			  allowOutsideClick		: false,
+			  allowEscapeKey		: false,
 			  confirmButtonText 	: notifications[lang]['confirmText']
 			 
 			});

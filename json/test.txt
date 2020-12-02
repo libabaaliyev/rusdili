@@ -1,0 +1,1386 @@
+"trns": "diğer, başka"
+                },
+                {
+                  "orgn": "ничего́ плохо́го / ничего́ плохо́го не де́лать ",
+                  "trns": "kötü bir şey yok / kötü bir şey yapmamak"
+                },
+                {
+                  "orgn": "ничего́ хоро́шего / ничего́ хоро́шего не де́лать ",
+                  "trns": "iyi bir şey yok / iyi bir şey yapmamak"
+                },
+                {
+                  "orgn": "музыка́льный инструме́нт ",
+                  "trns": "müzik aleti"
+                },
+                {
+                  "orgn": "зал / конце́ртный зал ",
+                  "trns": "salon / konser salonu"
+                },
+                {
+                  "orgn": "приду́мывать / приду́мать что? ",
+                  "trns": "bulmak, uydurmak, akıl etmek,"
+                },
+                {
+                  "orgn": "приду́мывать ",
+                  "trns": "kural koymak"
+                },
+                {
+                  "orgn": "приду́мывать ",
+                  "trns": "bir yol bulmak"
+                },
+                {
+                  "orgn": "приду́мать и́мя ",
+                  "trns": "isim koymak"
+                },
+                {
+                  "orgn": "приду́мать план ",
+                  "trns": "plan yapmak"
+                },
+                {
+                  "orgn": "приду́мать оправда́ние ",
+                  "trns": "bahane uydurmak"
+                },
+                {
+                  "orgn": "приду́мать Интерне́т ",
+                  "trns": "İnternet'i icat etmek"
+                },
+                {
+                  "orgn": "приду́мать зага́дку ",
+                  "trns": "bulmacayı oluşturmak"
+                },
+                {
+                  "orgn": "что-нибу́дь приду́маем ",
+                  "trns": "bir şekilde hallederiz"
+                },
+                {
+                  "orgn": "понеде́льник ",
+                  "trns": "Pazartesi"
+                },
+                {
+                  "orgn": "вто́рник ",
+                  "trns": "Salı"
+                },
+                {
+                  "orgn": "среда́ ",
+                  "trns": "Çarşamba"
+                },
+                {
+                  "orgn": "четве́рг ",
+                  "trns": "Perşembe"
+                },
+                {
+                  "orgn": "пя́тница ",
+                  "trns": "Cuma"
+                },
+                {
+                  "orgn": "суббо́та ",
+                  "trns": "Cumartesi"
+                },
+                {
+                  "orgn": "воскресе́нье ",
+                  "trns": "Pazar"
+                },
+                {
+                  "orgn": "скуча́ть ",
+                  "trns": "canı sıkılmak"
+                },
+                {
+                  "orgn": "путь ",
+                  "trns": "yolculuk, yol"
+                },
+                {
+                  "orgn": "доро́га ",
+                  "trns": "yol, yolculuk"
+                },
+                {
+                  "orgn": "пра́вильный ",
+                  "trns": "doğru olan"
+                },
+                {
+                  "orgn": "ве́рный ",
+                  "trns": "doğru olan"
+                },
+                {
+                  "orgn": "успе́х ",
+                  "trns": "başarı"
+                },
+                {
+                  "orgn": "неуда́ча ",
+                  "trns": "başarısızlık"
+                },
+                {
+                  "orgn": "открыва́ть ",
+                  "trns": "açmak"
+                },
+                {
+                  "orgn": "закрыва́ть ",
+                  "trns": "kapatmak "
+                },
+                {
+                  "orgn": "ка́ждый ",
+                  "trns": "her"
+                },
+                {
+                  "orgn": "находи́ть ",
+                  "trns": "bulmak"
+                },
+                {
+                  "orgn": "ваго́н ",
+                  "trns": "vagon"
+                },
+                {
+                  "orgn": "о́бщий ваго́н ",
+                  "trns": "oturma koltuklu vagon"
+                },
+                {
+                  "orgn": "плацка́ртный ваго́н ",
+                  "trns": "yataklı vagon"
+                },
+                {
+                  "orgn": "купе́йный ваго́н ",
+                  "trns": "kompartımanlı vagon"
+                },
+                {
+                  "orgn": "спа́льный ваго́н ",
+                  "trns": "yataklı vagon"
+                },
+                {
+                  "orgn": "премиум ваго́н ",
+                  "trns": "birinci sınıf vagon"
+                },
+                {
+                  "orgn": "купе́ ",
+                  "trns": "kompartıman"
+                },
+                {
+                  "orgn": "улыба́ться ",
+                  "trns": "gülümsemek"
+                },
+                {
+                  "orgn": "происходи́ть ",
+                  "trns": "meydana gelmek, yer almak, olmak"
+                },
+                {
+                  "orgn": "тепле́ть / потепле́ть где? ",
+                  "trns": "ne ısınmak"
+                },
+                {
+                  "orgn": "та́ять / раста́ять ",
+                  "trns": "erimek"
+                },
+                {
+                  "orgn": "цвести́ / расцвести́ ",
+                  "trns": "çiçek açmak"
+                },
+                {
+                  "orgn": "пти́ца ",
+                  "trns": "kuş"
+                },
+                {
+                  "orgn": "свети́ть / посвети́ть ",
+                  "trns": "ışık vermek, parlamak (güneş için)"
+                },
+                {
+                  "orgn": "греть / согре́ть кого? что? ",
+                  "trns": "kimi, neyi ısıtmak"
+                },
+                {
+                  "orgn": "спеть/ поспе́ть ",
+                  "trns": "olgunlaşmak, olmak (meyve, sebze için)"
+                },
+                {
+                  "orgn": "вре́мя года ",
+                  "trns": "mevsim"
+                },
+                {
+                  "orgn": "торго́вый центр ",
+                  "trns": "alışveriş merkezi"
+                },
+                {
+                  "orgn": "универма́г ",
+                  "trns": "süpermarket, alışveriş merkezi"
+                },
+                {
+                  "orgn": "благодари́ть / поблагодари́ть за что? ",
+                  "trns": "ne için teşekkür etmek"
+                },
+                {
+                  "orgn": "про́сто замеча́тельно! ",
+                  "trns": "harika valla!"
+                },
+                {
+                  "orgn": "начина́ть / нача́ть что? ",
+                  "trns": "neye başlamak (örneğin; derse başlamak)"
+                },
+                {
+                  "orgn": "начина́ться / нача́ться ",
+                  "trns": "ne başlamak (örneğin; ders başlıyor)"
+                },
+                {
+                  "orgn": "нача́ло ",
+                  "trns": "başlangıç"
+                },
+                {
+                  "orgn": "зака́нчивать / зако́нчить что? ",
+                  "trns": "neyi bitirmek"
+                },
+                {
+                  "orgn": "зака́нчиваться / зако́нчиться ",
+                  "trns": "bitmek"
+                },
+                {
+                  "orgn": "коне́ц ",
+                  "trns": "son"
+                },
+                {
+                  "orgn": "мо́дный ",
+                  "trns": "moda olan"
+                },
+                {
+                  "orgn": "кру́то / круто́й ",
+                  "trns": "harika / havalı"
+                },
+                {
+                  "orgn": "тала́нт ",
+                  "trns": "yetenek"
+                },
+                {
+                  "orgn": "тала́нтливый ",
+                  "trns": "yetenekli"
+                },
+                {
+                  "orgn": "уда́чливый ",
+                  "trns": "şanslı"
+                },
+                {
+                  "orgn": "поня́тливый ",
+                  "trns": "anlayışlı"
+                },
+                {
+                  "orgn": "устава́ть / уста́ть ",
+                  "trns": "yorulmak"
+                },
+                {
+                  "orgn": "исто́рия ",
+                  "trns": "tarih, kısa hikaye"
+                },
+                {
+                  "orgn": "матема́тика ",
+                  "trns": "matematik"
+                },
+                {
+                  "orgn": "фи́зика ",
+                  "trns": "fizik"
+                },
+                {
+                  "orgn": "иностра́нный язы́к ",
+                  "trns": "yabancı dil"
+                },
+                {
+                  "orgn": "вещь (она́) ",
+                  "trns": "eşya"
+                },
+                {
+                  "orgn": "носо́к ",
+                  "trns": "çorap"
+                },
+                {
+                  "orgn": "ча́йник ",
+                  "trns": "çaydanlık"
+                },
+                {
+                  "orgn": "ча́шка ",
+                  "trns": "fincan"
+                },
+                {
+                  "orgn": "ви́лка ",
+                  "trns": "çatal"
+                },
+                {
+                  "orgn": "нож ",
+                  "trns": "bıçak"
+                },
+                {
+                  "orgn": "диск ",
+                  "trns": "CD, disk"
+                },
+                {
+                  "orgn": "кни́жный шкаф (она́) ",
+                  "trns": "kitap dolabı"
+                },
+                {
+                  "orgn": "дверно́й замо́к ",
+                  "trns": "kapı kilidi"
+                },
+                {
+                  "orgn": "шко́льные го́ды ",
+                  "trns": "okul yılları"
+                },
+                {
+                  "orgn": "копчёная колбаса́ ",
+                  "trns": "sucuk"
+                },
+                {
+                  "orgn": "варёная колбаса́ ",
+                  "trns": "haşlanmış sosis"
+                },
+                {
+                  "orgn": "сли́вочное ма́сло ",
+                  "trns": "tereyağı"
+                },
+                {
+                  "orgn": "расти́тельное ма́сло ",
+                  "trns": "sıvı yağı"
+                },
+                {
+                  "orgn": "варе́нье ",
+                  "trns": "reçel"
+                },
+                {
+                  "orgn": "ме́бель ",
+                  "trns": "mobilya"
+                },
+                {
+                  "orgn": "посу́да ",
+                  "trns": "çanak çömlek, bulaşık"
+                },
+                {
+                  "orgn": "ужа́сный ",
+                  "trns": "korkunç, felaket, iğrenç"
+                },
+                {
+                  "orgn": "высо́кий ",
+                  "trns": "yüksek, uzun boylu"
+                },
+                {
+                  "orgn": "сли́шком ",
+                  "trns": "çok fazla, fazlasıyla"
+                },
+                {
+                  "orgn": "цена́ ",
+                  "trns": "fiyat"
+                },
+                {
+                  "orgn": "Что с тобо́й происхо́дит? ",
+                  "trns": "sana ne oluyor"
+                },
+                {
+                  "orgn": "норма́льный челове́к ",
+                  "trns": "normal, düzgün bir insan"
+                },
+                {
+                  "orgn": "яйцо́ ",
+                  "trns": "yumurta"
+                },
+                {
+                  "orgn": "яи́чница ",
+                  "trns": "sahanda yumurta"
+                },
+                {
+                  "orgn": "дово́лен чем? ",
+                  "trns": "ne ile memnun"
+                },
+                {
+                  "orgn": "Будь дово́лен! ",
+                  "trns": "keyfine bak memnun ol"
+                },
+                {
+                  "orgn": "включа́ть ",
+                  "trns": "açmak"
+                },
+                {
+                  "orgn": "свет ",
+                  "trns": "elektrik, ışık, lamba"
+                },
+                {
+                  "orgn": "тра́тить / потра́тить что? на что? ",
+                  "trns": "neyi ne için harcamak"
+                },
+                {
+                  "orgn": "не́рвничать / разне́рвничаться ",
+                  "trns": "sinirlenmek, sinir olmak"
+                },
+                {
+                  "orgn": "мяч ",
+                  "trns": "top"
+                },
+                {
+                  "orgn": "опя́ть ",
+                  "trns": "yine, tekrar"
+                },
+                {
+                  "orgn": "пла́кать / запла́кать ",
+                  "trns": "ağlamak / ağlamaya başlamak"
+                },
+                {
+                  "orgn": "учи́ть наизу́сть / вы́учить наизу́сть ",
+                  "trns": "ezberlemek"
+                },
+                {
+                  "orgn": "консервато́рия ",
+                  "trns": "konservatuar"
+                },
+                {
+                  "orgn": "бараба́н ",
+                  "trns": "davul, trampet"
+                },
+                {
+                  "orgn": "фле́йта ",
+                  "trns": "flüt"
+                },
+                {
+                  "orgn": "культу́ра ",
+                  "trns": "kültür"
+                },
+                {
+                  "orgn": "хи́нди ",
+                  "trns": "Hintçe, Hint dili"
+                },
+                {
+                  "orgn": "род ",
+                  "trns": "sülale, soy"
+                },
+                {
+                  "orgn": "объясня́ть / объясни́ть кому́? что? ",
+                  "trns": "kime ne açıklamak"
+                },
+                {
+                  "orgn": "знако́мый ",
+                  "trns": "tanıdık"
+                },
+                {
+                  "orgn": "чужо́й ",
+                  "trns": "yabancı"
+                },
+                {
+                  "orgn": "капиталисти́ческий ",
+                  "trns": "kapitalist sistemi ile ilgili"
+                },
+                {
+                  "orgn": "рок-музыка́нт ",
+                  "trns": "Rock müzisyen"
+                },
+                {
+                  "orgn": "шоу-би́знес ",
+                  "trns": "eğlence sektörü"
+                },
+                {
+                  "orgn": "поэ́т ",
+                  "trns": "şair"
+                },
+                {
+                  "orgn": "стих, стихотворе́ние ",
+                  "trns": "şiir"
+                },
+                {
+                  "orgn": "юг, ю́жный (ю́жный ве́тер) ",
+                  "trns": "Güney, Güney ile ilgili (Güney rüzgarı)"
+                },
+                {
+                  "orgn": "се́вер, се́верный (Се́верный по́люс) ",
+                  "trns": "Kuzey, Kuzey ile ilgili"
+                },
+                {
+                  "orgn": "восто́к, восто́чный (восто́чный та́нец) ",
+                  "trns": "Doğu, Doğu ile ilgili"
+                },
+                {
+                  "orgn": "за́пад, за́падный (за́падная культу́ра) ",
+                  "trns": "Batı, Batı ile ilgili (Batı"
+                },
+                {
+                  "orgn": "Сове́тский Сою́з ",
+                  "trns": "Sovyetler Birliği"
+                },
+                {
+                  "orgn": "получа́ть ",
+                  "trns": "(teslim) almak"
+                },
+                {
+                  "orgn": "посы́лка ",
+                  "trns": "kargo"
+                },
+                {
+                  "orgn": "про́сто, то́лько ",
+                  "trns": "sadece (basitçe), sadece (ancak)"
+                },
+                {
+                  "orgn": "филосо́фия ",
+                  "trns": "felsefi"
+                },
+                {
+                  "orgn": "ге́ний ",
+                  "trns": "deha"
+                },
+                {
+                  "orgn": "(как?) гениа́льно / (какой?) гениа́льный ",
+                  "trns": "dahice (belirteç (zarf) / sıfat)"
+                },
+                {
+                  "orgn": "совреме́нный ",
+                  "trns": "modern, günümüzde olan"
+                },
+                {
+                  "orgn": "оптимисти́чно ",
+                  "trns": "iyimserce"
+                },
+                {
+                  "orgn": "оптимисти́чный челове́к ",
+                  "trns": "iyimser insan"
+                },
+                {
+                  "orgn": "неформа́льный ",
+                  "trns": "gayriresmi"
+                },
+                {
+                  "orgn": "колле́га ",
+                  "trns": "meslektaş, iş arkadaşı"
+                },
+                {
+                  "orgn": "колле́га по рабо́те ",
+                  "trns": "iş arkadaşı"
+                },
+                {
+                  "orgn": "колле́га по университе́ту ",
+                  "trns": "üniversite arkadaşı"
+                },
+                {
+                  "orgn": "колле́га по слу́жбе ",
+                  "trns": "meslektaş"
+                },
+                {
+                  "orgn": "мир ",
+                  "trns": "dünya (Dünya deği); barış"
+                },
+                {
+                  "orgn": "мир во всём ми́ре ",
+                  "trns": "tüm dünyada barış"
+                },
+                {
+                  "orgn": "потихо́ньку ",
+                  "trns": "yavaş yavaş, idare eder"
+                },
+                {
+                  "orgn": "как всегда́ ",
+                  "trns": "her zamanki gibi"
+                },
+                {
+                  "orgn": "как обы́чно ",
+                  "trns": "her zamanki gibi"
+                },
+                {
+                  "orgn": "забыва́ть / забы́ть кого? что? о ком? о чём? ",
+                  "trns": "ne, kimi, ne hakkında, kim hakkında ututmak"
+                },
+                {
+                  "orgn": "услы́шать в отве́т ",
+                  "trns": "cevap olarak duymak "
+                },
+                {
+                  "orgn": "боле́ть / заболе́ть чем? ",
+                  "trns": "hasta yatmak / olmak, hastalanmak, ne hastalığıkapmak"
+                },
+                {
+                  "orgn": "голова́ боли́т ",
+                  "trns": "başı / m ağrıyor"
+                },
+                {
+                  "orgn": "пло́хо учи́ться ",
+                  "trns": "okulda başarılı olamamak, kötü notlara sahip olmak"
+                },
+                {
+                  "orgn": "задава́ть / зада́ть вопро́с ",
+                  "trns": "soru sormak"
+                },
+                {
+                  "orgn": "отвеча́ть / отве́тить на вопро́с ",
+                  "trns": "soruyu cevaplamak"
+                },
+                {
+                  "orgn": "незнако́мый ",
+                  "trns": "tanımadık, yabancı biri"
+                },
+                {
+                  "orgn": "напро́тив чего́? ",
+                  "trns": "nayin karşısında"
+                },
+                {
+                  "orgn": "напро́тив друг дру́га ",
+                  "trns": "karşı karşıya"
+                },
+                {
+                  "orgn": "друг про́тив дру́га ",
+                  "trns": "karşı karşıya"
+                },
+                {
+                  "orgn": "возвраща́ться / верну́ться откуда? куда? ",
+                  "trns": "nereden, nereye dönmek"
+                },
+                {
+                  "orgn": "нача́ть что де́лать? ",
+                  "trns": "ne yapmaya başlamak"
+                },
+                {
+                  "orgn": "стать что де́лать? ",
+                  "trns": "ne yapmaya başlamak"
+                },
+                {
+                  "orgn": "продолжа́ть что де́лать? ",
+                  "trns": "ne yapmaya devam etmek"
+                },
+                {
+                  "orgn": "переста́ть что де́лать? ",
+                  "trns": "ne yapmayı kesmek / durdurmak"
+                },
+                {
+                  "orgn": "ко́нчить что де́лать? ",
+                  "trns": "ne yapmayı bitirmek"
+                },
+                {
+                  "orgn": "встреча́ть / встре́тить кого? ",
+                  "trns": "kimi karşılamak, kime rastlamak, kiminle"
+                },
+                {
+                  "orgn": "сра́зу ",
+                  "trns": "hemen, o anda"
+                },
+                {
+                  "orgn": "блонди́н / блонди́нка ",
+                  "trns": "sarışın erkek / kadın"
+                },
+                {
+                  "orgn": "брюне́т / брюне́тка ",
+                  "trns": "esmer erkek / kadın"
+                },
+                {
+                  "orgn": "теря́ть / потеря́ть кого́? что? ",
+                  "trns": "kimi, ne kaybetmek"
+                },
+                {
+                  "orgn": "коме́дия ",
+                  "trns": "komedi"
+                },
+                {
+                  "orgn": "траге́дия ",
+                  "trns": "trajedi"
+                },
+                {
+                  "orgn": "глу́пый ",
+                  "trns": "budala, aptal"
+                },
+                {
+                  "orgn": "нача́льник / нача́льница ",
+                  "trns": "şef, başkan, amir, müdür erkek / kadın"
+                },
+                {
+                  "orgn": "секрета́рь (секрета́рша) ",
+                  "trns": "sekreter erkek / kadın (konuşma üslubu ile sekreter kadın)"
+                },
+                {
+                  "orgn": "вечери́нка ",
+                  "trns": "akşam partisi"
+                },
+                {
+                  "orgn": "анекдо́т ",
+                  "trns": "fıkra"
+                },
+                {
+                  "orgn": "жениться на ком? ",
+                  "trns": "kiminle evlenmek (erkek için söylenir)"
+                },
+                {
+                  "orgn": "выходи́ть / вы́йти за́муж за кого́? ",
+                  "trns": "kiminle evlenmek (kadın için söylenir)"
+                },
+                {
+                  "orgn": "жени́ться / пожени́ться ",
+                  "trns": "evlenmek (evlenen çift için söylenir)"
+                },
+                {
+                  "orgn": "прести́ж ",
+                  "trns": "saygınlık, itibar, prestij"
+                },
+                {
+                  "orgn": "прести́жный / прести́жно ",
+                  "trns": "saygın, itibarlı, prestijli (zarf/önad)"
+                },
+                {
+                  "orgn": "детекти́в ",
+                  "trns": "polis hafiyesi, polis hikayesi, polisiye"
+                },
+                {
+                  "orgn": "кла́ссика ",
+                  "trns": "klasik romanlar, dünya klasikleri"
+                },
+                {
+                  "orgn": "име́ть что? ",
+                  "trns": "neye sahip olmak"
+                },
+                {
+                  "orgn": "легко́ ",
+                  "trns": "kolayca"
+                },
+                {
+                  "orgn": "почти́ ",
+                  "trns": "neredeyse"
+                },
+                {
+                  "orgn": "электро́нная кни́га ",
+                  "trns": "elektronik kitap"
+                },
+                {
+                  "orgn": "бума́га ",
+                  "trns": "kağıt"
+                },
+                {
+                  "orgn": "бума́жная кни́га ",
+                  "trns": "kağıt kitap"
+                },
+                {
+                  "orgn": "лю́ди поста́рше ",
+                  "trns": "yaşça büyük insanlar"
+                },
+                {
+                  "orgn": "обы́чный ",
+                  "trns": "sıradan, alışılmış"
+                },
+                {
+                  "orgn": "слы́шно кому́? кого́? как? ",
+                  "trns": "kime, kimin sesi gelmek"
+                },
+                {
+                  "orgn": "(мне вас) пло́хо / хорошо́ слы́шно ",
+                  "trns": "(bana) sesiniz kötü / iyi geliyor"
+                },
+                {
+                  "orgn": "то́чка ",
+                  "trns": "nokta"
+                },
+                {
+                  "orgn": "электро́нная по́чта ",
+                  "trns": "elektronik posta"
+                },
+                {
+                  "orgn": "ко́шка ",
+                  "trns": "dişi kedi"
+                },
+                {
+                  "orgn": "знак ",
+                  "trns": "işaret"
+                },
+                {
+                  "orgn": "обезья́на ",
+                  "trns": "maymun"
+                },
+                {
+                  "orgn": "несча́стный ",
+                  "trns": "mutsuz, zavallı, talihsiz, bedbaht"
+                },
+                {
+                  "orgn": "несча́стье ",
+                  "trns": "mutsuzluk, talihsizlik, kötü bir olay"
+                },
+                {
+                  "orgn": "впро́чем ",
+                  "trns": "aslında, bununla beraber"
+                },
+                {
+                  "orgn": "заче́м? / для чего́? ",
+                  "trns": "ne için, ne diye"
+                },
+                {
+                  "orgn": "да́же ",
+                  "trns": "bile"
+                },
+                {
+                  "orgn": "налива́ть / нали́ть что? куда́? ",
+                  "trns": "ne nereye koymak (sıvı için söylenir)"
+                },
+                {
+                  "orgn": "вертолёт ",
+                  "trns": "helekopter"
+                },
+                {
+                  "orgn": "всего́ лишь ",
+                  "trns": "sadece, ancak (çok az anlamında)"
+                },
+                {
+                  "orgn": "диа́гноз ",
+                  "trns": "teşhis"
+                },
+                {
+                  "orgn": "температу́ра ",
+                  "trns": "ateş, vücut sıcaklığı"
+                },
+                {
+                  "orgn": "ни́зкий ",
+                  "trns": "düşük, alçak, kısa boylu"
+                },
+                {
+                  "orgn": "ка́шель ",
+                  "trns": "öksürük"
+                },
+                {
+                  "orgn": "на́сморк ",
+                  "trns": "burun akıntısı"
+                },
+                {
+                  "orgn": "простужа́ться / простуди́ться ",
+                  "trns": "nezle olmak, üşütmek"
+                },
+                {
+                  "orgn": "просту́да ",
+                  "trns": "nezle"
+                },
+                {
+                  "orgn": "лека́рство ",
+                  "trns": "ilaç"
+                },
+                {
+                  "orgn": "выпи́сывать / вы́писать лека́рство ",
+                  "trns": "ilaç yazmak"
+                },
+                {
+                  "orgn": "чу́вствовать / почу́вствовать себя́ как? ",
+                  "trns": "kendini nasıl hissetmek"
+                },
+                {
+                  "orgn": "День рожде́ния ",
+                  "trns": "Doğum Günü"
+                },
+                {
+                  "orgn": "ура́! ",
+                  "trns": "Yaşa! "
+                },
+                {
+                  "orgn": "крича́ть / прокрича́ть что? ",
+                  "trns": "bağırmak"
+                },
+                {
+                  "orgn": "ско́рая по́мощь ",
+                  "trns": "ambulans"
+                },
+                {
+                  "orgn": "вызыва́ть / вы́звать кого́? что? ",
+                  "trns": "kimi, ne çağırmak"
+                },
+                {
+                  "orgn": "вы́звать мили́цию / поли́цию ",
+                  "trns": "polis çağırmak"
+                },
+                {
+                  "orgn": "вы́звать такси́ ",
+                  "trns": "taksi çağırmak"
+                },
+                {
+                  "orgn": "вы́звать врача́ ",
+                  "trns": "doktor çağırmak"
+                },
+                {
+                  "orgn": "вы́звать ско́рую по́мощь ",
+                  "trns": "ambulans çağırmak"
+                },
+                {
+                  "orgn": "молодёжь ",
+                  "trns": "gençler (dişil)"
+                },
+                {
+                  "orgn": "молодёжный ",
+                  "trns": "genç, gençlikle ilgili"
+                },
+                {
+                  "orgn": "молодёжный фо́рум ",
+                  "trns": "gençlik fotumu"
+                },
+                {
+                  "orgn": "молодёжное движе́ние ",
+                  "trns": "gençlik harekatı"
+                },
+                {
+                  "orgn": "молодёжная кома́нда ",
+                  "trns": "genç takım"
+                },
+                {
+                  "orgn": "дра́ма ",
+                  "trns": "dram"
+                },
+                {
+                  "orgn": "драмати́ческий ",
+                  "trns": "dram ile ilgili, dramatik"
+                },
+                {
+                  "orgn": "драмати́ческий теа́тр ",
+                  "trns": "drama tiyatrosu"
+                },
+                {
+                  "orgn": "драмати́ческий слу́чай ",
+                  "trns": "dramatik olay"
+                },
+                {
+                  "orgn": "сце́на ",
+                  "trns": "sahne"
+                },
+                {
+                  "orgn": "мно́гие ",
+                  "trns": "birçok "
+                },
+                {
+                  "orgn": "бале́т ",
+                  "trns": "bale"
+                },
+                {
+                  "orgn": "ремо́нт ",
+                  "trns": "onarım, tamir, bakım, tamirat"
+                },
+                {
+                  "orgn": "спекта́кль ",
+                  "trns": "gösteri, sahne oyunu, temsil"
+                },
+                {
+                  "orgn": "кста́ти ",
+                  "trns": "bu arada"
+                },
+                {
+                  "orgn": "бли́зко (как?) / бли́зкий (како́й?) ",
+                  "trns": "yakın / yakında olan"
+                },
+                {
+                  "orgn": "далеко́(как?) / далёкий (како́й?) ",
+                  "trns": "uzak / uzakta olan"
+                },
+                {
+                  "orgn": "ближа́йший ",
+                  "trns": "en yakın olan"
+                },
+                {
+                  "orgn": "немно́го да́льше ",
+                  "trns": "biraz daha uzakta"
+                },
+                {
+                  "orgn": "в оди́н прекра́сный день ",
+                  "trns": "günğn birinde "
+                },
+                {
+                  "orgn": "хлеб ",
+                  "trns": "ekmek"
+                },
+                {
+                  "orgn": "рис ",
+                  "trns": "pirinç"
+                },
+                {
+                  "orgn": "са́хар ",
+                  "trns": "şeker"
+                },
+                {
+                  "orgn": "сыр ",
+                  "trns": "peynir"
+                },
+                {
+                  "orgn": "соль ",
+                  "trns": "tuz"
+                },
+                {
+                  "orgn": "яи́чница ",
+                  "trns": "sahanda yumurta"
+                },
+                {
+                  "orgn": "ря́дом ",
+                  "trns": "yakın(da) (mesafe için söylenir)"
+                },
+                {
+                  "orgn": "до́брый (челове́к) ",
+                  "trns": "iyi kalplı, hoş görülü "
+                },
+                {
+                  "orgn": "боксёр ",
+                  "trns": "boksör"
+                },
+                {
+                  "orgn": "каки́е пробле́мы? ",
+                  "trns": "sorun ne?"
+                },
+                {
+                  "orgn": "бифште́кс ",
+                  "trns": "biftek"
+                },
+                {
+                  "orgn": "(как?) до́рого / недо́рого ",
+                  "trns": "pahalı (belirteç)"
+                },
+                {
+                  "orgn": "вдруг ",
+                  "trns": "birden"
+                },
+                {
+                  "orgn": "медсестра́ / медбра́т ",
+                  "trns": "hemşire kadın / erkek"
+                },
+                {
+                  "orgn": "врач ",
+                  "trns": "hekim"
+                },
+                {
+                  "orgn": "рука́ ",
+                  "trns": "el, kol"
+                },
+                {
+                  "orgn": "умне́ть / поумне́ть ",
+                  "trns": "akıllanmak"
+                },
+                {
+                  "orgn": "фило́соф ",
+                  "trns": "filozof "
+                },
+                {
+                  "orgn": "во́ля ",
+                  "trns": "irade"
+                },
+                {
+                  "orgn": "выбира́ть / вы́брать кого́? что? ",
+                  "trns": "kimi, ne seçmek"
+                },
+                {
+                  "orgn": "свобо́да ",
+                  "trns": "özgürlük"
+                },
+                {
+                  "orgn": "свобо́дный / свобо́ден ",
+                  "trns": "özgür, müsait (tam sıfat / kısa sıfat)"
+                },
+                {
+                  "orgn": "э́то ме́сто свобо́дное? ",
+                  "trns": "burası (bu koltuk) müsait mi?"
+                },
+                {
+                  "orgn": "я свобо́дный челове́к ",
+                  "trns": "ben özgür bir insanım"
+                },
+                {
+                  "orgn": "я сего́дня свобо́ден ",
+                  "trns": "bugün müsaitim"
+                },
+                {
+                  "orgn": "согла́сен / согла́сна / согла́сны с кем? с чем? ",
+                  "trns": "kiminle aynı fikirde olmak, kime, neye katılmak"
+                },
+                {
+                  "orgn": "кварти́ра ",
+                  "trns": "apartman dairesi"
+                },
+                {
+                  "orgn": "свобо́дное вре́мя ",
+                  "trns": "boş zaman"
+                },
+                {
+                  "orgn": "кре́сло ",
+                  "trns": "koltuk"
+                },
+                {
+                  "orgn": "фигу́ра ",
+                  "trns": "insanın fiziği, boy pos"
+                },
+                {
+                  "orgn": "ла́па ",
+                  "trns": "pençe"
+                },
+                {
+                  "orgn": "хвост ",
+                  "trns": "kuyruk"
+                },
+                {
+                  "orgn": "виля́ть / вильну́ть чем? ",
+                  "trns": "sallamak, oynatmak, kıvıra kıvıra gitmek"
+                },
+                {
+                  "orgn": "виля́ть хвосто́м ",
+                  "trns": "kuyruk sallamak"
+                },
+                {
+                  "orgn": "банки́р ",
+                  "trns": "bankacı"
+                },
+                {
+                  "orgn": "шпио́н ",
+                  "trns": "ispiyoncu"
+                },
+                {
+                  "orgn": "кло́ун ",
+                  "trns": "palyaço"
+                },
+                {
+                  "orgn": "продаве́ц ",
+                  "trns": "satıcı"
+                },
+                {
+                  "orgn": "опа́сный ",
+                  "trns": "tehlikeli"
+                },
+                {
+                  "orgn": "секре́т ",
+                  "trns": "sır"
+                },
+                {
+                  "orgn": "секре́тный ",
+                  "trns": "gizli"
+                },
+                {
+                  "orgn": "тяжёлый ",
+                  "trns": "zor, zahmetli"
+                },
+                {
+                  "orgn": "ци́фра ",
+                  "trns": "rakam"
+                },
+                {
+                  "orgn": "случа́йно ",
+                  "trns": "tesadüfen, yanlışlıkla"
+                },
+                {
+                  "orgn": "про́бка ",
+                  "trns": "trafik, tıkaç"
+                },
+                {
+                  "orgn": "пассажи́р ",
+                  "trns": "yolcu "
+                },
+                {
+                  "orgn": "моби́льный телефо́н ",
+                  "trns": "cep telefon"
+                },
+                {
+                  "orgn": "дорого́й ",
+                  "trns": "canım "
+                },
+                {
+                  "orgn": "опа́здывать / опозда́ть куда? на ско́лько? ",
+                  "trns": "nereye, ne kadar süre geç kalmak"
+                },
+                {
+                  "orgn": "крича́ть / накрича́ть на кого́ ",
+                  "trns": "kime bağırmak, kimi azarlamak"
+                },
+                {
+                  "orgn": "волнова́ться / переволнова́ться о чём? о ком? за кого? ",
+                  "trns": "ne için, kimin için endişelenmek"
+                },
+                {
+                  "orgn": "винова́т ",
+                  "trns": "suçlu "
+                },
+                {
+                  "orgn": "огро́мный ",
+                  "trns": "kocaman, devasa, çok büyük"
+                },
+                {
+                  "orgn": "целова́ть / поцелова́ть кого? куда? ",
+                  "trns": "kimi nereden öpmek"
+                },
+                {
+                  "orgn": "разгово́р ",
+                  "trns": "sohbet, konuşma"
+                },
+                {
+                  "orgn": "телефо́нный разгово́р ",
+                  "trns": "telefon konuşması"
+                },
+                {
+                  "orgn": "че́рез ско́лько вре́мени? ",
+                  "trns": "ne kadar süre sonra"
+                },
+                {
+                  "orgn": "без кого́? чего́? ",
+                  "trns": "kim, ne olmadan"
+                },
+                {
+                  "orgn": "удо́бный ",
+                  "trns": "rahat, kullanışlı, elverişli"
+                },
+                {
+                  "orgn": "удо́бная вещь ",
+                  "trns": "kullanımı rahat bir şey / bir eşya"
+                },
+                {
+                  "orgn": "деревя́нный ",
+                  "trns": "ahşap"
+                },
+                {
+                  "orgn": "ска́зка, ска́зочный ",
+                  "trns": "masal, masal ile ilgili"
+                },
+                {
+                  "orgn": "фаса́д ",
+                  "trns": "cephe"
+                },
+                {
+                  "orgn": "галере́я ",
+                  "trns": "galeri"
+                },
+                {
+                  "orgn": "прое́кт ",
+                  "trns": "proje"
+                },
+                {
+                  "orgn": "стиль ",
+                  "trns": "tarz"
+                },
+                {
+                  "orgn": "в како́м сти́ле ",
+                  "trns": "hangi tarzda?"
+                },
+                {
+                  "orgn": "в ру́сском сти́ле ",
+                  "trns": "Rus tarzında"
+                },
+                {
+                  "orgn": "запомина́ть ",
+                  "trns": "aklında tutmak, hatırlmak"
+                },
+                {
+                  "orgn": "переу́лок ",
+                  "trns": "ara sokak"
+                },
+                {
+                  "orgn": "жи́вопись ",
+                  "trns": "resim sanatı"
+                },
+                {
+                  "orgn": "живо́й ",
+                  "trns": "canlı"
+                },
+                {
+                  "orgn": "берёза ",
+                  "trns": "huş ağacı"
+                },
+                {
+                  "orgn": "си́мвол ",
+                  "trns": "sembol "
+                },
+                {
+                  "orgn": "анса́мбль ",
+                  "trns": "topluluk, grup"
+                },
+                {
+                  "orgn": "анса́мбль пе́сни и та́нца ",
+                  "trns": "şarkı ve oyun topluluğu"
+                },
+                {
+                  "orgn": "визи́тная ка́рточка ",
+                  "trns": "kartvizit "
+                },
+                {
+                  "orgn": "не́жный ",
+                  "trns": "narin, nazlı, nazik, çıtkırıldım"
+                },
+                {
+                  "orgn": "пе́сня ",
+                  "trns": "şarkı "
+                },
+                {
+                  "orgn": "ра́ньше всех ",
+                  "trns": "hepsinden evvel, ilk olarak "
+                },
+                {
+                  "orgn": "поле́зный ",
+                  "trns": "faydalı "
+                },
+                {
+                  "orgn": "не́которые ",
+                  "trns": "bazıları "
+                },
+                {
+                  "orgn": "здоро́вье ",
+                  "trns": "sağlık "
+                },
+                {
+                  "orgn": "си́ла ",
+                  "trns": "güç "
+                },
+                {
+                  "orgn": "стро́йный ",
+                  "trns": "endamlı, boyulu poslu"
+                },
+                {
+                  "orgn": "секре́т ",
+                  "trns": "sır"
+                },
+                {
+                  "orgn": "данти́ст ",
+                  "trns": "diş hekimi"
+                },
+                {
+                  "orgn": "выдава́ть / вы́дать кого́? что? ",
+                  "trns": "kimi ele vermek, ispiyonlamak; ne açıklamak"
+                },
+                {
+                  "orgn": "вы́дать секре́т ",
+                  "trns": "sır açıklamak"
+                },
+                {
+                  "orgn": "парикма́хер ",
+                  "trns": "kuaför, berber"
+                },
+                {
+                  "orgn": "держа́ть / продержа́ть кого? что? где? ",
+                  "trns": "kimi, ne, nerede tutmak"
+                },
+                {
+                  "orgn": "храни́ть / сохрани́ть что? где? ",
+                  "trns": "ne, nerede saklamak, korumak"
+                },
+                {
+                  "orgn": "пода́рок ",
+                  "trns": "hediye"
+                },
+                {
+                  "orgn": "духи́ ",
+                  "trns": "parfüm"
+                },
+                {
+                  "orgn": "кастрю́ля ",
+                  "trns": "tencere"
+                },
+                {
+                  "orgn": "сковорода́ ",
+                  "trns": "tava"
+                },
+                {
+                  "orgn": "лягу́шка ",
+                  "trns": "kurbağa"
+                },
+                {
+                  "orgn": "коллекциони́ровать ",
+                  "trns": "biriktirmek, koleksiyon yapmak"
+                },
+                {
+                  "orgn": "коллекционе́р ",
+                  "trns": "koleksiyoncu"
+                },
+                {
+                  "orgn": "Рождество́ ",
+                  "trns": "Noel Bayramı"
+                },
+                {
+                  "orgn": "Но́вый год ",
+                  "trns": "Yeni Yıl"
+                },
+                {
+                  "orgn": "пья́ный ",
+                  "trns": "sarhoş"
+                },
+                {
+                  "orgn": "эта́ж ",
+                  "trns": "apartıman katı"
+                },
+                {
+                  "orgn": "симпати́чный ",
+                  "trns": "sempatik, hoş"
+                },
+                {
+                  "orgn": "обнима́ть / обня́ть кого? ",
+                  "trns": "kime sarılmak"
+                },
+                {
+                  "orgn": "ситуа́ция ",
+                  "trns": "durum"
+                }

@@ -2,9 +2,36 @@
 	- logo 		+
 	- açılış 	+
 	- keçid 	+
+	- dil		+
 
 2.main.html
 	- menu acilma baglanma	+
 	- touch ile menu		+
-	- seviyye secim			-
+	- seviyye secim			+
 	- seviyyeye uygun plan	-
+
+
+
+
+
+
+2300
+
+
+soz sayi
+	- 1100
+cumle sayi
+	- 1200
+hekaye sayi
+	- 54
+grammatika
+	- 200
+
+
+
+planlama:
+
+merheleler kece kece irelileme mexanizmasi üzərində olacaq plan. Hər level üçün açar və can lazım olacaq. Can və açarı isə sözlərdən və imtahanlarda əldə edə biləcək. hal hazırda 1000 levellik bir dəsrlik hazırlanmalıyam. Levellərdə grammer ve soz oyredilecek. sonra o sozlerden imtahan olacaq. her imtahanda ise xal(alma ve ya armud) elde edecek. O xallardan levellerin kilidin açmaqda istifade edecek. İmtahanlarda test usulu ile olacaq. hazırda test usu ile ancaq sozlerin gosterilmesi ve seslendirilmesi ile aparilacaq.
+
+level arxitetturasini json-da yazacam. 
+

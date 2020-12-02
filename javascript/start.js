@@ -30,6 +30,9 @@ $(document).ready(function()
 			const { value: language } = Swal.fire({
 			  title: 'Dil seçin',
 			  input: 'select',
+			  backdrop: true,
+			  allowOutsideClick: false,
+			  allowEscapeKey: false,
 			  inputOptions: {
 			    
 			      az: 'Azərbaycan dili',
@@ -39,7 +42,7 @@ $(document).ready(function()
 			    
 			  },
 			  inputPlaceholder: 'Bir dil seçin',
-			  showCancelButton: true,
+			  showCancelButton: false,
 			  inputValidator: (value) => {
 			    return new Promise((resolve) => {
 			      if (value) {
