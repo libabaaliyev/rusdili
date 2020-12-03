@@ -1,8 +1,20 @@
 .red
 {
-  color: #ff0000 !important;
+	color: #ff0000 !important;
 }
 .gold
 {
-  color: #FFA726 !important;
+	color: #FDD835 !important;
+}
+.dark-gold
+{
+	color: #7f3600 !important;
+}
+.metalic
+{
+	color: #005b64 !important;
+}
+.txt-shadow
+{
+	text-shadow: 1px 0px 5px rgba(0,0,0,0.4) !important;
 }

@@ -9,6 +9,7 @@
 	<title>Alibaba Studio</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/icon/css/all.css">
+
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -19,22 +20,74 @@
 </head>
 <body>
 	<header class="main-header">
-		<ul>
-			<li id="menu">
+		<ul id="menu">
+			<li data-value="menu">
 				<i class="fas fa-bars"></i>
 			</li>
-			<li id="crown">
-				<i class="gold fas fa-crown"></i> <label>32</label>
+			<li data-value="crown">
+				<i class="gold txt-shadow fas fa-crown "></i> <label>32</label>
 			</li>
-			<li id="key">
-				<i class="fas fa-key-skeleton"></i> <label>32</label>
+			<li data-value="target">
+				<i class="metalic txt-shadow fas fa-feather"></i>
 			</li>
-			<li id="apple">
-				<i class="red fas fa-apple-alt"></i> <label>32</label>
+			<li data-value="heart">
+				<i class="red txt-shadow fas fa-heart"></i> <label>32</label>
 			</li>
 		</ul>
-		
-		
+
+		<div class="bar">
+			<div class="bar-item" id="crown">
+				<figure class="bar-icon">
+					<i class="gold txt-shadow fas fa-crown "></i> <label class="dark-gold ">32</label>
+				</figure>
+				<section class="bar-info">
+					<div class="info-head">
+						<h4>Taçlar</h4>
+					</div>
+					<div class="info-body">
+						<span>Taç kazanmak için becerilerini güçlendir! </span>
+					</div>
+				</section>
+			</div>
+
+			<div class="bar-item" id="target">
+				<figure class="bar-icon">
+					<img src="img/icons/treasure.png">
+				</figure>
+				<section class="bar-info">
+					<div class="info-head">
+						<h4>Günlük Hedef</h4>
+					</div>
+					<div class="info-body">
+						<span>0/50</span>
+						<div class="progress-bar">
+							<div class="progress-bar-active">
+								
+							</div>
+						</div>
+					</div>
+					
+				</section>
+				<div class="bar-btn">
+					<span class="btn btn-success pl-5 pr-5">Update</span>
+				</div>
+			</div>
+
+			<div class="bar-item" id="heart">
+				<figure class="bar-icon">
+					<i class="red txt-shadow fas fa-heart"></i> <label class="dark-gold ">32</label>
+				</figure>
+				<section class="bar-info">
+					<div class="info-head">
+						<h4>Canlar</h4>
+					</div>
+					<div class="info-body">
+						<span>Tüm canların duruyor.</span>
+					</div>
+				</section>
+			</div>
+		</div>
+	
 	</header>
 	<nav class="navbar">
 		<header class="nav-header">
@@ -47,7 +100,7 @@
 			</div>
 		</header>
 		<ul>
-			<li><i class="fas fa-cog"></i> Settings</li>
+			<li><i class="fas fa-cog "></i> Settings</li>
 			<li><i class="fas fa-envelope"></i> Email Us</li>
 			<li><i class="fas fa-user-plus"></i> Invite Friends</li>
 			<li><i class="fas fa-star"></i> Rate Us</li>

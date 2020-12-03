@@ -3,9 +3,12 @@ $(document).ready(function()
 	body 			= $("body");
 	darkness		= $(".darkness");
 	navbar 			= $(".navbar");
-	menu 			= $("#menu");
-	menu_opening 	= false;
+	menu 			= $("#menu li");
+	bar 			= $(".bar");
+	barItems 		= $(".bar-item");
 
+	menu_opening 	= false;
+	var menu_value 	= "menu";
 
 	//localStorages
 	notifications 	= JSON.parse(localStorage.notifications);
@@ -17,13 +20,20 @@ $(document).ready(function()
 
 	menu.click(function()
 	{
-		menuFunction.menuToggle();
+		if(menu_value == $(this).data("value") && menu_opening == true)
+			menuFunction.menuToggle(menu_opening,"all");
+		else
+		{
+			menu_value = $(this).data("value");		
+			menuFunction.menuToggle(menu_opening,menu_value);
+		}
 	});
 
 	darkness.click(function()
 	{	
+		
 		if(menu_opening)
-			menuFunction.menuToggle();
+			menuFunction.menuToggle(menu_opening,"all");
 	});
 
 	body[0].addEventListener('touchstart',function(e)
@@ -37,30 +47,48 @@ $(document).ready(function()
 		x2 = e.changedTouches[0].pageX;
 		var z = (x2 - x1);
 		if(z > 100)
-			menuFunction.menuToggle(menu_opening = false);
+			menuFunction.menuToggle(menu_opening = false,"menu");
 		
 		else if(z<-100)
-			menuFunction.menuToggle(menu_opening = true);
+			menuFunction.menuToggle(menu_opening = true,"all");
 
 	});
 
 	var menuFunction = 
 	{
-		menuToggle: function()
+		menuToggle: function(opening,value)
 		{
-			if(menu_opening){
-				darkness.hide();
-				navbar.fadeOut();				
+			barItems.hide();
+			navbar.fadeOut();
+			
+			if(value == "all")
+			{
+				darkness.hide();				
+				bar.hide();
+				if(value != 'menu')
+					$("#"+value).fadeOut();	
+				
 				menu_opening = false;
 			}
-			else{
-				navbar.fadeIn();
+			else
+			{
+				if(value == "menu"){
+					
+					bar.hide();
+					navbar.fadeIn();
+				}
+				else{
+					bar.fadeIn();
+					$("#"+value).show();
+				}
+
 				darkness.show();
 				setTimeout(function()
 				{
 					menu_opening = true;
 				},500)
 				
+
 			}
 		}
 
