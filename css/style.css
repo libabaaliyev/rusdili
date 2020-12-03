@@ -123,7 +123,13 @@ body
 {
   padding: 5px;
   font-size: 20px;
-
+}
+.main-header ul li img
+{
+  
+  width: 40px;
+  height: auto;
+  object-fit: cover;
 }
 .bar
 {
