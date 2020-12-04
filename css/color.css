@@ -1,3 +1,33 @@
+.fa-beat {
+  animation:fa-beat 5s ease infinite;
+}
+@keyframes fa-beat {
+  0% {
+    transform:scale(1);
+  }
+  5% {
+    transform:scale(1.25);
+  }
+  20% {
+    transform:scale(1);
+  }
+  30% {
+    transform:scale(1);
+  }
+  35% {
+    transform:scale(1.25);
+  }
+  50% {
+    transform:scale(1);
+  }
+  55% {
+    transform:scale(1.25);
+  }
+  70% {
+    transform:scale(1);
+  }
+}
+
 .red
 {
 	color: #ff0000 !important;
@@ -17,4 +47,29 @@
 .txt-shadow
 {
 	text-shadow: 1px 0px 5px rgba(0,0,0,0.4) !important;
+}
+
+.bg-1
+{
+	background: #EF5350 !important;
+}
+
+.bg-2
+{
+	background: #81C784 !important;
+}
+
+.bg-3
+{
+	background: #AED581 !important;
+}
+
+.bg-4
+{
+	background: #F57F17 !important;
+}
+
+.bg-5
+{
+	background: #6D4C41 !important;
 }

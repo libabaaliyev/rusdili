@@ -19,99 +19,325 @@
 	<script src="javascript/sweetalert2@10.js"></script>
 </head>
 <body>
-	<header class="main-header">
-		<ul id="menu">
-			<li data-value="menu">
-				<i class="fas fa-bars"></i>
-			</li>
-			<li data-value="crown">
-				<img src="img/icons/crown_1.png">
-				<!-- <i class="gold txt-shadow fas fa-crown "></i>--> <label>32</label> 
-			</li>
-			<li data-value="target">
-				<img src="img/icons/treasure.png">
-				<!-- <i class="metalic txt-shadow fas fa-feather"></i> -->
-			</li>
-			<li data-value="heart">
-				<i class="red txt-shadow fas fa-heart"></i> <label>32</label>
-			</li>
-		</ul>
+	<div class="tab-content">
+		<div class="tab-pane fade in active" id="main">
+			<header class="main-header">
+				<ul id="menu">
+					<li data-value="menu">
+						<i class="fas fa-bars"></i>
+					</li>
+					<li data-value="crown">
+						<img src="img/icons/crown_1.png">
+						<!--  <i class="gold fas fa-crown "></i> --> <label>32</label> 
+					</li>
+					<li data-value="target">
+						<img src="img/icons/treasure.png">
+						<!-- <i class="metalic fas fa-feather"> </i>-->
+					</li>
+					<li data-value="heart">
+						<i class="red fas fa-heart fa-beat"></i> <label>32</label>
+					</li>
+				</ul>
 
-		<div class="bar">
-			<div class="bar-item" id="crown">
-				<figure class="bar-icon">
-					<!-- <i class="gold txt-shadow fas fa-crown "></i> --><img src="img/icons/crown_1.png"> <label class="dark-gold ">32</label>
-				</figure>
-				<section class="bar-info">
-					<div class="info-head">
-						<h4>Taçlar</h4>
-					</div>
-					<div class="info-body">
-						<span>Taç kazanmak için becerilerini güçlendir! </span>
-					</div>
-				</section>
-			</div>
-
-			<div class="bar-item" id="target">
-				<figure class="bar-icon">
-					<img src="img/icons/treasure.png">
-				</figure>
-				<section class="bar-info">
-					<div class="info-head">
-						<h4>Günlük Hedef</h4>
-					</div>
-					<div class="info-body">
-						<span>0/50</span>
-						<div class="progress-bar">
-							<div class="progress-bar-active">
-								
+				<div class="bar">
+					<div class="bar-item" id="crown">
+						<figure class="bar-icon">
+							<img src="img/icons/crown_1.png">
+						</figure>
+						<section class="bar-info">
+							<div class="info-head">
+								<h4>Taçlar</h4>
 							</div>
+							<div class="info-body">
+								<span>Taç kazanmak için becerilerini güçlendir! </span>
+							</div>
+						</section>
+					</div>
+
+					<div class="bar-item" id="target">
+						<figure class="bar-icon">
+							<img src="img/icons/treasure.png">
+						</figure>
+						<section class="bar-info">
+							<div class="info-head">
+								<h4>Günlük Hedef</h4>
+							</div>
+							<div class="info-body">
+								<span>0/50</span>
+								<div class="progress-bar">
+									<div class="progress-bar-active">
+										
+									</div>
+								</div>
+							</div>
+							
+						</section>
+						<div class="bar-btn">
+							<span class="btn btn-success pl-5 pr-5">Update</span>
 						</div>
 					</div>
-					
-				</section>
-				<div class="bar-btn">
-					<span class="btn btn-success pl-5 pr-5">Update</span>
+
+					<div class="bar-item" id="heart">
+						<section class="bar-special-info">
+							<div class="info-head">
+								<h4>Tüm canların duruyor</h4>
+							</div>
+							<div class="info-body">
+								<span>Yeni derslere başlamak için can gereksinimin var.</span>
+							</div>
+						</section>
+
+						<section class="special-body">
+							<ul>
+								<li>
+									<div class="special-items-icon">
+										<i class="red fas fa-heart fa-beat"></i>
+									</div>
+									<div class="special-items-info">
+										<h4>1 Can</h4>
+									</div>
+									<div class="special-items-info">
+										<span>Pratik yap</span>
+									</div>							
+								</li>
+
+								<li class="add-heart">
+									<div class="special-items-icon">
+										<i class="red fas fa-heart fa-beat"></i>
+									</div>
+									<div class="special-items-info">
+										<h4>Can Yükle</h4>
+									</div>
+									<div class="special-items-info">
+										<i class="fas fa-gem"></i> <span>350</span>
+									</div>							
+								</li>
+
+								<li class="sp-active">
+									<div class="special-item">
+										<span>Plus</span>
+									</div>
+									<div class="special-items-icon">
+										<i class="red fas fa-heart fa-beat"></i>
+									</div>
+									<div class="special-items-info">
+										<h4>Sınırsız</h4>
+									</div>
+									<div class="special-items-info">
+										<span>Plus`a geç</span>
+									</div>							
+								</li>
+							</ul>
+						</section>
+
+						<!-- <figure class="bar-icon">
+							<i class="red fas fa-heart"></i> <label class="dark-gold ">32</label>
+						</figure>
+						<section class="bar-info">
+							<div class="info-head">
+								<h4>Canlar</h4>
+							</div>
+							<div class="info-body">
+								<span>Tüm canların duruyor.</span>
+							</div>
+						</section> -->
+					</div>
 				</div>
-			</div>
+			
+			</header>
+			<nav class="navbar">
+				<header class="nav-header">
+					<figure class="header-photo">
+						<img src="img/profiles/p7.png">
+					</figure>
+					<div class="header-info">
+						<h4>Unname</h4>
+						<span>Elementary</span>
+					</div>
+				</header>
+				<ul>
+					<li><i class="fas fa-cog "></i> Settings</li>
+					<li><i class="fas fa-envelope"></i> Email Us</li>
+					<li><i class="fas fa-user-plus"></i> Invite Friends</li>
+					<li><i class="fas fa-star"></i> Rate Us</li>
+				</ul>
+			</nav>
 
-			<div class="bar-item" id="heart">
-				<figure class="bar-icon">
-					<i class="red txt-shadow fas fa-heart"></i> <label class="dark-gold ">32</label>
-				</figure>
-				<section class="bar-info">
-					<div class="info-head">
-						<h4>Canlar</h4>
-					</div>
-					<div class="info-body">
-						<span>Tüm canların duruyor.</span>
-					</div>
-				</section>
-			</div>
+			<section class="container">
+				
+			</section>
 		</div>
-	
-	</header>
-	<nav class="navbar">
-		<header class="nav-header">
-			<figure class="header-photo">
-				<img src="img/profiles/p7.png">
-			</figure>
-			<div class="header-info">
-				<h4>Unname</h4>
-				<span>Elementary</span>
-			</div>
-		</header>
-		<ul>
-			<li><i class="fas fa-cog "></i> Settings</li>
-			<li><i class="fas fa-envelope"></i> Email Us</li>
-			<li><i class="fas fa-user-plus"></i> Invite Friends</li>
-			<li><i class="fas fa-star"></i> Rate Us</li>
-		</ul>
-	</nav>
+		<div class="tab-pane fade" id="profile">
+			<header class="main-header">
+				<ul id="setting">
+					<li>
+						<a href="setting.html">
+							<i class="fas fa-cog"></i>
+						</a>
+					</li>
+					
+				</ul>
+				<div class="header-name">
+					<label>Profil</label>
+				</div>
+			</header>
+			<section class="profile-header">
+				<figure class="profile-photo">
+			    	<img src="img/profiles/p5.png" id="profile-photo">
+			        <div class="clip">
+			          <i class="fas fa-camera"></i>
+			        </div>
+			    </figure>
+				<div class="profile-info">
+					<h4>Unnamed</h4>
+				</div>
+			</section>
 
-	<section class="container">
-		
-	</section>
+			<section class="profile-info" id="profile-info">
+				<ul>
+					<li>
+						<section class="archive">
+							<figure class="archive-img bg-2">
+								<img src="img/profiles/p13.png">
+							</figure>
+							<div class="archive-data">
+								
+									<div class="info-head">
+										<h4>Günlük Hedef</h4>
+									</div>
+									<div class="info-body">
+										<span>15/50</span>
+										<div class="progress-bar">
+											<div class="progress-bar-active">
+												
+											</div>
+										</div>
+									</div>
+									
+								
+							</div>
+						</section>
+					</li>
+
+					<li>
+						<section class="archive">
+							<figure class="archive-img bg-1">
+								<img src="img/profiles/p14.png">
+							</figure>
+							<div class="archive-data">
+								
+									<div class="info-head">
+										<h4>Günlük Hedef</h4>
+									</div>
+									<div class="info-body">
+										<span>15/50</span>
+										<div class="progress-bar">
+											<div class="progress-bar-active">
+												
+											</div>
+										</div>
+									</div>
+									
+								
+							</div>
+						</section>
+					</li>
+
+					<li>
+						<section class="archive">
+							<figure class="archive-img bg-3">
+								<img src="img/profiles/p15.png">
+							</figure>
+							<div class="archive-data">
+								
+									<div class="info-head">
+										<h4>Günlük Hedef</h4>
+									</div>
+									<div class="info-body">
+										<span>15/50</span>
+										<div class="progress-bar">
+											<div class="progress-bar-active">
+												
+											</div>
+										</div>
+									</div>
+									
+								
+							</div>
+						</section>
+					</li>
+
+					<li>
+						<section class="archive">
+							<figure class="archive-img bg-4">
+								<img src="img/profiles/p16.png">
+							</figure>
+							<div class="archive-data">
+								
+									<div class="info-head">
+										<h4>Günlük Hedef</h4>
+									</div>
+									<div class="info-body">
+										<span>15/50</span>
+										<div class="progress-bar">
+											<div class="progress-bar-active">
+												
+											</div>
+										</div>
+									</div>
+									
+								
+							</div>
+						</section>
+					</li>
+
+					<li>
+						<section class="archive">
+							<figure class="archive-img bg-5">
+								<img src="img/profiles/p17.png">
+							</figure>
+							<div class="archive-data">
+								
+									<div class="info-head">
+										<h4>Günlük Hedef</h4>
+									</div>
+									<div class="info-body">
+										<span>15/50</span>
+										<div class="progress-bar">
+											<div class="progress-bar-active">
+												
+											</div>
+										</div>
+									</div>
+									
+								
+							</div>
+						</section>
+					</li>
+				</ul>
+			</section>
+
+		</div>
+		<div class="tab-pane fade" id="score"></div>
+		<div class="tab-pane fade" id="shopping"></div>
+
+	</div>
+	<footer class="footer">
+		<ul id="footer">
+			<li data-toggle="tab" href="#main">
+				<i class="fas fa-shoe-prints"></i>
+			</li>
+			<li data-toggle="tab" href="#profile" >
+				<i class="fas fa-dragon"></i>				
+			</li>
+			<li data-toggle="tab" href="#score" >
+				<i class="fas fa-shield-alt"></i>
+			</li>
+			<li data-toggle="tab" href="#shopping">
+				<i class="fas fa-store"></i>
+			</li>
+		</ul>
+	</footer>
 
 	<div class="darkness"></div>
 
