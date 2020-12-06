@@ -11,10 +11,11 @@ body
 {
   position: relative;
   width: 100%;
-  height: 100vh;
-  background: #edf9fe;
-  font-family: kanit-r;
+  
+  background: #edf9fe !important;
+  font-family: kanit-r !important;
 }
+
 
 .main-page
 {
@@ -99,8 +100,7 @@ body
   left: 0;
   width: 100%;
   height: 50px;
-  background: #edf9fe;
-  
+  background: #edf9fe;  
   z-index: 3;
 }
 .main-header
@@ -142,7 +142,7 @@ body
   font-size: 14px;
   color: #546E7A;
   padding: 8px 5px;
-  margin: 0 7px;  
+  margin: 0 10px;  
   margin-right: 11px;
   z-index: 3;
 }
@@ -160,6 +160,11 @@ body
 {  
   min-width: 20px;
 }
+.footer ul li:last-child
+{  
+  min-width: 20px;
+  margin-right: 0;
+}
 .main-header ul li i
 {
   display: inline-block;
@@ -171,7 +176,7 @@ body
 {
   display: inline-block;
   float: left;
-  padding: 7px 15px;
+  padding: 7px 10px;
   font-size: 25px !important;
 }
 .main-header ul li img,.footer ul li img
@@ -267,7 +272,7 @@ body
   height: 40px;
   text-align: left;
   color: #000;
-  padding-left: 10px;
+  padding: 0 10px;
   font-size: 16px;
   font-weight: 750;
 }
@@ -286,16 +291,26 @@ body
   font-weight: 800;
 
 }
+.info-body img
+{
+  display: table;
+  margin: auto;
+  width: 60px;
+  height: auto;
+  object-fit: cover;
+}
 .bar-special-info .info-head,.bar-special-info .info-body
 {
   text-align: center;
 }
 .special-body
 {
+  position: relative;
   min-height: 100px;
   font-weight: 400;
   padding-top: 15px;
   padding-bottom: 5px;
+  padding-left: 8px;
   
 }
 .special-body ul
@@ -310,10 +325,11 @@ body
   position: relative;
   display: inline-block;
   float: left;
-  width: calc(100%/3 - 20px);
+  width: calc(100%/3 - 10px);
   height: 140px;
   border-radius: 12px;
   border: 2px solid #e0e0e0;
+  margin: 3px;
 }
 .special-items-icon,.special-items-info
 {
@@ -433,7 +449,11 @@ body
   height: 100vh;
   background: #fff;
   z-index: 3;
-
+}
+.navbar a
+{
+  text-decoration: none;
+  color: #000;
 }
 .nav-header
 {
@@ -668,6 +688,743 @@ body
 {
   border: none !important;
 }
+
+.form-button
+{
+  display: block;
+  float: left;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1.8px solid #cecece;
+  border-bottom: 4px solid #cecece;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin: 5px 0;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.form-button:focus, .form-button:active:focus
+{
+  border: 1.3px solid #cecece;
+  border-bottom: 3px solid #cecece;
+  outline-offset: 0;
+  outline: none;
+}
+
+.simple-btn
+{
+  display: inline-block;
+  width: auto;
+  padding: 10px;
+}
+
+/*score table*/
+
+.score-table,.shopping,.lessons,.lesson,.lesson-success,.adsense
+{
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+}
+.score-table ul
+{
+  display: block;
+  float: left;
+  width: 100%;
+  min-height: calc(100vh - 250px);
+  max-height: calc(100vh - 150px);
+  overflow: auto;
+  padding: 0;
+  padding-top: 50px;
+  border-bottom: 1px solid #B0BEC5;
+}
+.score-table ul li
+{
+  display: inline-block;
+  float: left;
+  width: 42px;
+  height: 48px;
+  background: #D2E0EB;
+  border-radius: 10px 10px 40% 40%;
+  border-bottom: 3px solid #AAC1D4;
+  text-align: center;
+  margin: 6px;
+}
+
+.score-table ul li i
+{
+  display: table;
+  margin: auto;
+  margin-top: 4px;
+  width: 34px;
+  height: 38px;
+  font-size: 22px;
+  color: #92A8BA;
+  background: #C2D1DD;
+  border-radius: 8px 8px 40% 40%;
+  padding-top: 10px; 
+}
+.checked
+{
+  margin-top: -6px !important;
+  margin-bottom: 0 !important;
+  width: 54px !important;
+  height: 66px !important;
+  background: #E8BA8F !important;
+  border-bottom: 5px solid #C88E57 !important;
+}
+.checked i
+{
+  margin-top: 6px !important;
+  width: 44px !important;
+  height: 50px !important;
+  font-size: 26px !important;
+  color: #B07032 !important;
+  background: #CF9C6D !important;
+}
+.text-center
+{
+  text-align: center !important;
+}
+.line-h-1
+{
+  line-height: 16px !important;
+}
+.line-h-2
+{
+  line-height: 24px !important;
+}
+.line-h-3
+{
+  line-height: 30px !important;
+}
+.weight-normal
+{
+  font-weight: 400;
+}
+.weight-bold
+{
+  font-weight: 700;
+}
+
+.mt-10
+{
+  margin-top: 10px !important;
+}
+
+.mt-20
+{
+  margin-top: 20px !important;
+}
+
+.mt-50
+{
+  margin-top: 50px !important;
+}
+
+.mt-100
+{
+  margin-top: 100px !important;
+}
+
+.mb-10
+{
+  margin-bottom: 10px !important;
+}
+
+.mb-20
+{
+  margin-bottom: 20px !important;
+}
+
+.mb-50
+{
+  margin-bottom: 50px !important;
+}
+
+.mb-100
+{
+  margin-bottom: 100px !important;
+}
+
+.border-none
+{
+  border: none !important;
+}
+.shopping
+{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.card,.card-special
+{
+  display: block;
+  float: left;
+  width: 100%;
+  height: 150px;
+  border-radius: 12px;
+  border: 1px solid #cecece;
+  padding: 8px 20px;
+  margin: 12px 0;
+}
+.card-special
+{
+  height: 170px;
+  background: #1CB0F6;
+}
+.card-special header
+{
+  display: block;
+  float: left;
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+}
+.card-special header h2
+{
+  display: inline-block;
+  float: left;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 8px;
+  margin-right: 10px;
+  margin-left: 0;
+  padding: 8px 0;
+  text-align: left;
+  font-family: ubuntu-r;
+}
+.card-special header span
+{
+  display: inline-block;
+  float: left;
+  height: 30px;
+  border-radius: 5px;
+  background: #0055FF;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  padding: 3px 14px;
+  margin-top: 14px;
+  font-weight: 800;
+}
+.card-special .info-body
+{
+  padding-left: 0; 
+}
+.card-special .info-body span
+{
+  color: #fff;
+  text-align: left;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.card-special a
+{
+  text-decoration: none;
+}
+
+.card-img
+{
+  display: inline-block;
+  float: left;
+  width: 100px;
+  padding: 12px 10px;
+}
+.card-img img
+{
+  display: table;
+  margin: auto;
+  width: 80px;
+  height: auto;
+  object-fit: cover;
+
+}
+.card-info
+{
+  display: inline-block;
+  float: left;
+  width: calc(100% - 100px);
+  height: auto;
+}
+.card-info header
+{
+  padding: 10px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+.lessons
+{
+  
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.castles
+{
+  position: relative;
+  display: block;
+  float: left;
+  float: left;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  background: #E8E8E8;
+  z-index: 1;
+  padding-bottom: 40px;
+}
+.level
+{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #CDCFD5;
+  top: -50px;
+  left: calc(50% - 50px);
+  padding: 10px 5px;
+  border: 7px solid #edf9fe;
+  overflow: hidden;
+
+}
+.level img
+{
+  display: table;
+  margin: auto;
+  height: 65px;
+  width: auto;
+  object-fit: cover;
+}
+.level label
+{
+  position: absolute;
+  width: 100%;
+
+  bottom: 20px;
+  left: 0;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  /*background: rgba(0,0,0,0.5);*/
+  padding-bottom: 5px;
+}
+.castles ul
+{
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 15px;
+  margin-top: 50px;
+
+}
+.castles ul li
+{
+  position: relative;
+  display: inline-block;
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: #B2FF59;
+  margin: 50px calc(25% - 35px);
+
+  
+}
+.castle-border
+{
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 70px;
+  height: 70px;
+  background: #5C6BC0;
+  border-radius: 100%;
+  z-index: -1;
+  
+}
+.castles ul li:first-child/*,.castles ul li:last-child*/
+{
+  display: table;
+  float: none;
+  margin: auto;
+}
+
+
+.query-into
+{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  padding: 5px 2px;
+}
+
+.query-into i
+{  
+  font-size: 30px;
+  color: #5C6BC0;  
+}
+.query-info
+{
+  position: absolute;
+  bottom: -30px;
+  text-align: center;
+  width: 100%;
+}
+.query-info h4
+{
+  display: inline;
+  padding: 5px 0;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: ubuntu-r;
+}
+
+.query-crown
+{
+  position: absolute;
+  right: -5px;
+  bottom: -10px;
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+}
+.query-crown i
+{
+  font-size: 20px;
+  color: #ccc;
+}
+.query-crown span
+{
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  font-size: 10px;
+  color: #000;
+  text-align: center;
+}
+
+.lesson-info
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 280px;
+  height: 140px;
+  border-radius: 13px;
+  padding: 10px;
+  z-index: 3;
+  display: none;
+
+}
+.info-left
+{
+  display: inline-block;
+  float: left;
+  width: auto;
+  min-height: 50px;
+  text-align: left;
+
+}
+.info-left h6
+{
+  font-size: 16px;
+  font-weight: 700;
+  font-family: ubuntu-r;
+  color: #F8FAFB !important;
+
+}
+.info-right
+{
+  display: inline-block;
+  float: right;
+  width: auto;
+  min-width: 50px;
+  min-height: 50px;
+  margin-bottom: 20px;
+}
+.info-right .form-button
+{
+  margin: 0;
+  border: 1.8px solid #1A619B;
+  border-bottom: 4px solid #1A619B;
+  color: #F8FAFB;
+}
+
+.info-right button:focus, .info-right button:active:focus
+{
+  border: 1.3px solid #1A619B;
+  border-bottom: 3px solid #1A619B;
+  outline-offset: 0;
+  outline: none;
+}
+
+.lock-lesson
+{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background: #fff;
+  z-index: 4;
+  display: none;
+
+}
+.lock-lesson .special-body
+{
+  padding: 0 10px;
+  margin-bottom: 30px;
+ 
+}
+.lock-lesson .special-body ul
+{
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+.lock-lesson .special-body ul li
+{
+  width: calc(100%/2 - 10px);
+  height: 180px;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+  margin: 5px;
+}
+
+.lock-lesson .special-items-icon,.lock-lesson .special-items-info
+{
+  padding: 0 5px;
+  padding-top: 12px;
+
+}
+.lock-lesson .info-body
+{
+  text-align: center;
+  padding: 0;
+  padding-bottom: 15px;
+}
+
+/*lessons*/
+.loading-lesson
+{
+  position: relative;
+  display: table;
+  margin: auto;
+  margin-top: 200px;
+  width: 100px;
+  height: 100px;
+}
+.loading-lesson img
+{
+  height: 100px;
+  width: auto;
+  object-fit: cover;
+}
+
+.lesson-header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+}
+.head-side
+{
+  position: relative;
+  display: inline-block;
+  float: left;
+  width: 50px;
+  height: 30px;
+}
+.head-side span
+{
+  padding: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+.side-icon
+{
+  display: block;
+  float: left;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px 0;
+}
+.side-icon i
+{
+
+  font-size: 20px;
+  margin-right: 5px;
+}
+.head-average
+{
+  position: relative;
+  display: inline-block;
+  float: left;
+  width: calc(100% - 110px);
+  height: 30px;
+  padding: 3px 0;
+  margin-right: 10px;
+}
+.lesson
+{
+  height: calc(100vh - 50px);
+  margin-top: 50px;
+}
+.lesson-1,.success-body,.success-gem
+{
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+}
+.success-body
+{
+  display: none;
+}
+
+.questions
+{
+  display: block;
+  float: left;
+  width: 100%;
+  min-height: 40px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px dotted #1CB0F6;
+  /*background: #fff;*/
+  color: #1CB0F6;
+  text-align: left;
+  line-height: 16px;
+  font-size: 14px;
+  margin: 10px 0;
+  /*border-bottom: 1px solid #cecece*/
+
+}
+.questions span
+{
+  display: inline-block;
+  width: auto;
+  min-height: 50px;
+  float: left;
+  margin: 0 10px;
+  margin-top: 20px;
+}
+
+.answer
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+
+
+}
+.answer span
+{
+  display: block;
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0;
+  font-family: ubuntu-r;
+  font-size: 14px;
+  text-align: left;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.happy
+{
+  display: block;
+  float: left;
+  width: 100%;
+  min-height: 120px;
+  margin-top: 100px; 
+}
+.happy img
+{
+  display: table;
+  margin: auto;
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+}
+
+.success-left,.success-right
+{
+  display: inline-block;
+  width: calc(100% - 80px);
+  float: left;
+  height: 50px;
+  padding: 10px;
+}
+.success-right
+{
+  padding: 0;
+  width: 60px;
+}
+.success-right img
+{
+  height: 50px;
+  width: auto;
+  object-fit: cover;
+}
+
+.no-thanks
+{
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 16px;
+
+}
+.ads
+{
+  display: block;
+  float: left;
+  width: 100%;
+  height: 400px;
+  background: grey;
+}
+.hr
+{
+  display: block;
+  float: left;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  margin: 20px 0;
+}
+
+.lesson-main,.lesson-success,.adsense
+{
+  display: none;
+}
+
 @media(max-width: 1000px)
 {
   
