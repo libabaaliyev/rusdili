@@ -2,13 +2,138 @@ $(document).ready(function()
 {
 	body 			= $("body");
 	darkness		= $(".darkness");
-	navbar 			= $(".navbar");
-	menu 			= $("#menu li");
-	bar 			= $(".bar");
-	barItems 		= $(".bar-item");
+	lesson 			= $(".level-query li");
+	lesson_info 	= $(".lesson-info");
+	l_a_top			= $(".arrow-top");
+	skip_lesson		= $(".skip-lesson");
+	skip_tab 		= $(".lock-lesson");
+	not_skip 		= $(".darkness, .not-skip-lesson");
+	update_aim		= $(".update-aim");
+	aim_tab			= $(".day-aim");
+	aim_items 		= $(".aim ul li");
+	aim_save 		= $(".aim-save")
+	close 			= $(".close-tabs");
+	start_lesson 	= $(".start-lesson");
+	opening 		= false;
 
-	menu_opening 	= false;
-	var menu_value 	= "menu";
+	body.click(function()
+	{
+		if(opening){
+			opening = false;
+			lesson_info.fadeOut();
+		}
+
+	})
+
+
+	lesson.click(function(e)
+	{
+		if(!opening)
+		{
+			x = e.pageX;
+			y = e.pageY;
+
+			y_lesson 	= $(this).offset().top;
+			bodyHeight 	= $(window).height();
+			
+			
+			lesson_info.css(
+			{
+				"top": y_lesson+50+"px"
+			});
+
+			if(x>150&& x<200)
+			{
+				x = 135;
+			}
+			else if(x>200&&x<270)
+				x = 190;
+			else
+				x = 40;
+
+			l_a_top.css(
+			{
+				"left": x+"px"
+
+			});
+
+			
+
+			if((bodyHeight - y_lesson) < 200)
+				$("html, body").animate({ scrollTop: (y_lesson-200) }, 1000);
+			
+			
+			
+			setTimeout(function(){ 
+				if(!opening){
+					opening = true;
+					lesson_info.fadeIn();
+				}
+				
+				
+			},100);
+		}
+		else
+		{
+			lesson_info.fadeOut();
+		}
+	});
+
+	skip_lesson.click(function()
+	{
+		opening = false;
+		darkness.show();
+
+		skip_tab.removeClass("slideOutDown");
+		skip_tab.removeClass("slideInUp");
+		skip_tab.addClass("slideInUp");
+		skip_tab.show();
+	});
+
+	not_skip.click(function()
+	{
+		setTimeout(function(){ 
+			opening = true;			
+
+		},100);
+	});
+
+	update_aim.click(function()
+	{
+		aim_tab.removeClass("slideOutRight");
+		aim_tab.removeClass("slideInRight");
+		aim_tab.addClass("slideInRight");
+		aim_tab.show();
+
+
+	});
+	close.click(function()
+	{
+		aim_tab.removeClass("slideInRight");
+		aim_tab.removeClass("slideOutRight");
+		aim_tab.addClass("slideOutRight");
+		aim_tab.fadeOut(1000);
+		
+	});
+
+	aim_save.click(function()
+	{
+		aim_tab.removeClass("slideInRight");
+		aim_tab.removeClass("slideOutRight");
+		aim_tab.addClass("slideOutRight");
+		aim_tab.fadeOut(1000);
+	});
+
+	aim_items.click(function()
+	{
+		aim_items.removeClass("active");
+		$(this).addClass("active");
+	});
+
+	start_lesson.click(function()
+	{
+		window.location = "lessons.html";
+	});
 
 	//localStorages
 	notifications 	= JSON.parse(localStorage.notifications);
@@ -18,82 +143,15 @@ $(document).ready(function()
 		notification('level-select','question');		
 	}
 
-	menu.click(function()
+	function callOther(loc,func,funcData)
 	{
-		if(menu_value == $(this).data("value") && menu_opening == true)
-			menuFunction.menuToggle(menu_opening,"all");
-		else
+		$.getScript("javascript/"+loc+".js",function(e)
 		{
-			menu_value = $(this).data("value");		
-			menuFunction.menuToggle(menu_opening,menu_value);
-		}
-	});
-
-	darkness.click(function()
-	{	
-		
-		if(menu_opening)
-			menuFunction.menuToggle(menu_opening,"all");
-	});
-
-	body[0].addEventListener('touchstart',function(e)
-	{		
-		x1 = e.changedTouches[0].pageX;
-
-	});
-
-	body[0].addEventListener('touchend',function(e)
-	{
-		x2 = e.changedTouches[0].pageX;
-		var z = (x2 - x1);
-		if(z > 100)
-			menuFunction.menuToggle(menu_opening = false,"menu");
-		
-		else if(z<-100)
-			menuFunction.menuToggle(menu_opening = true,"all");
-
-	});
-
-	var menuFunction = 
-	{
-		menuToggle: function(opening,value)
-		{
-			barItems.hide();
-			navbar.fadeOut();
-			
-			if(value == "all")
-			{
-				darkness.hide();				
-				bar.hide();
-				if(value != 'menu')
-					$("#"+value).fadeOut();	
-				
-				menu_opening = false;
-			}
-			else
-			{
-				if(value == "menu"){
 					
-					bar.hide();
-					navbar.fadeIn();
-				}
-				else{
-					bar.fadeIn();
-					$("#"+value).show();
-				}
-
-				darkness.show();
-				setTimeout(function()
-				{
-					menu_opening = true;
-				},500)
-				
-
-			}
-		}
+			window[func](funcData);				
+		});
 
 	}
-
 
 	function notification(event,process)
 	{
@@ -141,7 +199,6 @@ $(document).ready(function()
 			 
 			});
 		}	
-		
 	}
 
 });

@@ -10,7 +10,7 @@ $(document).ready(function()
 	
 	const startFunc = 
 	{
-		jsonfiles: function()
+		jsonfiles: function(e)
 		{
 			$(".main-name h4").html(title[lang]);
 			
@@ -21,7 +21,7 @@ $(document).ready(function()
 				
 			});
 			setTimeout(function() {
-				window.location = "main.html";
+				window.location = e+".html";
 
 			},3000);
 		},
@@ -49,7 +49,7 @@ $(document).ready(function()
 			      	localStorage.applang 	= JSON.stringify(value);
 			      	lang 					= JSON.parse(localStorage.applang)
 			      	Swal.close();
-			      	this.jsonfiles();
+			      	this.jsonfiles("start");
 			        
 			      } else {
 
@@ -63,12 +63,11 @@ $(document).ready(function()
 		}
 	}
 
-	
 	if(localStorage.getItem("applang")===null)
 		startFunc.language();
 	else{
 		lang = JSON.parse(localStorage.applang);
-		startFunc.jsonfiles();
+		startFunc.jsonfiles("main");
 	}
 	
 
