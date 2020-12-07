@@ -7,6 +7,11 @@
   src: url(fonts/ubuntu/Ubuntu-Regular.ttf);
 }
 
+@font-face {
+  font-family: fredoka;
+  src: url(fonts/acme/acme.ttf);
+}
+
 body
 {
   position: relative;
@@ -730,7 +735,7 @@ body
 
 /*score table*/
 
-.score-table,.shopping,.lessons,.lesson,.lesson-success,.adsense,.day-aim
+.score-table,.shopping,.lessons,.lesson,.lesson-success,.adsense,.day-aim,.select-level,.get-start,.account,.registration
 {
   position: relative;
   display: block;
@@ -833,6 +838,16 @@ body
 .mt-50
 {
   margin-top: 50px !important;
+}
+
+.mt-60
+{
+  margin-top: 60px !important;
+}
+
+.mt-70
+{
+  margin-top: 70px !important;
 }
 
 .mt-100
@@ -1150,8 +1165,6 @@ body
   border-bottom: 15px solid #2196F3;
 }
 
-
-
 .info-left
 {
   display: inline-block;
@@ -1159,16 +1172,16 @@ body
   width: auto;
   min-height: 50px;
   text-align: left;
-
 }
+
 .info-left h6
 {
   font-size: 16px;
   font-weight: 700;
   font-family: ubuntu-r;
   color: #F8FAFB !important;
-
 }
+
 .info-right
 {
   display: inline-block;
@@ -1394,6 +1407,21 @@ body
   height: auto;
   object-fit: cover;
 }
+.happy h3
+{
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+.happy span
+{
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 300;
+  color: #A5A5A5;
+}
 .training img
 {
   display: table;
@@ -1450,7 +1478,7 @@ body
   margin: 20px 0;
 }
 
-.lesson-main,.lesson-success,.adsense,.day-aim,.answer
+.lesson-main,.lesson-success,.adsense,.day-aim,.answer,.select-level,.account
 {
   display: none;
 }
@@ -1476,6 +1504,7 @@ body
 {
   display: block;
   float: left;
+  width: 100%;
   padding: 0;
   margin: 0;
   border-radius: 8px;
@@ -1495,7 +1524,7 @@ body
 
 .aim ul li.active
 {
-  border: 2px solid #1CB0F6;
+  border: 1px solid #1CB0F6;
   color: #1CB0F6;
   background: #d1effd;
 }
@@ -1507,7 +1536,7 @@ body
 {
   border-radius: 0 0 8px 8px;
 }
-.aim ul li h4
+.aim ul li h4,.aim ul li h5,.aim ul li h6
 {
   display: inline;
   float: left;
@@ -1523,6 +1552,22 @@ body
   text-align: right;
   margin: 0;
   font-weight: 200;
+}
+
+.account .info-head,.account .info-body
+{
+  
+  letter-spacing: 1px;
+  
+}
+.account .info-body
+{
+  font-family: ubuntu-r;
+  font-weight: 400;
+}
+.account .form-button
+{
+  text-transform: capitalize;
 }
 @media(min-width: 380px)
 {

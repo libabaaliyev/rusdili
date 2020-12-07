@@ -9,6 +9,7 @@
 	<title>Alibaba Studio</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/color.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="javascript/jquery.js"></script>
 	<script src="javascript/jquery.min.js"></script>
@@ -16,7 +17,140 @@
 	<script src="javascript/sweetalert2@10.js"></script>
 </head>
 <body>
-	
+	<section class="get-start" style="display: none;">
+		<div class="happy">
+			<img src="img/icons/greeting.gif">
+			<h3 class="text-primary">Rusça Eğitim seti</h3>
+			<span>Ücretsiz ve kesintisiz öğren</span>
+		</div>
+
+		<button class="form-button btn-success mt-100">Get started</button>
+		<button class="form-button green">I already have an account</button>
+	</section>
+
+	<section class="day-aim animated" id="aim">
+		<header class="main-header">
+			<div class="header-name">
+				<label>Günlük Hedef Seçin</label>
+			</div>
+		</header>
+
+		<div class="aim">
+			<ul>
+				<li>
+					<h4>Rahat</h4>
+					<span>gunde 5 dakika</span>
+				</li>
+
+				<li class="active">
+					<h4>Orta</h4>
+					<span>gunde 10 dakika</span>
+				</li>
+
+				<li>
+					<h4>Ciddi</h4>
+					<span>gunde 15 dakika</span>
+				</li>
+
+				<li>
+					<h4>Çılgın</h4>
+					<span>gunde 25 dakika</span>
+				</li>
+			</ul>
+			<div class="training">
+				<img src="img/icons/training.gif">
+			</div>
+
+			<button class="form-button btn-pr mt-20 aim-save">
+				Kaydet
+			</button>
+		</div>
+	</section>
+
+	<section class="select-level">
+		<header class="main-header">		
+			
+			<div class="header-name">
+				<label>Bir yol seçin</label>
+			</div>
+
+		</header>
+
+		<div class="aim mt-100">
+			<ul class="mb-20">
+				<li class="active">
+					<h5>Eğitime sıfırdan başla</h5>
+				</li>
+
+				<li>
+					<h5>Biraz bilgim var.</h5>
+				</li>
+			</ul>
+			
+
+			<button class="form-button btn-pr mt-50 aim-save">
+				Kaydet
+			</button>
+		</div>
+	</section>
+
+	<section class="account mt-50">
+		<div class="account-main mt-100">
+			<div class="info-head">
+				<h4 class="text-center">Profil oluşturma zamanı geldi!</h4>
+			</div>
+
+			<div class="info-body">
+				<span class="text-center">İlerlemelerinizi kaydetmek ve ücretsiz olarak öğrenmeye devam etmek için bir profil oluşturun.</span>
+			</div>
+		</div>
+		<button class="form-button btn-success mt-100">Profil oluştur</button>
+	</section>
+
+	<div class="registration">
+		<header class="main-header">		
+			
+			<div class="header-name">
+				<label>Kaydol</label>
+			</div>
+
+		</header>
+		<div class="form mt-70">
+			<div class="form-group">
+			    <label for="exampleInputEmail1">Ad</label>
+			    <input type="text" class="form-control" id="ad" value="Alibaba">
+			    
+			</div>
+
+			<div class="form-group">
+			    <label for="exampleInputEmail1">Username</label>
+			    <input type="text" class="form-control" id="username" value="AlibabaAliyev">
+			   
+			</div>
+
+			<div class="form-group">
+			    <label for="exampleInputEmail1">E-posta</label>
+			    <input type="email" class="form-control" id="ad" aria-describedby="emailHelp" value="aliyev.alibaba@hotmail.com">
+			 
+			</div>
+
+			<div class="form-group">
+			    <label>Parol</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" value="1234567">
+			</div>
+
+			<div class="form-group">
+			    <button class="form-button text-primary">
+			    	GİZLİLİK
+			    </button>
+			    <button class="form-button btn-success">
+			    	Kaydet
+			    </button>
+			</div>
+
+		</div>		
+	</div>
+
 
 <script src="javascript/account.js"></script>
 
