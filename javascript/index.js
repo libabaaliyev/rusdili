@@ -338,6 +338,8 @@ $(document).ready(function()
 
 		$("#buy-plus-txt").html(words[lang]['buy-plus-txt']);
 
+		$("#select-picture").html(words[lang]['select-picture']);
+
 
 	}
 
