@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv=Content-Security-Policy content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
     
-	<title>Alibaba Studio</title>
+	<title>Main</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/icon/css/all.css">
 
@@ -39,17 +39,17 @@
 					</li>
 				</ul>
 
-				<div class="bar">
+				<div class="bar" >
 					<div class="bar-item" id="crown">
 						<figure class="bar-icon">
 							<img src="img/icons/crown_1.png">
 						</figure>
 						<section class="bar-info">
 							<div class="info-head">
-								<h4>Taçlar</h4>
+								<h4 id="crown-l"><!-- Taçlar --></h4>
 							</div>
 							<div class="info-body">
-								<span>Taç kazanmak için becerilerini güçlendir! </span>
+								<span id="crown-txt"><!-- Taç kazanmak için becerilerini güçlendir! --> </span>
 							</div>
 						</section>
 					</div>
@@ -60,7 +60,7 @@
 						</figure>
 						<section class="bar-info">
 							<div class="info-head">
-								<h4>Günlük Hedef</h4>
+								<h4 class="day-aim-title"><!-- Günlük Hedef --></h4>
 							</div>
 							<div class="info-body">
 								<span>0/50</span>
@@ -73,17 +73,17 @@
 							
 						</section>
 						<div class="bar-btn">
-							<span class="form-button update-aim">Değiştir</span>
+							<span class="form-button update-aim" id="update"><!-- Değiştir --></span>
 						</div>
 					</div>
 
 					<div class="bar-item" id="heart">
 						<section class="bar-special-info">
 							<div class="info-head">
-								<h4>Tüm canların duruyor</h4>
+								<h4 id="health-info"><!-- Tüm canların duruyor --></h4>
 							</div>
 							<div class="info-body">
-								<span>Yeni derslere başlamak için can gereksinimin var.</span>
+								<span id="health-txt"><!-- Yeni derslere başlamak için can gereksinimin var. --></span>
 							</div>
 						</section>
 
@@ -94,10 +94,10 @@
 										<i class="red fas fa-heart fa-beat"></i>
 									</div>
 									<div class="special-items-info">
-										<h4>1 Can</h4>
+										<h4 id="a-health"><!-- 1 Can --></h4>
 									</div>
 									<div class="special-items-info">
-										<span>Pratik yap</span>
+										<span class="get-practice"><!-- Pratik yap --></span>
 									</div>							
 								</li>
 
@@ -106,7 +106,7 @@
 										<i class="red fas fa-heart fa-beat"></i>
 									</div>
 									<div class="special-items-info">
-										<h4>Can Yükle</h4>
+										<h4 class="get-health"><!-- Can Kazan --></h4>
 									</div>
 									<div class="special-items-info">
 										<i class="fas fa-gem"></i> <span>350</span>
@@ -115,16 +115,16 @@
 
 								<li class="sp-active">
 									<div class="special-item">
-										<span>Plus</span>
+										<span class="plus"><!-- Plus --></span>
 									</div>
 									<div class="special-items-icon">
 										<i class="red fas fa-heart fa-beat"></i>
 									</div>
 									<div class="special-items-info">
-										<h4>Sınırsız</h4>
+										<h4 class="unlimited"><!-- Sınırsız --></h4>
 									</div>
 									<div class="special-items-info">
-										<span>Plus`a geç</span>
+										<span class="get-plus"><!-- Plus`a geç --></span>
 									</div>							
 								</li>
 							</ul>
@@ -143,15 +143,15 @@
 						</figure>
 						<div class="header-info">
 							<h4>Unname</h4>
-							<span>Elementary</span>
+							<span class="level-step"><!-- Elementary --></span>
 						</div>
 					</a>
 				</header>
 				<ul>
-					<li><a href="setting.html"><i class="fas fa-cog "></i> Settings</a></li>
-					<li><a href=""><i class="fas fa-envelope"></i> Email Us</a></li>
-					<li><a href=""><i class="fas fa-user-plus"></i> Invite Friends</a></li>
-					<li><a href=""><i class="fas fa-star"></i> Rate Us</a></li>
+					<li><a href="setting.html"><i class="fas fa-cog "></i> 	<span class="settings"><!-- Settings --></span></a></li>
+					<li><a href=""><i class="fas fa-envelope"></i> 			<span id="contact-us"><!-- Email Us --></span></a></li>
+					<li><a href=""><i class="fas fa-user-plus"></i> 		<span id="invite"><!-- Invite Friends --></span></a></li>
+					<li><a href=""><i class="fas fa-star"></i> 				<span id="rate"><!-- Rate Us --></span></a></li>
 				</ul>
 			</nav>
 
@@ -174,83 +174,12 @@
 									<i class="gold txt-shadow fas fa-crown"></i> <span>1</span>
 								</div>
 								<div class="query-info">
-									<h4>Adım 1</h4>
+									<h4><span class="step"><!-- Adım --></span> 1</h4>
 								</div>
 							</li>
 
 							<li>
 								<div class="castle-border"></div>
-								<div class="query-into">
-									<i class="fas fa-shoe-prints fa-rotate-90"></i>
-								</div>
-								<div class="query-crown">
-									<i class="txt-shadow fas fa-crown"></i>
-								</div>
-								<div class="query-info">
-									<h4>Adım 2</h4>
-								</div>
-							</li>
-
-							<li>
-								<div class="castle-border"></div>
-								
-								<div class="query-into">
-									<i class="fas fa-shoe-prints fa-rotate-90"></i>
-								</div>
-
-								<div class="query-crown">
-									<i class="txt-shadow fas fa-crown"></i>
-								</div>
-
-								<div class="query-info">
-									<h4>Adım 3</h4>
-								</div>
-							</li>
-
-							<li>
-								<div class="castle-border"></div>
-								
-								<div class="query-into">
-									<i class="fas fa-shoe-prints fa-rotate-90"></i>
-								</div>
-
-								<div class="query-crown">
-									<i class="txt-shadow fas fa-crown"></i>
-								</div>
-
-								<div class="query-info">
-									<h4>Adım 4</h4>
-								</div>
-							</li>
-
-							<li>
-								<div class="castle-border"></div>
-								
-								<div class="query-into">
-									<i class="fas fa-shoe-prints fa-rotate-90"></i>
-								</div>
-
-								<div class="query-crown">
-									<i class="txt-shadow fas fa-crown"></i>
-								</div>
-
-								<div class="query-info">
-									<h4>Adım 5</h4>
-								</div>
-							</li>
-
-						</ul>
-
-					</div>
-
-					<div class="castles">
-						<header class="level">
-							<img src="img/icons/castle-4.png">
-							<label>1</label>
-						</header>
-						<ul class="level-query">
-							<li>
-								<div class="castle-border "></div>
 								<div class="query-into">
 									<i class="fas fa-shoe-prints fa-rotate-90"></i>
 								</div>
@@ -258,83 +187,12 @@
 									<i class="gold txt-shadow fas fa-crown"></i> <span>1</span>
 								</div>
 								<div class="query-info">
-									<h4>Adım 1</h4>
+									<h4><span class="step">Adım</span> 1</h4>
 								</div>
 							</li>
 
 							<li>
 								<div class="castle-border"></div>
-								<div class="query-into">
-									<i class="fas fa-shoe-prints fa-rotate-90"></i>
-								</div>
-								<div class="query-crown">
-									<i class="txt-shadow fas fa-crown"></i>
-								</div>
-								<div class="query-info">
-									<h4>Adım 2</h4>
-								</div>
-							</li>
-
-							<li>
-								<div class="castle-border"></div>
-								
-								<div class="query-into">
-									<i class="fas fa-shoe-prints fa-rotate-90"></i>
-								</div>
-
-								<div class="query-crown">
-									<i class="txt-shadow fas fa-crown"></i>
-								</div>
-
-								<div class="query-info">
-									<h4>Adım 3</h4>
-								</div>
-							</li>
-
-							<li>
-								<div class="castle-border"></div>
-								
-								<div class="query-into">
-									<i class="fas fa-shoe-prints fa-rotate-90"></i>
-								</div>
-
-								<div class="query-crown">
-									<i class="txt-shadow fas fa-crown"></i>
-								</div>
-
-								<div class="query-info">
-									<h4>Adım 4</h4>
-								</div>
-							</li>
-
-							<li>
-								<div class="castle-border"></div>
-								
-								<div class="query-into">
-									<i class="fas fa-shoe-prints fa-rotate-90"></i>
-								</div>
-
-								<div class="query-crown">
-									<i class="txt-shadow fas fa-crown"></i>
-								</div>
-
-								<div class="query-info">
-									<h4>Adım 5</h4>
-								</div>
-							</li>
-
-						</ul>
-
-					</div>
-
-					<div class="castles">
-						<header class="level">
-							<img src="img/icons/castle-4.png">
-							<label>1</label>
-						</header>
-						<ul class="level-query">
-							<li>
-								<div class="castle-border "></div>
 								<div class="query-into">
 									<i class="fas fa-shoe-prints fa-rotate-90"></i>
 								</div>
@@ -342,7 +200,7 @@
 									<i class="gold txt-shadow fas fa-crown"></i> <span>1</span>
 								</div>
 								<div class="query-info">
-									<h4>Adım 1</h4>
+									<h4><span class="step">Adım</span> 1</h4>
 								</div>
 							</li>
 
@@ -352,78 +210,72 @@
 									<i class="fas fa-shoe-prints fa-rotate-90"></i>
 								</div>
 								<div class="query-crown">
-									<i class="txt-shadow fas fa-crown"></i>
+									<i class="gold txt-shadow fas fa-crown"></i> <span>1</span>
 								</div>
 								<div class="query-info">
-									<h4>Adım 2</h4>
+									<h4><span class="step">Adım</span> 1</h4>
 								</div>
 							</li>
 
 							<li>
 								<div class="castle-border"></div>
-								
 								<div class="query-into">
 									<i class="fas fa-shoe-prints fa-rotate-90"></i>
 								</div>
-
 								<div class="query-crown">
-									<i class="txt-shadow fas fa-crown"></i>
+									<i class="gold txt-shadow fas fa-crown"></i> <span>1</span>
 								</div>
-
 								<div class="query-info">
-									<h4>Adım 3</h4>
+									<h4><span class="step">Adım</span> 1</h4>
 								</div>
 							</li>
 
 							<li>
 								<div class="castle-border"></div>
-								
 								<div class="query-into">
 									<i class="fas fa-shoe-prints fa-rotate-90"></i>
 								</div>
-
 								<div class="query-crown">
-									<i class="txt-shadow fas fa-crown"></i>
+									<i class="gold txt-shadow fas fa-crown"></i> <span>1</span>
 								</div>
-
 								<div class="query-info">
-									<h4>Adım 4</h4>
+									<h4><span class="step">Adım</span> 1</h4>
 								</div>
 							</li>
 
 							<li>
 								<div class="castle-border"></div>
-								
 								<div class="query-into">
 									<i class="fas fa-shoe-prints fa-rotate-90"></i>
 								</div>
-
 								<div class="query-crown">
-									<i class="txt-shadow fas fa-crown"></i>
+									<i class="gold txt-shadow fas fa-crown"></i> <span>1</span>
 								</div>
-
 								<div class="query-info">
-									<h4>Adım 5</h4>
+									<h4><span class="step">Adım</span> 1</h4>
 								</div>
 							</li>
+
+							
 
 						</ul>
 
 					</div>
+
 				</div>
 
 				<div class="lesson-info animated bg-blue">
 					<div class="arrow-top"></div>
 					<div class="info-head">
 						<div class="info-left">
-							<h6>Düzey 1/5</h6>
+							<h6><span class="level-txt"><!-- Düzey --></span> 1/5</h6>
 						</div>
 						<div class="info-right">
 							<button class="form-button text-light bg-blue skip-lesson">
 								<i class="fas fa-key"></i>
 							</button>
 						</div>
-						<button class="form-button text-primary m-3 start-lesson">Başla</button>
+						<button class="form-button text-primary m-3 start-lesson"><!-- Başla --></button>
 					</div>
 				</div>
 
@@ -434,10 +286,10 @@
 					
 					<section class="bar-special-info">
 						<div class="info-head">
-							<h4>2. düzeyi atlamak için teste gir!</h4>
+							<h4>2. <span class="level-txt"><!-- düzeyi --></span> - <span class="skip-level-txt"><!-- atlamak için teste gir! --></span></h4>
 						</div>
 						<div class="info-body">
-							<span>Sınırsız test hakkı almak için mücevher kullan veya Plus`ı dene</span>
+							<span class="skip-level-span"><!-- Sınırsız test hakkı almak için mücevher kullan veya Plus`ı dene --></span>
 						</div>
 					</section>
 
@@ -448,7 +300,7 @@
 									<i class="gem fas fa-gem"></i>
 								</div>
 								<div class="special-items-info">
-									<h4>Mücevher kullan</h4>
+									<h4 class="use-gem"><!-- Mücevher kullan --></h4>
 								</div>
 								<div class="info-body">
 									<i class="fas fa-gem text-primary"></i> <span class="text-primary">120</span>
@@ -457,22 +309,22 @@
 
 							<li class="sp-active">
 								<div class="special-item">
-									<span>Plus</span>
+									<span class="plus"><!-- Plus --></span>
 								</div>
 								<div class="special-items-icon">
 									<i class="gem fas fa-gem"></i>
 								</div>
 								<div class="special-items-info">
-									<h4>Sınırsız test hakkı</h4>
+									<h4 class="unlimited-test"><!-- Sınırsız test hakkı --></h4>
 								</div>
 								<div class="special-items-info">
-									<span>Plus`a geç</span>
+									<span class="get-plus"><!-- Plus`a geç --></span>
 								</div>							
 							</li>
 						</ul>
 					</section>
 
-					<button class="form-button text-primary not-skip-lesson"> Hayır, Teşekkürler</button>
+					<button class="form-button text-primary not-skip-lesson no-thanks-l"><!--  Hayır, Teşekkürler --></button>
 
 				</div>
 
@@ -484,7 +336,7 @@
 						<span class="close-tabs">&#10005;</span>
 					</div>
 					<div class="header-name">
-						<label>Günlük Hedef</label>
+						<label class="day-aim-title"><!-- Günlük Hedef --></label>
 					</div>
 
 				</header>
@@ -492,31 +344,31 @@
 				<div class="aim">
 					<ul>
 						<li>
-							<h4>Rahat</h4>
-							<span>gunde 5 dakika</span>
+							<h4 id="easy"><!-- Rahat --></h4>
+							<span id="easy-time"><!-- gunde 5 dakika --></span>
 						</li>
 
 						<li class="active">
-							<h4>Orta</h4>
-							<span>gunde 10 dakika</span>
+							<h4 id="average"><!-- Orta --></h4>
+							<span id="average-time"><!-- gunde 10 dakika --></span>
 						</li>
 
 						<li>
-							<h4>Ciddi</h4>
-							<span>gunde 15 dakika</span>
+							<h4 id="serious"><!-- Ciddi --></h4>
+							<span id="serious-time"><!-- gunde 15 dakika --></span>
 						</li>
 
 						<li>
-							<h4>Çılgın</h4>
-							<span>gunde 25 dakika</span>
+							<h4 id="crazy"><!-- Çılgın --></h4>
+							<span id="crazy-time"><!-- gunde 25 dakika --></span>
 						</li>
 					</ul>
 					<div class="training">
 						<img src="img/icons/training.gif">
 					</div>
 
-					<button class="form-button btn-pr mt-20 aim-save">
-						Kaydet
+					<button class="form-button btn-pr mt-20 aim-save save">
+						<!-- Kaydet -->
 					</button>
 				</div>
 
@@ -534,7 +386,7 @@
 					
 				</ul>
 				<div class="header-name">
-					<label>Profil</label>
+					<label id="profile-title"><!-- Profil --></label>
 				</div>
 			</header>
 			<section class="profile-header">
@@ -559,7 +411,7 @@
 							<div class="archive-data">
 								
 									<div class="info-head">
-										<h4>Günlük Hedef</h4>
+										<h4 class="day-aim-title"><!-- Günlük Hedef --></h4>
 									</div>
 									<div class="info-body">
 										<span>15/50</span>
@@ -581,7 +433,7 @@
 							<div class="archive-data">
 								
 									<div class="info-head">
-										<h4>Günlük Hedef</h4>
+										<h4 class="day-aim-title"><!-- Günlük Hedef --></h4>
 									</div>
 									<div class="info-body">
 										<span>15/50</span>
@@ -596,78 +448,7 @@
 							</div>
 						</section>
 					</li>
-
-					<li>
-						<section class="archive">
-							<figure class="archive-img bg-3">
-								<img src="img/profiles/p15.png">
-							</figure>
-							<div class="archive-data">
-								
-									<div class="info-head">
-										<h4>Günlük Hedef</h4>
-									</div>
-									<div class="info-body">
-										<span>15/50</span>
-										<div class="progress-bar">
-											<div class="progress-bar-active">
-												
-											</div>
-										</div>
-									</div>
-									
-								
-							</div>
-						</section>
-					</li>
-
-					<li>
-						<section class="archive">
-							<figure class="archive-img bg-4">
-								<img src="img/profiles/p16.png">
-							</figure>
-							<div class="archive-data">
-								
-									<div class="info-head">
-										<h4>Günlük Hedef</h4>
-									</div>
-									<div class="info-body">
-										<span>15/50</span>
-										<div class="progress-bar">
-											<div class="progress-bar-active">
-												
-											</div>
-										</div>
-									</div>
-									
-								
-							</div>
-						</section>
-					</li>
-
-					<li>
-						<section class="archive">
-							<figure class="archive-img bg-5">
-								<img src="img/profiles/p17.png">
-							</figure>
-							<div class="archive-data">
-								
-									<div class="info-head">
-										<h4>Günlük Hedef</h4>
-									</div>
-									<div class="info-body">
-										<span>15/50</span>
-										<div class="progress-bar">
-											<div class="progress-bar-active">
-												
-											</div>
-										</div>
-									</div>
-									
-								
-							</div>
-						</section>
-					</li>
+					
 				</ul>
 			</section>
 		</div>
@@ -734,10 +515,10 @@
 
 				</ul>
 				<div class="info-head">
-					<h4 class="text-center">Bronz Lig</h4>
+					<h4 class="text-center">Bronz Lig</h4> <!-- level sistemi yigilanda -->
 				</div>
 				<div class="info-body text-center">
-					<span>Üç lig tamamladınız...</span>
+					<span><span id="count-leag">Üç lig</span> <span id="finish-lig"><!-- tamamladınız... --></span></span>
 				</div>
 			</section>
 		</div>
@@ -751,19 +532,19 @@
 					
 				</ul>
 				<div class="header-name">
-					<label>Mağaza</label>
+					<label id="shop"><!-- Mağaza --></label>
 				</div>
 			</header>
 
 			<section class="shopping">
 				<div class="card-special">
 					<header>
-						<h2>Rusça eğitim seti</h2><span>PLUS</span>
+						<h2 class="app-name"><!-- Rusça eğitim seti --></h2><span class="plus" style="text-transform: uppercase;"><!-- PLUS --></span>
 					</header>
 					<div class="info-body">
-						<span>Reklamsız, sınırsız eğitim selam söyle !!!</span>
+						<span id="get-plus-shop"><!-- Reklamsız, sınırsız eğitim selam söyle !!! --></span>
 					</div>
-					<a class="form-button text-primary" href="">Yükselt</a>
+					<a class="form-button text-primary upgrade" href=""><!-- Yükselt --></a>
 				</div>
 
 				<div class="card">
@@ -772,11 +553,11 @@
 					</figure>
 					<div class="card-info">
 						<header>
-							<h5>Seri koruma kalkanı</h5>
+							<h5 id="get-shielt-title"><!-- Seri koruma kalkanı --></h5>
 						</header>
 						<div class="info-body">
-							<span>
-								Bir hafta kullanmayı unutduğun serini koruyabilirsin.
+							<span id="get-shielt-txt">
+								<!-- Bir hafta kullanmayı unutduğun serini koruyabilirsin. -->
 							</span>
 						</div>
 						<div class="info-body">
@@ -793,15 +574,15 @@
 					</figure>
 					<div class="card-info">
 						<header>
-							<h5>Can Yenileme Hakkı</h5>
+							<h5 id="health-update"><!-- Can Yenileme Hakkı --></h5>
 						</header>
 						<div class="info-body">
-							<span>
-								Derslerde hata yapmaktak korma!
+							<span id="health-update-txt">
+								<!-- Derslerde hata yapmaktak korma! -->
 							</span>
 						</div>
-						<div class="info-body">
-							<span class="text-primary">Reklam izle</span>
+						<div class="info-body" id="get-ads">
+							<span class="text-primary"><!-- Reklam izle --></span>
 						</div>
 					</div>
 				</div>
@@ -812,11 +593,11 @@
 					</figure>
 					<div class="card-info">
 						<header>
-							<h5>İkiye katla</h5>
+							<h5 id="double-skill-title"><!-- İkiye katla --></h5>
 						</header>
 						<div class="info-body">
-							<span>
-								7 günlük seriyi tamamladığın zaman kazancını ikiye katla.
+							<span id="double-skill-txt">
+								<!-- 7 günlük seriyi tamamladığın zaman kazancını ikiye katla. -->
 							</span>
 						</div>
 						<div class="info-body">
@@ -834,15 +615,15 @@
 					</figure>
 					<div class="card-info">
 						<header>
-							<h5>Sınırsız Can</h5>
+							<h5 id="unlimited-health"><!-- Sınırsız Can --></h5>
 						</header>
 						<div class="info-body">
-							<span>
-								Plus'a geç
+							<span class ="get-plus">
+								<!-- Plus'a geç -->
 							</span>
 						</div>
 						<div class="info-body">
-							<span class="text-primary">PLUS SATIN AL</span>
+							<span class="text-primary" id="buy-plus"><!-- PLUS SATIN AL --></span>
 						</div>
 					</div>
 				</div>

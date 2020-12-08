@@ -7,12 +7,14 @@ $(document).ready(function()
 		ru : "Русское Oбразование",
 		en : "Russian Education"
 	}
+	var appLanguage = [];
 	
 	const startFunc = 
 	{
 		jsonfiles: function(e)
 		{
-			$(".main-name h4").html(title[lang]);
+			
+				
 			
 			$.getJSON("json/notification.json", function(data){
 				
@@ -20,6 +22,16 @@ $(document).ready(function()
 				localStorage.notifications 	= JSON.stringify(notificationData);
 				
 			});
+
+			$.getJSON("json/appLanguage.json", function(data){
+				
+				$("#app-name").html(data[lang]['app-name']);
+				localStorage.appLanguage 	= JSON.stringify(data);
+				
+			});
+
+			
+
 			setTimeout(function() {
 				window.location = e+".html";
 
@@ -57,8 +69,7 @@ $(document).ready(function()
 			      }
 			    })
 			  }
-			})
-
+			});
 			
 		}
 	}
@@ -66,7 +77,10 @@ $(document).ready(function()
 	if(localStorage.getItem("applang")===null)
 		startFunc.language();
 	else{
-		lang = JSON.parse(localStorage.applang);
+		lang 		= JSON.parse(localStorage.applang);
+		appLanguage = JSON.parse(localStorage.appLanguage);
+		
+		$("#app-name").html(appLanguage[lang]['app-name']);
 		startFunc.jsonfiles("main");
 	}
 	

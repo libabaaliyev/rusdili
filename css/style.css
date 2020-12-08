@@ -3,7 +3,7 @@
   src: url(fonts/kanit/Kanit-Regular.ttf);
 }
 @font-face {
-  font-family: ubuntu-r;
+  /*font-family: ubuntu-r;*/
   src: url(fonts/ubuntu/Ubuntu-Regular.ttf);
 }
 
@@ -712,7 +712,7 @@ body
   border-bottom: 4px solid #cecece;
   font-weight: 600;
   letter-spacing: 1.2px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin: 5px 0;
   text-align: center;
   padding: 5px 0;
@@ -922,7 +922,7 @@ body
   margin-left: 0;
   padding: 8px 0;
   text-align: left;
-  font-family: ubuntu-r;
+
 }
 .card-special header span
 {
@@ -1109,7 +1109,7 @@ body
   padding: 5px 0;
   font-size: 16px;
   font-weight: 600;
-  font-family: ubuntu-r;
+  /*font-family: ubuntu-r;*/
 }
 
 .query-crown
@@ -1178,7 +1178,7 @@ body
 {
   font-size: 16px;
   font-weight: 700;
-  font-family: ubuntu-r;
+  /*font-family: ubuntu-r;*/
   color: #F8FAFB !important;
 }
 
@@ -1383,7 +1383,7 @@ body
   width: 100%;
   margin-bottom: 30px;
   padding: 0;
-  font-family: ubuntu-r;
+  /*font-family: ubuntu-r;*/
   font-size: 14px;
   text-align: left;
   color: #fff;
@@ -1478,11 +1478,11 @@ body
   margin: 20px 0;
 }
 
-.lesson-main,.lesson-success,.adsense,.day-aim,.answer,.select-level,.account
+.lesson-main,.lesson-success,.adsense,.day-aim,.answer,.select-level,.account,.registration
 {
   display: none;
 }
-.day-aim
+.day-aim,.select-level,.get-start,.account,.registration
 {
   position: fixed;
   top: 0;
@@ -1491,7 +1491,7 @@ body
   background: #edf9fe;
   z-index: 4;
 }
-.aim
+.aim,.select-level-items
 {
   display: block;
   margin-top: 50px;
@@ -1500,7 +1500,7 @@ body
   height: auto;
 
 }
-.aim ul
+.aim ul,.select-level-items ul
 {
   display: block;
   float: left;
@@ -1510,7 +1510,7 @@ body
   border-radius: 8px;
   border: 1px solid #cecece;
 }
-.aim ul li
+.aim ul li,.select-level-items ul li
 {
   display: inline-block;
   float: left;
@@ -1522,30 +1522,30 @@ body
   margin: 0;
 }
 
-.aim ul li.active
+.aim ul li.active,.select-level-items ul li.active
 {
   border: 1px solid #1CB0F6;
   color: #1CB0F6;
   background: #d1effd;
 }
-.aim ul li:first-child
+.aim ul li:first-child,.select-level-items ul li:first-child
 {
   border-radius: 8px 8px 0 0;
 }
-.aim ul li:last-child
+.aim ul li:last-child,.select-level-items ul li:last-child
 {
   border-radius: 0 0 8px 8px;
 }
-.aim ul li h4,.aim ul li h5,.aim ul li h6
+.aim ul li h4,.aim ul li h5,.aim ul li h6,.select-level-items ul li h4,.select-level-items ul li h5,.select-level-items ul li h6
 {
   display: inline;
   float: left;
   text-align: left;
   margin: 0;
-  font-family: ubuntu-r;
+  /*font-family: ubuntu-r;*/
   font-weight: 700;
 }
-.aim ul li span
+.aim ul li span,.select-level-items ul li span
 {
   display: inline;
   float: right;
@@ -1562,7 +1562,7 @@ body
 }
 .account .info-body
 {
-  font-family: ubuntu-r;
+  /*font-family: ubuntu-r;*/
   font-weight: 400;
 }
 .account .form-button
