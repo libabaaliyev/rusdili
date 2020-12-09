@@ -1,5 +1,5 @@
 $(document).ready(function()
-{  
+{
 	get_start 	= $(".get-start-function");
 	aim_items	= $(".aim ul li");
 	level_items = $(".select-level-items ul li");
@@ -12,43 +12,33 @@ $(document).ready(function()
 	lang 		= JSON.parse(localStorage.applang);
 	words 		= JSON.parse(localStorage.appLanguage);
 
-	user_data 	= 
-	{
-		"aim": "",
-		"level" : "",
-		"name": "",
-		"username":"",
-		"email":"",
-		"password":"",
-		"grade":"0"
-
-	}
-
 	language();
 
 	get_start.click(function()
 	{
-		action = $(this).data("action");
 		$("#get-start-"+start_value).addClass("slideOutLeft");
 		$("#get-start-"+start_value).fadeOut(100);
-
-	/*	if(action)*/
-
-		add_datas(action);
-
-		
+		start_value++;
+		if(start_value<5){
+			$("#get-start-"+start_value).addClass("slideInRight");
+			$("#get-start-"+start_value).fadeIn();
+		}
+		else
+		{
+			window.location = "lessons.html#exam-get-start";
+		}
 	});
 
 	aim_items.click(function()
 	{
-		aim_items.removeClass("active active-aim");
-		$(this).addClass("active active-aim");
+		aim_items.removeClass("active");
+		$(this).addClass("active");
 	})
 
 	level_items.click(function()
 	{
-		level_items.removeClass("active active-level");
-		$(this).addClass("active active-level");
+		level_items.removeClass("active");
+		$(this).addClass("active");
 	});
 
 	login.click(function()
@@ -74,41 +64,6 @@ $(document).ready(function()
 		$("#get-start-"+start_value).fadeIn();
 	});
 
-	login_end.click(function()
-	{
-		window.location = "main.html";
-	});
-
-	function add_datas(event)
-	{
-
-		if(event == "aim")
-		{
-			aim = $(".active-aim").data("aim");
-			user_data.aim = aim;
-		}
-		else if(event == "level")
-		{
-			level = $(".active-level").data("level");
-			user_data.level = level;
-		}
-		else if(event == "create-profile")
-		{
-			level = $(".active-level").data("level");
-			user_data.level = level;
-		}
-
-		start_value++;
-		if(start_value<5){
-			$("#get-start-"+start_value).addClass("slideInRight");
-			$("#get-start-"+start_value).fadeIn();
-		}
-		else
-		{
-			window.location = "lessons.html#exam-get-start";
-		}
-	}
-
 
 	function language()
 	{
@@ -128,7 +83,7 @@ $(document).ready(function()
 		$("#crazy").html(words[lang]['crazy']);
 		$("#crazy-time").html(words[lang]['crazy-time']);
 		$(".save").html(words[lang]['save']);
-		$("#select-level").html(words[lang]['select-level']);
+		$("#select-leve").html(words[lang]['select-leve']);
 		$("#start-zero").html(words[lang]['start-zero']);
 		$("#start-elementary").html(words[lang]['start-elementary']);
 		$("#create-profile").html(words[lang]['create-profile']);
