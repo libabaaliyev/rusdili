@@ -3,7 +3,8 @@ $(document).ready(function()
 	body 			= $("body");
 	darkness		= $(".darkness");
 	lesson 			= $(".level-query li");
-	lesson_info 	= $(".lesson-info");
+	lesson_info 	= $(".lesson-info-x");
+	lesson_info_tab	= $(".lesson-info");
 	l_a_top			= $(".arrow-top");
 	skip_lesson		= $(".skip-lesson");
 	skip_tab 		= $(".lock-lesson");
@@ -14,6 +15,10 @@ $(document).ready(function()
 	aim_save 		= $(".aim-save")
 	close 			= $(".close-tabs");
 	start_lesson 	= $(".start-lesson");
+
+	bodyHeight 		= $(window).height();
+	windowWidth		= $(window).width();
+	bodyWidth		= $("body").width();
 	opening 		= false;
 
 	//localStorages
@@ -37,28 +42,39 @@ $(document).ready(function()
 		{
 			x = e.pageX;
 			y = e.pageY;
-
+			
+			
 			y_lesson 	= $(this).offset().top;
-			bodyHeight 	= $(window).height();
+
+			if(windowWidth<1050)
+			{
+				
+				objectLeft 	= $(this).offset().left;
+				
+			}
+			else
+			{
+				objectLeft 	= $(this).offset().left - ((windowWidth - bodyWidth)/2);
+			}
 			
-			
+			if(objectLeft>(bodyWidth/2+40)){
+
+				lesson_info_tab.css("left",(objectLeft-140));
+			}
+
+			else
+			{
+				lesson_info_tab.css("left",objectLeft);
+			}
+
 			lesson_info.css(
 			{
-				"top": y_lesson+50+"px"
+				"top": (y_lesson-25)+"px"
 			});
-
-			if(x>150&& x<200)
-			{
-				x = 135;
-			}
-			else if(x>200&&x<270)
-				x = 190;
-			else
-				x = 40;
 
 			l_a_top.css(
 			{
-				"left": x+"px"
+				"left": (objectLeft+25)+"px"
 
 			});
 

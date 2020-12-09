@@ -12,13 +12,19 @@
   src: url(fonts/acme/acme.ttf);
 }
 
+html
+{
+  overflow: auto;
+}
+
 body
 {
-  position: relative;
-  width: 100%;
   
+  width: 100%;
+
   background: #edf9fe !important;
   font-family: kanit-r !important;
+  overflow: auto;
 }
 
 
@@ -1135,23 +1141,32 @@ body
   color: #000;
   text-align: center;
 }
-
+.lesson-info-x
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 135px;
+  z-index: 2;
+  display: none;
+}
 .lesson-info
 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  top: 0;
+  left: calc(50% - 140px);
+  
   width: 280px;
   height: 140px;
   border-radius: 13px;
   padding: 10px;
   z-index: 3;
-  display: none;
-  z-index: 2;
+  
+  
 }
 .lesson-info.arrow-top {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .arrow-top {
@@ -1576,22 +1591,29 @@ body
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100vh - 120px);
+  height: 100vh;
   background: #edf9fe;
-  z-index: 101;
-  overflow: auto;
+
   display: none;
-  margin-top: 60px;
-  margin-bottom: 60px;
   z-index: 4;
 
+}
+
+.photos
+{
+  position: fixed;
+  top: 50px;
+  left: 0; 
+  width: 100%;
+  height: calc(100vh - 130px);
+  overflow: auto;
 }
 .photo-items
 {
   display: inline-block;
   float: left;
   width: calc(100%/3 - 10px);
-  max-width: 140px;
+  max-width: 120px;
   height: 140px; 
   margin: 5px;
   border-radius: 3px;
@@ -1622,6 +1644,25 @@ body
   padding: 16px;
 }
 
+::-webkit-scrollbar {
+  width: 2px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #A8D0E2; 
+}
 
 @media(min-width: 380px)
 {
@@ -1651,13 +1692,42 @@ body
     }
 
 }
+.full
+{
+  height: 100vh;
+}
 
 @media(min-width: 1050px)
 {
+
+    body
+    {
+      width: 720px;    
+      margin-left: calc(50% - 360px);
+      border-left: 1px solid #cecece;
+      border-right: 1px solid #cecece;
+      overflow: auto;
+
+    }
+
+    .main-header,.footer,.lesson-info-x,.lesson-header,.photo-panel,.bottom-button-fixed
+    {
+      width: 720px;
+      left: calc(50% - 360px);
+      border-left: 1px solid #cecece;
+      border-right: 1px solid #cecece;
+    }
+
+
     .main-header ul li,.footer ul li
     {      
       padding: 8px 5px;      
     } 
    
+    .photo-items
+    {
+      width: calc(100%/5 - 10px);
+      max-width: 150px;
+    }
 
 }
