@@ -81,7 +81,7 @@ $(document).ready(function()
 		appLanguage = JSON.parse(localStorage.appLanguage);
 		
 		$("#app-name").html(appLanguage[lang]['app-name']);
-		startFunc.jsonfiles("main");
+		startFunc.jsonfiles("start"); //burani duzeldecem
 	}
 	
 

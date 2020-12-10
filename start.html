@@ -25,7 +25,7 @@
 			<span id="free-learn"><!-- Ücretsiz ve kesintisiz öğren --></span>
 		</div>
 
-		<button class="form-button btn-success mt-100 get-start-function" id="get-start"><!-- Get started --></button>
+		<button class="form-button btn-success mt-100 get-start-function" data-action="start" id="get-start"><!-- Get started --></button>
 		<button class="form-button green already-start" id="login-start"><!-- I already have an account --></button>
 	</section>
 
@@ -37,22 +37,22 @@
 		</header>
 		<div class="aim">
 			<ul>
-				<li>
+				<li data-aim="easy">
 					<h4 id="easy"><!-- Rahat --></h4>
 					<span id="easy-time"><!-- gunde 5 dakika --></span>
 				</li>
 
-				<li class="active">
+				<li class="active active-aim" data-aim="average">
 					<h4 id="average"><!-- Orta --></h4>
 					<span id="average-time"><!-- gunde 10 dakika --></span>
 				</li>
 
-				<li>
-					<h4 id="serious"><!-- Ciddi --></h4>
+				<li data-aim="serious">
+					<h4 id="serious" ><!-- Ciddi --></h4>
 					<span id="serious-time"><!-- gunde 15 dakika --></span>
 				</li>
 
-				<li>
+				<li data-aim="crazy">
 					<h4 id="crazy"><!-- Çılgın --></h4>
 					<span id="crazy-time"><!-- gunde 25 dakika --></span>
 				</li>
@@ -61,7 +61,7 @@
 				<img src="img/icons/training.gif">
 			</div>
 
-			<button class="form-button btn-pr mt-20 get-start-function save">
+			<button class="form-button btn-pr mt-20 get-start-function save" data-action="aim">
 				<!-- Kaydet -->
 			</button>
 		</div>
@@ -76,17 +76,17 @@
 
 		<div class="select-level-items mt-100">
 			<ul class="mb-20">
-				<li class="active">
+				<li class="active active-level" data-level="zero">
 					<h5 id="start-zero"><!-- Eğitime sıfırdan başla --></h5>
 				</li>
 
-				<li>
+				<li data-level="elementary">
 					<h5 id="start-elementary"><!-- Biraz bilgim var. --></h5>
 				</li>
 			</ul>
 			
 
-			<button class="form-button btn-pr mt-50 get-start-function save">
+			<button class="form-button btn-pr mt-50 get-start-function save"  data-action="level">
 				<!-- Kaydet -->
 			</button>
 		</div>
@@ -94,15 +94,15 @@
 
 	<section class="account mt-50 animated" id="get-start-3">
 		<div class="account-main mt-100">
-			<div class="info-head">
+			<div class="info-head ">
 				<h4 class="text-center" id="create-profile"><!-- Profil oluşturma zamanı geldi! --></h4>
 			</div>
 
-			<div class="info-body">
+			<div class="info-body text-center">
 				<span class="text-center" id="create-profile-txt"><!-- İlerlemelerinizi kaydetmek ve ücretsiz olarak öğrenmeye devam etmek için bir profil oluşturun. --></span>
 			</div>
 		</div>
-		<button class="form-button btn-success mt-100 get-start-function" id="create-profile-btn"><!-- Profil oluştur --></button>
+		<button class="form-button btn-success mt-100 get-start-function"  data-action="create-profile-start" id="create-profile-btn"><!-- Profil oluştur --></button>
 	</section>
 
 	<div class="registration animated" id="get-start-4">
@@ -116,32 +116,32 @@
 		<div class="form mt-70">
 			<div class="form-group">
 			    <label class="name"><!-- Ad --></label>
-			    <input type="text" class="form-control name-input" id="ad" value="Alibaba">
+			    <input type="text" class="form-control name-input" id="name-registry" value="">
 			    
 			</div>
 
 			<div class="form-group">
 			    <label class="username"><!-- Username --></label>
-			    <input type="text" class="form-control username-input" value="AlibabaAliyev">
+			    <input type="text" class="form-control username-input" id="username-registry" value="">
 			   
 			</div>
 
 			<div class="form-group">
 			    <label class="email"><!-- E-posta --></label>
-			    <input type="email" class="form-control email-input" aria-describedby="emailHelp" value="aliyev.alibaba@hotmail.com">
+			    <input type="email" class="form-control email-input" id="email-registry" aria-describedby="emailHelp" value="">
 			 
 			</div>
 
 			<div class="form-group">
 			    <label class="password"><!-- Parol --></label>
-			    <input type="password" class="form-control password-input" value="1234567">
+			    <input type="password" class="form-control password-input" id="password-registry" value="">
 			</div>
 
 			<div class="form-group">
 			    <button class="form-button text-primary" id="privacy">
 			    	<!-- GİZLİLİK -->
 			    </button>
-			    <button class="form-button btn-success get-start-function save">
+			    <button class="form-button btn-success get-start-function save"  data-action="create-profile">
 			    	<!-- Kaydet -->
 			    </button>
 			</div>

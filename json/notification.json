@@ -1,17 +1,32 @@
-{
+{ 
 	"en":
 	{
 		"confirmText"		: "Ok",
 		"cancel"			: "Cancel",
 		"confirmDelete"		: "Yes, delete it!",
 
-		"levels"			:{
-								"beginner"	: "Beginner",
+		"empty-input"		: {"message"	:"Fill in all the fields",	"info": "error"},
 
-							    "middle"	: "Middle",
 
-							    "good"		: "Good"
-							},
+		"notUserMail"		: {"message"	: "Wrong email or password.",	"info"	: "error"},
+
+		"notUser"			: {"message" 	: "Wrong username or password.","info"	: "error"},
+
+		"yesUser"			: {"message"	: "Login success!!!", "info":"success"},
+
+		"registryOk"		: {"message"	: "Congratulations, your account has been successfully created.",	"info":"success"},
+
+		"registryError"		: {"message"	: "Something went wrong during the registration process. Please try again.","info":"error"},
+
+		"existUsername"		: {"message"	: "Sorry, username already exists. Please enter another username.","info":"error"},
+
+		"existEmail"		: {"message"	: "Sorry, email already exists. Please enter another email.","info":"error"},
+
+		"emailvalidate"		: {"message"	: "You have entered an invalid e-mail address. Please try again.","info":"error"},
+
+		"password-validate" : {"message"	: "You must use at least 8, at most 20 characters. You cannot use a space in the password.", "info": "info"},
+
+		"username-validate" : {"message"	: "You must use at least 5, at most 14 characters. You cannot use a space in the password.", "info": "info"},
 
 		"choose-something"	: {"message"	:"You need to choose something!",	"info": "error"},
 
@@ -29,13 +44,19 @@
 		"cancel"			: "İptal",
 		"confirmDelete"		: "Eminim, sil!",
 
-		"levels"			:{
-								"beginner"	: "Başlangıc",
+		"empty-input"		: {"message"	: "Tüm alanları doldurun",	"info": "error"},
 
-							    "middle"	: "Orta",
-							    
-							    "good"		: "İyi"
-							},
+		"notUserMail"		: {"message"	: "Yanlış e-posta veya şifre.", "info": "error"},
+		"notUser"			: {"message"	: "Yanlış kullanıcı adı veya şifre.", "info": "error"},
+		"yesUser"			: {"message"	: "Giriş başarılı !!!", "info": "success"},
+		"registryOk"		: {"message"	: "Tebrikler, hesabınız başarıyla oluşturuldu.", "info": "success"},
+		"registryError"		: {"message"	: "Kayıt işlemi sırasında bir şeyler ters gitti. Lütfen tekrar deneyin.", "info": "error"},
+		"existUsername"		: {"message"	: "Üzgünüz, kullanıcı adı zaten mevcut. Lütfen başka bir kullanıcı adı girin.", "info": "error"},
+		"existingEmail"		: {"message"	: "Üzgünüz, e-posta zaten var. Lütfen başka bir e-posta girin.", "info": "error"},
+		"emailvalidate"		: {"message"	: "Geçersiz bir e-posta adresi girdiniz. Lütfen tekrar deneyin.", "info": "error"},
+		"password-validate"	: {"message"	: "En az 8,en fazla 20 karakter kullanmalısınız, ayrıca boşluk kullanılamaz.", "info": "info"},
+
+		"username-validate"	: {"message"	: "En az 5,en fazla 14 karakter kullanmalısınız, ayrıca boşluk kullanılamaz.", "info": "info"},
 
 		"choose-something"	: {"message"	: "Birini seçin!",	"info": "error"},
 		
@@ -55,14 +76,21 @@
 		"cancel"			: "İmtina",
 		"confirmDelete"		: "Əminəm, sil!",
 
-		"levels"			:{
-								"beginner"	: "Başlanğıc",
+		"empty-input"		: {"message"	: "Bütün xanaları doldurun",	"info": "error"},
 
-							    "middle"	: "Orta",
-							    
-							    "good"		: "Yaxşı"
-							},
+		"notUserMail"		: {"message"	: "Yanlış e-poçt və ya şifrə.", "info": "error"},
+		"notUser"			: {"message"	: "Yanlış istifadəçi adı və ya şifrə.", "info": "error"},
+		"yesUser"			: {"message"	: "Giriş uğurla həyata keçirildi !!!", "info": "uğur"},
+		"registerOk"		: {"message"	: "Təbrik edirik, hesabınız uğurla yaradıldı.", "info": "uğur"},
+		"registerError"		: {"message"	: "Qeydiyyatı zamanı bir şey səhv oldu. Xahiş edirik yenidən cəhd edin.", "info": "error"},
+		"existUsername"		: {"message"	: "Bağışlayın, istifadəçi adı artıq mövcuddur. Xahiş edirik başqa istifadəçi adı daxil edin.", "info": "error"},
+		"existEmail"		: {"message"	: "Bağışlayın, e-poçt artıq mövcuddur. Xahiş edirik başqa bir e-poçt daxil edin.", "info": "error"},
+		"emailvalidate"		: {"message"	: "Yanlış bir e-poçt ünvanı daxil etmisiniz. Yenidən cəhd edin.", "info": "error"},
 		
+		"password-validate" : {"message"	: "Şifrənizdə ən az 8,ən çox 20 simvoldan istifadə edə bilərsiniz. Şifrədə boşluqdan istifadə etmək olmaz.", "info": "info"},
+
+		"password-validate" : {"message"	: "Ən az 5,ən çox 14 simvoldan istifadə edə bilərsiniz və boşluqdan istifadə etmək olmaz.", "info": "info"},
+
 		"choose-something"	: {"message"	: "Birini seçməlisiniz.",	"info": "error"},
 
 		"errorsomething"	: {"message"	: "Xahiş edirik təkrar cəhd edin.", "info": "error"},
@@ -80,12 +108,18 @@
 		"cancel"			: "Отмена",
 		"confirmDelete"		: "Да удалите!",
 
-		"levels"			:{	"beginner"	: "Новичок",
+		"empty-input"		: {"message"	: "Заполните все поля",	"info": "error"},
 
-							    "middle"	: "Средний",
-							    
-							    "good"		: "Хороший"
-							},
+		"notUserMail"		: {"message"	: "Неверный адрес электронной почты или пароль.", "info": "error"},
+		"notUser"			: {"message"	: "Неверное прозвище или пароль.", "info": "error"},
+		"yesUser"			: {"message"	: "Успешный вход !!!", "info": "success"},
+		"registryOk"		: {"message"	: "Поздравляем, ваш аккаунт был успешно создан.", "info": "success"},
+		"registryError"		: {"message"	: "Во время регистрации произошла ошибка. Повторите попытку.", "info": "error"},
+		"existUsername"		: {"message"	: "Извините, прозвище уже существует. Введите другое прозвище.", "info": "error"},
+		"existEmail"		: {"message"	: "Извините, адрес электронной почты уже существует. Введите другой адрес электронной почты.", "info": "error"},
+		"emailvalidate"		: {"message"	: "Вы ввели неверный адрес электронной почты. Повторите попытку.", "info": "error"},
+
+		"password-validate" : {"message"	: "Вы должны использовать от 8 до 20 символов. Вы не можете использовать пробел в пароле.", "info": "info"},
 
 		"choose-something"	: {"message"	:"Вам нужно что-то выбрать!",	"info": "error"},
 
