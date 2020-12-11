@@ -79,6 +79,23 @@ body
   padding-top: 0;
   font-size: 12px;
 }
+.loading
+{
+  position: absolute;
+  display: none;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 5;
+}
+.loading img
+{
+  height: 100px;
+  width: auto;
+  object-fit: cover;
+}
 
 #loader {
   position: relative; 
@@ -1269,6 +1286,8 @@ body
   padding-bottom: 15px;
 }
 
+
+
 /*lessons*/
 .loading-lesson
 {
@@ -1278,6 +1297,7 @@ body
   margin-top: 200px;
   width: 100px;
   height: 100px;
+
 }
 .loading-lesson img
 {

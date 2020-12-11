@@ -31,6 +31,8 @@
 		"choose-something"	: {"message"	:"You need to choose something!",	"info": "error"},
 
 		"errorsomething"	: {"message"	: "Something went wrong. Please try again.", "info": "error"},
+
+		"internet-error"	: {"message"	: "You don't have an internet connection.", "info": "error"},
 		
 		"notenoughCoin"		: {"message"	:"Not enough coin.", "info": "error"},
 
@@ -62,7 +64,7 @@
 		
 		"errorsomething"	: {"message"	: "Bir şeyler ters gitti. Lütfen tekrar deneyin.", "info": "error"},
 
-		
+		"internet-error"	: {"message"	: "İnternet bağlantınız yok.", "info": "error"},
 
 		"notenoughCoin"		: {"message"	: "Yeterki koininiz yok.", "info": "error"},
 
@@ -80,8 +82,8 @@
 
 		"notUserMail"		: {"message"	: "Yanlış e-poçt və ya şifrə.", "info": "error"},
 		"notUser"			: {"message"	: "Yanlış istifadəçi adı və ya şifrə.", "info": "error"},
-		"yesUser"			: {"message"	: "Giriş uğurla həyata keçirildi !!!", "info": "uğur"},
-		"registerOk"		: {"message"	: "Təbrik edirik, hesabınız uğurla yaradıldı.", "info": "uğur"},
+		"yesUser"			: {"message"	: "Giriş uğurla həyata keçirildi !!!", "info": "success"},
+		"registryOk"		: {"message"	: "Təbrik edirik, hesabınız uğurla yaradıldı.", "info": "success"},
 		"registerError"		: {"message"	: "Qeydiyyatı zamanı bir şey səhv oldu. Xahiş edirik yenidən cəhd edin.", "info": "error"},
 		"existUsername"		: {"message"	: "Bağışlayın, istifadəçi adı artıq mövcuddur. Xahiş edirik başqa istifadəçi adı daxil edin.", "info": "error"},
 		"existEmail"		: {"message"	: "Bağışlayın, e-poçt artıq mövcuddur. Xahiş edirik başqa bir e-poçt daxil edin.", "info": "error"},
@@ -95,6 +97,7 @@
 
 		"errorsomething"	: {"message"	: "Xahiş edirik təkrar cəhd edin.", "info": "error"},
 
+		"internet-error"	: {"message"	: "İnternet bağlantısı yoxdur.", "info": "error"},
 		
 		"notenoughCoin"		: {"message"	: "Yetərli koininiz yoxdur", "info": "error"},
 
@@ -125,7 +128,7 @@
 
 		"errorsomething"	: {"message"	: "Что-то пошло не так. Пожалуйста, попробуйте еще раз.", "info": "error"},
 
-		
+		"internet-error"	: {"message"	: "У вас нет подключения к Интернету.", "info": "error"},
 
 		"notenoughCoin"		: {"message"	: "Недостаточно монеты.", "info": "error"},
 

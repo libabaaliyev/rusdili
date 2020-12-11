@@ -7,7 +7,10 @@ $(document).ready(function()
 	login_end	= $("#login-end");
 	login_page	= $("#login");
 	close 		= $("#close-tab");
+	loading		= $(".loading");
+	
 	start_value = 0;
+	source		= new EventSource("loginsocket.php");
 
 	lang 		= JSON.parse(localStorage.applang);
 	words 		= JSON.parse(localStorage.appLanguage);
@@ -33,22 +36,32 @@ $(document).ready(function()
 	{
 		if(action !="create-profile-start")
 		{
+			
 			$("#get-start-"+start_value).addClass("slideOutLeft");
 			$("#get-start-"+start_value).fadeOut(100);
+			
+			
 			add_datas(action);
 			action = $(this).data("action");
 		}
 		else
 		{
-			name 		= $("#name-registry").val();
-			username 	= $("#username-registry").val();
-			email 		= $("#email-registry").val();
-			password 	= $("#password-registry").val();
-			
-			if(!name || !username|| !email|| !password)
-				callOther("general","notification","empty-input");
+			if(start_value<5)
+			{
+				name 		= $("#name-registry").val();
+				username 	= $("#username-registry").val();
+				email 		= $("#email-registry").val();
+				password 	= $("#password-registry").val();
+				
+				if(!name || !username|| !email|| !password)
+					callOther("general","notification","empty-input");
+				else
+					filterInput(name,username,email,password,'registry');
+			}
 			else
-				filterInput(name,username,email,password,'registry');
+			{
+				window.location = "lessons.html#exam-get-start";
+			}
 		}
 		
 	});
@@ -108,12 +121,12 @@ $(document).ready(function()
 	        	{
 	        		if(username&&email&&password){
 	        			
+	        			loading.show();
+	        			detectUser();
 	        			user_data.name 		= name;
 	        			user_data.username 	= username;
 	        			user_data.email 	= email;
 	        			user_data.password 	= password;
-
-	        			
 
 	        			if(navigator.onLine){ //burda network kodlari olacaq
 	        				
@@ -121,7 +134,7 @@ $(document).ready(function()
 	        				import_data.append("info","import-base");
 	        				import_data.append("data",JSON.stringify(user_data));
 
-	        				callOther("general","importBase",import_data);
+	        				callOther("general","importBase",import_data,user_data);
 	        			}
 	        			else
 	        				console.log("internet yoxdu")
@@ -164,20 +177,15 @@ $(document).ready(function()
 			level = $(".active-level").data("level");
 			user_data.level = level;
 		}
-		else if(event == "create-profile")
-		{
-			
-		}
+		
 
 		start_value++;
-		if(start_value<5){
+		if(start_value<6){
 			$("#get-start-"+start_value).addClass("slideInRight");
 			$("#get-start-"+start_value).fadeIn();
+			loading.hide();
 		}
-		else
-		{
-			window.location = "lessons.html#exam-get-start";
-		}
+		
 	}
 
 
@@ -195,6 +203,11 @@ $(document).ready(function()
 		$("#average-time").html(words[lang]['average-time']);
 		$("#serious").html(words[lang]['serious']);
 		$("#serious-time").html(words[lang]['serious-time']);
+
+		$("#exam-time").html(words[lang]['exam-time']);
+		$("#exam-span").html(words[lang]['exam-span']);
+		$("#go-exam").html(words[lang]['go-exam']);
+		
 
 		$("#crazy").html(words[lang]['crazy']);
 		$("#crazy-time").html(words[lang]['crazy-time']);
@@ -220,15 +233,34 @@ $(document).ready(function()
 		$(".login").html(words[lang]['login']);
 	}
 
-	function callOther(loc,func,funcData)
+	function callOther(loc,func,funcData,funcData_1)
 	{
 
 		$.getScript("javascript/"+loc+".js",function(e)
 		{
-			window[func](funcData);				
+			window[func](funcData,funcData_1);				
 		});
 
 	}
+	
+	function detectUser()
+	{
+		if(localStorage.getItem("user") === null)
+		{
+			setTimeout(function(){ detectUser()},1000);
+		}
+		else
+		{
+			setTimeout(function()
+			{
+				$("#get-start-"+start_value).addClass("slideOutLeft");
+				$("#get-start-"+start_value).fadeOut(100);
+				start_value = 4;
+				add_datas("profile-done");
 
+			},1000);
+
+		}
+	}
 
 });

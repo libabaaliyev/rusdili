@@ -34,6 +34,12 @@
 		"privacy"				: "PRIVACY",
 		"login"					: "Login",
 
+
+		"exam-time" 			: "It's exam time!",
+		"exam-span" 			: "An exam is essential for us to know your level",
+		"go-exam" 				: "Go to exam",
+
+
 		"crown"					: "Crowns",
 		"crown-txt"				: "Strengthen your skills to win the crown!",
 		"update"				: "Change",
@@ -123,6 +129,10 @@
 		"pass-input"			: "Bir şifre yazın...",
 		"privacy"				: "GİZLİLİK",
 		"login"					: "Giriş yap",
+
+		"exam-time" 			: "Şimdi sınav zamanı!",
+		"exam-span" 			: "Başlama seviyenizi bilmemiz için sınav şart",
+		"go-exam" 				: "Sınava gir",
 
 		"crown"					: "Taçlar",
 		"crown-txt"				: "Taç kazanmak için becerilerini güçlendir!",
@@ -218,6 +228,10 @@
 		"privacy"				: "GİZLİLİK",
 		"login"					: "Giriş",
 
+		"exam-time" 			: "İndi isə imtahan vaxtıdır!",
+		"exam-span" 			: "Səviyyənizi bilmək üçün imtahana girməlisiniz",
+		"go-exam" 				: "İmtahana gir",
+
 		"crown"					: "Taclar",
 		"crown-txt"				: "Tac qazanmaq üçün bacarıqlarını təkmilləşdir!",
 		"update"				: "Düzəliş et",
@@ -306,6 +320,10 @@
 		"pass-input"			: "Введите пароль ...",
 		"privacy"				: "КОНФИДЕНЦИАЛЬНОСТЬ",		
 		"login"					: "Логин",
+
+		"exam-time" 			: "Время экзамена!",
+		"exam-span" 			: "Чтобы узнать ваш уровень, нам необходимо сдать экзамен",
+		"go-exam" 				: "Сдавать экзамен",
 
 		"crown"					: "Короны",
 		"crown-txt"				: "Укрепляйте свои навыки, чтобы выиграть корону!",

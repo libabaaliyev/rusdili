@@ -2,13 +2,14 @@
 	include ("baglan.php");
 
 	$info = $_POST['info'];
+	session_start();
 
 	if($info == "import-base")
 	{
 		$data 		= json_decode($_POST['data'],true);
-		$name 		= $data['name'];
-		$username 	= $data['username'];
-		$email 		= $data['email'];
+		$name 		= ucwords($data['name']);
+		$username 	= strtolower($data['username']);
+		$email 		= strtolower($data['email']);
 		$password 	= $data['password'];
 		$level 		= $data['level'];
 		$aim 		= $data['aim'];
@@ -31,22 +32,29 @@
 			if($count>1)
 				$result = ['result'=>'existUsername'];
 			else
-				$result = ['result'=>'existingEmail'];
+				$result = ['result'=>'existEmail'];
 		}
 		else
 		{
-			$insert = $db->prepare($insertSql);
+			if(filter_var($email, FILTER_VALIDATE_EMAIL))
+			{
+				$insert = $db->prepare($insertSql);
 
-			$x = $insert ->execute(["$name","$username","$email","$password","$level","$aim","$grade","$learning","$lang"]);
+				$x = $insert ->execute(["$name","$username","$email","$password","$level","$aim","$grade","$learning","$lang"]);
 
-			if($x){
-				//$select = $db->query($detectUSql)->fetch(PDO::FETCH_ASSOC);
-				$result = ['result'=>'registryOk','user'=> $select];
+				if($x){
+					$select = $db->query($detectUSql)->fetch(PDO::FETCH_ASSOC);
+					$result = ['result'=>'registryOk','user'=> $select];
+
+					$_SESSION['username'] = $username;
+
+				}
+				else
+					$result = ['result'=>'registryError'];
+			
 			}
 			else
-				$result = ['result'=>'registryError'];
-			
-
+				$result = ['result' => 'emailvalidate'];
 		}
 
 		echo json_encode($result);

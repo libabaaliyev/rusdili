@@ -15,13 +15,14 @@
 		  backdrop				: true,
 		  allowOutsideClick		: false,
 		  allowEscapeKey		: false,
+		  heightAuto			: true,
 		  confirmButtonText 	: notifications[lang]['confirmText']
 		 
 		});
 		
 	}
 
-	function importBase(base)
+	function importBase(base,userData)
 	{
 		$.ajax({
 			url: "process.php",
@@ -29,12 +30,36 @@
 			data: base,
 			contentType: false,
 		    processData: false,
-		    success: function(data)
+		    success: function(data,status)
 		    {
-		    	console.log(data);      	
-		    	/*dataLogin 	= JSON.parse(data);
-		    	result 		= dataLogin['result'];
-		    	notification(result);*/
+		    	if(status == "success")
+		    	{
+		    		dataLogin 	= JSON.parse(data);
+			    	result 		= dataLogin['result'];
+			    	localStorage.connection = "registr-ok";
+
+			    	notification(result);
+
+			    	if(result == "registryOk")
+			    	{
+			    		user = dataLogin['user'];
+			    		localStorage.user = JSON.stringify(user);
+			    	}
+		    	}
+		    	else
+		    	{
+		    		notification("internet-error");
+		    		userData.id 		= "not-registr";
+		    		userData.photo 		= "p1.png";
+		    		userData.league 	= "starter";
+		    		localStorage.user 	= JSON.stringify(userData);
+
+		    		localStorage.connection = "internet-error";
+
+
+		    	}
+		    	
+		    	
 		    }
 
 		});
