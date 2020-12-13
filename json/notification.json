@@ -38,7 +38,9 @@
 
 		"add-coin-success"	: {"message"	: "You get coins", "info": "success"},
 
-		"level-select"		: {"message"	: "Choose your level of Russian", "info": "info"}
+		"level-select"		: {"message"	: "Choose your level of Russian", "info": "info"},
+
+		"exam-finish" 		: {"message"	: "Level exam is over. Exam result:", "info": "info"}
 	},
 	"tr":
 	{
@@ -70,7 +72,10 @@
 
 		"add-coin-success"	: {"message"	: "Koin aldınız.", "info": "success"},
 
-		"level-select"		: {"message"	: "Rusça seviyenizi seçin", "info": "info"}
+		"level-select"		: {"message"	: "Rusça seviyenizi seçin", "info": "info"},
+
+		"exam-finish" 		: {"message"	: "Seviye sınavı bitdi. Sınav sonucu: ", "info": "info"}
+
 	},
 	"az":
 	{
@@ -84,7 +89,7 @@
 		"notUser"			: {"message"	: "Yanlış istifadəçi adı və ya şifrə.", "info": "error"},
 		"yesUser"			: {"message"	: "Giriş uğurla həyata keçirildi !!!", "info": "success"},
 		"registryOk"		: {"message"	: "Təbrik edirik, hesabınız uğurla yaradıldı.", "info": "success"},
-		"registerError"		: {"message"	: "Qeydiyyatı zamanı bir şey səhv oldu. Xahiş edirik yenidən cəhd edin.", "info": "error"},
+		"registryError"		: {"message"	: "Qeydiyyatı zamanı bir şey səhv oldu. Xahiş edirik yenidən cəhd edin.", "info": "error"},
 		"existUsername"		: {"message"	: "Bağışlayın, istifadəçi adı artıq mövcuddur. Xahiş edirik başqa istifadəçi adı daxil edin.", "info": "error"},
 		"existEmail"		: {"message"	: "Bağışlayın, e-poçt artıq mövcuddur. Xahiş edirik başqa bir e-poçt daxil edin.", "info": "error"},
 		"emailvalidate"		: {"message"	: "Yanlış bir e-poçt ünvanı daxil etmisiniz. Yenidən cəhd edin.", "info": "error"},
@@ -103,7 +108,9 @@
 
 		"add-coin-success"	: {"message"	: "Koin əldə etdiniz.", "info": "success"},
 
-		"level-select"		: {"message"	: "Bilgi səviyənizi seçin", "info": "info"}
+		"level-select"		: {"message"	: "Bilgi səviyənizi seçin", "info": "info"},
+
+		"exam-finish" 		: {"message"	: "Səviyyə imtahanı bitdi. imtahan nəticəsi: ", "info": "info"}
 	},
 	"ru":
 	{
@@ -134,7 +141,9 @@
 
 		"add-coin-success"	: {"message"	: "Вы получаете монеты", "info": "success"},
 
-		"level-select"		: {"message"	: "Выбери свой уровень русского", "info": "info"}
+		"level-select"		: {"message"	: "Выбери свой уровень русского", "info": "info"},
+
+		"exam-finish" 		: {"message"	: "Контрольный экзамен окончен. Результат экзамена: ", "info": "info"}
 	}
 
 }

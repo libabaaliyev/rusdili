@@ -1,3 +1,5 @@
+loading		= $(".loading");
+
 //localStorages
 	notifications 	= JSON.parse(localStorage.notifications);
 	lang 			= JSON.parse(localStorage.applang);
@@ -5,12 +7,18 @@
 
 	
 
-	function notification(event)
+	function notification(event,event_1)
 	{
+		if(event_1)
+			messageTxt = notifications[lang][event]['message']+words[lang][event_1];
+		else
+			messageTxt = notifications[lang][event]['message'];
+
+
 		Swal.fire({
 		  position				: 'center',
 		  icon					: notifications[lang][event]['info'],
-		  title					: notifications[lang][event]['message'],
+		  title					: messageTxt,
 		  showConfirmButton 	: true,
 		  backdrop				: true,
 		  allowOutsideClick		: false,
@@ -32,41 +40,84 @@
 		    processData: false,
 		    success: function(data,status)
 		    {
+		    	loading.hide();
 		    	if(status == "success")
 		    	{
 		    		dataLogin 	= JSON.parse(data);
 			    	result 		= dataLogin['result'];
 			    	localStorage.connection = "registr-ok";
-
+			    	console.log(result);
 			    	notification(result);
 
-			    	if(result == "registryOk")
+			    	if(result == "registryOk" || result == "yesUser")
 			    	{
 			    		user = dataLogin['user'];
 			    		localStorage.user = JSON.stringify(user);
 			    	}
 		    	}
 		    	else
-		    	{
-		    		notification("internet-error");
-		    		userData.id 		= "not-registr";
-		    		userData.photo 		= "p1.png";
-		    		userData.league 	= "starter";
-		    		localStorage.user 	= JSON.stringify(userData);
-
-		    		localStorage.connection = "internet-error";
-
-
-		    	}
-		    	
-		    	
+		    		internet_error(userData);		    	
 		    }
 
 		});
 	}
 
+	function internet_error(data)
+	{
+		notification("internet-error");
+		data.id 		= "not-registr";
+		data.photo 		= "p1.png";
+		data.league 	= "starter";
+		localStorage.user 	= JSON.stringify(data);
+
+		localStorage.connection = "internet-error";
+	}
+
 	function language()
 	{
+		$("#app-name").html(words[lang]['app-name']);
+		$("#free-learn").html(words[lang]['free-learn']);
+		$("#get-start").html(words[lang]['get-start']);
+		$(".already-start").html(words[lang]['already-start']);
+		$("#day-aim-title").html(words[lang]['day-aim-title']);
+		$("#easy").html(words[lang]['easy']);
+		$("#easy-time").html(words[lang]['easy-time']);
+		$("#average").html(words[lang]['average']);
+		$("#average-time").html(words[lang]['average-time']);
+		$("#serious").html(words[lang]['serious']);
+		$("#serious-time").html(words[lang]['serious-time']);
+
+		$("#exam-time").html(words[lang]['exam-time']);
+		$("#exam-span").html(words[lang]['exam-span']);
+		$("#go-exam").html(words[lang]['go-exam']);
+		
+
+		$("#crazy").html(words[lang]['crazy']);
+		$("#crazy-time").html(words[lang]['crazy-time']);
+
+		$(".save").html(words[lang]['save']);
+		$("#select-level").html(words[lang]['select-level']);
+		$("#start-zero").html(words[lang]['start-zero']);
+		$("#start-elementary").html(words[lang]['start-elementary']);
+		$("#create-profile").html(words[lang]['create-profile']);
+		$("#create-profile-txt").html(words[lang]['create-profile-txt']);
+		$("#create-profile-btn").html(words[lang]['create-profile-btn']);
+		$("#registration").html(words[lang]['registration']);
+		$(".name").html(words[lang]['name']);
+		$(".username").html(words[lang]['username']);
+		$(".email").html(words[lang]['email']);
+		$(".password").html(words[lang]['password']);
+
+		$(".name-input").attr("placeholder",words[lang]['name-input']);
+		$(".username-input").attr("placeholder",words[lang]['username-input']);
+		$(".email-input").attr("placeholder",words[lang]['email-input']);
+		$(".password-input").attr("placeholder",words[lang]['pass-input']);
+
+		$("#privacy").html(words[lang]['privacy']);
+		$(".login").html(words[lang]['login']);
+
+
+
 		$("#crown-l").html(words[lang]['crown']);
 
 		$("#crown-txt").html(words[lang]['crown-txt']);
@@ -119,23 +170,7 @@
 
 		$(".no-thanks-l").html(words[lang]['no-thanks']);
 
-		$("#easy").html(words[lang]['easy']);
-		
-		$("#easy-time").html(words[lang]['easy-time']);
-		
-		$("#average").html(words[lang]['average']);
-		
-		$("#average-time").html(words[lang]['average-time']);
-		
-		$("#serious").html(words[lang]['serious']);
-		
-		$("#serious-time").html(words[lang]['serious-time']);
 
-		$("#crazy").html(words[lang]['crazy']);
-		
-		$("#crazy-time").html(words[lang]['crazy-time']);
-
-		$(".save").html(words[lang]['save']);
 		
 		$("#profile-title").html(words[lang]['profile']);
 
@@ -168,23 +203,7 @@
 
 		$("#buy-plus").html(words[lang]['buy-plus']);
 
-		$(".name").html(words[lang]['name']);
 
-		$(".username").html(words[lang]['username']);
-
-		$(".email").html(words[lang]['email']);
-
-		$(".password").html(words[lang]['password']);
-
-		$(".name-input").attr("placeholder",words[lang]['name-input']);
-
-		$(".username-input").attr("placeholder",words[lang]['username-input']);
-
-		$(".email-input").attr("placeholder",words[lang]['email-input']);
-
-		$(".password-input").attr("placeholder",words[lang]['pass-input']);
-
-		$("#privacy").html(words[lang]['privacy']);
 
 
 		$(".continue").html(words[lang]['continue']); 

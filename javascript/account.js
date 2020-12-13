@@ -28,9 +28,10 @@ $(document).ready(function()
 		"use_lang"	: JSON.stringify(lang)
 
 	}
-
-	language();
+	
 	action = 'start';
+
+	callOther("general","language","index");
 
 	get_start.click(function()
 	{
@@ -103,9 +104,20 @@ $(document).ready(function()
 
 	login_end.click(function()
 	{
-		window.location = "main.html";
+
+		username 	= $("#login-username").val();
+		password 	= $("#login-password").val();
+		
+		if(!username || !password)
+			callOther("general","notification","empty-input");
+		else
+			filterInput("-",username,"alibaba.aliyev@hotmail.com",password,'login');
+
+		
 	});
 
+
+	detecting = false;
 	function filterInput(name,username,email,password,act)
 	{
 		mailfilter 		= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -122,22 +134,43 @@ $(document).ready(function()
 	        		if(username&&email&&password){
 	        			
 	        			loading.show();
-	        			detectUser();
-	        			user_data.name 		= name;
+	        			if(!detecting){
+	        				detectUser(act);
+	        				detecting = true;
+	        			}
+
+	        			
 	        			user_data.username 	= username;
-	        			user_data.email 	= email;
 	        			user_data.password 	= password;
 
 	        			if(navigator.onLine){ //burda network kodlari olacaq
 	        				
 	        				import_data = new FormData();
-	        				import_data.append("info","import-base");
+	        				if(act == "registry")
+		        			{
+		        				user_data.name 		= name;
+								user_data.email 	= email;
+								import_data.append("info","import-base");
+		        			}
+		        			else
+		        			{
+		        				import_data.append("info","update-base");
+		        			}
+
+	        				
 	        				import_data.append("data",JSON.stringify(user_data));
 
 	        				callOther("general","importBase",import_data,user_data);
 	        			}
-	        			else
-	        				console.log("internet yoxdu")
+	        			else{
+	        				if(act == "login")
+		        			{
+		        				user_data.name 		= "Unname";
+								user_data.email 	= "-";
+		        			}
+
+	        				callOther("general","internet_error",user_data);
+	        			}
 
 	        		}
 	        			
@@ -178,8 +211,10 @@ $(document).ready(function()
 			user_data.level = level;
 		}
 		
-
+		
 		start_value++;
+
+		
 		if(start_value<6){
 			$("#get-start-"+start_value).addClass("slideInRight");
 			$("#get-start-"+start_value).fadeIn();
@@ -188,50 +223,6 @@ $(document).ready(function()
 		
 	}
 
-
-	function language()
-	{
-		
-		$("#app-name").html(words[lang]['app-name']);
-		$("#free-learn").html(words[lang]['free-learn']);
-		$("#get-start").html(words[lang]['get-start']);
-		$(".already-start").html(words[lang]['already-start']);
-		$("#day-aim-title").html(words[lang]['day-aim-title']);
-		$("#easy").html(words[lang]['easy']);
-		$("#easy-time").html(words[lang]['easy-time']);
-		$("#average").html(words[lang]['average']);
-		$("#average-time").html(words[lang]['average-time']);
-		$("#serious").html(words[lang]['serious']);
-		$("#serious-time").html(words[lang]['serious-time']);
-
-		$("#exam-time").html(words[lang]['exam-time']);
-		$("#exam-span").html(words[lang]['exam-span']);
-		$("#go-exam").html(words[lang]['go-exam']);
-		
-
-		$("#crazy").html(words[lang]['crazy']);
-		$("#crazy-time").html(words[lang]['crazy-time']);
-		$(".save").html(words[lang]['save']);
-		$("#select-level").html(words[lang]['select-level']);
-		$("#start-zero").html(words[lang]['start-zero']);
-		$("#start-elementary").html(words[lang]['start-elementary']);
-		$("#create-profile").html(words[lang]['create-profile']);
-		$("#create-profile-txt").html(words[lang]['create-profile-txt']);
-		$("#create-profile-btn").html(words[lang]['create-profile-btn']);
-		$("#registration").html(words[lang]['registration']);
-		$(".name").html(words[lang]['name']);
-		$(".username").html(words[lang]['username']);
-		$(".email").html(words[lang]['email']);
-		$(".password").html(words[lang]['password']);
-
-		$(".name-input").attr("placeholder",words[lang]['name-input']);
-		$(".username-input").attr("placeholder",words[lang]['username-input']);
-		$(".email-input").attr("placeholder",words[lang]['email-input']);
-		$(".password-input").attr("placeholder",words[lang]['pass-input']);
-
-		$("#privacy").html(words[lang]['privacy']);
-		$(".login").html(words[lang]['login']);
-	}
 
 	function callOther(loc,func,funcData,funcData_1)
 	{
@@ -243,20 +234,29 @@ $(document).ready(function()
 
 	}
 	
-	function detectUser()
+	function detectUser(a)
 	{
 		if(localStorage.getItem("user") === null)
 		{
-			setTimeout(function(){ detectUser()},1000);
+			setTimeout(function(){ detectUser(a)},1000);
 		}
 		else
 		{
 			setTimeout(function()
 			{
-				$("#get-start-"+start_value).addClass("slideOutLeft");
-				$("#get-start-"+start_value).fadeOut(100);
-				start_value = 4;
-				add_datas("profile-done");
+				if(a == "registry")
+				{
+					$("#get-start-"+start_value).addClass("slideOutLeft");
+					$("#get-start-"+start_value).fadeOut(100);
+					start_value = 4;
+					add_datas("profile-done");
+				}
+				else
+				{
+					window.location = "main.html";
+				}
+				
+				
 
 			},1000);
 

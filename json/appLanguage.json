@@ -83,14 +83,26 @@
 		"done"					: "Done",
 		"select-picture"		: "Select picture",
 		"true-answer"			: "Correct answer",
-		"wrong-answer"			: "Wrong answer",
+		"false-answer"			: "Wrong answer",
 		"continue"				: "Continue",
 		"lesson-completed"		: "Level completed",
 		"combo"					: "Combo bonus",
 		"double-skill-ads"		: "Watch an ad to double your reward.",
 		"double-reward"			: "Double Reward",
 		"ads-txt"				: "Thanks to this ad, we can continue to provide you with free training.",
-		"buy-plus-txt"			: "Remove ads"
+		"buy-plus-txt"			: "Remove ads",
+
+
+		"reading"				: "Choose the correct reading.",
+		"translate"				: "Choose the correct translation.",
+		"complete"				: "Choose the appropriate one.",
+
+		"so-bad"				: "Beginner",
+		"low-good"				: "Partially good",
+		"bad"					: "Bad",
+		"good"					: "Good",		
+		"very-good"				: "Very good",
+		"excellent"				: "Excellent"
 
 
 	},
@@ -183,14 +195,25 @@
 		"done"					: "Bitti",
 		"select-picture"		: "Resim seç",
 		"true-answer"			: "Doğru cevap",
-		"wrong-answer"			: "Yalnış cevap",
+		"false-answer"			: "Yalnış cevap",
 		"continue"				: "Devam",
 		"lesson-completed"		: "Seviye tamamlandı",
 		"combo"					: "Kombo bonus",
 		"double-skill-ads"		: "Ödülünüzü ikiye katlamak için bir reklam izleyin.",
 		"double-reward"			: "Çifte Ödül",
 		"ads-txt"				: "Bu reklam sayesinde size ücretsiz eğitim sağlamaya devam edebiliyoruz.",
-		"buy-plus-txt"			: "Reklamları kaldır - Plus`a geç"
+		"buy-plus-txt"			: "Reklamları kaldır - Plus`a geç",
+
+		"reading"				: "Doğru okunuşu seçin.",
+		"translate"				: "Doğru çeviriyi seçin.",
+		"complete"				: "Uygun olanı seçin.",
+
+		"so-bad"				: "Sıfır",
+		"low-good"				: "Kısmen",
+		"bad"					: "Kötü",
+		"good"					: "İyi",		
+		"very-good"				: "Çok iyi",
+		"excellent"				: "Muhteşem"
 		
 
 	},
@@ -276,14 +299,26 @@
 		"select-picture"		: "Şəkil seç",
 
 		"true-answer"			: "Doğru cavab",
-		"wrong-answer"			: "Yalnış cavab",
+		"false-answer"			: "Yalnış cavab",
 		"continue"				: "Davam",
 		"lesson-completed"		: "Səviyyə tamamlandı",
 		"combo"					: "Kombo bonus",
 		"double-skill-ads"		: "Mükafatınızı ikiqat etmək üçün reklam izləyin.",
 		"double-reward"			: "İkiqat mükafat",
 		"ads-txt"				: "Bu reklam sayəsində sizə ödənişsiz və davamlı təhsil verməyə davam edə bilirik.",
-		"buy-plus-txt"			: "Reklamları yığışdır - Plus`a keç"
+		"buy-plus-txt"			: "Reklamları yığışdır - Plus`a keç",
+
+
+		"reading"				: "Doğru oxunuşu seçin.",
+		"translate"				: "Doğru tərcüməni seçin.",
+		"complete"				: "Uyğun variantı seçin.",
+
+		"so-bad"				: "Sıfır",
+		"low-good"				: "Qismən",
+		"bad"					: "Pis",
+		"good"					: "Yaxşı",		
+		"very-good"				: "Çox yaxşı",
+		"excellent"				: "Əla"
 
 
 	},
@@ -378,7 +413,20 @@
 		"double-skill-ads"		: "Посмотрите рекламу, чтобы удвоить вознаграждение.",
 		"double-reward"			: "Двойная награда",
 		"ads-txt"				: "Благодаря этому объявлению мы можем продолжать предоставлять вам бесплатное обучение.",
-		"buy-plus-txt"			: "Убрать рекламу - перейти на Plus"
+		"buy-plus-txt"			: "Убрать рекламу - перейти на Plus",
+
+
+		"reading"				: "Выберите правильное чтение.",
+		"translate"				: "Выберите правильный перевод.",
+		"complete"				: "Выберите подходящий.",
+
+		"so-bad"				: "Hуль",
+		"low-good"				: "Частично",
+		"bad"					: "Плохо",
+		"good"					: "Хорошо",		
+		"very-good"				: "Очень хорошо",
+		"excellent"				: "Превосходно"
+
 	}
 
 }

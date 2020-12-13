@@ -12,10 +12,7 @@ $(document).ready(function()
 	const startFunc = 
 	{
 		jsonfiles: function(e)
-		{
-			
-				
-			
+		{	
 			$.getJSON("json/notification.json", function(data){
 				
 				notificationData 			= data;
@@ -29,6 +26,30 @@ $(document).ready(function()
 				localStorage.appLanguage 	= JSON.stringify(data);
 				
 			});
+
+			$.getJSON("json/words.json", function(data){
+				
+				
+				localStorage.words 	= JSON.stringify(data);
+				
+			});
+
+			$.getJSON("json/sentence.json", function(data){
+				
+				
+				localStorage.sentences 	= JSON.stringify(data);
+				
+			});
+
+			$.getJSON("json/stories.json", function(data){
+				
+				
+				localStorage.stories 	= JSON.stringify(data);
+				
+			});
+
+			
+
 
 			
 
@@ -74,14 +95,14 @@ $(document).ready(function()
 		}
 	}
 
-	if(localStorage.getItem("applang")===null)
+	if(localStorage.getItem("user")===null)
 		startFunc.language();
 	else{
 		lang 		= JSON.parse(localStorage.applang);
 		appLanguage = JSON.parse(localStorage.appLanguage);
 		
 		$("#app-name").html(appLanguage[lang]['app-name']);
-		startFunc.jsonfiles("start"); //burani duzeldecem
+		startFunc.jsonfiles("main"); //burani duzeldecem
 	}
 	
 

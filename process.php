@@ -2,7 +2,7 @@
 	include ("baglan.php");
 
 	$info = $_POST['info'];
-	session_start();
+	
 
 	if($info == "import-base")
 	{
@@ -17,19 +17,23 @@
 		$learning	= $data['learning'];
 		$lang 		= $data['use_lang'];
 
-		$detectSql = "SELECT * FROM users WHERE username = '$username' or email = '$email'";
+		$sql = "SELECT * FROM users WHERE username = '$username' or email = '$email'";
 
-		$detectUSql = "SELECT * FROM users WHERE username = '$username'";
+		$detectSql = "SELECT count(*) FROM users WHERE username = '$username' or email = '$email'";
+
+		$detectUSql = "SELECT count(*) FROM users WHERE username = '$username'";
 
 		$insertSql = "INSERT INTO users (name,username,email,password,level,aim,grade,learning,using_lang) VALUES(?,?,?,?,?,?,?,?,?)";
 
-		$detecting = $db->query($detectSql)->fetch(PDO::FETCH_ASSOC);
-		$count = count($detecting);
-		if($count>1){
-			$detecting = $db->query($detectUSql)->fetch(PDO::FETCH_ASSOC);;
-			$count = count($detecting);
+		$detecting = $db->prepare($detectSql);
+		$detecting->execute();
+		$count = $detecting->fetchColumn();
+		if($count != 0){
+			$detecting = $db->prepare($detectUSql);
+			$detecting->execute();
+			$count = $detecting->fetchColumn();
 
-			if($count>1)
+			if($count!=0)
 				$result = ['result'=>'existUsername'];
 			else
 				$result = ['result'=>'existEmail'];
@@ -39,19 +43,14 @@
 			if(filter_var($email, FILTER_VALIDATE_EMAIL))
 			{
 				$insert = $db->prepare($insertSql);
-
 				$x = $insert ->execute(["$name","$username","$email","$password","$level","$aim","$grade","$learning","$lang"]);
 
 				if($x){
-					$select = $db->query($detectUSql)->fetch(PDO::FETCH_ASSOC);
+					$select = $db->query($sql)->fetch(PDO::FETCH_ASSOC);
 					$result = ['result'=>'registryOk','user'=> $select];
-
-					$_SESSION['username'] = $username;
-
 				}
 				else
-					$result = ['result'=>'registryError'];
-			
+					$result = ['result'=>'registryError'];			
 			}
 			else
 				$result = ['result' => 'emailvalidate'];
@@ -60,7 +59,32 @@
 		echo json_encode($result);
 
 	}
+	else if($info == "update-base")
+	{
+		$data 		= json_decode($_POST['data'],true);
+		$username 	= strtolower($data['username']);
+		$password 	= $data['password'];
+	
+		$have 	= "SELECT count(*) FROM users WHERE username = '$username' and password = '$password'";
+		$select = "SELECT * FROM users WHERE username = '$username' and password = '$password'";
 
+		$isHave = $db->prepare($have);
+		$isHave->execute();
+		$count = $isHave->fetchColumn();
+		if($count == 0)
+		{
+			$result = ['result'=>'notUser'];
+		}
+		else
+		{
+			$user = $db->query($select)->fetch(PDO::FETCH_ASSOC);
+			$result = ['result'=>'yesUser',"user"=>$user];
+		}
+
+		echo json_encode($result);
+
+
+	}
 
 
 

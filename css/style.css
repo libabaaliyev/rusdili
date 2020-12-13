@@ -1663,6 +1663,10 @@ body
   background: #edf9fe;
   padding: 16px;
 }
+.float-right
+{
+  float: right !important;
+}
 
 ::-webkit-scrollbar {
   width: 2px;

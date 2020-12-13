@@ -11,7 +11,8 @@
 	<link rel="stylesheet" type="text/css" href="css/icon/css/all.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/color.css">	
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<script src="javascript/jquery.js"></script>	
 	<script src="javascript/jquery.min.js"></script>
 	<script src="javascript/bootstrap.min.js"></script>
 	<script src="javascript/sweetalert2@10.js"></script>
@@ -19,6 +20,10 @@
 <body class="full">
 	<div class="loading-lesson">
 		<img src="img/gif/loading/loading-1.gif">
+	</div>
+
+	<div class="loading">
+		<img src="img/gif/loading/loading-0.gif">
 	</div>
 
 	<div class="lesson-main">
@@ -41,31 +46,26 @@
 		</header>
 		<section class="lesson">
 			<div class="head-info">
-				<h4>Bu cümleyi termüme edin</h4> <!-- ders sistemi yaradilanda duzeldilecek -->
+				<h4 id="question_txt">Bu cümleyi termüme edin</h4> <!-- ders sistemi yaradilanda duzeldilecek -->
 			</div>
 
 			<div class="lesson-1">
 				<div class="questions">
-					<span>Salam menim adim Alibabadi</span>
+					<span id="question">Salam menim adim Alibabadi</span>
 					
-						<button class="form-button simple-btn btn-pr">
+						<button class="form-button simple-btn btn-pr float-right">
 							<i class="fas fa-volume-up"></i>
 						</button>
 					
 				</div>
-
-				<span class="form-button text-dark question-answer">Hello</span>
-
-				<span class="form-button text-dark question-answer">Hi</span>
-
-				<span class="form-button text-dark question-answer">Aloha</span>
-
-				<span class="form-button text-dark question-answer">HUHU</span>
+				<div id="answers">
+					
+				</div>
 
 			</div>
 
 			<div class="answer bg-true">
-				<span id="answer-result">Doğru cevap</span>
+				<span id="answer-result"></span>
 				<button class="form-button text-dark continue-lesson continue">
 					<!-- Devam -->
 				</button>
