@@ -184,13 +184,10 @@ count_heart_html = $(".count-heart");
 		else if(page == "index")
 		{
 
-			heart 	= JSON.parse(user.heart);
-			league 	= user.league;
+			heart 	= JSON.parse(user.heart);			
 			crown 	= JSON.parse(user.crown);
-			aim 	= user.aim;
-			level 	= user.level;
 			grade 	= JSON.parse(user.grade);
-
+			
 
 
 			if(crown>0)
@@ -216,8 +213,10 @@ count_heart_html = $(".count-heart");
 				heart_info = words[lang]['health-lost'];
 
 		}
-		else
+		else{
 			stlevel = 'zero-level';
+			heart_info = '';
+		}
 
 		$("#app-name").html(words[lang]['app-name']);
 		$("#free-learn").html(words[lang]['free-learn']);

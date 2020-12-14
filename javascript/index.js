@@ -2,7 +2,7 @@ $(document).ready(function()
 {
 	body 			= $("body");
 	darkness		= $(".darkness");
-	lesson 			= $(".level-query li");
+	
 	lesson_info 	= $(".lesson-info-x");
 	lesson_info_tab	= $(".lesson-info");
 	l_a_top			= $(".arrow-top");
@@ -16,16 +16,29 @@ $(document).ready(function()
 	close 			= $(".close-tabs");
 	start_lesson 	= $(".start-lesson");
 
+	limit 			= $("#limits");
+
 	bodyHeight 		= $(window).height();
 	windowWidth		= $(window).width();
 	bodyWidth		= $("body").width();
 	opening 		= false;
 
-
 	//localStorages
 	notifications 	= JSON.parse(localStorage.notifications);
 	lang 			= JSON.parse(localStorage.applang);
 	words 			= JSON.parse(localStorage.appLanguage);
+	user 			= JSON.parse(localStorage.user);
+
+	aim 			= user.aim;
+	grade 			= user.grade;
+
+	day_aim 		=
+	{
+		etalon  	: 50,
+		getting 	: 0,
+		time 		: 0
+	}
+
 
 	body.click(function()
 	{
@@ -38,6 +51,10 @@ $(document).ready(function()
 
 	callOther("general","language");
 	callOther("general","start_page","index");
+
+	aim_setting();
+	create_level();
+	lesson 	= $(".level-query li");
 
 	lesson.click(function(e)
 	{
@@ -64,10 +81,20 @@ $(document).ready(function()
 
 				lesson_info_tab.css("left",(objectLeft-140));
 			}
-
 			else
 			{
-				lesson_info_tab.css("left",objectLeft);
+				if(windowWidth<1050)
+				{
+					f = (bodyWidth/2+40) - objectLeft;
+					if(f>100)
+						f = 20;
+					else if(f>60 && f<100)
+						f = 30;
+					lesson_info_tab.css("left",f);
+				}
+				else
+					lesson_info_tab.css("left",objectLeft);
+				
 			}
 
 			lesson_info.css(
@@ -136,7 +163,10 @@ $(document).ready(function()
 		aim_tab.removeClass("slideOutRight");
 		aim_tab.addClass("slideOutRight");
 		aim_tab.fadeOut(1000);
-		
+
+		aim = user.aim;
+
+		aim_setting();
 	});
 
 	aim_save.click(function()
@@ -145,10 +175,15 @@ $(document).ready(function()
 		aim_tab.removeClass("slideOutRight");
 		aim_tab.addClass("slideOutRight");
 		aim_tab.fadeOut(1000);
+		user.aim = aim;
+		localStorage.user = JSON.stringify(user);
+		aim_setting();
+
 	});
 
 	aim_items.click(function()
 	{
+		aim = $(this).data("aim");
 		aim_items.removeClass("active");
 		$(this).addClass("active");
 	});
@@ -157,6 +192,116 @@ $(document).ready(function()
 	{
 		window.location = "lessons.html";
 	});
+
+
+	function aim_setting()
+	{		
+		aim 	= user.aim;
+		level 	= user.level;		
+		$(".aim ul li").removeClass("active");
+		$("#"+aim+"-x").addClass("active");
+
+		if(aim == "easy")
+		{
+			if(level == "zero")
+			{
+				day_aim.etalon = 15;
+			}
+			else
+			{
+				day_aim.etalon = 30;
+			}
+		}
+		else if(aim == "average")
+		{
+			if(level == "zero")
+			{
+				day_aim.etalon = 35;
+			}
+			else
+			{
+				day_aim.etalon = 50;
+			}
+		}
+		else if(aim == "serious")
+		{
+			if(level == "zero")
+			{
+				day_aim.etalon = 45;
+			}
+			else
+			{
+				day_aim.etalon = 70;
+			}
+		}
+		else if(aim == "crazy")
+		{
+			if(level == "zero")
+			{
+				day_aim.etalon = 60;
+			}
+			else
+			{
+				day_aim.etalon = 100;
+			}
+		}
+
+		limit.html(day_aim.getting+"/"+day_aim.etalon);
+
+	}
+
+	function create_level()
+	{
+		for (var i = grade; i < (grade + 2); i++) {
+			
+			if(i == 0)
+			{
+				img_castle = `<img src="img/icons/castle-2.png">
+								<label></label>`
+			}
+			else
+			{
+				img_castle = `<img src="img/icons/castle-4.png">
+								<label>`+i+`</label>`
+			}
+
+			castle = `<div id="castles">
+						<div class="castles">
+							<header class="level">
+								`+img_castle+`
+							</header>
+							<ul class="level-query" id="query`+i+`">								
+							</ul>
+						</div>
+					  </div>`;
+
+
+			$(castle).appendTo(".lessons");
+
+			for (var k = 1; k < 6; k++) {
+				
+				castles = `<li>
+								<div class="castle-border"></div>
+								<div class="query-into">
+									<i class="fas fa-shoe-prints fa-rotate-90"></i>
+								</div>
+								<div class="query-crown">
+									<i class="txt-shadow fas fa-crown"></i> <span></span>
+								</div>
+								<div class="query-info">
+									<h4><span class="step"><!-- Adım --></span> `+k+`</h4>
+								</div>
+							</li>`
+
+				$(castles).appendTo("#query"+i);
+
+
+			}
+
+
+		}
+	}
+
 
 	function callOther(loc,func,funcData)
 	{
@@ -167,5 +312,6 @@ $(document).ready(function()
 		});
 
 	}
+
 
 });
