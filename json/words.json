@@ -4625,11 +4625,11 @@
                 },
                 {
                   "orgn": "вас",
-                  "trns": "siz"
+                  "trns": "sizin"
                 },
                 {
                   "orgn": "у вас",
-                  "trns": "növbəniz"
+                  "trns": "sizin"
                 },
                 {
                   "orgn": "о вас",
@@ -4637,11 +4637,11 @@
                 },
                 {
                   "orgn": "на вас",
-                  "trns": "yuxarıda"
+                  "trns": "sizə"
                 },
                 {
                   "orgn": "вам",
-                  "trns": "size"
+                  "trns": "siz"
                 },
                 {
                   "orgn": "к вам",
@@ -4769,7 +4769,7 @@
                 },
                 {
                   "orgn": "е́ю",
-                  "trns": "bununla bağlı bir şey et"
+                  "trns": "onun"
                 },
                 {
                   "orgn": "с ней",
@@ -7367,12 +7367,9 @@
                   "orgn": "сала́т",
                   "trns": "salat"
                 },
+                
                 {
-                  "orgn": "millimetr",
-                  "trns": "polis (Ukraynada)"
-                },
-                {
-                  "orgn": "hərbi əməliyyat",
+                  "orgn": "отделение полиции",
                   "trns": "polis idarəsi, polis idarəsi, məntəqə"
                 },
                 {
@@ -7408,8 +7405,8 @@
                   "trns": "pis bir şey yoxdur / pis bir şey etmir"
                 },
                 {
-                  "orgn": "bir neçə komitə / bir neçə komitə",
-                  "trns": "yaxşı bir şey yoxdur / yaxşı bir şey etməmək"
+                  "orgn": "нет ничего хорошегоə",
+                  "trns": "yaxşı bir şey yoxdur"
                 },
                 {
                   "orgn": "музыка́льный инструме́нт",

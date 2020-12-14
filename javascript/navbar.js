@@ -15,6 +15,8 @@ $(document).ready(function()
 	menu_value 		= "menu";
 	menu_opening 	= false;
 
+	
+
 	if(localStorage.getItem("isPage")===null)
 		localStorage.isPage = isPage;
 	else
@@ -125,6 +127,16 @@ $(document).ready(function()
 			else
 				darkness.hide();
 		},200);
+	}
+
+	function callOther(loc,func,funcData,funcData_1)
+	{
+
+		$.getScript("javascript/"+loc+".js",function(e)
+		{
+			window[func](funcData,funcData_1);				
+		});
+
 	}
 
 });

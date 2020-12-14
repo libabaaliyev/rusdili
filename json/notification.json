@@ -28,6 +28,10 @@
 
 		"username-validate" : {"message"	: "You must use at least 5, at most 14 characters. You cannot use a space in the password.", "info": "info"},
 
+		"updateOk"			: {"message"	: "Congratulations, the arrangements have been made successfully.", "info": "success"},
+
+		"updateError"		: {"message"	: "Something went wrong during the edits. Please try again.", "info": "error"},
+
 		"choose-something"	: {"message"	:"You need to choose something!",	"info": "error"},
 
 		"errorsomething"	: {"message"	: "Something went wrong. Please try again.", "info": "error"},
@@ -61,6 +65,10 @@
 		"password-validate"	: {"message"	: "En az 8,en fazla 20 karakter kullanmalısınız, ayrıca boşluk kullanılamaz.", "info": "info"},
 
 		"username-validate"	: {"message"	: "En az 5,en fazla 14 karakter kullanmalısınız, ayrıca boşluk kullanılamaz.", "info": "info"},
+
+		"updateOk"			: {"message"	: "Tebrikler, düzenlemeler başarıyla yapıldı.", "info": "success"},
+
+		"updateError"		: {"message"	: "Düzenlemeler sırasında bir şeyler ters gitti. Lütfen tekrar deneyin.", "info": "error"},
 
 		"choose-something"	: {"message"	: "Birini seçin!",	"info": "error"},
 		
@@ -98,6 +106,11 @@
 
 		"password-validate" : {"message"	: "Ən az 5,ən çox 14 simvoldan istifadə edə bilərsiniz və boşluqdan istifadə etmək olmaz.", "info": "info"},
 
+		"updateOk"			: {"message"	: "Təbriklər, düzəlişlər uğurla həyata keçirildi.", "info": "success"},
+
+		"updateError"		: {"message"	: "Düzəliş zamanı xəta baş verdi. Xahiş edirik yenidən cəhd edin.", "info": "error"},
+
+
 		"choose-something"	: {"message"	: "Birini seçməlisiniz.",	"info": "error"},
 
 		"errorsomething"	: {"message"	: "Xahiş edirik təkrar cəhd edin.", "info": "error"},
@@ -130,6 +143,11 @@
 		"emailvalidate"		: {"message"	: "Вы ввели неверный адрес электронной почты. Повторите попытку.", "info": "error"},
 
 		"password-validate" : {"message"	: "Вы должны использовать от 8 до 20 символов. Вы не можете использовать пробел в пароле.", "info": "info"},
+
+		"updateOk"			: {"message"	: "Поздравляем, приготовления были успешно выполнены.", "info": "success"},
+
+		"updateError"		: {"message"	: "Что-то пошло не так во время редактирования. Пожалуйста, попробуйте еще раз.", "info": "error"},
+
 
 		"choose-something"	: {"message"	:"Вам нужно что-то выбрать!",	"info": "error"},
 

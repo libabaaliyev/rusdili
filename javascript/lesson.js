@@ -1,7 +1,7 @@
 $(document).ready(function()
 {
-	loading 		= $(".loading-lesson");
-	loading_1 		= $(".loading");
+	loading_lesson	= $(".loading-lesson");
+	loading_next	= $(".loading");
 	main 			= $(".lesson-main");
 	lesson 			= $(".lesson");
 	continue_lesson = $(".continue-lesson")
@@ -44,15 +44,20 @@ $(document).ready(function()
 		"з":"z","Х":"Kh","х":"kh","Ъ":":","ъ":":"
 	};
 
-	start(hash);
+	
+	
 
 	setTimeout(function()
 	{
-		loading.hide();
+		loading_lesson.hide();
+		start(hash);
 		main.show();
+
+
 
 	},3000);
 
+	callOther("general","language");
 
 	$(document).on('click', '.question-answer', function()
 	{
@@ -230,7 +235,7 @@ $(document).ready(function()
 	{
 		if(hash == "exam-get-start")
 		{
-			loading_1.show();
+			loading_next.show();
 
 			if(correct_count>5)
 			{
@@ -266,7 +271,7 @@ $(document).ready(function()
 			setTimeout(function()
 			{
 
-				loading_1.hide();
+				loading_next.hide();
 				window.location = "main.html";
 
 			},1500);
@@ -294,8 +299,6 @@ $(document).ready(function()
 	{
 		return Math.floor(Math.random()*(max-min+1)+min);
 	}
-
-
 
 
 });

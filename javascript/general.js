@@ -1,6 +1,15 @@
-loading		= $(".loading");
+loading			= $(".loading");
+profile_photo 	= $(".profile-photo-img");
+name_input 		= $(".name-input");
+username_input 	= $(".username-input");
+email_input 	= $(".email-input");
+password_input 	= $(".password-input");
+
+count_crown_html = $(".count-crown");
+count_heart_html = $(".count-heart");
 
 //localStorages
+
 	notifications 	= JSON.parse(localStorage.notifications);
 	lang 			= JSON.parse(localStorage.applang);
 	words 			= JSON.parse(localStorage.appLanguage);
@@ -30,7 +39,83 @@ loading		= $(".loading");
 		
 	}
 
-	function importBase(base,userData)
+	function filterInput(user_data,act)
+	{
+		mailfilter 		= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		usernamefilter 	= /^[A-Za-z]\w{5,14}$/;
+		passwordfilter	= /^[A-Za-z]\w{8,20}$/;
+
+		username 	= user_data.username;
+		email 		= user_data.email;
+		password 	= user_data.password;
+
+		$("input").attr("style","border: 1px solid #cecece;");
+		if(username.match(usernamefilter))
+		{
+			if(email.match(mailfilter))
+	        {
+	        	if(password.match(passwordfilter))
+	        	{
+	        		if(username&&email&&password){
+	        			
+	        			loading.show();	        			
+	        			user_data.username 	= username;
+	        			user_data.password 	= password;
+
+	        			if(navigator.onLine)//burda network kodlari olacaq
+	        			{ 
+	        				
+	        				import_data = new FormData();
+	        				if(act == "import")
+		        			{
+		        				user_data.name 		= name;
+								user_data.email 	= email;
+								
+		        			}
+		        			
+		        			import_data.append("info",act+"-base");
+	        				
+	        				import_data.append("data",JSON.stringify(user_data));
+
+	        				importBase(import_data,user_data,act);
+	        			}
+	        			else
+	        			{
+	        				if(act == "login")
+		        			{
+		        				user_data.name 		= "Unname";
+								user_data.email 	= "-";
+		        			}
+	        				internet_error(user_data,act);
+	        			}
+
+	        		}
+	        			
+	        	}
+	        	else{
+	        		notification("password-validate");
+	        		$("#password-registry").val("");
+					$("#password-registry").attr("style","border: 1px solid #FF2A00;");
+	        	}
+	        }
+	        else{
+
+	        	notification("emailvalidate");
+
+	        	$("#email-registry").val("");
+				$("#email-registry").attr("style","border: 1px solid #FF2A00;");
+	        	
+	        }
+		}
+		else
+		{
+			notification("username-validate");
+			$("#username-registry").val("");
+			$("#username-registry").attr("style","border: 1px solid #FF2A00;");
+		}
+	}
+
+	function importBase(base,userData,act)
 	{
 		$.ajax({
 			url: "process.php",
@@ -39,42 +124,101 @@ loading		= $(".loading");
 			contentType: false,
 		    processData: false,
 		    success: function(data,status)
-		    {
+		    {console.log(data)
 		    	loading.hide();
 		    	if(status == "success")
 		    	{
 		    		dataLogin 	= JSON.parse(data);
 			    	result 		= dataLogin['result'];
 			    	localStorage.connection = "registr-ok";
-			    	console.log(result);
+			    	
 			    	notification(result);
 
-			    	if(result == "registryOk" || result == "yesUser")
+			    	if(result == "registryOk" || result == "yesUser" || result == "updateOk")
 			    	{
 			    		user = dataLogin['user'];
 			    		localStorage.user = JSON.stringify(user);
+			    		if(act == "update")
+			    			start_page();
 			    	}
+
 		    	}
 		    	else
-		    		internet_error(userData);		    	
+		    		internet_error(userData,act);		    	
 		    }
 
 		});
 	}
 
-	function internet_error(data)
+	function internet_error(data,act)
 	{
+		loading.hide();	    
 		notification("internet-error");
-		data.id 		= "not-registr";
-		data.photo 		= "p1.png";
-		data.league 	= "starter";
-		localStorage.user 	= JSON.stringify(data);
+		if(act !="login"){
+			if(act =="update")
+				start_page();
+			
+			localStorage.user 	= JSON.stringify(data);
 
-		localStorage.connection = "internet-error";
+			localStorage.connection = "internet-error";
+		}
+
+	}
+	
+	function start_page(page)
+	{
+		user = JSON.parse(localStorage.user);
+
+		if(page == "setting")
+		{
+			name_input.val(user.name);
+			username_input.val(user.username);
+			email_input.val(user.email);
+			password_input.val(user.password);
+
+			photo_panel.removeClass("slideOutRight");
+			photo_panel.removeClass("slideInRight");
+			photo_panel.addClass("slideOutRight");
+			photo_panel.fadeOut(300);
+		}
+		else if(page == "index")
+		{
+
+			heart 	= JSON.parse(user.heart);
+			league 	= user.league;
+			crown 	= JSON.parse(user.crown);
+			aim 	= user.aim;
+			level 	= user.level;
+			grade 	= JSON.parse(user.grade);
+
+
+
+			if(crown>0)
+				count_crown_html.html(crown)
+			
+			if(heart>0)
+				count_heart_html.html(heart);
+		}
+		
+		profile_photo.attr("src","img/profiles/"+user.photo);
+		$(".nameProfile").html(user.name);
+		
 	}
 
 	function language()
 	{
+		if(localStorage.getItem("user")){
+			user = JSON.parse(localStorage.user);
+			stlevel = user.level+'-level';
+			if(JSON.parse(user.heart) == 5)
+				heart_info = words[lang]['health-all'];
+			else
+				heart_info = words[lang]['health-lost'];
+
+		}
+		else
+			stlevel = 'zero-level';
+
 		$("#app-name").html(words[lang]['app-name']);
 		$("#free-learn").html(words[lang]['free-learn']);
 		$("#get-start").html(words[lang]['get-start']);
@@ -126,7 +270,7 @@ loading		= $(".loading");
 
 		$("#update").html(words[lang]['update']);
 		
-		$("#health-info").html(words[lang]['health-all']); // can sistemi duzelende bu serte gore deyisecek
+		$("#health-info").html(heart_info); // can sistemi duzelende bu serte gore deyisecek
 		
 		$("#health-txt").html(words[lang]['health-txt']);
 		
@@ -142,8 +286,9 @@ loading		= $(".loading");
 		
 		$(".get-plus").html(words[lang]['get-plus']);
 		
-		
-		$(".level-step").html(words[lang]['zero-level']); //level sistemi duzelende bu da sertle deyisecek
+
+		$(".level-step").html(words[lang][stlevel]); //level sistemi duzelende bu da sertle deyisecek
+
 
 		$("#contact-us").html(words[lang]['contact-us']);
 

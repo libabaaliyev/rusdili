@@ -2,11 +2,29 @@
 	include ("baglan.php");
 
 	$info = $_POST['info'];
-	
+	$data = json_decode($_POST['data'],true);
 
 	if($info == "import-base")
+		import_user($data,$db);
+
+	else if($info == "login-base")
+		login_user($data,$db);
+
+	else if($info == "update-base")
 	{
-		$data 		= json_decode($_POST['data'],true);
+		$id = $data['id'];		
+		if($id == "not-registr")
+			import_user($data,$db);
+		
+		else
+			update_user($data,$db);
+		
+	}
+
+
+
+	function import_user($data,$db)
+	{
 		$name 		= ucwords($data['name']);
 		$username 	= strtolower($data['username']);
 		$email 		= strtolower($data['email']);
@@ -57,11 +75,9 @@
 		}
 
 		echo json_encode($result);
-
 	}
-	else if($info == "update-base")
+	function login_user($data,$db)
 	{
-		$data 		= json_decode($_POST['data'],true);
 		$username 	= strtolower($data['username']);
 		$password 	= $data['password'];
 	
@@ -83,11 +99,86 @@
 
 		echo json_encode($result);
 
-
 	}
 
+	function update_user($data,$db)
+	{
+		$id 		= $data['id'];
+		$name 		= ucwords($data['name']);
+		$username 	= strtolower($data['username']);
+		$email 		= strtolower($data['email']);
+		$password 	= $data['password'];
+		$photo 		= $data['photo'];
+
+		$sql 			= "UPDATE users SET username = ? , name = ? , email = ? , password = ? , photo = ? WHERE id = ?";
+
+		$findingUpdate 	= "SELECT * FROM users WHERE id = '$id'";
+
+		$detectSql 		= "SELECT count(*) FROM users WHERE username = '$username' or email = '$email'";
+
+		$detectUSql 	= "SELECT count(*) FROM users WHERE username = '$username'";
+
+		$detectMSql 	= "SELECT count(*) FROM users WHERE email = '$email'";
+
+		
+		$which = '';
+		$finding = $db->query($findingUpdate)->fetch(PDO::FETCH_ASSOC);
+
+		if($username == $finding['username'])
+		{
+			if($email == $finding['email'])
+			{
+				$count = 0;
+			}
+			else
+			{
+				$detecting 		= $db->prepare($detectMSql);
+
+				$detecting->execute();
+
+				$count = $detecting->fetchColumn();
+
+				$result = ['result'=>'existEmail'];
+			}
+		}
+		else
+		{
+			if($email == $finding['email']){
+				$detecting 		= $db->prepare($detectUSql);
+				$result = ['result'=>'existUsername'];
+			}
+
+			else
+				$detecting 		= $db->prepare($detectSql);
+
+			$detecting->execute();
+
+			$count = $detecting->fetchColumn();
+		}
+
+		if($count == 0){
+
+			
+			if(filter_var($email, FILTER_VALIDATE_EMAIL))
+			{
+				$update = $db->prepare($sql);
+				$update_ok = $update->execute([$username,$name,$email,$password,$photo,$id]);
 
 
 
+				if($update_ok){
+					$finding = $db->query($findingUpdate)->fetch(PDO::FETCH_ASSOC);
+					$result = ['result'=>'updateOk','user'=>$finding];
+				}
+				else
+					$result = ['result'=>'updateError'];
+
+			}
+			else
+				$result = ['result'=>'emailvalidate'];
+		}
+
+		echo json_encode($result);
+	}
 
 ?>

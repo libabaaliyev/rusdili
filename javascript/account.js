@@ -14,17 +14,23 @@ $(document).ready(function()
 
 	lang 		= JSON.parse(localStorage.applang);
 	words 		= JSON.parse(localStorage.appLanguage);
+	detecting 	= false;
 
 	user_data 	= 
 	{
+		"id"		: "not-registr",
+		"photo"		: "p1.png",
 		"aim"		: "",
 		"level" 	: "",
 		"name"		: "",
 		"username"	: "",
 		"email"		: "",
 		"password"	: "",
-		"grade"		: "0",
+		"grade"		: 0,
 		"learning" 	: "ru",
+		"league" 	: "starter",
+		"heart"		: 5,
+		"crown" 	: 0,
 		"use_lang"	: JSON.stringify(lang)
 
 	}
@@ -56,8 +62,21 @@ $(document).ready(function()
 				
 				if(!name || !username|| !email|| !password)
 					callOther("general","notification","empty-input");
-				else
-					filterInput(name,username,email,password,'registry');
+				else{
+
+					
+        			if(!detecting){
+        				detectUser('registry');
+        				detecting = true;
+        			}
+        			user_data.username 	= username;
+	        		user_data.password 	= password;
+					user_data.name 		= name;
+					user_data.email 	= email;
+
+					callOther("general","filterInput",user_data,'import');
+					
+				}
 			}
 			else
 			{
@@ -81,6 +100,11 @@ $(document).ready(function()
 
 	login.click(function()
 	{
+		
+		if(!detecting){
+			detectUser('login');
+			detecting = true;
+		}
 		$("#get-start-"+start_value).removeClass("slideInRight");
 		$("#get-start-"+start_value).addClass("slideOutLeft");
 		$("#get-start-"+start_value).fadeOut(100);
@@ -107,17 +131,24 @@ $(document).ready(function()
 
 		username 	= $("#login-username").val();
 		password 	= $("#login-password").val();
+
+		login_data = 
+		{
+			"username"	: username,
+			"password"	: password,
+			"email"		: "aliyev@alibaba.com"
+		}
 		
 		if(!username || !password)
 			callOther("general","notification","empty-input");
 		else
-			filterInput("-",username,"alibaba.aliyev@hotmail.com",password,'login');
-
+			callOther("general","filterInput",login_data,'login');
+		
 		
 	});
 
 
-	detecting = false;
+	
 	function filterInput(name,username,email,password,act)
 	{
 		mailfilter 		= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -133,13 +164,6 @@ $(document).ready(function()
 	        	{
 	        		if(username&&email&&password){
 	        			
-	        			loading.show();
-	        			if(!detecting){
-	        				detectUser(act);
-	        				detecting = true;
-	        			}
-
-	        			
 	        			user_data.username 	= username;
 	        			user_data.password 	= password;
 
@@ -154,7 +178,7 @@ $(document).ready(function()
 		        			}
 		        			else
 		        			{
-		        				import_data.append("info","update-base");
+		        				import_data.append("info","login-base");
 		        			}
 
 	        				
@@ -236,6 +260,7 @@ $(document).ready(function()
 	
 	function detectUser(a)
 	{
+		
 		if(localStorage.getItem("user") === null)
 		{
 			setTimeout(function(){ detectUser(a)},1000);
