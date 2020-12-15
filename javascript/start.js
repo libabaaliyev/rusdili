@@ -7,6 +7,8 @@ $(document).ready(function()
 		ru : "Русское Oбразование",
 		en : "Russian Education"
 	}
+
+
 	var appLanguage = [];
 	
 	const startFunc = 
@@ -96,8 +98,13 @@ $(document).ready(function()
 	}
 
 	if(localStorage.getItem("user")===null)
+	{
 		startFunc.language();
-	else{
+		plan = [];
+		localStorage.plan = JSON.stringify(plan);
+	}
+	else
+	{
 		lang 		= JSON.parse(localStorage.applang);
 		appLanguage = JSON.parse(localStorage.appLanguage);
 		

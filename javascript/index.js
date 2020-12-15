@@ -15,6 +15,7 @@ $(document).ready(function()
 	aim_save 		= $(".aim-save")
 	close 			= $(".close-tabs");
 	start_lesson 	= $(".start-lesson");
+	countLesson 	= $("#countLesson");
 
 	limit 			= $("#limits");
 
@@ -28,17 +29,13 @@ $(document).ready(function()
 	lang 			= JSON.parse(localStorage.applang);
 	words 			= JSON.parse(localStorage.appLanguage);
 	user 			= JSON.parse(localStorage.user);
+	plan 			= JSON.parse(localStorage.plan);
 
 	aim 			= user.aim;
 	grade 			= user.grade;
+	
 
-	day_aim 		=
-	{
-		etalon  	: 50,
-		getting 	: 0,
-		time 		: 0
-	}
-
+	exam_data = {};
 
 	body.click(function()
 	{
@@ -52,14 +49,27 @@ $(document).ready(function()
 	callOther("general","language");
 	callOther("general","start_page","index");
 
-	aim_setting();
+	if(localStorage.getItem("day_aim"))
+		day_aim = JSON.parse(localStorage.day_aim);
+	else
+	{
+		
+		callOther("general","aim_setting","index");
+	}
+
 	create_level();
 	lesson 	= $(".level-query li");
 
+
 	lesson.click(function(e)
 	{
+		count_l 	= $(this).data("count");
+		selectGrade = $(this).data("grade");
+		selectStep 	= $(this).data("step");
+
 		if(!opening)
 		{
+
 			x = e.pageX;
 			y = e.pageY;
 			
@@ -114,7 +124,7 @@ $(document).ready(function()
 				$("html, body").animate({ scrollTop: (y_lesson-200) }, 1000);
 			
 			
-			
+			countLesson.html("0/"+count_l);
 			setTimeout(function(){ 
 				if(!opening){
 					opening = true;
@@ -163,10 +173,9 @@ $(document).ready(function()
 		aim_tab.removeClass("slideOutRight");
 		aim_tab.addClass("slideOutRight");
 		aim_tab.fadeOut(1000);
-
 		aim = user.aim;
 
-		aim_setting();
+		callOther("general","aim_setting","index");
 	});
 
 	aim_save.click(function()
@@ -177,7 +186,8 @@ $(document).ready(function()
 		aim_tab.fadeOut(1000);
 		user.aim = aim;
 		localStorage.user = JSON.stringify(user);
-		aim_setting();
+		
+		callOther("general","aim_setting","index");
 
 	});
 
@@ -190,69 +200,29 @@ $(document).ready(function()
 
 	start_lesson.click(function()
 	{
+		exam_data.grade 	= selectGrade;
+		exam_data.step 		= selectStep;
+		exam_data.category 	= 'step-by-step';
+
+		localStorage.examing = JSON.stringify(exam_data);
 		window.location = "lessons.html";
+
 	});
-
-
-	function aim_setting()
-	{		
-		aim 	= user.aim;
-		level 	= user.level;		
-		$(".aim ul li").removeClass("active");
-		$("#"+aim+"-x").addClass("active");
-
-		if(aim == "easy")
-		{
-			if(level == "zero")
-			{
-				day_aim.etalon = 15;
-			}
-			else
-			{
-				day_aim.etalon = 30;
-			}
-		}
-		else if(aim == "average")
-		{
-			if(level == "zero")
-			{
-				day_aim.etalon = 35;
-			}
-			else
-			{
-				day_aim.etalon = 50;
-			}
-		}
-		else if(aim == "serious")
-		{
-			if(level == "zero")
-			{
-				day_aim.etalon = 45;
-			}
-			else
-			{
-				day_aim.etalon = 70;
-			}
-		}
-		else if(aim == "crazy")
-		{
-			if(level == "zero")
-			{
-				day_aim.etalon = 60;
-			}
-			else
-			{
-				day_aim.etalon = 100;
-			}
-		}
-
-		limit.html(day_aim.getting+"/"+day_aim.etalon);
-
-	}
 
 	function create_level()
 	{
-		for (var i = grade; i < (grade + 2); i++) {
+		if(grade == 0){
+			f = 0;
+			g = 4;
+		}
+		else
+		{
+			f = grade-1;
+			g = grade+3;
+		}
+
+
+		for (var i = f; i < g; i++) {
 			
 			if(i == 0)
 			{
@@ -265,7 +235,15 @@ $(document).ready(function()
 								<label>`+i+`</label>`
 			}
 
-			castle = `<div id="castles">
+			if(grade<5)
+				k_max = 6;
+			else if(grade<10)
+				k_max = 9;
+			else
+				k_max = 12;
+
+
+			castle = `<div id="castles" class="">
 						<div class="castles">
 							<header class="level">
 								`+img_castle+`
@@ -278,9 +256,40 @@ $(document).ready(function()
 
 			$(castle).appendTo(".lessons");
 
-			for (var k = 1; k < 6; k++) {
+
+			for (var k = 1; k < k_max; k++)
+			{
+
+				if (k == 1)
+					count_lesson = 3;
+				else
+					count_lesson  = k+1
+
+				if(count_lesson >5)
+					count_lesson = 4;
 				
-				castles = `<li>
+
+				if(plan.length>0)
+				{
+					isHave = search_plan(i,k);
+					
+				}
+				else{
+					
+					isHave = -1;
+				}
+
+				
+
+				
+
+				if(k== (isHave+1))
+					activation = "bg-active"
+				
+				else
+					activation = "bg-passive";
+
+				castles = `<li class="`+activation+`" data-count="`+count_lesson+`" data-grade="`+i+`" data-step="`+k+`">
 								<div class="castle-border"></div>
 								<div class="query-into">
 									<i class="fas fa-shoe-prints fa-rotate-90"></i>
@@ -295,13 +304,29 @@ $(document).ready(function()
 
 				$(castles).appendTo("#query"+i);
 
-
 			}
 
 
 		}
 	}
 
+	
+	function search_plan(e,v)
+	{
+
+		for (var i = 0; i < plan.length; i++) {
+			
+			if(plan[i]['grade'] == e && plan[i]['step'] == v)
+				return i;
+		}
+		
+	}
+
+
+	function random_number(min,max)
+	{
+		return Math.floor(Math.random()*(max-min+1)+min);
+	}
 
 	function callOther(loc,func,funcData)
 	{

@@ -13,7 +13,8 @@ $(document).ready(function()
 	result 			= $("#answer-result");
 	
 	answer_tab 		= $(".answer");
-	progressBar		= $(".progress-bar-active");
+	progressBar		= $("#progress-exam");
+	progressAim		= $("#progress-aim");
 	question_categ 	= $("#question_txt");
 	question_txt 	= $("#question");
 
@@ -22,17 +23,26 @@ $(document).ready(function()
 	skipAd 			= $(".no-thanks");
 	close 			= $(".close-lesson")
 	
-	etalon 			= 10;
+	etalon 			= 3;
 	current			= 1;
-	correct_count 	= 0;
-	
+	correct_count 	= 0;	
 	hash 			= location.hash.substr(1);
+
 	user 			= JSON.parse(localStorage.user); 
 	lang 			= JSON.parse(localStorage.applang); 
 	transl 			= JSON.parse(localStorage.appLanguage);
 	words 			= JSON.parse(localStorage.words);
 	sentences 		= JSON.parse(localStorage.sentences);
+	day_aim 		= JSON.parse(localStorage.day_aim);
+	plan 			= JSON.parse(localStorage.plan);
+
+	etalon_aim 		= JSON.parse(day_aim.etalon);
+	getting_aim		= JSON.parse(day_aim.getting);
+	
+
 	userLevel		= user.level;
+
+	callOther("general","start_page","index");
 
 	var rus_latin 	= 
 	{
@@ -52,8 +62,6 @@ $(document).ready(function()
 		loading_lesson.hide();
 		start(hash);
 		main.show();
-
-
 
 	},3000);
 
@@ -79,7 +87,10 @@ $(document).ready(function()
 	continue_succes.click(function()
 	{
 		success_body.hide();
-		success_gem.show();
+		if(getting_aim >= etalon_aim)		
+			success_gem.show();
+		else
+			adsense_tab.show();
 	});
 
 	rewardBtn.click(function()
@@ -111,12 +122,30 @@ $(document).ready(function()
 
 	function start(command)
 	{
-		if(command == "exam-get-start")
-		{
-			if(userLevel == "zero")
-				question("exam-start","trns","translate",100);
+		if(command){
+			if(command == "exam-get-start")
+			{
 
+				//if(userLevel == "zero")
+					question("exam-start","trns","translate",100);
+
+			}
+		}			
+		else if(localStorage.getItem("examing"))
+		{
+			exam_data 	= JSON.parse(localStorage.examing);
+			grade 		= exam_data.grade;
+			step 		= exam_data.step;
+			category 	= exam_data.category;
+
+			question("step-by-step","trns","translate",100);
 		}
+		else
+		{
+			window.location = "main.html";
+		}
+			
+		
 	}
 
 
@@ -127,6 +156,7 @@ $(document).ready(function()
 		
 		if(exam == "exam-start")
 		{
+
 			question_t 			= words[lang][que][cat];
 			question_general 	= words[lang][que];
 			question_txt.html(question_t);
@@ -138,7 +168,19 @@ $(document).ready(function()
 
 			answers_all(question_general,category,comm);
 
+		}
+		else if(exam == "step-by-step") //burani duzeldecem
+		{
+			question_t 			= words[lang][que][cat];
+			question_general 	= words[lang][que];
+			question_txt.html(question_t);
+			
+			if(cat == "orgn")
+				category = "trns";
+			else
+				category = "orgn";
 
+			answers_all(question_general,category,comm);
 		}
 	}
 
@@ -155,8 +197,7 @@ $(document).ready(function()
 			if(command == "translate")
 			{
 				answ_txt 		= words[lang][que][cat];
-				correct_answ 	= q[cat];
-			
+				correct_answ 	= q[cat];			
 			}
 
 			if(i == qq)
@@ -181,7 +222,6 @@ $(document).ready(function()
         str = str_array.join('');
 	    
 	 	return str;
-
 	}
 
 	
@@ -191,13 +231,14 @@ $(document).ready(function()
 		answer_tab.removeClass("bg-false");
 		answer_tab.addClass("bg-"+answ);
 
-		
-
+		if(!answ){
+			heart-=1;
+			user.heart = heart;
+			localStorage.user = JSON.stringify(user);
+			callOther("general","start_page","index");
+		}
 		result.html(transl[lang][answ+"-answer"]);
-
 		answer_tab.fadeIn();
-		console.log(correct_count);
-
 	}
 
 	function next()
@@ -215,21 +256,34 @@ $(document).ready(function()
 
 		answer_tab.fadeOut();
 
-		if(hash == "exam-get-start")
-		{
+		/*if(hash == "exam-get-start")
+		{*/
 			if(userLevel == "zero"){
-				if(current%2 == 0){
-					
-					question("exam-start","trns","translate",100);
-				}
-				else{
-
-					question("exam-start","orgn","translate",100);
-				}
+				
+				max = grade*10+100;
+				
 			}
+			else
+			{
+				max = max = grade*10+200;
+
+			}
+		/*}*/
+
+		if(words.length<max)
+			max = words.length;
+
+		if(current%2 == 0){
+					
+			question("exam-start","trns","translate",max);
+		}
+		else{
+
+			question("exam-start","orgn","translate",max);
 		}
 
 	}
+
 
 	function finish()
 	{
@@ -240,10 +294,13 @@ $(document).ready(function()
 			if(correct_count>5)
 			{
 				if(correct_count>8){
+
 					if(correct_count == 10)
 						callOther("general","notification","exam-finish","excellent");
+					
 					else
 						callOther("general","notification","exam-finish","very-good");
+
 				}
 				else
 					callOther("general","notification","exam-finish","good");
@@ -253,18 +310,13 @@ $(document).ready(function()
 				if(correct_count<3)
 				{
 					if(correct_count<1)
-					{
 						callOther("general","notification","exam-finish","so-bad");
-					}
+					
 					else
-					{
-						callOther("general","notification","exam-finish","bad");
-					}
+						callOther("general","notification","exam-finish","bad");					
 				}
 				else
-				{
-					callOther("general","notification","exam-finish","low-good");
-				}
+					callOther("general","notification","exam-finish","low-good");				
 			}
 			
 
@@ -279,8 +331,73 @@ $(document).ready(function()
 		}
 		else
 		{
+			getting_aim 			+= 13;
+			day_aim.getting 		= getting_aim;
+			localStorage.day_aim 	= JSON.stringify(day_aim);
+			percent 				= (getting_aim/etalon_aim)*100;
+		
+			if(plan.length == 0){
+				
+				plan_step = 
+				{
+					grade: grade,
+					step : step,
+					exam : 1
+				}
+				
+				plan.push(plan_step);
+
+				localStorage.plan = JSON.stringify(plan);
+
+			}
+			else{
+
+				k = search_plan(grade,step);
+				
+				if(k == -1)
+				{
+					plan_step = 
+					{
+						grade: grade,
+						step : step,
+						exam : 1
+					}
+					
+					plan.push(plan_step);
+				}
+				else					
+					plan[k]['exam'] = JSON.parse(plan[k]['exam'])+1;
+
+				
+				localStorage.plan = JSON.stringify(plan);
+				
+			}
+
+
+
+
+			progressAim.css("width",percent+"%");
 			main.fadeOut();
 			lesson_success.fadeIn();
+		}
+		
+	}
+
+	function search_plan(e,v)
+	{
+		for (var i = 0; i < plan.length; i++) {
+			
+			if(plan[i]['grade'] == e && plan[i]['step'] == v)
+				return i;
+			else{
+				if(i == (plan.length - 1))
+				{
+					k = -1;
+					return k;
+				}
+
+			}
+
 		}
 		
 	}

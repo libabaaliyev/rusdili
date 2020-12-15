@@ -93,8 +93,13 @@
 		}
 		else
 		{
-			$user = $db->query($select)->fetch(PDO::FETCH_ASSOC);
-			$result = ['result'=>'yesUser',"user"=>$user];
+			$user 	= $db->query($select)->fetch(PDO::FETCH_ASSOC);
+			$id 	= $user['id'];
+
+			$plan 	= $db->query("SELECT * FROM learning WHERE user_id = '$id'")->fetch(PDO::FETCH_ASSOC);
+
+
+			$result = ['result'=>'yesUser',"user"=>$user,"plan"=>$plan];
 		}
 
 		echo json_encode($result);

@@ -12,14 +12,14 @@ count_heart_html = $(".count-heart");
 
 	notifications 	= JSON.parse(localStorage.notifications);
 	lang 			= JSON.parse(localStorage.applang);
-	words 			= JSON.parse(localStorage.appLanguage);
+	appLanguage		= JSON.parse(localStorage.appLanguage);
 
 	
 
 	function notification(event,event_1)
 	{
 		if(event_1)
-			messageTxt = notifications[lang][event]['message']+words[lang][event_1];
+			messageTxt = notifications[lang][event]['message']+appLanguage[lang][event_1];
 		else
 			messageTxt = notifications[lang][event]['message'];
 
@@ -124,7 +124,7 @@ count_heart_html = $(".count-heart");
 			contentType: false,
 		    processData: false,
 		    success: function(data,status)
-		    {console.log(data)
+		    {
 		    	loading.hide();
 		    	if(status == "success")
 		    	{
@@ -138,8 +138,16 @@ count_heart_html = $(".count-heart");
 			    	{
 			    		user = dataLogin['user'];
 			    		localStorage.user = JSON.stringify(user);
+
+			    		aim_setting();
+
 			    		if(act == "update")
 			    			start_page();
+			    		else if(act == "login"){
+			    			plan = dataLogin['plan'];
+			    			if(plan)
+			    				localStorage.plan = JSON.stringify(plan);
+			    		}
 			    	}
 
 		    	}
@@ -202,15 +210,84 @@ count_heart_html = $(".count-heart");
 		
 	}
 
+	function aim_setting(page)
+	{
+		day_aim 		=
+		{
+			etalon  	: 0,
+			getting 	: 0,
+			time 		: 0
+		}
+
+
+		aim 	= user.aim;
+		level 	= user.level;		
+		$(".aim ul li").removeClass("active");
+		$("#"+aim+"-x").addClass("active");
+
+		if(aim == "easy")
+		{
+			if(level == "zero")
+			{
+				day_aim.etalon = 15;
+			}
+			else
+			{
+				day_aim.etalon = 30;
+			}
+		}
+		else if(aim == "average")
+		{
+			if(level == "zero")
+			{
+				day_aim.etalon = 35;
+			}
+			else
+			{
+				day_aim.etalon = 50;
+			}
+		}
+		else if(aim == "serious")
+		{
+			if(level == "zero")
+			{
+				day_aim.etalon = 45;
+			}
+			else
+			{
+				day_aim.etalon = 70;
+			}
+		}
+		else if(aim == "crazy")
+		{
+			if(level == "zero")
+			{
+				day_aim.etalon = 60;
+			}
+			else
+			{
+				day_aim.etalon = 100;
+			}
+		}
+
+		localStorage.day_aim = JSON.stringify(day_aim);
+
+		if(page == "index")
+			limit.html(day_aim.getting+"/"+day_aim.etalon);
+
+		
+
+	}
+
 	function language()
 	{
 		if(localStorage.getItem("user")){
 			user = JSON.parse(localStorage.user);
 			stlevel = user.level+'-level';
 			if(JSON.parse(user.heart) == 5)
-				heart_info = words[lang]['health-all'];
+				heart_info = appLanguage[lang]['health-all'];
 			else
-				heart_info = words[lang]['health-lost'];
+				heart_info = appLanguage[lang]['health-lost'];
 
 		}
 		else{
@@ -218,153 +295,153 @@ count_heart_html = $(".count-heart");
 			heart_info = '';
 		}
 
-		$("#app-name").html(words[lang]['app-name']);
-		$("#free-learn").html(words[lang]['free-learn']);
-		$("#get-start").html(words[lang]['get-start']);
-		$(".already-start").html(words[lang]['already-start']);
-		$("#day-aim-title").html(words[lang]['day-aim-title']);
-		$("#easy").html(words[lang]['easy']);
-		$("#easy-time").html(words[lang]['easy-time']);
-		$("#average").html(words[lang]['average']);
-		$("#average-time").html(words[lang]['average-time']);
-		$("#serious").html(words[lang]['serious']);
-		$("#serious-time").html(words[lang]['serious-time']);
+		$("#app-name").html(appLanguage[lang]['app-name']);
+		$("#free-learn").html(appLanguage[lang]['free-learn']);
+		$("#get-start").html(appLanguage[lang]['get-start']);
+		$(".already-start").html(appLanguage[lang]['already-start']);
+		$("#day-aim-title").html(appLanguage[lang]['day-aim-title']);
+		$("#easy").html(appLanguage[lang]['easy']);
+		$("#easy-time").html(appLanguage[lang]['easy-time']);
+		$("#average").html(appLanguage[lang]['average']);
+		$("#average-time").html(appLanguage[lang]['average-time']);
+		$("#serious").html(appLanguage[lang]['serious']);
+		$("#serious-time").html(appLanguage[lang]['serious-time']);
 
-		$("#exam-time").html(words[lang]['exam-time']);
-		$("#exam-span").html(words[lang]['exam-span']);
-		$("#go-exam").html(words[lang]['go-exam']);
+		$("#exam-time").html(appLanguage[lang]['exam-time']);
+		$("#exam-span").html(appLanguage[lang]['exam-span']);
+		$("#go-exam").html(appLanguage[lang]['go-exam']);
 		
 
-		$("#crazy").html(words[lang]['crazy']);
-		$("#crazy-time").html(words[lang]['crazy-time']);
+		$("#crazy").html(appLanguage[lang]['crazy']);
+		$("#crazy-time").html(appLanguage[lang]['crazy-time']);
 
-		$(".save").html(words[lang]['save']);
-		$("#select-level").html(words[lang]['select-level']);
-		$("#start-zero").html(words[lang]['start-zero']);
-		$("#start-elementary").html(words[lang]['start-elementary']);
-		$("#create-profile").html(words[lang]['create-profile']);
-		$("#create-profile-txt").html(words[lang]['create-profile-txt']);
-		$("#create-profile-btn").html(words[lang]['create-profile-btn']);
-		$("#registration").html(words[lang]['registration']);
-		$(".name").html(words[lang]['name']);
-		$(".username").html(words[lang]['username']);
-		$(".email").html(words[lang]['email']);
-		$(".password").html(words[lang]['password']);
+		$(".save").html(appLanguage[lang]['save']);
+		$("#select-level").html(appLanguage[lang]['select-level']);
+		$("#start-zero").html(appLanguage[lang]['start-zero']);
+		$("#start-elementary").html(appLanguage[lang]['start-elementary']);
+		$("#create-profile").html(appLanguage[lang]['create-profile']);
+		$("#create-profile-txt").html(appLanguage[lang]['create-profile-txt']);
+		$("#create-profile-btn").html(appLanguage[lang]['create-profile-btn']);
+		$("#registration").html(appLanguage[lang]['registration']);
+		$(".name").html(appLanguage[lang]['name']);
+		$(".username").html(appLanguage[lang]['username']);
+		$(".email").html(appLanguage[lang]['email']);
+		$(".password").html(appLanguage[lang]['password']);
 
-		$(".name-input").attr("placeholder",words[lang]['name-input']);
-		$(".username-input").attr("placeholder",words[lang]['username-input']);
-		$(".email-input").attr("placeholder",words[lang]['email-input']);
-		$(".password-input").attr("placeholder",words[lang]['pass-input']);
+		$(".name-input").attr("placeholder",appLanguage[lang]['name-input']);
+		$(".username-input").attr("placeholder",appLanguage[lang]['username-input']);
+		$(".email-input").attr("placeholder",appLanguage[lang]['email-input']);
+		$(".password-input").attr("placeholder",appLanguage[lang]['pass-input']);
 
-		$("#privacy").html(words[lang]['privacy']);
-		$(".login").html(words[lang]['login']);
+		$("#privacy").html(appLanguage[lang]['privacy']);
+		$(".login").html(appLanguage[lang]['login']);
 
 
 
-		$("#crown-l").html(words[lang]['crown']);
+		$("#crown-l").html(appLanguage[lang]['crown']);
 
-		$("#crown-txt").html(words[lang]['crown-txt']);
+		$("#crown-txt").html(appLanguage[lang]['crown-txt']);
 
-		$(".day-aim-title").html(words[lang]['day-aim-title']);
+		$(".day-aim-title").html(appLanguage[lang]['day-aim-title']);
 
-		$("#update").html(words[lang]['update']);
+		$("#update").html(appLanguage[lang]['update']);
 		
 		$("#health-info").html(heart_info); // can sistemi duzelende bu serte gore deyisecek
 		
-		$("#health-txt").html(words[lang]['health-txt']);
+		$("#health-txt").html(appLanguage[lang]['health-txt']);
 		
-		$("#a-health").html(words[lang]['a-health']);
+		$("#a-health").html(appLanguage[lang]['a-health']);
 		
-		$(".get-practice").html(words[lang]['get-practice']);
+		$(".get-practice").html(appLanguage[lang]['get-practice']);
 		
-		$(".get-health").html(words[lang]['get-health']);
+		$(".get-health").html(appLanguage[lang]['get-health']);
 		
-		$(".plus").html(words[lang]['plus']);
+		$(".plus").html(appLanguage[lang]['plus']);
 		
-		$(".unlimited").html(words[lang]['unlimited']);
+		$(".unlimited").html(appLanguage[lang]['unlimited']);
 		
-		$(".get-plus").html(words[lang]['get-plus']);
+		$(".get-plus").html(appLanguage[lang]['get-plus']);
 		
 
-		$(".level-step").html(words[lang][stlevel]); //level sistemi duzelende bu da sertle deyisecek
+		$(".level-step").html(appLanguage[lang][stlevel]); //level sistemi duzelende bu da sertle deyisecek
 
 
-		$("#contact-us").html(words[lang]['contact-us']);
+		$("#contact-us").html(appLanguage[lang]['contact-us']);
 
-		$("#invite").html(words[lang]['invite']);
+		$("#invite").html(appLanguage[lang]['invite']);
 
-		$("#rate").html(words[lang]['rate']);
+		$("#rate").html(appLanguage[lang]['rate']);
 
-		$(".settings").html(words[lang]['settings']);
+		$(".settings").html(appLanguage[lang]['settings']);
 
 
-		$(".step").html(words[lang]['step']);
+		$(".step").html(appLanguage[lang]['step']);
 
-		$(".level-txt").html(words[lang]['level']);
+		$(".level-txt").html(appLanguage[lang]['level']);
 
-		$(".start-lesson").html(words[lang]['start']);
+		$(".start-lesson").html(appLanguage[lang]['start']);
 
-		$(".skip-level-txt").html(words[lang]['skip-level-txt']);
+		$(".skip-level-txt").html(appLanguage[lang]['skip-level-txt']);
 
-		$(".skip-level-span").html(words[lang]['skip-level-span']);
+		$(".skip-level-span").html(appLanguage[lang]['skip-level-span']);
 
-		$(".use-gem").html(words[lang]['use-gem']);
+		$(".use-gem").html(appLanguage[lang]['use-gem']);
 
-		$(".unlimited-test").html(words[lang]['unlimited-test']);
+		$(".unlimited-test").html(appLanguage[lang]['unlimited-test']);
 
-		$(".no-thanks-l").html(words[lang]['no-thanks']);
+		$(".no-thanks-l").html(appLanguage[lang]['no-thanks']);
 
 
 		
-		$("#profile-title").html(words[lang]['profile']);
+		$("#profile-title").html(appLanguage[lang]['profile']);
 
-		$("#finish-lig").html(words[lang]['finish-lig']);
+		$("#finish-lig").html(appLanguage[lang]['finish-lig']);
 
-		$("#shop").html(words[lang]['shop']);
+		$("#shop").html(appLanguage[lang]['shop']);
 
-		$(".app-name").html(words[lang]['app-name']);
+		$(".app-name").html(appLanguage[lang]['app-name']);
 
-		$("#get-plus-shop").html(words[lang]['get-plus-shop']);
+		$("#get-plus-shop").html(appLanguage[lang]['get-plus-shop']);
 
-		$(".upgrade").html(words[lang]['upgrade']);
+		$(".upgrade").html(appLanguage[lang]['upgrade']);
 
-		$("#get-shielt-title").html(words[lang]['get-shielt-title']);
+		$("#get-shielt-title").html(appLanguage[lang]['get-shielt-title']);
 
-		$("#get-shielt-txt").html(words[lang]['get-shielt-txt']);
+		$("#get-shielt-txt").html(appLanguage[lang]['get-shielt-txt']);
 
-		$("#health-update").html(words[lang]['health-update']);
+		$("#health-update").html(appLanguage[lang]['health-update']);
 
-		$("#health-update-txt").html(words[lang]['health-update-txt']);
+		$("#health-update-txt").html(appLanguage[lang]['health-update-txt']);
 
-		$("#get-ads").html(words[lang]['get-ads']);
-
-
-		$("#double-skill-title").html(words[lang]['double-skill-title']);
-
-		$("#double-skill-txt").html(words[lang]['double-skill-txt']);
-
-		$("#unlimited-health").html(words[lang]['unlimited-health']);
-
-		$("#buy-plus").html(words[lang]['buy-plus']);
+		$("#get-ads").html(appLanguage[lang]['get-ads']);
 
 
+		$("#double-skill-title").html(appLanguage[lang]['double-skill-title']);
+
+		$("#double-skill-txt").html(appLanguage[lang]['double-skill-txt']);
+
+		$("#unlimited-health").html(appLanguage[lang]['unlimited-health']);
+
+		$("#buy-plus").html(appLanguage[lang]['buy-plus']);
 
 
-		$(".continue").html(words[lang]['continue']); 
 
-		$(".lesson-completed").html(words[lang]['lesson-completed']);
 
-		$("#combo").html(words[lang]['combo']);
+		$(".continue").html(appLanguage[lang]['continue']); 
 
-		$("#double-skill-ads").html(words[lang]['double-skill-ads']);
+		$(".lesson-completed").html(appLanguage[lang]['lesson-completed']);
 
-		$(".reward").html(words[lang]['double-reward']);
+		$("#combo").html(appLanguage[lang]['combo']);
 
-		$("#ads-txt").html(words[lang]['ads-txt']);
+		$("#double-skill-ads").html(appLanguage[lang]['double-skill-ads']);
 
-		$("#buy-plus-txt").html(words[lang]['buy-plus-txt']);
+		$(".reward").html(appLanguage[lang]['double-reward']);
 
-		$("#select-picture").html(words[lang]['select-picture']);
+		$("#ads-txt").html(appLanguage[lang]['ads-txt']);
+
+		$("#buy-plus-txt").html(appLanguage[lang]['buy-plus-txt']);
+
+		$("#select-picture").html(appLanguage[lang]['select-picture']);
 
 
 	}
