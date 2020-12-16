@@ -45,16 +45,18 @@ $(document).ready(function()
 	})
 
 	callOther("general","language");
+	callOther("general","aim_setting","index");
 	callOther("general","start_page","index");
 
-	if(localStorage.getItem("day_aim"))
+
+	/*if(localStorage.getItem("day_aim"))
 		day_aim = JSON.parse(localStorage.day_aim);
 	else
 	{
 		
 		callOther("general","aim_setting","index");
 	}
-
+*/
 	create_level();
 	lesson 	= $(".level-query li");
 

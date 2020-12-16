@@ -42,7 +42,7 @@ $(document).ready(function()
 
 	userLevel		= user.level;
 
-	callOther("general","start_page","index");
+	callOther("general","start_page","index","lesson");
 
 	var rus_latin 	= 
 	{
@@ -235,7 +235,7 @@ $(document).ready(function()
 			heart-=1;
 			user.heart = heart;
 			localStorage.user = JSON.stringify(user);
-			callOther("general","start_page","index");
+			callOther("general","start_page","index","lesson");
 		}
 		result.html(transl[lang][answ+"-answer"]);
 		answer_tab.fadeIn();

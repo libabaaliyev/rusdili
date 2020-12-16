@@ -123,7 +123,7 @@ function importBase(base,userData,act)
 		contentType: false,
 	    processData: false,
 	    success: function(data,status)
-	    {
+	    {console.log(data)
 	    	loading.hide();
 	    	if(status == "success")
 	    	{
@@ -172,8 +172,8 @@ function internet_error(data,act)
 
 }
 
-function start_page(page)
-{console.log(fullDate)
+function start_page(page,page_1)
+{
 	user = JSON.parse(localStorage.user);
 
 	if(page == "setting")
@@ -204,40 +204,55 @@ function start_page(page)
 
 		$(".gem-count").html(gem);
 
-		if(localStorage.getItem("day_aim")){
-
-			limit.html(day_aim.getting+"/"+day_aim.etalon);
-			percent = (JSON.parse(day_aim.getting)/JSON.parse(day_aim.etalon))*100;
-			$("#progress-aim").css("width",percent+"%");
-
-			if(percent>=100 && !day_aim.showing)
-				notification("full-aim");
-
-
-
-		}
 		
+		set_day_aim(page_1);
 
 	}
 	
 	profile_photo.attr("src","img/profiles/"+user.photo);
 	$(".nameProfile").html(user.name);
-	
+		
+}
+
+function set_day_aim(page)
+{
+	if(localStorage.getItem("day_aim") && page != "lesson"){
+
+		limit.html(day_aim.getting+"/"+day_aim.etalon);
+		percent = (JSON.parse(day_aim.getting)/JSON.parse(day_aim.etalon))*100;
+		$("#progress-aim").css("width",percent+"%");
+
+		if(percent>=100 && !day_aim.showing){
+			notification("full-aim");
+			day_aim.showing = true;
+			localStorage.day_aim = JSON.stringify(day_aim);
+		}
+
+	}
 }
 
 function aim_setting(page)
-{
-	day_aim 		=
+{ 
+	if(localStorage.getItem("day_aim") === null)
 	{
-		etalon  	: 0,
-		getting 	: 0,
-		time 		: fullDate,
-		showing		: false
+
+
+		day_aim 		=
+		{
+			etalon  	: 0,
+			getting 	: 0,
+			time 		: fullDate,
+			showing		: false
+		}
+	}
+	else
+	{
+		day_aim = JSON.parse(localStorage.day_aim);
 	}
 
-
 	aim 	= user.aim;
-	level 	= user.level;		
+	level 	= user.level;
+	console.log(aim)		
 	$(".aim ul li").removeClass("active");
 	$("#"+aim+"-x").addClass("active");
 
@@ -287,6 +302,8 @@ function aim_setting(page)
 	}
 
 	localStorage.day_aim = JSON.stringify(day_aim);
+
+	set_day_aim();
 
 	if(page == "index")
 		limit.html(day_aim.getting+"/"+day_aim.etalon);
