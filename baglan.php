@@ -3,8 +3,8 @@
 
 $username="root";
 $password="";
-$local="localhost:3308";
-$database="rusdili";
+$local="127.0.0.1";
+$database="lang_edu";
 
 try {
      $db = new PDO("mysql:host=$local;dbname=$database", "$username", "$password");
@@ -15,4 +15,4 @@ try {
 $db->query("SET CHARACTER SET utf8");
 
 
-?>
+?> 

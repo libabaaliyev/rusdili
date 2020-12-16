@@ -936,9 +936,9 @@ body
   display: inline-block;
   float: left;
   height: 40px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: #fff;
   margin: 8px;
   margin-right: 10px;
@@ -1666,6 +1666,11 @@ body
 .float-right
 {
   float: right !important;
+}
+
+.reset-lesson
+{
+  display: none;
 }
 
 ::-webkit-scrollbar {

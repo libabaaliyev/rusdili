@@ -8,7 +8,6 @@ $(document).ready(function()
 		en : "Russian Education"
 	}
 
-
 	var appLanguage = [];
 	
 	const startFunc = 
@@ -100,8 +99,8 @@ $(document).ready(function()
 	if(localStorage.getItem("user")===null)
 	{
 		startFunc.language();
-		plan = [];
-		localStorage.plan = JSON.stringify(plan);
+		plan 				= [];
+		localStorage.plan 	= JSON.stringify(plan);
 	}
 	else
 	{

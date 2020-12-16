@@ -44,7 +44,9 @@
 
 		"level-select"		: {"message"	: "Choose your level of Russian", "info": "info"},
 
-		"exam-finish" 		: {"message"	: "Level exam is over. Exam result:", "info": "info"}
+		"exam-finish" 		: {"message"	: "Level exam is over. Exam result:", "info": "info"},
+
+		"full-aim"			: {"message"	: "Congratulations, you have reached the daily goal !!!", "info": "success"}
 	},
 	"tr":
 	{
@@ -82,7 +84,9 @@
 
 		"level-select"		: {"message"	: "Rusça seviyenizi seçin", "info": "info"},
 
-		"exam-finish" 		: {"message"	: "Seviye sınavı bitdi. Sınav sonucu: ", "info": "info"}
+		"exam-finish" 		: {"message"	: "Seviye sınavı bitdi. Sınav sonucu: ", "info": "info"},
+
+		"full-aim"			: {"message"	: "Tebrikler, günlük hedefe ulaştınız !!!", "info": "success"}
 
 	},
 	"az":
@@ -123,7 +127,9 @@
 
 		"level-select"		: {"message"	: "Bilgi səviyənizi seçin", "info": "info"},
 
-		"exam-finish" 		: {"message"	: "Səviyyə imtahanı bitdi. imtahan nəticəsi: ", "info": "info"}
+		"exam-finish" 		: {"message"	: "Səviyyə imtahanı bitdi. imtahan nəticəsi: ", "info": "info"},
+
+		"full-aim"			: {"message"	: "Təbriklər, günlük hədəfə çatdınız !!!", "info": "success"}
 	},
 	"ru":
 	{
@@ -161,7 +167,9 @@
 
 		"level-select"		: {"message"	: "Выбери свой уровень русского", "info": "info"},
 
-		"exam-finish" 		: {"message"	: "Контрольный экзамен окончен. Результат экзамена: ", "info": "info"}
+		"exam-finish" 		: {"message"	: "Контрольный экзамен окончен. Результат экзамена: ", "info": "info"},
+
+		"full-aim"			: {"message"	: "Поздравляем, вы достигли ежедневной цели !!!", "info": "success"}
 	}
 
 }

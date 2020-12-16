@@ -1,8 +1,7 @@
 $(document).ready(function()
 {
 	body 			= $("body");
-	darkness		= $(".darkness");
-	
+	darkness		= $(".darkness");	
 	lesson_info 	= $(".lesson-info-x");
 	lesson_info_tab	= $(".lesson-info");
 	l_a_top			= $(".arrow-top");
@@ -15,14 +14,16 @@ $(document).ready(function()
 	aim_save 		= $(".aim-save")
 	close 			= $(".close-tabs");
 	start_lesson 	= $(".start-lesson");
+	reset_lesson 	= $(".reset-lesson")
 	countLesson 	= $("#countLesson");
-
 	limit 			= $("#limits");
 
 	bodyHeight 		= $(window).height();
 	windowWidth		= $(window).width();
 	bodyWidth		= $("body").width();
 	opening 		= false;
+	selectStep 		= -1;
+	selectGrade 	= -1;
 
 	//localStorages
 	notifications 	= JSON.parse(localStorage.notifications);
@@ -30,19 +31,16 @@ $(document).ready(function()
 	words 			= JSON.parse(localStorage.appLanguage);
 	user 			= JSON.parse(localStorage.user);
 	plan 			= JSON.parse(localStorage.plan);
-
 	aim 			= user.aim;
 	grade 			= user.grade;
 	
+
 
 	exam_data = {};
 
 	body.click(function()
 	{
-		if(opening){
-			opening = false;
-			lesson_info.fadeOut();
-		}
+		func_lesson_info("close");
 
 	})
 
@@ -60,84 +58,55 @@ $(document).ready(function()
 	create_level();
 	lesson 	= $(".level-query li");
 
-
+	
 	lesson.click(function(e)
 	{
+		
 		count_l 	= $(this).data("count");
-		selectGrade = $(this).data("grade");
-		selectStep 	= $(this).data("step");
+		
+		if(selectStep == $(this).data("step") && selectGrade == $(this).data("grade")){
+			func_lesson_info("close");
 
-		if(!opening)
-		{
-
-			x = e.pageX;
-			y = e.pageY;
-			
-			
-			y_lesson 	= $(this).offset().top;
-
-			if(windowWidth<1050)
-			{
-				
-				objectLeft 	= $(this).offset().left;
-				
-			}
-			else
-			{
-				objectLeft 	= $(this).offset().left - ((windowWidth - bodyWidth)/2);
-			}
-			
-			if(objectLeft>(bodyWidth/2+40)){
-
-				lesson_info_tab.css("left",(objectLeft-140));
-			}
-			else
-			{
-				if(windowWidth<1050)
-				{
-					f = (bodyWidth/2+40) - objectLeft;
-					if(f>100)
-						f = 20;
-					else if(f>60 && f<100)
-						f = 30;
-					lesson_info_tab.css("left",f);
-				}
-				else
-					lesson_info_tab.css("left",objectLeft);
-				
-			}
-
-			lesson_info.css(
-			{
-				"top": (y_lesson-25)+"px"
-			});
-
-			l_a_top.css(
-			{
-				"left": (objectLeft+25)+"px"
-
-			});
-
-			
-
-			if((bodyHeight - y_lesson) < 200)
-				$("html, body").animate({ scrollTop: (y_lesson-200) }, 1000);
-			
-			
-			countLesson.html("0/"+count_l);
-			setTimeout(function(){ 
-				if(!opening){
-					opening = true;
-					lesson_info.fadeIn();
-				}
-				
-				
-			},100);
 		}
 		else
 		{
-			lesson_info.fadeOut();
+			selectGrade = $(this).data("grade");
+			selectStep 	= $(this).data("step");
+			y_lesson 	= $(this).offset().top;
+			objectLeft 	= $(this).offset().left;
+
+			if(plan.length > 0){
+				isHave = search_plan(selectGrade,selectStep);
+				if(isHave!= -1)
+					currentExam = isHave.exam;
+				else
+					currentExam = 0;
+
+			}
+			else
+				currentExam = 0;
+			
+			countLesson.html(currentExam+"/"+count_l);
+
+			if(currentExam == count_l){
+				skip_lesson.hide();
+				start_lesson.data("mission","reset");
+				start_lesson.html(words[lang]['reset']);
+			}
+			else
+			{
+				
+				skip_lesson.show();
+				start_lesson.data("mission","start");
+				start_lesson.html(words[lang]['start']);
+				
+			}
+
+			func_lesson_info("open",y_lesson,objectLeft);
+			
 		}
+		e.stopPropagation();
+		
 	});
 
 	skip_lesson.click(function()
@@ -184,9 +153,8 @@ $(document).ready(function()
 		aim_tab.removeClass("slideOutRight");
 		aim_tab.addClass("slideOutRight");
 		aim_tab.fadeOut(1000);
-		user.aim = aim;
-		localStorage.user = JSON.stringify(user);
-		
+		user.aim 			= aim;
+		localStorage.user 	= JSON.stringify(user);		
 		callOther("general","aim_setting","index");
 
 	});
@@ -200,14 +168,98 @@ $(document).ready(function()
 
 	start_lesson.click(function()
 	{
-		exam_data.grade 	= selectGrade;
-		exam_data.step 		= selectStep;
-		exam_data.category 	= 'step-by-step';
-
-		localStorage.examing = JSON.stringify(exam_data);
-		window.location = "lessons.html";
-
+		mission = $(this).data("mission");			
+		goLesson(mission);
 	});
+
+	function func_lesson_info(category,posY,objLeft)
+	{
+		
+		if(category == "open")
+		{
+			if(windowWidth>1050)
+			{			
+				objLeft 	= objLeft - ((windowWidth - bodyWidth)/2);
+			}
+			
+			if(objLeft>(bodyWidth/2+40)){
+
+				lesson_info_tab.css("left",(objLeft-140));
+			}
+			else
+			{
+				if(windowWidth<1050)
+				{
+					f = (bodyWidth/2+40) - objLeft;
+					if(f>100)
+						f = 20;
+					else if(f>60 && f<100)
+						f = 30;
+					lesson_info_tab.css("left",f);
+				}
+				else
+					lesson_info_tab.css("left",objLeft);
+				
+			}
+
+			lesson_info.css(
+			{
+				"top": (posY-25)+"px"
+			});
+
+			l_a_top.css(
+			{
+				"left": (objLeft+25)+"px"
+
+			});
+
+			if((bodyHeight - posY) < 200)
+				$("html, body").animate({ scrollTop: (posY-200) }, 1000);
+
+			setTimeout(function()
+			{
+				if(!opening)
+				{
+					opening = true;
+					lesson_info.fadeIn();
+				}
+			});
+			
+
+		}
+		else
+		{
+				
+			if(opening){
+				opening = false;
+				lesson_info.fadeOut();
+				selectStep 	= -1;
+				selectGrade = -1;
+			}
+		}
+	}
+
+	function goLesson(e)
+	{
+
+		if(e=="reset")
+		{
+			isHave 				= search_plan(selectGrade,selectStep);
+			h 					= isHave.i;
+			countExam 			= JSON.parse(plan[h]['exam']);
+			user.crown 			= JSON.parse(user.crown) - countExam;
+			plan[h]['exam'] 	= 0;
+			localStorage.plan 	= JSON.stringify(plan);
+			localStorage.user 	= JSON.stringify(user);
+
+
+		}
+		exam_data.grade 		= selectGrade;
+		exam_data.step 			= selectStep;
+		exam_data.category 		= 'step-by-step';
+		localStorage.examing 	= JSON.stringify(exam_data);
+		window.location = "lessons.html";
+	}
 
 	function create_level()
 	{
@@ -268,26 +320,35 @@ $(document).ready(function()
 				if(count_lesson >5)
 					count_lesson = 4;
 				
-
+				countCrown = '';
+				crownCss = '';
 				if(plan.length>0)
 				{
 					isHave = search_plan(i,k);
+
+					if(isHave != -1){
+						cStep = isHave.step;
+						cExam = isHave.exam;
+						if(cExam != 0){
+							crownCss = 'gold'
+							countCrown = cExam;
+						}
+					}					
 					
 				}
 				else{
 					
-					isHave = -1;
+					cStep = -1;
+					
 				}
 
-				
-
-				
-
-				if(k== (isHave+1))
+				if(k == cStep)
 					activation = "bg-active"
 				
 				else
 					activation = "bg-passive";
+
+
 
 				castles = `<li class="`+activation+`" data-count="`+count_lesson+`" data-grade="`+i+`" data-step="`+k+`">
 								<div class="castle-border"></div>
@@ -295,7 +356,7 @@ $(document).ready(function()
 									<i class="fas fa-shoe-prints fa-rotate-90"></i>
 								</div>
 								<div class="query-crown">
-									<i class="txt-shadow fas fa-crown"></i> <span></span>
+									<i class="`+crownCss+` txt-shadow fas fa-crown"></i> <span>`+countCrown+`</span>
 								</div>
 								<div class="query-info">
 									<h4><span class="step"><!-- Adım --></span> `+k+`</h4>
@@ -313,13 +374,25 @@ $(document).ready(function()
 	
 	function search_plan(e,v)
 	{
+		for (var i = 0; i < plan.length; i++) {			
+			if(plan[i]['grade'] == e && plan[i]['step'] == v){
 
-		for (var i = 0; i < plan.length; i++) {
-			
-			if(plan[i]['grade'] == e && plan[i]['step'] == v)
-				return i;
-		}
-		
+				result = 
+				{
+					"i": i,
+					"grade": e,
+					"step": v,
+					"exam": plan[i]['exam']
+				}
+
+				return result;
+			}
+			else
+			{
+				if(i == (plan.length - 1))
+					return -1;
+			}
+		}		
 	}
 
 

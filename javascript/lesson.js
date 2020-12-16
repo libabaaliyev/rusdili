@@ -331,13 +331,15 @@ $(document).ready(function()
 		}
 		else
 		{
-			getting_aim 			+= 13;
+			getting_aim 			+= 15;
+			user.gem				= JSON.parse(user.gem) + 15;
 			day_aim.getting 		= getting_aim;
 			localStorage.day_aim 	= JSON.stringify(day_aim);
+			localStorage.user 		= JSON.stringify(user);
 			percent 				= (getting_aim/etalon_aim)*100;
 		
-			if(plan.length == 0){
-				
+			if(plan.length == 0)
+			{				
 				plan_step = 
 				{
 					grade: grade,
@@ -346,14 +348,12 @@ $(document).ready(function()
 				}
 				
 				plan.push(plan_step);
-
 				localStorage.plan = JSON.stringify(plan);
-
 			}
-			else{
+			else
+			{
 
-				k = search_plan(grade,step);
-				
+				k = search_plan(grade,step);				
 				if(k == -1)
 				{
 					plan_step = 
@@ -373,7 +373,8 @@ $(document).ready(function()
 				
 			}
 
-
+			user.crown = JSON.parse(user.crown)+1;
+			localStorage.user = JSON.stringify(user);
 
 
 			progressAim.css("width",percent+"%");
