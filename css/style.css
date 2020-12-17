@@ -1164,7 +1164,6 @@ body
   top: 0;
   left: 0;
   width: 100%;
-  height: 135px;
   z-index: 2;
   display: none;
 }
@@ -1178,7 +1177,7 @@ body
   height: 140px;
   border-radius: 13px;
   padding: 10px;
-  z-index: 3;
+  z-index: 30
   
   
 }

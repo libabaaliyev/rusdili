@@ -43,6 +43,7 @@ $(document).ready(function()
 	userLevel		= user.level;
 
 	callOther("general","start_page","index","lesson");
+	callOther("general","language");
 
 	var rus_latin 	= 
 	{
@@ -63,9 +64,10 @@ $(document).ready(function()
 		start(hash);
 		main.show();
 
+
 	},3000);
 
-	callOther("general","language");
+	
 
 	$(document).on('click', '.question-answer', function()
 	{
@@ -111,6 +113,16 @@ $(document).ready(function()
 
 	close.click(function()
 	{
+		if(localStorage.connection == "registr-ok")
+		{
+			base = new FormData();
+			base.append("info","update-datas");
+			base.append("user",JSON.stringify(user));
+			base.append("plan",JSON.stringify(plan));
+			callOther("general","importbase",importBase,user,"update");
+
+		}
+
 		window.location = "main.html";
 	});
 
@@ -136,9 +148,9 @@ $(document).ready(function()
 			exam_data 	= JSON.parse(localStorage.examing);
 			grade 		= exam_data.grade;
 			step 		= exam_data.step;
-			category 	= exam_data.category;
+			category_e 	= exam_data.category;
 
-			question("step-by-step","trns","translate",100);
+			question(category_e,"trns","translate",100);
 		}
 		else
 		{
@@ -171,6 +183,22 @@ $(document).ready(function()
 		}
 		else if(exam == "step-by-step") //burani duzeldecem
 		{
+			question_t 			= words[lang][que][cat];
+			question_general 	= words[lang][que];
+			question_txt.html(question_t);
+			
+			if(cat == "orgn")
+				category = "trns";
+			else
+				category = "orgn";
+
+			answers_all(question_general,category,comm);
+		}
+		else if(exam == "open-lock")
+		{
+			etalon *=2;
+		
+
 			question_t 			= words[lang][que][cat];
 			question_general 	= words[lang][que];
 			question_txt.html(question_t);
@@ -243,7 +271,8 @@ $(document).ready(function()
 
 	function next()
 	{
-		current++;
+		if(correcting)
+			current++;
 		percent = (current/etalon)*100;
 
 		progressBar.css("width",percent+"%");
@@ -339,12 +368,28 @@ $(document).ready(function()
 			percent 				= (getting_aim/etalon_aim)*100;
 		
 			if(plan.length == 0)
-			{				
+			{
+
+				if(category_e == 'open-lock'){
+					if (step == 1)
+						examCount = 3;
+					else
+						examCount  = step+1;
+
+
+					if(examCount >5)
+						examCount = 4;					
+				}
+				else
+					examCount = 1;
+
+
+
 				plan_step = 
 				{
 					grade: grade,
 					step : step,
-					exam : 1
+					exam : examCount
 				}
 				
 				plan.push(plan_step);
@@ -353,21 +398,41 @@ $(document).ready(function()
 			else
 			{
 
-				k = search_plan(grade,step);				
+				k = search_plan(grade,step);
+
+				if(category_e == 'open-lock'){
+					if (step == 1)
+						examCount = 3;
+					else
+						examCount  = step+1;
+
+
+					if(examCount >5)
+						examCount = 4;					
+				}
+				else
+					examCount = 1;
+
+
 				if(k == -1)
 				{
 					plan_step = 
 					{
 						grade: grade,
 						step : step,
-						exam : 1
+						exam : examCount
 					}
 					
 					plan.push(plan_step);
 				}
-				else					
-					plan[k]['exam'] = JSON.parse(plan[k]['exam'])+1;
+				else
+				{	
+					if(category_e == 'open-lock')				
+						plan[k]['exam'] = examCount;
+					else
+						plan[k]['exam'] = JSON.parse(plan[k]['exam'])+1;
 
+				}
 				
 				localStorage.plan = JSON.stringify(plan);
 				
@@ -403,12 +468,12 @@ $(document).ready(function()
 		
 	}
 
-	function callOther(loc,func,funcData,funcData_1)
+	function callOther(loc,func,funcData,funcData_1,funcData_2)
 	{
 
 		$.getScript("javascript/"+loc+".js",function(e)
 		{
-			window[func](funcData,funcData_1);				
+			window[func](funcData,funcData_1,funcData_2);				
 		});
 
 	}

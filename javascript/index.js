@@ -17,6 +17,7 @@ $(document).ready(function()
 	reset_lesson 	= $(".reset-lesson")
 	countLesson 	= $("#countLesson");
 	limit 			= $("#limits");
+	open_lock_gem	= $("#open-lock-with-gem");
 
 	bodyHeight 		= $(window).height();
 	windowWidth		= $(window).width();
@@ -31,8 +32,10 @@ $(document).ready(function()
 	words 			= JSON.parse(localStorage.appLanguage);
 	user 			= JSON.parse(localStorage.user);
 	plan 			= JSON.parse(localStorage.plan);
+	gems 			= JSON.parse(user.gem);
 	aim 			= user.aim;
 	grade 			= user.grade;
+
 	
 
 
@@ -40,38 +43,29 @@ $(document).ready(function()
 
 	body.click(function()
 	{
-		func_lesson_info("close");
 
+		func_lesson_info("close");
 	})
 
 	callOther("general","language");
 	callOther("general","aim_setting","index");
 	callOther("general","start_page","index");
-
-
-	/*if(localStorage.getItem("day_aim"))
-		day_aim = JSON.parse(localStorage.day_aim);
-	else
-	{
-		
-		callOther("general","aim_setting","index");
-	}
-*/
 	create_level();
-	lesson 	= $(".level-query li");
+	lesson 	= $(".level-query-li");
 
 	
 	lesson.click(function(e)
 	{
-		
+		//console.log("klik lesson");
 		count_l 	= $(this).data("count");
 		
 		if(selectStep == $(this).data("step") && selectGrade == $(this).data("grade")){
 			func_lesson_info("close");
-
+			//console.log("close");
 		}
 		else
 		{
+			//console.log("open");
 			selectGrade = $(this).data("grade");
 			selectStep 	= $(this).data("step");
 			y_lesson 	= $(this).offset().top;
@@ -111,8 +105,9 @@ $(document).ready(function()
 		
 	});
 
-	skip_lesson.click(function()
+	skip_lesson.click(function(e)
 	{
+
 		opening = false;
 		darkness.show();
 
@@ -120,6 +115,7 @@ $(document).ready(function()
 		skip_tab.removeClass("slideInUp");
 		skip_tab.addClass("slideInUp");
 		skip_tab.show();
+		e.stopPropagation();
 	});
 
 	not_skip.click(function()
@@ -171,11 +167,29 @@ $(document).ready(function()
 	start_lesson.click(function()
 	{
 		mission = $(this).data("mission");			
-		goLesson(mission);
+		goLesson(mission,'step-by-step');
 	});
+
+	open_lock_gem.click(function(e)
+	{
+		lock_gems = JSON.parse($(this).data("gem"));
+
+		if(gems >= lock_gems)
+		{
+			gems 				-= lock_gems;
+			user.gem 			= gems;
+			localStorage.user 	= JSON.stringify(user);		
+
+			goLesson("start","open-lock");
+		}
+		else
+			callOther("general","notification","notenoughCoin");
+
+	})
 
 	function func_lesson_info(category,posY,objLeft)
 	{
+		//console.log("func"+category);
 		
 		if(category == "open")
 		{
@@ -220,28 +234,23 @@ $(document).ready(function()
 
 			setTimeout(function()
 			{
-				if(!opening)
-				{
-					opening = true;
-					lesson_info.fadeIn();
-				}
+				opening = true;
+				lesson_info.fadeIn();
 			});
 			
 
 		}
 		else
 		{
-				
-			if(opening){
 				opening = false;
 				lesson_info.fadeOut();
 				selectStep 	= -1;
 				selectGrade = -1;
-			}
+			
 		}
 	}
 
-	function goLesson(e)
+	function goLesson(e,category)
 	{
 
 		if(e=="reset")
@@ -256,11 +265,12 @@ $(document).ready(function()
 
 
 		}
+
 		exam_data.grade 		= selectGrade;
 		exam_data.step 			= selectStep;
-		exam_data.category 		= 'step-by-step';
+		exam_data.category 		= category;
 		localStorage.examing 	= JSON.stringify(exam_data);
-		window.location = "lessons.html";
+		window.location 		= "lessons.html";
 	}
 
 	function create_level()
@@ -329,6 +339,7 @@ $(document).ready(function()
 					isHave = search_plan(i,k);
 
 					if(isHave != -1){
+						cGrade= isHave.grade;
 						cStep = isHave.step;
 						cExam = isHave.exam;
 						if(cExam != 0){
@@ -339,12 +350,12 @@ $(document).ready(function()
 					
 				}
 				else{
-					
-					cStep = -1;
+					cGrade = -1;
+					cStep  = -1;
 					
 				}
 
-				if(k == cStep)
+				if(k == cStep && i == cGrade)
 					activation = "bg-active"
 				
 				else
@@ -352,7 +363,7 @@ $(document).ready(function()
 
 
 
-				castles = `<li class="`+activation+`" data-count="`+count_lesson+`" data-grade="`+i+`" data-step="`+k+`">
+				castles = `<li class="`+activation+` level-query-li" data-count="`+count_lesson+`" data-grade="`+i+`" data-step="`+k+`">
 								<div class="castle-border"></div>
 								<div class="query-into">
 									<i class="fas fa-shoe-prints fa-rotate-90"></i>

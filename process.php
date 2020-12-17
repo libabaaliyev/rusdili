@@ -20,6 +20,13 @@
 			update_user($data,$db);
 		
 	}
+	else if($info == "update-datas")
+	{
+		$user = json_decode($_POST['user'],true);
+		$plan = json_decode($_POST['plan'],true);
+		update_user($user,$db);
+		update_plan($$user,$plan,$db)
+	}
 
 
 
@@ -184,6 +191,44 @@
 		}
 
 		echo json_encode($result);
+	}
+
+	function update_plan($user,$plan,$db)
+	{
+		$id 		= $user['id'];
+
+		$detectSql 		= "SELECT count(*) FROM learning WHERE user_id = '$id'";
+
+		$insertsql 		= "INSERT INTO learning (user_id,plan) VALUES(?,?)";
+
+		$update 		= "UPDATE learning SET plan = ? WHERE user_id = ?";
+
+		$search = $db->prepare($detectSql);
+		$search->execute();
+		$count = $search->fetchColumn(); 
+
+
+		if($count == 0){
+
+			
+				$inserting = $db->prepare($insertsql);
+				$insert = $inserting->execute([$id,$plan]);
+
+
+
+				if($insert){
+					
+					$result = ['result'=>'updateOk'];
+				}
+				else
+					$result = ['result'=>'updateError'];
+
+		}
+		else{
+
+		}
+		echo json_encode($result);
+		
 	}
 
 ?>

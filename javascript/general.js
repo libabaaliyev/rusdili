@@ -123,7 +123,7 @@ function importBase(base,userData,act)
 		contentType: false,
 	    processData: false,
 	    success: function(data,status)
-	    {console.log(data)
+	    {
 	    	loading.hide();
 	    	if(status == "success")
 	    	{
@@ -218,6 +218,7 @@ function set_day_aim(page)
 {
 	if(localStorage.getItem("day_aim") && page != "lesson"){
 
+
 		limit.html(day_aim.getting+"/"+day_aim.etalon);
 		percent = (JSON.parse(day_aim.getting)/JSON.parse(day_aim.etalon))*100;
 		$("#progress-aim").css("width",percent+"%");
@@ -235,8 +236,6 @@ function aim_setting(page)
 { 
 	if(localStorage.getItem("day_aim") === null)
 	{
-
-
 		day_aim 		=
 		{
 			etalon  	: 0,
@@ -246,8 +245,15 @@ function aim_setting(page)
 		}
 	}
 	else
-	{
+	{		
 		day_aim = JSON.parse(localStorage.day_aim);
+		if(day_aim.time != fullDate)
+		{
+			day_aim.getting = 0;
+			day_aim.time = fullDate;
+			set_day_aim("index");
+		}
+
 	}
 
 	aim 	= user.aim;

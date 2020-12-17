@@ -38,7 +38,7 @@
 
 		"internet-error"	: {"message"	: "You don't have an internet connection.", "info": "error"},
 		
-		"notenoughCoin"		: {"message"	:"Not enough coin.", "info": "error"},
+		"notenoughCoin"		: {"message"	:"Not enough gems.", "info": "error"},
 
 		"add-coin-success"	: {"message"	: "You get coins", "info": "success"},
 
@@ -78,7 +78,7 @@
 
 		"internet-error"	: {"message"	: "İnternet bağlantınız yok.", "info": "error"},
 
-		"notenoughCoin"		: {"message"	: "Yeterki koininiz yok.", "info": "error"},
+		"notenoughCoin"		: {"message"	: "Yeterli sayda mücevheriniz yok.", "info": "error"},
 
 		"add-coin-success"	: {"message"	: "Koin aldınız.", "info": "success"},
 
@@ -121,7 +121,7 @@
 
 		"internet-error"	: {"message"	: "İnternet bağlantısı yoxdur.", "info": "error"},
 		
-		"notenoughCoin"		: {"message"	: "Yetərli koininiz yoxdur", "info": "error"},
+		"notenoughCoin"		: {"message"	: "Yetərli sayda briliantınız yoxdur", "info": "error"},
 
 		"add-coin-success"	: {"message"	: "Koin əldə etdiniz.", "info": "success"},
 
@@ -161,7 +161,7 @@
 
 		"internet-error"	: {"message"	: "У вас нет подключения к Интернету.", "info": "error"},
 
-		"notenoughCoin"		: {"message"	: "Недостаточно монеты.", "info": "error"},
+		"notenoughCoin"		: {"message"	: "Вам не хватает бриллиантов", "info": "error"},
 
 		"add-coin-success"	: {"message"	: "Вы получаете монеты", "info": "success"},
 
