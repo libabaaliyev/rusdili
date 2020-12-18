@@ -1096,13 +1096,16 @@ body
   z-index: -1;
   
 }
-.castles ul li:first-child/*,.castles ul li:last-child*/
+.castles ul li:first-child,.castles ul li.twice:last-child
 {
   display: table;
   float: none;
   margin: auto;
 }
-
+.castles ul li.twice:last-child
+{
+  margin-bottom: 30px;
+}
 
 .query-into
 {
@@ -1132,6 +1135,7 @@ body
   padding: 5px 0;
   font-size: 16px;
   font-weight: 600;
+  white-space: nowrap;
   /*font-family: ubuntu-r;*/
 }
 

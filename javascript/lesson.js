@@ -97,11 +97,8 @@ $(document).ready(function()
 
 	rewardBtn.click(function()
 	{
-		
-		setTimeout(function()
-		{
-			window.location = "main.html";
-		},2000);
+		//reklam funksiyasindan save verecik
+		save();
 	});
 
 	skipAd.click(function()
@@ -112,18 +109,8 @@ $(document).ready(function()
 	});
 
 	close.click(function()
-	{
-		if(localStorage.connection == "registr-ok")
-		{
-			base = new FormData();
-			base.append("info","update-datas");
-			base.append("user",JSON.stringify(user));
-			base.append("plan",JSON.stringify(plan));
-			callOther("general","importbase",importBase,user,"update");
-
-		}
-
-		window.location = "main.html";
+	{			
+		save();
 	});
 
 	continue_lesson.click(function()
@@ -156,8 +143,16 @@ $(document).ready(function()
 		{
 			window.location = "main.html";
 		}
-			
-		
+	}
+
+	function save()
+	{
+
+		base = new FormData();
+		base.append("info","update-datas");
+		base.append("data",JSON.stringify(user));
+		base.append("plan",JSON.stringify(plan));
+		callOther("general","importBase",base,user,"update");
 	}
 
 
@@ -251,7 +246,6 @@ $(document).ready(function()
 	    
 	 	return str;
 	}
-
 	
 	function control_asw(answ)
 	{
@@ -310,9 +304,7 @@ $(document).ready(function()
 
 			question("exam-start","orgn","translate",max);
 		}
-
 	}
-
 
 	function finish()
 	{
@@ -446,7 +438,6 @@ $(document).ready(function()
 			main.fadeOut();
 			lesson_success.fadeIn();
 		}
-		
 	}
 
 	function search_plan(e,v)
@@ -465,7 +456,6 @@ $(document).ready(function()
 			}
 
 		}
-		
 	}
 
 	function callOther(loc,func,funcData,funcData_1,funcData_2)
@@ -475,7 +465,6 @@ $(document).ready(function()
 		{
 			window[func](funcData,funcData_1,funcData_2);				
 		});
-
 	}
 
 	function random_number(min,max)

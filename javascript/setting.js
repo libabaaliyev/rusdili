@@ -8,7 +8,7 @@ $(document).ready(function()
 	clip 			= $(".clip");
 	update 			= $(".save-update");
 	updateImg		= $(".save-img");
-
+ 	hash 			= location.hash.substr(1);
 	user 		= JSON.parse(localStorage.user);
 	photo 		= user.photo;
 
@@ -17,6 +17,9 @@ $(document).ready(function()
 
 	callOther("general","language");
 	callOther("general","start_page","setting");
+
+	if(hash)
+		callOther("general","notification",hash);
 	
 	photo_items.click(function()
 	{

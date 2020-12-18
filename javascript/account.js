@@ -147,80 +147,6 @@ $(document).ready(function()
 		
 	});
 
-
-	
-	function filterInput(name,username,email,password,act)
-	{
-		mailfilter 		= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-		usernamefilter 	= /^[A-Za-z]\w{5,14}$/;
-		passwordfilter	= /^[A-Za-z]\w{8,20}$/;
-
-		$("input").attr("style","border: 1px solid #cecece;");
-		if(username.match(usernamefilter))
-		{
-			if(email.match(mailfilter))
-	        {
-	        	if(password.match(passwordfilter))
-	        	{
-	        		if(username&&email&&password){
-	        			
-	        			user_data.username 	= username;
-	        			user_data.password 	= password;
-
-	        			if(navigator.onLine){ //burda network kodlari olacaq
-	        				
-	        				import_data = new FormData();
-	        				if(act == "registry")
-		        			{
-		        				user_data.name 		= name;
-								user_data.email 	= email;
-								import_data.append("info","import-base");
-		        			}
-		        			else
-		        			{
-		        				import_data.append("info","login-base");
-		        			}
-
-	        				
-	        				import_data.append("data",JSON.stringify(user_data));
-
-	        				callOther("general","importBase",import_data,user_data);
-	        			}
-	        			else{
-	        				if(act == "login")
-		        			{
-		        				user_data.name 		= "Unname";
-								user_data.email 	= "-";
-		        			}
-
-	        				callOther("general","internet_error",user_data);
-	        			}
-
-	        		}
-	        			
-	        	}
-	        	else{
-	        		callOther("general","notification","password-validate");
-	        		$("#password-registry").val("");
-					$("#password-registry").attr("style","border: 1px solid #FF2A00;");
-	        	}
-	        }
-	        else{
-
-	        	callOther("general","notification","emailvalidate");
-
-	        	$("#email-registry").val("");
-				$("#email-registry").attr("style","border: 1px solid #FF2A00;");
-	        	
-	        }
-		}
-		else{
-			callOther("general","notification","username-validate");
-			$("#username-registry").val("");
-			$("#username-registry").attr("style","border: 1px solid #FF2A00;");
-		}
-	}
-
 	function add_datas(event)
 	{
 
@@ -277,9 +203,8 @@ $(document).ready(function()
 					add_datas("profile-done");
 				}
 				else
-				{
 					window.location = "main.html";
-				}
+				
 				
 				
 

@@ -6,6 +6,7 @@ email_input 		= $(".email-input");
 password_input 		= $(".password-input");
 count_crown_html 	= $(".count-crown");
 count_heart_html 	= $(".count-heart");
+limit 				= $("#limits");
 
 
 notifications 		= JSON.parse(localStorage.notifications);
@@ -123,30 +124,61 @@ function importBase(base,userData,act)
 		contentType: false,
 	    processData: false,
 	    success: function(data,status)
-	    {
+	    {//console.log(data)
+
 	    	loading.hide();
 	    	if(status == "success")
 	    	{
 	    		dataLogin 	= JSON.parse(data);
 		    	result 		= dataLogin['result'];
-		    	localStorage.connection = "registr-ok";
-		    	
-		    	notification(result);
+		    	planX 		= dataLogin['plan'];
+		    			    	
+		    	if(result!="plan-add")
+		    		notification(result);
 
 		    	if(result == "registryOk" || result == "yesUser" || result == "updateOk")
 		    	{
-		    		user = dataLogin['user'];
-		    		localStorage.user = JSON.stringify(user);
-
+		    		user 					= dataLogin['user'];
+		    		localStorage.user 		= JSON.stringify(user);
+		    		localStorage.connection = "registr-ok";
 		    		aim_setting();
 
 		    		if(act == "update")
 		    			start_page();
 		    		else if(act == "login"){
+
 		    			plan = dataLogin['plan'];
+		    	
 		    			if(plan)
 		    				localStorage.plan = JSON.stringify(plan);
 		    		}
+		    	}
+		    	else if(result == 'plan-add')
+		    	{
+
+		    		result_x 	= dataLogin['user-result'];
+		    		result_u	= result_x['result'];
+		    		
+	    			if(result_u != "existUsername" && result_u != "existEmail" && result_u != "emailvalidate")
+	    			{
+	    				    				
+	    				setTimeout(function(){
+
+	    					window.location = "main.html";
+
+	    				},100);
+	    				
+	    			}
+	    			else
+	    			{
+
+
+	    				setTimeout(function(){
+
+	    					window.location = "setting.html#"+result_u;
+
+	    				},100);
+	    			}
 		    	}
 
 	    	}

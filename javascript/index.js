@@ -33,17 +33,15 @@ $(document).ready(function()
 	user 			= JSON.parse(localStorage.user);
 	plan 			= JSON.parse(localStorage.plan);
 	gems 			= JSON.parse(user.gem);
+	crown 			= JSON.parse(user.crown);
 	aim 			= user.aim;
 	grade 			= user.grade;
-
-	
 
 
 	exam_data = {};
 
 	body.click(function()
 	{
-
 		func_lesson_info("close");
 	})
 
@@ -66,7 +64,7 @@ $(document).ready(function()
 		else
 		{
 			//console.log("open");
-			selectGrade = $(this).data("grade");
+			selectGrade = JSON.parse($(this).data("grade"));
 			selectStep 	= $(this).data("step");
 			y_lesson 	= $(this).offset().top;
 			objectLeft 	= $(this).offset().left;
@@ -98,7 +96,19 @@ $(document).ready(function()
 				
 			}
 
-			func_lesson_info("open",y_lesson,objectLeft);
+			if(selectGrade < 5)
+				fk = 19*selectGrade;
+			else if(selectGrade < 10)
+				fk = 35 * selectGrade - 45;
+			else
+				fk = 43 * selectGrade - 172;
+
+
+			if(crown > fk)
+				func_lesson_info("open",y_lesson,objectLeft);
+			else
+				callOther("general","notification","lock-castle");
+			
 			
 		}
 		e.stopPropagation();
@@ -258,7 +268,7 @@ $(document).ready(function()
 			isHave 				= search_plan(selectGrade,selectStep);
 			h 					= isHave.i;
 			countExam 			= JSON.parse(plan[h]['exam']);
-			user.crown 			= JSON.parse(user.crown) - countExam;
+			user.crown 			= crown - countExam;
 			plan[h]['exam'] 	= 0;
 			localStorage.plan 	= JSON.stringify(plan);
 			localStorage.user 	= JSON.stringify(user);
@@ -277,7 +287,7 @@ $(document).ready(function()
 	{
 		if(grade == 0){
 			f = 0;
-			g = 4;
+			g = 5;
 		}
 		else
 		{
@@ -299,9 +309,9 @@ $(document).ready(function()
 								<label>`+i+`</label>`
 			}
 
-			if(grade<5)
+			if(i<5)
 				k_max = 6;
-			else if(grade<10)
+			else if(i<10)
 				k_max = 9;
 			else
 				k_max = 12;
@@ -360,11 +370,28 @@ $(document).ready(function()
 				
 				else
 					activation = "bg-passive";
+				if(countCrown !=0){
+					progress_percent = 100 * (JSON.parse(countCrown)/count_lesson);
 
+					if(Math.round(progress_percent)>=33&&Math.round(progress_percent)<40)
+						progress_percent = 30;
+					else if(Math.round(progress_percent)>=66&&Math.round(progress_percent)<70)
+						progress_percent = 60;
 
+					
+					progress_css = "progress-"+progress_percent;
+				}
+				else
+					progress_css = 'progress-0';
+				
+				console.log(progress_css)
 
-				castles = `<li class="`+activation+` level-query-li" data-count="`+count_lesson+`" data-grade="`+i+`" data-step="`+k+`">
-								<div class="castle-border"></div>
+				twice = '';
+				if(k % 8 == 0)
+					twice = "twice";
+
+				castles = `<li class="`+activation+` `+twice+` level-query-li" data-count="`+count_lesson+`" data-grade="`+i+`" data-step="`+k+`">
+								<div class="castle-border `+progress_css+`"></div>
 								<div class="query-into">
 									<i class="fas fa-shoe-prints fa-rotate-90"></i>
 								</div>
@@ -383,7 +410,6 @@ $(document).ready(function()
 
 		}
 	}
-
 	
 	function search_plan(e,v)
 	{

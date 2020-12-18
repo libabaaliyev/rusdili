@@ -7,7 +7,6 @@
 
 		"empty-input"		: {"message"	:"Fill in all the fields",	"info": "error"},
 
-
 		"notUserMail"		: {"message"	: "Wrong email or password.",	"info"	: "error"},
 
 		"notUser"			: {"message" 	: "Wrong username or password.","info"	: "error"},
@@ -46,7 +45,12 @@
 
 		"exam-finish" 		: {"message"	: "Level exam is over. Exam result:", "info": "info"},
 
-		"full-aim"			: {"message"	: "Congratulations, you have reached the daily goal !!!", "info": "success"}
+		"full-aim"			: {"message"	: "Congratulations, you have reached the daily goal !!!", "info": "success"},
+
+		"lock-castle"		: {"message"	: "The lesson is locked for now because you don't have enough crowns.", "info": "error"}
+
+
+
 	},
 	"tr":
 	{
@@ -86,7 +90,9 @@
 
 		"exam-finish" 		: {"message"	: "Seviye sınavı bitdi. Sınav sonucu: ", "info": "info"},
 
-		"full-aim"			: {"message"	: "Tebrikler, günlük hedefe ulaştınız !!!", "info": "success"}
+		"full-aim"			: {"message"	: "Tebrikler, günlük hedefe ulaştınız !!!", "info": "success"},
+
+		"lock-castle"		: {"message"	: "Yeterli sayıda taçınız olmadığından ders şu anlık kilitli.", "info": "error"}
 
 	},
 	"az":
@@ -112,8 +118,7 @@
 
 		"updateOk"			: {"message"	: "Təbriklər, düzəlişlər uğurla həyata keçirildi.", "info": "success"},
 
-		"updateError"		: {"message"	: "Düzəliş zamanı xəta baş verdi. Xahiş edirik yenidən cəhd edin.", "info": "error"},
-
+		"updateError"		: {"message"	: "Düzəliş zamanı xəta baş verdi. Xahiş edirik yenidən cəhd edin.", "info": "error"},		
 
 		"choose-something"	: {"message"	: "Birini seçməlisiniz.",	"info": "error"},
 
@@ -129,7 +134,10 @@
 
 		"exam-finish" 		: {"message"	: "Səviyyə imtahanı bitdi. imtahan nəticəsi: ", "info": "info"},
 
-		"full-aim"			: {"message"	: "Təbriklər, günlük hədəfə çatdınız !!!", "info": "success"}
+		"full-aim"			: {"message"	: "Təbriklər, günlük hədəfə çatdınız !!!", "info": "success"},
+
+		"lock-castle"		: {"message"	: "Yetərli sayda tacınız olmadığından dərs bağlıdır.", "info": "error"}
+
 	},
 	"ru":
 	{
@@ -154,7 +162,6 @@
 
 		"updateError"		: {"message"	: "Что-то пошло не так во время редактирования. Пожалуйста, попробуйте еще раз.", "info": "error"},
 
-
 		"choose-something"	: {"message"	:"Вам нужно что-то выбрать!",	"info": "error"},
 
 		"errorsomething"	: {"message"	: "Что-то пошло не так. Пожалуйста, попробуйте еще раз.", "info": "error"},
@@ -169,7 +176,10 @@
 
 		"exam-finish" 		: {"message"	: "Контрольный экзамен окончен. Результат экзамена: ", "info": "info"},
 
-		"full-aim"			: {"message"	: "Поздравляем, вы достигли ежедневной цели !!!", "info": "success"}
+		"full-aim"			: {"message"	: "Поздравляем, вы достигли ежедневной цели !!!", "info": "success"},
+
+		"lock-castle"		: {"message"	: "Урок пока заблокирован, потому что у вас недостаточно корон.", "info": "error"}
+
 	}
 
 }
