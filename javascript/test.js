@@ -1,6 +1,6 @@
 $(document).ready(function()
 {
-	var fd = new FormData(),
+	/*var fd = new FormData(),
     key;
 
 	// poulate with dummy data
@@ -13,6 +13,10 @@ $(document).ready(function()
 	// does not do anything useful   
 	for (let [key, value] of fd) {
 	  console.log(`${key}: ${value}`)
-	}
+	}*/
+
+	bonus = 101;
+	(bonus > 100) ? alert("salam"):alert("salam1");
+	
 
 });

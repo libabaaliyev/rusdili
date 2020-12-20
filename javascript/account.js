@@ -35,7 +35,8 @@ $(document).ready(function()
 
 	}
 	
-	action = 'start';
+	action 			= 'start';
+	account_action 	= 'registry';
 
 	callOther("general","language","index");
 
@@ -64,9 +65,9 @@ $(document).ready(function()
 					callOther("general","notification","empty-input");
 				else{
 
-					
+					account_action = 'registry';
         			if(!detecting){
-        				detectUser('registry');
+        				detectUser();
         				detecting = true;
         			}
         			user_data.username 	= username;
@@ -100,9 +101,10 @@ $(document).ready(function()
 
 	login.click(function()
 	{
+		account_action = 'login';
 		
 		if(!detecting){
-			detectUser('login');
+			detectUser();
 			detecting = true;
 		}
 		$("#get-start-"+start_value).removeClass("slideInRight");
@@ -164,6 +166,7 @@ $(document).ready(function()
 		
 		start_value++;
 
+		console.log(start_value);
 		
 		if(start_value<6){
 			$("#get-start-"+start_value).addClass("slideInRight");
@@ -184,18 +187,18 @@ $(document).ready(function()
 
 	}
 	
-	function detectUser(a)
+	function detectUser()
 	{
 		
 		if(localStorage.getItem("user") === null)
 		{
-			setTimeout(function(){ detectUser(a)},1000);
+			setTimeout(function(){ detectUser()},1000);
 		}
 		else
 		{
 			setTimeout(function()
 			{
-				if(a == "registry")
+				if(account_action == "registry")
 				{
 					$("#get-start-"+start_value).addClass("slideOutLeft");
 					$("#get-start-"+start_value).fadeOut(100);
@@ -204,10 +207,7 @@ $(document).ready(function()
 				}
 				else
 					window.location = "main.html";
-				
-				
-				
-
+	
 			},1000);
 
 		}

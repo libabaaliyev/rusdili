@@ -5,7 +5,7 @@
 	$data = json_decode($_POST['data'],true);
 
 	if($info == "import-base")
-		import_user($data,$db);
+		import_user($data,$db,'without-plan','-');
 
 	else if($info == "login-base")
 		login_user($data,$db);
@@ -14,10 +14,10 @@
 	{
 		$id = $data['id'];		
 		if($id == "not-registr")
-			import_user($data,$db);
+			import_user($data,$db,'without-plan','-');
 		
 		else
-			update_user($data,$db);
+			update_user($data,$db,'without-plan','-');
 		
 	}
 	else if($info == "update-datas")

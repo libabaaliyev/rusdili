@@ -99,76 +99,76 @@
 }
 .progress-0
 {
-  background: linear-gradient(to top, #edf9fe 100%, #E53935 0%);
+  background: linear-gradient(to top, #999fa2 100%, #E53935 0%);
   
 }
 .progress-10
 {
-  background: linear-gradient(to top, #edf9fe 90%, #E53935 10%);
+  background: linear-gradient(to top, #999fa2 90%, #E53935 10%);
   /*transform: rotate(300deg);*/
 }
 
 .progress-20
 {
-  background: linear-gradient(to top, #edf9fe 80%, #E53935 20%);
+  background: linear-gradient(to top, #999fa2 80%, #E53935 20%);
   /*transform: rotate(320deg);*/
 }
 
 .progress-25
 {
-  background: linear-gradient(to top, #edf9fe 75%, #E53935 25%);
+  background: linear-gradient(to top, #999fa2 75%, #E53935 25%);
   /*transform: rotate(330deg);*/
 }
 
 .progress-30
 {
-  background: linear-gradient(to top, #edf9fe 70%, #E53935 30%);
+  background: linear-gradient(to top, #999fa2 70%, #E53935 30%);
   /*transform: rotate(330deg);*/
 }
 
 .progress-40
 {
-  background: linear-gradient(to top, #edf9fe 60%, #E53935 40%);
+  background: linear-gradient(to top, #999fa2 60%, #E53935 40%);
   /*transform: rotate(340deg);*/
 }
 
 .progress-50
 {
-  background: linear-gradient(to top, #edf9fe 50%, #E53935 50%);
+  background: linear-gradient(to top, #999fa2 50%, #E53935 50%);
   /*transform: rotate(360deg);*/
 }
 
 .progress-60
 {
-  background: linear-gradient(to bottom, #E53935 60%, #edf9fe 40%);
+  background: linear-gradient(to bottom, #E53935 60%, #999fa2 40%);
   
 }
 
 .progress-70
 {
-  background: linear-gradient(to bottom, #E53935 70%, #edf9fe 30%);
+  background: linear-gradient(to bottom, #E53935 70%, #999fa2 30%);
   /*transform: rotate(210deg);*/
 }
 
 .progress-75
 {
-  background: linear-gradient(to bottom, #E53935 75%, #edf9fe 25%);
+  background: linear-gradient(to bottom, #E53935 75%, #999fa2 25%);
   /*transform: rotate(210deg);*/
 }
 
 .progress-80
 {
-  background: linear-gradient(to bottom, #E53935 80%, #edf9fe 20%);
+  background: linear-gradient(to bottom, #E53935 80%, #999fa2 20%);
   /*transform: rotate(220deg);*/
 }
 .progress-90
 {
-  background: linear-gradient(to bottom, #E53935 90%, #edf9fe 10%);
+  background: linear-gradient(to bottom, #E53935 90%, #999fa2 10%);
   /*transform: rotate(240deg);*/
 }
 .progress-100
 {
-  background: linear-gradient(to top, #E53935 100%, #edf9fe 0%);
+  background: linear-gradient(to top, #E53935 100%, #999fa2 0%);
   /*transform: rotate(240deg);*/
 }
 .m-0
@@ -188,4 +188,9 @@
     border: 1.87px solid #2E7C40 !important;
     border-bottom: 4px solid #2E7C40 !important;
     background: #35BB55 !important;
+}
+
+.bg-p
+{
+  background: #999fa2 !important;
 }

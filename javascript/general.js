@@ -124,7 +124,7 @@ function importBase(base,userData,act)
 		contentType: false,
 	    processData: false,
 	    success: function(data,status)
-	    {//console.log(data)
+	    {console.log(data)
 
 	    	loading.hide();
 	    	if(status == "success")
@@ -281,8 +281,11 @@ function aim_setting(page)
 		day_aim = JSON.parse(localStorage.day_aim);
 		if(day_aim.time != fullDate)
 		{
-			day_aim.getting = 0;
-			day_aim.time = fullDate;
+			day_aim.getting 	= 0;
+			day_aim.time 		= fullDate;
+			user.heart 			= 5;
+			localStorage.user 	= JSON.stringify(user);
+
 			set_day_aim("index");
 		}
 
@@ -298,44 +301,44 @@ function aim_setting(page)
 	{
 		if(level == "zero")
 		{
-			day_aim.etalon = 15;
+			day_aim.etalon = 180; //min 4 ders max 8 ders
 		}
 		else
 		{
-			day_aim.etalon = 30;
+			day_aim.etalon = 320; //min 8 ders max 12 ders
 		}
 	}
 	else if(aim == "average")
 	{
 		if(level == "zero")
 		{
-			day_aim.etalon = 35;
+			day_aim.etalon = 300; //min 6 ders max 12 ders
 		}
 		else
 		{
-			day_aim.etalon = 50;
+			day_aim.etalon = 500; //min 10 ders max 16 ders
 		}
 	}
 	else if(aim == "serious")
 	{
 		if(level == "zero")
 		{
-			day_aim.etalon = 45;
+			day_aim.etalon = 350; //min 10 ders max 15 ders
 		}
 		else
 		{
-			day_aim.etalon = 70;
+			day_aim.etalon = 650; //min 14 ders max 23 ders
 		}
 	}
 	else if(aim == "crazy")
 	{
 		if(level == "zero")
 		{
-			day_aim.etalon = 60;
+			day_aim.etalon = 500; //min 12 ders max 20 ders
 		}
 		else
 		{
-			day_aim.etalon = 100;
+			day_aim.etalon = 800; //min 20 ders max 33 ders
 		}
 	}
 
@@ -484,7 +487,7 @@ function language()
 
 	$("#health-update-txt").html(appLanguage[lang]['health-update-txt']);
 
-	$("#get-ads").html(appLanguage[lang]['get-ads']);
+	$(".get-ads span").html(appLanguage[lang]['get-ads']);
 
 
 	$("#double-skill-title").html(appLanguage[lang]['double-skill-title']);

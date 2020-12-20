@@ -1079,7 +1079,7 @@ body
   width: 60px;
   height: 60px;
   border-radius: 100%;
-  background: #2196F3;
+  background: #CDCFD5;
   margin: 50px calc(25% - 35px);
 
   
@@ -1110,16 +1110,18 @@ body
 .query-into
 {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 40px;
-  height: 40px;
-  padding: 5px 2px;
+  top: 4px;
+  left: 4px;
+  width: 52px;
+  height: 52px;
+  padding: 16px 12px;
+  border-radius: 50%;
+  background: #1976D2;
 }
 
 .query-into i
 {  
-  font-size: 30px;
+  font-size: 20px;
   color: #edf9fe;  
 }
 .query-info

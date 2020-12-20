@@ -18,6 +18,7 @@ $(document).ready(function()
 	countLesson 	= $("#countLesson");
 	limit 			= $("#limits");
 	open_lock_gem	= $("#open-lock-with-gem");
+	practice 		= $(".practice");
 
 	bodyHeight 		= $(window).height();
 	windowWidth		= $(window).width();
@@ -96,15 +97,10 @@ $(document).ready(function()
 				
 			}
 
-			if(selectGrade < 5)
-				fk = 19*selectGrade;
-			else if(selectGrade < 10)
-				fk = 35 * selectGrade - 45;
-			else
-				fk = 43 * selectGrade - 172;
+			limitCrown = crown_limit(selectGrade);
 
 
-			if(crown > fk)
+			if(crown >= limitCrown)
 				func_lesson_info("open",y_lesson,objectLeft);
 			else
 				callOther("general","notification","lock-castle");
@@ -161,8 +157,8 @@ $(document).ready(function()
 		aim_tab.removeClass("slideOutRight");
 		aim_tab.addClass("slideOutRight");
 		aim_tab.fadeOut(1000);
-		user.aim 			= aim;
-		localStorage.user 	= JSON.stringify(user);		
+		user.aim = aim;
+		save();	
 		callOther("general","aim_setting","index");
 
 	});
@@ -180,6 +176,15 @@ $(document).ready(function()
 		goLesson(mission,'step-by-step');
 	});
 
+	practice.click(function()
+	{
+		mission 			= 'test';
+		user.heart 			= JSON.parse(user.heart) - 1;
+		save();
+		goLesson(mission,'practice');
+
+	});
+
 	open_lock_gem.click(function(e)
 	{
 		lock_gems = JSON.parse($(this).data("gem"));
@@ -188,14 +193,32 @@ $(document).ready(function()
 		{
 			gems 				-= lock_gems;
 			user.gem 			= gems;
-			localStorage.user 	= JSON.stringify(user);		
+			save();		
 
 			goLesson("start","open-lock");
 		}
 		else
 			callOther("general","notification","notenoughCoin");
 
-	})
+	});
+
+	function save()
+	{
+		localStorage.plan 		= JSON.stringify(plan);
+		localStorage.user 		= JSON.stringify(user);
+	}
+
+	function crown_limit(e)
+	{
+		if(e < 5)
+			fk = 19*e;
+		else if(e < 10)
+			fk = 35 * e - 45;
+		else
+			fk = 43 * e - 172;
+
+		return fk;
+	}
 
 	function func_lesson_info(category,posY,objLeft)
 	{
@@ -270,10 +293,8 @@ $(document).ready(function()
 			countExam 			= JSON.parse(plan[h]['exam']);
 			user.crown 			= crown - countExam;
 			plan[h]['exam'] 	= 0;
-			localStorage.plan 	= JSON.stringify(plan);
-			localStorage.user 	= JSON.stringify(user);
-
-
+			
+			save();
 		}
 
 		exam_data.grade 		= selectGrade;
@@ -384,15 +405,23 @@ $(document).ready(function()
 				else
 					progress_css = 'progress-0';
 				
-				console.log(progress_css)
-
+				
 				twice = '';
 				if(k % 8 == 0)
 					twice = "twice";
 
+				limitCrown = crown_limit(i);
+
+				if(crown < limitCrown)
+					openingCss = 'bg-p';
+				else
+					openingCss = '';
+
+
+
 				castles = `<li class="`+activation+` `+twice+` level-query-li" data-count="`+count_lesson+`" data-grade="`+i+`" data-step="`+k+`">
 								<div class="castle-border `+progress_css+`"></div>
-								<div class="query-into">
+								<div class="query-into `+openingCss+`">
 									<i class="fas fa-shoe-prints fa-rotate-90"></i>
 								</div>
 								<div class="query-crown">

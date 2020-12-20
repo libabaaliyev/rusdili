@@ -11,14 +11,11 @@ $(document).ready(function()
 	adsense_tab 	= $(".adsense");
 	continue_succes = $(".continue-success");
 	result 			= $("#answer-result");
-	
 	answer_tab 		= $(".answer");
 	progressBar		= $("#progress-exam");
 	progressAim		= $("#progress-aim");
 	question_categ 	= $("#question_txt");
 	question_txt 	= $("#question");
-
-
 	rewardBtn		= $(".reward");
 	skipAd 			= $(".no-thanks");
 	close 			= $(".close-lesson")
@@ -27,7 +24,6 @@ $(document).ready(function()
 	current			= 1;
 	correct_count 	= 0;	
 	hash 			= location.hash.substr(1);
-
 	user 			= JSON.parse(localStorage.user); 
 	lang 			= JSON.parse(localStorage.applang); 
 	transl 			= JSON.parse(localStorage.appLanguage);
@@ -35,7 +31,6 @@ $(document).ready(function()
 	sentences 		= JSON.parse(localStorage.sentences);
 	day_aim 		= JSON.parse(localStorage.day_aim);
 	plan 			= JSON.parse(localStorage.plan);
-
 	etalon_aim 		= JSON.parse(day_aim.etalon);
 	getting_aim		= JSON.parse(day_aim.getting);
 	
@@ -161,50 +156,36 @@ $(document).ready(function()
 		que = random_number(1,JSON.parse(q));
 		question_categ.html(transl[lang][comm]);
 		
+		//buralari duzeldecem
 		if(exam == "exam-start")
 		{
 
-			question_t 			= words[lang][que][cat];
-			question_general 	= words[lang][que];
-			question_txt.html(question_t);
-			
-			if(cat == "orgn")
-				category = "trns";
-			else
-				category = "orgn";
-
-			answers_all(question_general,category,comm);
-
 		}
-		else if(exam == "step-by-step") //burani duzeldecem
+		else if(exam == "step-by-step") 
 		{
-			question_t 			= words[lang][que][cat];
-			question_general 	= words[lang][que];
-			question_txt.html(question_t);
 			
-			if(cat == "orgn")
-				category = "trns";
-			else
-				category = "orgn";
-
-			answers_all(question_general,category,comm);
 		}
 		else if(exam == "open-lock")
 		{
-			etalon *=2;
-		
-
-			question_t 			= words[lang][que][cat];
-			question_general 	= words[lang][que];
-			question_txt.html(question_t);
+			etalon *=2;			
 			
-			if(cat == "orgn")
-				category = "trns";
-			else
-				category = "orgn";
-
-			answers_all(question_general,category,comm);
 		}
+		else if(exam == "practice")
+		{
+			etalon *=2;
+		}
+
+		question_t 			= words[lang][que][cat];
+		question_general 	= words[lang][que];
+		question_txt.html(question_t);
+		
+		if(cat == "orgn")
+			category = "trns";
+		else
+			category = "orgn";
+
+		answers_all(question_general,category,comm);
+
 	}
 
 	function answers_all(q,cat,command)
@@ -279,8 +260,8 @@ $(document).ready(function()
 
 		answer_tab.fadeOut();
 
-		/*if(hash == "exam-get-start")
-		{*/
+		if(hash == "exam-get-start")
+		{
 			if(userLevel == "zero"){
 				
 				max = grade*10+100;
@@ -288,16 +269,18 @@ $(document).ready(function()
 			}
 			else
 			{
-				max = max = grade*10+200;
+				max = grade*10+200;
 
 			}
-		/*}*/
 
-		if(words.length<max)
-			max = words.length;
+			if(words.length<max)
+				max = words[lang].length;
+		}
+		else
+			max = words[lang].length;
+		
 
-		if(current%2 == 0){
-					
+		if(current%2 == 0){					
 			question("exam-start","trns","translate",max);
 		}
 		else{
@@ -352,62 +335,57 @@ $(document).ready(function()
 		}
 		else
 		{
-			getting_aim 			+= 15;
-			user.gem				= JSON.parse(user.gem) + 15;
-			day_aim.getting 		= getting_aim;
-			localStorage.day_aim 	= JSON.stringify(day_aim);
-			localStorage.user 		= JSON.stringify(user);
-			percent 				= (getting_aim/etalon_aim)*100;
-		
-			if(plan.length == 0)
-			{
+			bonus = JSON.parse(grade)*2+18 + JSON.parse(step);
+			combo = JSON.parse(grade)*2+10;
 
-				if(category_e == 'open-lock'){
-					if (step == 1)
-						examCount = 3;
-					else
-						examCount  = step+1;
+			if(bonus > 50)
+				bonus = 50;
+
+			if(combo > 20)
+				combo = 20;
+
+			if(category_e == "step-by-step" || category_e == "open-lock"){
 
 
-					if(examCount >5)
-						examCount = 4;					
-				}
-				else
-					examCount = 1;
-
-
-
-				plan_step = 
-				{
-					grade: grade,
-					step : step,
-					exam : examCount
-				}
+				getting_aim 			+= (bonus+combo);
+				$(".level-bonus").html("+" + bonus);
+				$(".combo-bonus").html("+" + combo);
 				
-				plan.push(plan_step);
-				localStorage.plan = JSON.stringify(plan);
-			}
-			else
-			{
+				day_aim.getting 		= getting_aim;
 
-				k = search_plan(grade,step);
-
-				if(category_e == 'open-lock'){
-					if (step == 1)
-						examCount = 3;
-					else
-						examCount  = step+1;
-
-
-					if(examCount >5)
-						examCount = 4;					
-				}
-				else
-					examCount = 1;
-
-
-				if(k == -1)
+				/*if(category_e == "open-lock")
 				{
+					if(step == 1 || step == 2)
+					{
+						allCrown = 3;
+					}
+					else if(step == 3 || step > 5){
+						allCrown = 4;
+					}
+					else if(step == 4)
+						allCrown = 5;
+				}*/
+				
+				
+				addCrown = 1;
+				if(plan.length == 0)
+				{
+
+					if(category_e == 'open-lock'){
+						if (step == 1)
+							examCount = 3;
+						else
+							examCount  = step+1;
+
+
+						if(examCount >5)
+							examCount = 4;					
+					}
+					else
+						examCount = 1;
+
+					addCrown = examCount;
+
 					plan_step = 
 					{
 						grade: grade,
@@ -415,25 +393,67 @@ $(document).ready(function()
 						exam : examCount
 					}
 					
+
 					plan.push(plan_step);
+					localStorage.plan = JSON.stringify(plan);
 				}
 				else
-				{	
-					if(category_e == 'open-lock')				
-						plan[k]['exam'] = examCount;
-					else
-						plan[k]['exam'] = JSON.parse(plan[k]['exam'])+1;
+				{
 
+					k = search_plan(grade,step);
+
+					if(category_e == 'open-lock'){
+						if (step == 1)
+							examCount = 3;
+						else
+							examCount  = step+1;
+
+
+						if(examCount >5)
+							examCount = 4;					
+					}
+					else
+						examCount = 1;
+
+
+					if(k == -1)
+					{
+						plan_step = 
+						{
+							grade: grade,
+							step : step,
+							exam : examCount
+						}
+						addCrown = examCount;
+
+						plan.push(plan_step);
+					}
+					else
+					{	
+						addCrown = examCount - JSON.parse(plan[k]['exam']);
+						if(category_e == 'open-lock')				
+							plan[k]['exam'] = examCount;
+						else
+							plan[k]['exam'] = JSON.parse(plan[k]['exam'])+1;
+
+					}
+					
+					localStorage.plan = JSON.stringify(plan);
+					
 				}
-				
-				localStorage.plan = JSON.stringify(plan);
-				
+
+				user.crown 				= JSON.parse(user.crown)+addCrown;
+			}
+			else
+			{
+				$(".level-bonus").html("+0");
+				$(".combo-bonus").html("+0");
 			}
 
-			user.crown = JSON.parse(user.crown)+1;
-			localStorage.user = JSON.stringify(user);
-
-
+			user.gem				= JSON.parse(user.gem) + (bonus+combo);
+			localStorage.day_aim 	= JSON.stringify(day_aim);
+			localStorage.user 		= JSON.stringify(user);
+			percent 				= (getting_aim/etalon_aim)*100;
 			progressAim.css("width",percent+"%");
 			main.fadeOut();
 			lesson_success.fadeIn();

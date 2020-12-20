@@ -112,9 +112,10 @@
 		"existEmail"		: {"message"	: "Bağışlayın, e-poçt artıq mövcuddur. Xahiş edirik başqa bir e-poçt daxil edin.", "info": "error"},
 		"emailvalidate"		: {"message"	: "Yanlış bir e-poçt ünvanı daxil etmisiniz. Yenidən cəhd edin.", "info": "error"},
 		
+
 		"password-validate" : {"message"	: "Şifrənizdə ən az 8,ən çox 20 simvoldan istifadə edə bilərsiniz. Şifrədə boşluqdan istifadə etmək olmaz.", "info": "info"},
 
-		"password-validate" : {"message"	: "Ən az 5,ən çox 14 simvoldan istifadə edə bilərsiniz və boşluqdan istifadə etmək olmaz.", "info": "info"},
+		"username-validate" : {"message"	: "Ən az 5,ən çox 14 simvoldan istifadə edə bilərsiniz və boşluqdan istifadə etmək olmaz.", "info": "info"},
 
 		"updateOk"			: {"message"	: "Təbriklər, düzəlişlər uğurla həyata keçirildi.", "info": "success"},
 
@@ -157,6 +158,9 @@
 		"emailvalidate"		: {"message"	: "Вы ввели неверный адрес электронной почты. Повторите попытку.", "info": "error"},
 
 		"password-validate" : {"message"	: "Вы должны использовать от 8 до 20 символов. Вы не можете использовать пробел в пароле.", "info": "info"},
+
+		"username-validate"	: {"message"	: "Вы должны использовать минимум 5 и максимум 14 символов, пробелы использовать нельзя.", "info": "info"},
+
 
 		"updateOk"			: {"message"	: "Поздравляем, приготовления были успешно выполнены.", "info": "success"},
 
