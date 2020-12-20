@@ -1,6 +1,6 @@
 $(document).ready(function()
 {
-	localStorage.clear();
+	//localStorage.clear();
 	title = 
 	{
 		az : "Rus dili tədrisi",

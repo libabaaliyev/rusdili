@@ -19,6 +19,7 @@ $(document).ready(function()
 	limit 			= $("#limits");
 	open_lock_gem	= $("#open-lock-with-gem");
 	practice 		= $(".practice");
+	addHeart 		= $(".add-heart");
 
 	bodyHeight 		= $(window).height();
 	windowWidth		= $(window).width();
@@ -35,6 +36,7 @@ $(document).ready(function()
 	plan 			= JSON.parse(localStorage.plan);
 	gems 			= JSON.parse(user.gem);
 	crown 			= JSON.parse(user.crown);
+	heart 			= JSON.parse(user.heart);
 	aim 			= user.aim;
 	grade 			= user.grade;
 
@@ -202,10 +204,25 @@ $(document).ready(function()
 
 	});
 
+	addHeart.click(function()
+	{
+		if(heart<5)
+			heart++;
+		user.heart = heart;
+		save();
+		ads('reward');
+	})
+
 	function save()
 	{
 		localStorage.plan 		= JSON.stringify(plan);
 		localStorage.user 		= JSON.stringify(user);
+		callOther("general","start_page","index");
+	}
+
+	function ads(e)
+	{
+		console.log(e);
 	}
 
 	function crown_limit(e)

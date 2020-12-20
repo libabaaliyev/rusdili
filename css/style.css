@@ -772,11 +772,11 @@ body
   display: block;
   float: left;
   width: 100%;
-  min-height: calc(100vh - 250px);
-  max-height: calc(100vh - 150px);
+  height: calc(100vh - 50px);
+  
   overflow: auto;
-  padding: 0;
-  padding-top: 50px;
+  padding: 50px 0;
+  padding-top: 10px; 
   border-bottom: 1px solid #B0BEC5;
 }
 .score-table ul li
@@ -789,7 +789,7 @@ body
   border-radius: 10px 10px 40% 40%;
   border-bottom: 3px solid #AAC1D4;
   text-align: center;
-  margin: 6px;
+  margin: 10px;
 }
 
 .score-table ul li i
@@ -807,10 +807,10 @@ body
 }
 .checked
 {
-  margin-top: -6px !important;
-  margin-bottom: 0 !important;
+  /*margin-top: 5px !important;
+  margin-bottom: 5px !important;*/
   width: 54px !important;
-  height: 66px !important;
+  min-height: 66px !important;
   background: #E8BA8F !important;
   border-bottom: 5px solid #C88E57 !important;
 }
@@ -822,6 +822,12 @@ body
   font-size: 26px !important;
   color: #B07032 !important;
   background: #CF9C6D !important;
+}
+.checked h4
+{
+  min-height: 30px;
+  font-size: 14px;
+  padding: 5px 0;
 }
 .text-center
 {
