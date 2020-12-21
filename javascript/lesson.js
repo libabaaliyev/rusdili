@@ -3,8 +3,15 @@ $(document).ready(function()
 	loading_lesson	= $(".loading-lesson");
 	loading_next	= $(".loading");
 	main 			= $(".lesson-main");
+	learning		= $(".lesson-learn");
+	orginal			= $(".orgn");
+	translating 	= $(".trns");
+	transkript 		= $(".trnsk");
+	knowing			= $(".know");
+	
+
 	lesson 			= $(".lesson");
-	continue_lesson = $(".continue-lesson")
+	continue_lesson = $(".continue-lesson");
 	lesson_success	= $(".lesson-success");
 	success_body	= $(".success-body")
 	success_gem		= $(".success-gem");
@@ -18,11 +25,13 @@ $(document).ready(function()
 	question_txt 	= $("#question");
 	rewardBtn		= $(".reward");
 	skipAd 			= $(".no-thanks");
-	close 			= $(".close-lesson")
+	close 			= $(".close-lesson");
 	
 	etalon 			= 3;
 	current			= 1;
 	correct_count 	= 0;	
+	queque 			= 0;
+	queLater 		= 0;
 	hash 			= location.hash.substr(1);
 	user 			= JSON.parse(localStorage.user); 
 	lang 			= JSON.parse(localStorage.applang); 
@@ -44,9 +53,9 @@ $(document).ready(function()
 	{
 		"Ф":"F","ф":"f","Ы":"I","ы":"ı","В":"V","в":"v","А":"A","а":"a","П":"P","п":"p","Р":"R","р":"r",
 		"О":"O","о":"o","Л":"L","л":"l","Д":"D","д":"d","Ж":"J","ж":"j","Э":"E","э":"e","Я":"Ya",
-		"я":"ya","Ч":"Ç","ч":"ç","С":"S","с":"s","М":"M","м":"m","И":"İ","и":"i","Т":"T","т":"t",
+		"я":"ya","Ч":"Ç","ч":"ç","Чт":"Ş","чт":"ş","С":"S","с":"s","М":"M","м":"m","И":"İ","и":"i","Т":"T","т":"t",
 		"Ь":":","ь":":","Б":"B","б":"b","Ю":"Yu","ю":"yu","Й":"Y","й":"y","Ц":"Ts","ц":"ts","У":"U","у":"u",
-		"К":"K","к":"k","Е":"Ye","е":"e","Н":"N","н":"N","Г":"Q","г":"q","Ш":"Sh","ш":"sh","Щ":"Ssh","щ":"ssh","З":"Z",
+		"К":"K","к":"k","Е":"Ye","е":"e","ё":"yo","Н":"N","н":"N","Г":"Q","г":"q","Ш":"Sh","ш":"sh","Щ":"Ssh","щ":"ssh","З":"Z",
 		"з":"z","Х":"Kh","х":"kh","Ъ":":","ъ":":"
 	};
 
@@ -57,12 +66,38 @@ $(document).ready(function()
 	{
 		loading_lesson.hide();
 		start(hash);
-		main.show();
+		/*learning.show();*/
 
 
-	},3000);
+	},10);
 
-	
+	later = [];
+	qx = 0;
+	knowing.click(function()
+	{
+		action = $(this).data("action");
+		
+		if(action == "later")
+			later.push((queque));
+
+		if(queque >= maxQue){
+			if(qx<later.length){
+				
+				queLater = later[qx];
+				learning_func(later);
+				qx++;
+			}
+			else{
+				learning.hide();
+				main.show();
+				question('step-by-step',"trns","translate",maxQue);
+			}
+		}
+		else{
+			queque++;
+			learning_func();
+		}
+	});
 
 	$(document).on('click', '.question-answer', function()
 	{
@@ -79,7 +114,7 @@ $(document).ready(function()
 		control_asw(correcting);
 
 	});
-	
+
 
 	continue_succes.click(function()
 	{
@@ -120,19 +155,44 @@ $(document).ready(function()
 			if(command == "exam-get-start")
 			{
 
-				//if(userLevel == "zero")
+				if(userLevel == "zero")
 					question("exam-start","trns","translate",100);
+				else
+					question("exam-start","trns","translate",words[lang].length);
+
+				main.show();
 
 			}
 		}			
 		else if(localStorage.getItem("examing"))
 		{
 			exam_data 	= JSON.parse(localStorage.examing);
-			grade 		= exam_data.grade;
-			step 		= exam_data.step;
+			grade 		= JSON.parse(exam_data.grade);
+			step 		= JSON.parse(exam_data.step);
+			exam_i 		= search_plan(grade,step);
+			(exam_i == -1) ? exam = 0 : exam = plan[exam_i]['exam'];			
 			category_e 	= exam_data.category;
 
-			question(category_e,"trns","translate",100);
+
+			minQue = selectQue("min",grade,step,exam);
+			maxQue = selectQue("max",grade,step,exam);
+
+
+			if(category_e == "step-by-step")
+			{
+				queque = minQue;
+				console.log(minQue+"-"+maxQue)
+				learning.show();
+				learning_func();
+			}
+			else
+			{
+				maxQue = 100;
+				minQue = 0;
+				main.show();
+				question(category_e,"trns","translate",maxQue);
+			}
+			
 		}
 		else
 		{
@@ -150,30 +210,59 @@ $(document).ready(function()
 		callOther("general","importBase",base,user,"update");
 	}
 
+	function learning_func(e)
+	{
+		if(grade < 15)
+		{
+			word_learn(e);
+		}
+	}
+
+	
+	function word_learn(e)
+	{
+		if(e)
+			q = queLater;
+		else
+			q = queque;
+		newWord_orgn  = words[lang][q]['orgn']; 
+		newWord_trns  = words[lang][q]['trns'];
+		newWord_trnsk =	convert_latin(newWord_orgn);
+		
+		orginal.html(newWord_orgn);
+		translating.html(newWord_trns);
+		transkript.html(newWord_trnsk);
+	}
 
 	function question(exam,cat,comm,q)
 	{
-		que = random_number(1,JSON.parse(q));
+		
 		question_categ.html(transl[lang][comm]);
 		
 		//buralari duzeldecem
 		if(exam == "exam-start")
 		{
-
+			que = random_number(0,JSON.parse(q));
 		}
 		else if(exam == "step-by-step") 
 		{
 			
+
+			que = random_number(minQue,JSON.parse(q));
+			etalon = 20;
 		}
 		else if(exam == "open-lock")
 		{
-			etalon *=2;			
+			que = random_number(0,JSON.parse(q));
+			etalon = 5;			
 			
 		}
 		else if(exam == "practice")
 		{
+			que = random_number(0,JSON.parse(q));
 			etalon *=2;
 		}
+
 
 		question_t 			= words[lang][que][cat];
 		question_general 	= words[lang][que];
@@ -225,7 +314,7 @@ $(document).ready(function()
 
         str = str_array.join('');
 	    
-	 	return str;
+	 	return "["+str+"]";
 	}
 	
 	function control_asw(answ)
@@ -260,37 +349,48 @@ $(document).ready(function()
 
 		answer_tab.fadeOut();
 
-		if(hash == "exam-get-start")
+		if(hash)
 		{
-			if(userLevel == "zero"){
-				
-				max = grade*10+100;
-				
+			if(hash == "exam-get-start")
+			{
+				if(userLevel == "zero"){
+					
+					max = grade*10+100;
+					
+				}
+				else
+				{
+					max = grade*10+200;
+
+				}
+
+				if(words.length<max)
+					max = words[lang].length;
 			}
 			else
-			{
-				max = grade*10+200;
-
-			}
-
-			if(words.length<max)
 				max = words[lang].length;
+			
+
+			if(current%2 == 0){					
+				question("exam-start","trns","translate",max);
+			}
+			else{
+
+				question("exam-start","orgn","translate",max);
+			}
 		}
 		else
-			max = words[lang].length;
-		
-
-		if(current%2 == 0){					
-			question("exam-start","trns","translate",max);
-		}
-		else{
-
-			question("exam-start","orgn","translate",max);
+		{
+			question(category_e,"trns","translate",maxQue);
 		}
 	}
 
 	function finish()
 	{
+		grade 		= JSON.parse(exam_data.grade);
+		step 		= JSON.parse(exam_data.step);
+
+		
 		if(hash == "exam-get-start")
 		{
 			loading_next.show();
@@ -352,71 +452,25 @@ $(document).ready(function()
 				$(".combo-bonus").html("+" + combo);
 				
 				day_aim.getting 		= getting_aim;
-
-				/*if(category_e == "open-lock")
-				{
-					if(step == 1 || step == 2)
-					{
-						allCrown = 3;
-					}
-					else if(step == 3 || step > 5){
-						allCrown = 4;
-					}
-					else if(step == 4)
-						allCrown = 5;
-				}*/
-				
-				
 				addCrown = 1;
-				if(plan.length == 0)
+
+				if(category_e == 'open-lock')
 				{
-
-					if(category_e == 'open-lock'){
-						if (step == 1)
-							examCount = 3;
-						else
-							examCount  = step+1;
-
-
-						if(examCount >5)
-							examCount = 4;					
-					}
+					if (step == 1)
+						examCount = 3;
 					else
-						examCount = 1;
+						examCount  = step+1;
 
-					addCrown = examCount;
 
-					plan_step = 
-					{
-						grade: grade,
-						step : step,
-						exam : examCount
-					}
-					
+					if(examCount >5)
+						examCount = 4;
 
-					plan.push(plan_step);
-					localStorage.plan = JSON.stringify(plan);
 				}
-				else
-				{
-
-					k = search_plan(grade,step);
-
-					if(category_e == 'open-lock'){
-						if (step == 1)
-							examCount = 3;
-						else
-							examCount  = step+1;
+				else if(category_e == 'step-by-step')
+					examCount = 1;
 
 
-						if(examCount >5)
-							examCount = 4;					
-					}
-					else
-						examCount = 1;
-
-
-					if(k == -1)
+					if(plan.length == 0)
 					{
 						plan_step = 
 						{
@@ -424,25 +478,46 @@ $(document).ready(function()
 							step : step,
 							exam : examCount
 						}
+						
 						addCrown = examCount;
 
 						plan.push(plan_step);
+						localStorage.plan = JSON.stringify(plan);
+
 					}
 					else
 					{	
-						addCrown = examCount - JSON.parse(plan[k]['exam']);
-						if(category_e == 'open-lock')				
-							plan[k]['exam'] = examCount;
+						k = search_plan(grade,step);
+						if(k == -1)
+						{
+							
+							plan_step = 
+							{
+								grade: grade,
+								step : step,
+								exam : examCount
+							}
+							addCrown = examCount;
+
+							plan.push(plan_step);
+						}
 						else
-							plan[k]['exam'] = JSON.parse(plan[k]['exam'])+1;
-
+						{
+							addCrown = examCount;
+							
+							if(category_e == "open-lock")
+								plan[k]['exam'] = examCount;
+							else if(category_e == "step-by-step")
+								plan[k]['exam'] = plan[k]['exam'] + examCount;
+						}
+						
+						
 					}
-					
-					localStorage.plan = JSON.stringify(plan);
-					
-				}
 
-				user.crown 				= JSON.parse(user.crown)+addCrown;
+				console.log(addCrown);
+				user.crown 	= JSON.parse(user.crown)+addCrown;
+
+				
 			}
 			else
 			{
@@ -452,6 +527,7 @@ $(document).ready(function()
 
 			user.gem				= JSON.parse(user.gem) + (bonus+combo);
 			localStorage.day_aim 	= JSON.stringify(day_aim);
+			localStorage.plan 		= JSON.stringify(plan);
 			localStorage.user 		= JSON.stringify(user);
 			percent 				= (getting_aim/etalon_aim)*100;
 			progressAim.css("width",percent+"%");
@@ -476,6 +552,25 @@ $(document).ready(function()
 			}
 
 		}
+	}
+
+	function selectQue(e,g,s,ex)
+	{
+		
+		xMin = g*190 + (s-1)*30 + ex*10;
+		xMax = xMin+10;
+		
+		if(xMax > words[lang].length){
+			xMax = words[lang].length;
+			xMin = 0;
+		}
+
+		
+		if(e=="min")
+			return xMin;
+		else
+			return xMax;
+
 	}
 
 	function callOther(loc,func,funcData,funcData_1,funcData_2)

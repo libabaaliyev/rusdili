@@ -429,12 +429,10 @@ $(document).ready(function()
 
 				limitCrown = crown_limit(i);
 
-				if(crown < limitCrown)
+				if(crown <= limitCrown)
 					openingCss = 'bg-p';
 				else
 					openingCss = '';
-
-
 
 				castles = `<li class="`+activation+` `+twice+` level-query-li" data-count="`+count_lesson+`" data-grade="`+i+`" data-step="`+k+`">
 								<div class="castle-border `+progress_css+`"></div>

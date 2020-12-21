@@ -890,7 +890,7 @@
                 },
                 {
                   "orgn": "ле́то ",
-                  "trns": "yaz"
+                  "trns": "yay"
                 },
                 {
                   "orgn": "зима́ ",
@@ -4494,7 +4494,7 @@
                 },
                 {
                   "orgn": "меня",
-                  "trns": "mən"
+                  "trns": "mənim"
                 },
                 {
                   "orgn": "у меня",
@@ -4502,7 +4502,7 @@
                 },
                 {
                   "orgn": "мне",
-                  "trns": "mən"
+                  "trns": "mənə"
                 },
                 {
                   "orgn": "ко мне",
@@ -5640,10 +5640,7 @@
                   "orgn": "мост",
                   "trns": "körpü"
                 },
-                {
-                  "orgn": "port",
-                  "trns": "port"
-                },
+               
                 {
                   "orgn": "угол",
                   "trns": "künc"
@@ -5674,7 +5671,7 @@
                 },
                 {
                   "orgn": "жарко",
-                  "trns": "isti"
+                  "trns": "qaynar"
                 },
                 {
                   "orgn": "снег",
@@ -5685,8 +5682,8 @@
                   "trns": "yağış"
                 },
                 {
-                  "orgn": "blank",
-                  "trns": "isti"
+                  "orgn": "теплый",
+                  "trns": "ilıq"
                 },
                 {
                   "orgn": "путешествие",
@@ -5817,7 +5814,7 @@
                   "trns": "yeni"
                 },
                 {
-                  "orgn": "rahatsızlık",
+                  "orgn": "Новости",
                   "trns": "xəbər"
                 },
                 {
@@ -5825,7 +5822,7 @@
                   "trns": "göl"
                 },
                 {
-                  "orgn": "bolşóй",
+                  "orgn": "большой",
                   "trns": "böyük"
                 },
                 {
@@ -7654,7 +7651,7 @@
                   "trns": "riyaziyyat"
                 },
                 {
-                  "orgn": "phishic",
+                  "orgn": "физика",
                   "trns": "fizika"
                 },
                 {
@@ -8194,7 +8191,7 @@
                   "trns": "diaqnoz"
                 },
                 {
-                  "orgn": "tamaşaçı",
+                  "orgn": "высокая температура",
                   "trns": "qızdırma, bədən istiliyi"
                 },
                 {
@@ -8703,7 +8700,7 @@
                 },
                 {
                   "orgn": "парикмахер",
-                  "trns": "bərbər, bərbər"
+                  "trns": "bərbər"
                 },
                 {
                   "orgn": "держать / продержать кого? что? где?",
@@ -8722,12 +8719,12 @@
                   "trns": "ətir"
                 },
                 {
-                  "orgn": "basılmış",
-                  "trns": "tencere"
+                  "orgn": "горшок",
+                  "trns": "qapaq"
                 },
                 {
                   "orgn": "сковорода",
-                  "trns": "pan"
+                  "trns": "tava"
                 },
                 {
                   "orgn": "лягушка",

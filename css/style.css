@@ -1379,6 +1379,96 @@ body
   width: 100%;
   padding: 10px 0;
 }
+.learning-card
+{
+  position: absolute;
+  width: calc(100% - 40px);
+  min-height: 220px;
+  height: auto;
+  
+  top: 50%;
+  left: 20px;
+  transform: translate(0,-50%);
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.5);
+  border: 1px solid #ccc;
+}
+.card-top
+{
+  width: 100%;
+  min-height: 150px;
+  height: auto;
+  display: block;
+  float: left;
+}
+.card-top .card-left,.card-top .card-right
+{
+  display: inline-block;
+  width: calc(100% - 100px);
+  min-height: 150px;
+  height: auto;
+  padding: 0;
+  float: left;
+  margin: 0;
+
+}
+.card-top .card-left
+{
+  padding: 10px 10px 10px 30px;
+}
+.card-top .card-right
+{
+  position: relative;
+  width: 100px;
+}
+.card-top .card-right i
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 30px;
+
+}
+.card-btn
+{
+  width: 100%;
+  height: 70px;
+  display: block;
+  float: left;
+}
+
+
+.card-btn .card-left,.card-btn .card-right
+{
+  display: inline-block;
+  width: 150px;  
+  padding: 15px 10px;
+  float: left;
+  margin: 0;
+
+}
+.card-btn .card-right 
+{
+  float: right;
+}
+
+.orgn,.trns,.trnsk
+{
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 22px;
+  text-align: left;
+  font-weight: 800;
+}
+.trns,.trnsk
+{
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+}
 .success-gem
 {
   display: none;
@@ -1524,7 +1614,7 @@ body
   margin: 20px 0;
 }
 
-.lesson-main,.lesson-success,.adsense,.day-aim,.answer,.select-level,.account,.registration
+.lesson-main,.lesson-success,.adsense,.day-aim,.answer,.select-level,.account,.registration,.lesson-learn
 {
   display: none;
 }
