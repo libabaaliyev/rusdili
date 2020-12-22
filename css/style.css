@@ -1618,6 +1618,7 @@ body
 {
   display: none;
 }
+
 .day-aim,.select-level,.get-start,.account,.registration
 {
   position: fixed;
@@ -1846,6 +1847,12 @@ body
       left: calc(50% - 360px);
       border-left: 1px solid #cecece;
       border-right: 1px solid #cecece;
+    }
+
+    .learning-card
+    {
+      width: 680px;
+      left: calc(50% - 340px);
     }
 
     .account

@@ -8047,12 +8047,12 @@
             },
             {
                "trns": "Zərəriniz üçün çox üzr istəyirik.",
-               "orgn": "Mənim соболезнуем твоей утрате.",
+               "orgn": "Приносим свои извинения за доставленные неудобства.",
                "mng": "Yaxınlarını itirənlərə başsağlığı verirəm"
             },
             {
                "trns": "Bu qaranlıq gündə sizə dərin hüznlə başsağlığı verirəm.",
-               "orgn": "Primi moi глубочайшие соболезнования в этот траурный день.",
+               "orgn": "Приношу вам свои глубочайшие соболезнования в этот мрачный день.",
                "mng": "Yaxınlarını itirənlərə başsağlığı verirəm"
             },
             
@@ -8471,7 +8471,7 @@
             },
             {
                "trns": "Dərhal həkimə müraciət etməliyəm!",
-               "orgn": "Мне srochno нужно к врачу! (Mne srochno nuzhno k vrachu!)",
+               "orgn": "Мне срочно нужно к врачу! (Mne srochno nuzhno k vrachu!)",
                "mng": "Təcili tibbi yardım axtarırıq"
             },
             {
@@ -8914,8 +8914,8 @@
                "mng": "Rezervasyon et"
             },
             {
-               "trns": "... [adam sayı] ... üçün bir masa. xahiş edirəm.",
-               "orgn": "Стол для ... (количество человек) ..., пожалуйста. (Stol dlya ... (kolichestvo chelovek) ..., pozhaluysta.)",
+               "trns": "... üçün bir masa. xahiş edirəm.",
+               "orgn": "Стол для ... , пожалуйста. (Stol dlya ... (kolichestvo chelovek) ..., pozhaluysta.)",
                "mng": "Cədvəl soruşma"
             },
             {
@@ -9119,13 +9119,13 @@
                "mng": "Pişirmə vaxtı çox qısadır"
             },
             {
-               "trns": "Bu çox pişmiş.",
-               "orgn": "Etu edu pereredjali na ogne. (Etu yedu perederzhali na ogne.)",
+               "trns": "Bu çox bişib.",
+               "orgn": "Он слишком приготовлен. ",
                "mng": "Pişirmə müddəti çox uzun"
             },
             {
                "trns": "Buna sifariş vermədim, ... sifariş etdim.",
-               "orgn": "Ya eto ne заказывал, ya заказывал ... (Eto ne zakazyval, ya zakazyval...)",
+               "orgn": "Я не заказывал ... Я заказывал.",
                "mng": "Verilən boşqabın sifariş etdiyiniz plaka olmadığını ifadə etmək"
             },
             {
@@ -9652,7 +9652,7 @@
             }
        ],
 
-       "gəzinti":
+       "walking":
        [
             {
                "trns": "Mən itmişəm.",

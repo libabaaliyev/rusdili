@@ -47,7 +47,9 @@
 
 		"full-aim"			: {"message"	: "Congratulations, you have reached the daily goal !!!", "info": "success"},
 
-		"lock-castle"		: {"message"	: "The lesson is locked for now because you don't have enough crowns.", "info": "error"}
+		"lock-castle"		: {"message"	: "The lesson is locked for now because you don't have enough crowns.", "info": "error"},
+
+		"go-test"			: {"message"	: "Let's consolidate what we have learned !!!", "info": "info"}
 
 
 
@@ -92,7 +94,9 @@
 
 		"full-aim"			: {"message"	: "Tebrikler, günlük hedefe ulaştınız !!!", "info": "success"},
 
-		"lock-castle"		: {"message"	: "Yeterli sayıda taçınız olmadığından ders şu anlık kilitli.", "info": "error"}
+		"lock-castle"		: {"message"	: "Yeterli sayıda taçınız olmadığından ders şu anlık kilitli.", "info": "error"},
+
+		"go-test"			: {"message"	: "Öğrendiklerimizi pekiştirelim!!!", "info": "info"}
 
 	},
 	"az":
@@ -137,7 +141,9 @@
 
 		"full-aim"			: {"message"	: "Təbriklər, günlük hədəfə çatdınız !!!", "info": "success"},
 
-		"lock-castle"		: {"message"	: "Yetərli sayda tacınız olmadığından dərs bağlıdır.", "info": "error"}
+		"lock-castle"		: {"message"	: "Yetərli sayda tacınız olmadığından dərs bağlıdır.", "info": "error"},
+
+		"go-test"			: {"message"	: "Öyrəndiklərimizi təkrarlayaq!!!", "info": "info"}
 
 	},
 	"ru":
@@ -182,7 +188,9 @@
 
 		"full-aim"			: {"message"	: "Поздравляем, вы достигли ежедневной цели !!!", "info": "success"},
 
-		"lock-castle"		: {"message"	: "Урок пока заблокирован, потому что у вас недостаточно корон.", "info": "error"}
+		"lock-castle"		: {"message"	: "Урок пока заблокирован, потому что у вас недостаточно корон.", "info": "error"},
+
+		"go-test"			: {"message"	: "Давайте закрепим то, что мы узнали !!!", "info": "info"}
 
 	}
 

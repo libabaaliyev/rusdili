@@ -8,8 +8,6 @@ $(document).ready(function()
 	translating 	= $(".trns");
 	transkript 		= $(".trnsk");
 	knowing			= $(".know");
-	
-
 	lesson 			= $(".lesson");
 	continue_lesson = $(".continue-lesson");
 	lesson_success	= $(".lesson-success");
@@ -32,6 +30,8 @@ $(document).ready(function()
 	correct_count 	= 0;	
 	queque 			= 0;
 	queLater 		= 0;
+	question_data 	= [];
+
 	hash 			= location.hash.substr(1);
 	user 			= JSON.parse(localStorage.user); 
 	lang 			= JSON.parse(localStorage.applang); 
@@ -42,14 +42,9 @@ $(document).ready(function()
 	plan 			= JSON.parse(localStorage.plan);
 	etalon_aim 		= JSON.parse(day_aim.etalon);
 	getting_aim		= JSON.parse(day_aim.getting);
-	
-
 	userLevel		= user.level;
-
-	callOther("general","start_page","index","lesson");
-	callOther("general","language");
-
-	var rus_latin 	= 
+	
+	rus_latin 		= 
 	{
 		"Ф":"F","ф":"f","Ы":"I","ы":"ı","В":"V","в":"v","А":"A","а":"a","П":"P","п":"p","Р":"R","р":"r",
 		"О":"O","о":"o","Л":"L","л":"l","Д":"D","д":"d","Ж":"J","ж":"j","Э":"E","э":"e","Я":"Ya",
@@ -59,8 +54,15 @@ $(document).ready(function()
 		"з":"z","Х":"Kh","х":"kh","Ъ":":","ъ":":"
 	};
 
+	s_category 		= 
+	[
 	
+		"presentation",	"application",	"science",	"order",	"date",	"own",	"travel",	"health",	"shopping",	"eating",	"camp",	"time",	"walking",	"meeting",	"documents",	"working",	"education",	"shelter",	"compensation",	"animals"
 	
+	]	
+	
+	callOther("general","start_page","index","lesson");
+	callOther("general","language");
 
 	setTimeout(function()
 	{
@@ -76,27 +78,65 @@ $(document).ready(function()
 	knowing.click(function()
 	{
 		action = $(this).data("action");
-		
-		if(action == "later")
-			later.push((queque));
-
-		if(queque >= maxQue){
-			if(qx<later.length){
-				
-				queLater = later[qx];
-				learning_func(later);
-				qx++;
+		if(action == 'later')
+		{
+			if(queque<10){
+				later.push((q));
+				queque++;
+				word_learn(first_value,second_value);
 			}
 			else{
-				learning.hide();
-				main.show();
-				question('step-by-step',"trns","translate",maxQue);
+
+				if(qx>=later.length)
+				{
+
+					callOther("general","notification","go-test");
+					learning.hide();
+					main.show();
+					question('step-by-step',"trns","translate",maxQue);
+				}
+				else{
+					word_learn(later[qx],second_value);
+					qx++;
+				}
+				
 			}
 		}
-		else{
-			queque++;
-			learning_func();
+		else
+		{
+			if(queque >= 9)
+			{
+				if(later.length > 0)
+				{
+					
+					if(qx>=later.length)
+					{
+
+						callOther("general","notification","go-test");
+						learning.hide();
+						main.show();
+						question('step-by-step',"trns","translate",maxQue);
+					}
+					else
+					{						
+						word_learn(later[qx],second_value);
+						qx++;
+					}
+					
+				}
+				else{
+					callOther("general","notification","go-test");
+					learning.hide();
+					main.show();
+					question('step-by-step',"trns","translate",maxQue);
+				}
+			}
+			else{
+				queque++;
+				word_learn(first_value,second_value);
+			}
 		}
+		
 	});
 
 	$(document).on('click', '.question-answer', function()
@@ -166,24 +206,48 @@ $(document).ready(function()
 		}			
 		else if(localStorage.getItem("examing"))
 		{
+
 			exam_data 	= JSON.parse(localStorage.examing);
 			grade 		= JSON.parse(exam_data.grade);
 			step 		= JSON.parse(exam_data.step);
 			exam_i 		= search_plan(grade,step);
-			(exam_i == -1) ? exam = 0 : exam = plan[exam_i]['exam'];			
 			category_e 	= exam_data.category;
-
-
-			minQue = selectQue("min",grade,step,exam);
-			maxQue = selectQue("max",grade,step,exam);
-
+			(exam_i == -1) ? exam = 0 : exam = plan[exam_i]['exam'];
+			minQue 		= selectQue("min",grade,step,exam);
+			maxQue 		= selectQue("max",grade,step,exam);
+			q 	   		= minQue
 
 			if(category_e == "step-by-step")
 			{
-				queque = minQue;
-				console.log(minQue+"-"+maxQue)
+						
 				learning.show();
-				learning_func();
+
+				if (grade < 5)
+				{
+					first_value 	= 'easy';
+					second_value 	= 'word';
+
+					
+				}
+				else if(grade>=5&&grade<15)
+				{
+					first_value 		= 'normal';
+					
+					if(grade % 5 == 0){
+
+						x 					= random_number(0,(s_category.length - 1));
+						console.log(x);
+						sentence_category 	= s_category[x];				
+						second_value 		= 'sentence';
+					}
+					else{
+						second_value 	= 'word';
+					}
+				}
+
+				
+				word_learn(first_value,second_value);
+
 			}
 			else
 			{
@@ -209,31 +273,49 @@ $(document).ready(function()
 		base.append("plan",JSON.stringify(plan));
 		callOther("general","importBase",base,user,"update");
 	}
-
-	function learning_func(e)
-	{
-		if(grade < 15)
-		{
-			word_learn(e);
-		}
-	}
-
 	
-	function word_learn(e)
+	function word_learn(e,v)
 	{
-		if(e)
-			q = queLater;
-		else
-			q = queque;
-		newWord_orgn  = words[lang][q]['orgn']; 
-		newWord_trns  = words[lang][q]['trns'];
-		newWord_trnsk =	convert_latin(newWord_orgn);
+		
+		if(e == 'normal'){
+			if(v == 'word')
+				q = random_number(0,words[lang].length);
+			else if(v == 'sentence')
+				q = random_number(0,sentences[lang][sentence_category].length);
+		}
+		else if(e == 'easy'){
+
+			q += 1;
+			if(q>=maxQue)
+				q = maxQue;
+		}
+		else{
+			q =	e;
+		}
+
+
+			if(v == 'word')
+			{
+				newWord_orgn  	= words[lang][q]['orgn']; 
+				newWord_trns  	= words[lang][q]['trns'];
+			}
+			else
+			{
+				newWord_orgn  	= regulation(sentences[lang][sentence_category][q]['orgn']); 
+				newWord_trns  	= sentences[lang][sentence_category][q]['trns'];
+			}
+			newWord_trnsk 	= convert_latin(newWord_orgn);			
+		
+
+		question_data.push(q);
+
 		
 		orginal.html(newWord_orgn);
 		translating.html(newWord_trns);
 		transkript.html(newWord_trnsk);
 	}
 
+	question_que = 0;
 	function question(exam,cat,comm,q)
 	{
 		
@@ -246,10 +328,9 @@ $(document).ready(function()
 		}
 		else if(exam == "step-by-step") 
 		{
-			
-
-			que = random_number(minQue,JSON.parse(q));
-			etalon = 20;
+			question_que 	= random_number(0,(question_data.length-1));			
+			que 			= question_data[question_que];
+			etalon 			= 20;
 		}
 		else if(exam == "open-lock")
 		{
@@ -264,8 +345,21 @@ $(document).ready(function()
 		}
 
 
-		question_t 			= words[lang][que][cat];
-		question_general 	= words[lang][que];
+		if(second_value == 'word')
+		{
+			question_t 			= words[lang][que][cat];
+			question_general 	= words[lang][que];
+		}
+		else
+		{
+			if(cat == 'orgn')
+				question_t 			= regulation(sentences[lang][sentence_category][que][cat]);
+			else
+				question_t 			= sentences[lang][sentence_category][que][cat];
+
+			question_general 	= sentences[lang][sentence_category][que];
+		}
+		
 		question_txt.html(question_t);
 		
 		if(cat == "orgn")
@@ -274,23 +368,41 @@ $(document).ready(function()
 			category = "orgn";
 
 		answers_all(question_general,category,comm);
-
 	}
 
 	function answers_all(q,cat,command)
 	{
+
 		$("#answers").html("");
 
 		qq = random_number(1,4);
 
 		for (var i = 1; i < 5; i++) {
 			
-			que = random_number(1,words[lang].length);
+			if(second_value == 'word')
+				que = random_number(0,words[lang].length);
+			else
+				que = random_number(0,sentences[lang][sentence_category].length);
 			
 			if(command == "translate")
 			{
-				answ_txt 		= words[lang][que][cat];
-				correct_answ 	= q[cat];			
+				if(second_value == 'word'){
+					answ_txt 		= words[lang][que][cat];
+					correct_answ 	= q[cat];
+				}
+				else{
+					if(cat == 'orgn'){
+						answ_txt 		= regulation(sentences[lang][sentence_category][que][cat]);
+						correct_answ 	= regulation(q[cat]);	
+					}
+					else{
+						answ_txt 		= sentences[lang][sentence_category][que][cat];
+						correct_answ 	= q[cat];
+					}
+				}
+
+
+						
 			}
 
 			if(i == qq)
@@ -315,6 +427,24 @@ $(document).ready(function()
         str = str_array.join('');
 	    
 	 	return "["+str+"]";
+	}
+
+	function regulation(s)
+	{
+		regularFind = s.indexOf("(");
+
+			
+		if(regularFind==-1)
+		{
+
+			return s;
+		}
+		else
+		{
+			console.log(s)
+			return s.substr(0, regularFind);
+			
+		}
 	}
 	
 	function control_asw(answ)
@@ -349,40 +479,36 @@ $(document).ready(function()
 
 		answer_tab.fadeOut();
 
-		if(hash)
+		
+		if(hash == "exam-get-start")
 		{
-			if(hash == "exam-get-start")
-			{
-				if(userLevel == "zero"){
-					
-					max = grade*10+100;
-					
-				}
-				else
-				{
-					max = grade*10+200;
-
-				}
-
-				if(words.length<max)
-					max = words[lang].length;
+			if(userLevel == "zero"){
+				
+				max = grade*10+100;
+				
 			}
 			else
+			{
+				max = grade*10+200;
+
+			}
+
+			if(words.length<max)
 				max = words[lang].length;
-			
-
-			if(current%2 == 0){					
-				question("exam-start","trns","translate",max);
-			}
-			else{
-
-				question("exam-start","orgn","translate",max);
-			}
 		}
 		else
-		{
-			question(category_e,"trns","translate",maxQue);
+			max = words[lang].length;
+		
+
+		if(current%2 == 0){					
+			question(category_e,"trns","translate",max);
 		}
+		else{
+
+			question(category_e,"orgn","translate",max);
+		}		
+
+		
 	}
 
 	function finish()
@@ -562,7 +688,7 @@ $(document).ready(function()
 		
 		if(xMax > words[lang].length){
 			xMax = words[lang].length;
-			xMin = 0;
+			xMin = words[lang].length - 20;
 		}
 
 		
@@ -570,7 +696,6 @@ $(document).ready(function()
 			return xMin;
 		else
 			return xMax;
-
 	}
 
 	function callOther(loc,func,funcData,funcData_1,funcData_2)
@@ -586,6 +711,5 @@ $(document).ready(function()
 	{
 		return Math.floor(Math.random()*(max-min+1)+min);
 	}
-
 
 });
