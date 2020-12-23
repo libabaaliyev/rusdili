@@ -46,20 +46,25 @@ $(document).ready(function()
 	body.click(function()
 	{
 		func_lesson_info("close");
-	})
+	});
 
 	callOther("general","language");
 	callOther("general","aim_setting","index");
 	callOther("general","start_page","index");
 	create_level();
-	lesson 	= $(".level-query-li");
 
+	lesson 	= $(".level-query-li");
+	hash 	= location.hash.substr(1);
+
+	if(hash){
+		if(heart == 0)
+			callOther("general","notification",hash);
+	}
 	
 	lesson.click(function(e)
 	{
 		//console.log("klik lesson");
 		count_l 	= $(this).data("count");
-		
 		if(selectStep == $(this).data("step") && selectGrade == $(this).data("grade")){
 			func_lesson_info("close");
 			//console.log("close");
@@ -487,11 +492,9 @@ $(document).ready(function()
 	function callOther(loc,func,funcData)
 	{
 		$.getScript("javascript/"+loc+".js",function(e)
-		{
-					
+		{					
 			window[func](funcData);				
 		});
-
 	}
 
 

@@ -37,7 +37,9 @@
 
 		"internet-error"	: {"message"	: "You don't have an internet connection.", "info": "error"},
 		
-		"notenoughCoin"		: {"message"	:"Not enough gems.", "info": "error"},
+		"notenoughCoin"		: {"message"	: "Not enough gems.", "info": "error"},
+
+		"notenoughHeart"	: {"message"	: "You have not enough heart. You must buy heart", "info": "error"},
 
 		"add-coin-success"	: {"message"	: "You get coins", "info": "success"},
 
@@ -86,6 +88,8 @@
 
 		"notenoughCoin"		: {"message"	: "Yeterli sayda mücevheriniz yok.", "info": "error"},
 
+		"notenoughHeart"	: {"message"	: "Yeterli sayda canınız yok. Lütfen can kazanın.", "info": "error"},
+
 		"add-coin-success"	: {"message"	: "Koin aldınız.", "info": "success"},
 
 		"level-select"		: {"message"	: "Rusça seviyenizi seçin", "info": "info"},
@@ -133,6 +137,8 @@
 		
 		"notenoughCoin"		: {"message"	: "Yetərli sayda briliantınız yoxdur", "info": "error"},
 
+		"notenoughHeart"	: {"message"	: "Yetərli sayda canınız yoxdur. Can qazanmalısınız.", "info": "error"},
+
 		"add-coin-success"	: {"message"	: "Koin əldə etdiniz.", "info": "success"},
 
 		"level-select"		: {"message"	: "Bilgi səviyənizi seçin", "info": "info"},
@@ -179,6 +185,8 @@
 		"internet-error"	: {"message"	: "У вас нет подключения к Интернету.", "info": "error"},
 
 		"notenoughCoin"		: {"message"	: "Вам не хватает бриллиантов", "info": "error"},
+
+		"notenoughHeart"	: {"message"	: "Не хватает сердец. Вы должны завоевать сердце.", "info": "error"},
 
 		"add-coin-success"	: {"message"	: "Вы получаете монеты", "info": "success"},
 

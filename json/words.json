@@ -5553,8 +5553,8 @@
                   "trns": "konsert, resital"
                 },
                 {
-                  "orgn": "mесто",
-                  "trns": "yer, yer, nəqliyyat vasitəsindəki oturacaq, baqajdakı parça"
+                  "orgn": "Место",
+                  "trns": "yer, nəqliyyat vasitəsindəki oturacaq, baqajdakı parça"
                 },
                 {
                   "orgn": "класс",
@@ -5634,7 +5634,7 @@
                 },
                 {
                   "orgn": "шкаф",
-                  "trns": "şkraf"
+                  "trns": "şkaf"
                 },
                 {
                   "orgn": "мост",
@@ -5643,7 +5643,7 @@
                
                 {
                   "orgn": "угол",
-                  "trns": "künc"
+                  "trns": "künc,bucaq"
                 },
                 {
                   "orgn": "аэропорт",
@@ -5675,7 +5675,7 @@
                 },
                 {
                   "orgn": "снег",
-                  "trns": "mənfəət"
+                  "trns": "qar"
                 },
                 {
                   "orgn": "дождь",
@@ -7210,7 +7210,7 @@
                   "trns": "ayağa qalx"
                 },
                 {
-                  "orgn": "kardinal",
+                  "orgn": "стол",
                   "trns": "masa"
                 },
                 {
@@ -7500,7 +7500,7 @@
                 },
                 {
                   "orgn": "каждый",
-                  "trns": "each"
+                  "trns": "hər biri"
                 },
                 {
                   "orgn": "находить",

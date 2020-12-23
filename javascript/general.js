@@ -15,7 +15,7 @@ appLanguage			= JSON.parse(localStorage.appLanguage);
 
 date  		= new Date();
 fullDate 	= date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear();
-
+/*day_aim 	= [];*/
 function notification(event,event_1)
 {
 	if(event_1)
@@ -231,7 +231,7 @@ function start_page(page,page_1)
 		if(crown>0)
 			count_crown_html.html(crown);
 		
-		if(heart>0)
+		if(heart>=0)
 			count_heart_html.html(heart);
 
 		$(".gem-count").html(gem);
@@ -351,6 +351,22 @@ function aim_setting(page)
 
 }
 
+function random_number(min,max)
+{
+	return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+function sounding(e)
+{
+	xM = random_number(0,10);
+	if(xM % 2 == 0)
+		person = 'Russian Female';
+	else
+		person = 'Russian Male';
+	
+	responsiveVoice.speak(e, person);
+}
+
 function language()
 {
 	if(localStorage.getItem("user")){
@@ -435,7 +451,7 @@ function language()
 	$(".get-plus").html(appLanguage[lang]['get-plus']);
 	
 
-	$(".level-step").html(appLanguage[lang][stlevel]); //level sistemi duzelende bu da sertle deyisecek
+	$(".level-step").html(appLanguage[lang][stlevel]); 
 
 
 	$("#contact-us").html(appLanguage[lang]['contact-us']);
@@ -497,6 +513,15 @@ function language()
 	$("#unlimited-health").html(appLanguage[lang]['unlimited-health']);
 
 	$("#buy-plus").html(appLanguage[lang]['buy-plus']);
+
+
+	$("#ready-question").html(appLanguage[lang]['ready']);
+
+	$(".yes-ready").html(appLanguage[lang]['yes-ready']);
+
+	$(".no-ready").html(appLanguage[lang]['later']);
+
+	$("#know").html(appLanguage[lang]['know']);
 
 
 

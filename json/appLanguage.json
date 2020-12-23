@@ -34,11 +34,9 @@
 		"privacy"				: "PRIVACY",
 		"login"					: "Login",
 
-
 		"exam-time" 			: "It's exam time!",
 		"exam-span" 			: "An exam is essential for us to know your level",
 		"go-exam" 				: "Go to exam",
-
 
 		"crown"					: "Crowns",
 		"crown-txt"				: "Strengthen your skills to win the crown!",
@@ -93,6 +91,10 @@
 		"ads-txt"				: "Thanks to this ad, we can continue to provide you with free training.",
 		"buy-plus-txt"			: "Remove ads",
 
+		"know" 					: "I learned",
+		"later" 				: "Later",
+		"ready"					: "Are you ready?",
+		"yes-ready"				: "I'm ready",
 
 		"reading"				: "Choose the correct reading.",
 		"translate"				: "Choose the correct translation.",
@@ -206,6 +208,11 @@
 		"ads-txt"				: "Bu reklam sayesinde size ücretsiz eğitim sağlamaya devam edebiliyoruz.",
 		"buy-plus-txt"			: "Reklamları kaldır - Plus`a geç",
 
+		"know" 					: "Öğrendim",
+		"later" 				: "Daha sonra",
+		"ready"					: "Hazırmısın?",
+		"yes-ready"				: "Hazırım",
+
 		"reading"				: "Doğru okunuşu seçin.",
 		"translate"				: "Doğru çeviriyi seçin.",
 		"complete"				: "Uygun olanı seçin.",
@@ -311,10 +318,16 @@
 		"ads-txt"				: "Bu reklam sayəsində sizə ödənişsiz və davamlı təhsil verməyə davam edə bilirik.",
 		"buy-plus-txt"			: "Reklamları yığışdır - Plus`a keç",
 
+		"know" 					: "Öyrəndim",
+		"later" 				: "Daha sonra",
+		"ready"					: "Hazırsınız?",
+		"yes-ready"				: "Hazıram",
+
 
 		"reading"				: "Doğru oxunuşu seçin.",
 		"translate"				: "Doğru tərcüməni seçin.",
 		"complete"				: "Uyğun variantı seçin.",
+
 
 		"so-bad"				: "Sıfır",
 		"low-good"				: "Qismən",
@@ -419,6 +432,10 @@
 		"ads-txt"				: "Благодаря этому объявлению мы можем продолжать предоставлять вам бесплатное обучение.",
 		"buy-plus-txt"			: "Убрать рекламу - перейти на Plus",
 
+		"know" 					: "Я узнал",
+		"later" 				: "Позже",
+		"ready"					: "Вы готовы?",
+		"yes-ready"				: "Я готов",
 
 		"reading"				: "Выберите правильное чтение.",
 		"translate"				: "Выберите правильный перевод.",
