@@ -29,8 +29,6 @@ $(document).ready(function()
 	rewardBtn		= $(".reward");
 	skipAd 			= $(".no-thanks");
 	close 			= $(".close-lesson");
-
-
 	
 	etalon 			= 3;
 	current			= 1;
@@ -52,8 +50,7 @@ $(document).ready(function()
 	plan 			= JSON.parse(localStorage.plan);
 	etalon_aim 		= JSON.parse(day_aim.etalon);
 	getting_aim		= JSON.parse(day_aim.getting);
-	userLevel		= user.level;
-	
+	userLevel		= user.level;	
 	rus_latin 		= 
 	{
 		"Ф":"F","ф":"f","Ы":"I","ы":"ı","В":"V","в":"v","А":"A","а":"a","П":"P","п":"p","Р":"R","р":"r",
@@ -77,7 +74,20 @@ $(document).ready(function()
 	setTimeout(function()
 	{
 		loading_lesson.hide();
-		learning.show();
+		if(hash){
+			learning.hide()
+			start(hash);
+		}
+		else if(localStorage.getItem("examing"))
+		{
+			exam_data 	= JSON.parse(localStorage.examing);
+			category_e 	= exam_data.category;
+			if(category_e == 'step-by-step')
+				learning.show();
+			else if(category_e == 'open-lock')
+				start();
+		}
+		
 
 
 	},200);
@@ -92,8 +102,6 @@ $(document).ready(function()
 			start(hash);
 
 		},100);
-
-		
 	});
 
 	play_txt.click(function()
@@ -171,7 +179,6 @@ $(document).ready(function()
 				word_learn(first_value,second_value);
 			}
 		}
-		
 	});
 
 	$(document).on('click', '.question-answer', function()
@@ -187,9 +194,7 @@ $(document).ready(function()
 			correct_count+=1;
 
 		control_asw(correcting);
-
 	});
-
 
 	continue_succes.click(function()
 	{
@@ -229,11 +234,16 @@ $(document).ready(function()
 		if(command){
 			if(command == "exam-get-start")
 			{
-
-				if(userLevel == "zero")
+				second_value 	= 'word';
+				category_e 		= 'exam-start';
+				if(userLevel == "zero"){
+					first_value 	= 'easy';				
 					question("exam-start","trns","translate",100);
-				else
+				}
+				else{
+					first_value 	= 'normal';			
 					question("exam-start","trns","translate",words[lang].length);
+				}
 
 				main.show();
 
@@ -242,63 +252,73 @@ $(document).ready(function()
 		else if(localStorage.getItem("examing"))
 		{
 
-			exam_data 	= JSON.parse(localStorage.examing);
-			grade 		= JSON.parse(exam_data.grade);
-			step 		= JSON.parse(exam_data.step);
-			exam_i 		= search_plan(grade,step);
-			category_e 	= exam_data.category;
-			(exam_i == -1) ? exam = 0 : exam = plan[exam_i]['exam'];
-			minQue 		= selectQue("min",grade,step,exam);
-			maxQue 		= selectQue("max",grade,step,exam);
-			q 	   		= minQue
+			lesson_setting();
 
 			if(category_e == "step-by-step")
 			{
-						
-				learning.show();
-
-				if (grade < 5)
-				{
-					first_value 	= 'easy';
-					second_value 	= 'word';
-
-					
-				}
-				else if(grade>=5&&grade<15)
-				{
-					first_value 		= 'normal';
-					
-					if(grade % 5 == 0){
-
-						x 					= random_number(0,(s_category.length - 1));
-						sentence_category 	= s_category[x];				
-						second_value 		= 'sentence';
-					}
-					else{
-						second_value 	= 'word';
-					}
-				}
-				else
-				{
-
-				}
-
-				
+				minQue 		= selectQue("min",grade,step,exam);
+				maxQue 		= selectQue("max",grade,step,exam);
+				q 	   		= minQue				
 				word_learn(first_value,second_value);
-
 			}
-			else
-			{
-				maxQue = 100;
-				minQue = 0;
+			else if(category_e == "open-lock")
+			{				
+				if (step == 1)
+					exam_c = 3;
+				else
+					exam_c  = step + 1;
+
+				if(exam_c > 5)
+					exam_c = 4;
+
+				minQue 		= selectQue("min",grade,step,exam);
+				maxQue 		= selectQue("max",grade,step,exam_c);
+				q 	   		= minQue;
 				main.show();
 				question(category_e,"trns","translate",maxQue);
+
 			}
 			
 		}
 		else
 		{
 			window.location = "main.html";
+		}
+	}
+	function lesson_setting()
+	{
+		exam_data 	= JSON.parse(localStorage.examing);
+		grade 		= JSON.parse(exam_data.grade);
+		step 		= JSON.parse(exam_data.step);			
+		category_e 	= exam_data.category;			
+		exam_i 		= search_plan(grade,step);
+		(exam_i == -1) ? exam = 0 : exam = plan[exam_i]['exam'];
+
+		if (grade < 5)
+		{
+			first_value 	= 'easy';
+			second_value 	= 'word';					
+		}
+		else if(grade >=5 && grade < 15)
+		{
+			first_value 		= 'normal';
+			
+			if(grade % 5 == 0){
+
+				x 					= random_number(0,(s_category.length - 1));
+				sentence_category 	= s_category[x];				
+				second_value 		= 'sentence';
+			}
+			else{
+				second_value 	= 'word';
+			}
+		}
+		else
+		{
+			first_value 		= 'normal';
+							x 	= random_number(0,(s_category.length - 1));
+			sentence_category 	= s_category[x];				
+			second_value 		= 'sentence';
 		}
 	}
 
@@ -362,7 +382,8 @@ $(document).ready(function()
 		//buralari duzeldecem
 		if(exam == "exam-start")
 		{
-			que = random_number(0,JSON.parse(q));
+			que 	= random_number(0,JSON.parse(q));
+			etalon 	= 10;
 		}
 		else if(exam == "step-by-step") 
 		{
@@ -372,9 +393,10 @@ $(document).ready(function()
 		}
 		else if(exam == "open-lock")
 		{
-			que = random_number(0,JSON.parse(q));
-			etalon = 5;			
-			
+
+			que = random_number(minQue,JSON.parse(maxQue));
+			etalon = 20;	
+			console.log(minQue+"--"+maxQue)		
 		}
 		else if(exam == "practice")
 		{
@@ -576,17 +598,13 @@ $(document).ready(function()
 		else{
 			question(category_e,"trns","translate",max);
 		}		
-		
 	}
 
 	function finish()
 	{
-		grade 		= JSON.parse(exam_data.grade);
-		step 		= JSON.parse(exam_data.step);
-
-		
 		if(hash == "exam-get-start")
 		{
+			console.log(hash)
 			loading_next.show();
 
 			if(correct_count>5)
@@ -594,27 +612,27 @@ $(document).ready(function()
 				if(correct_count>8){
 
 					if(correct_count == 10)
-						callOther("general","notification","exam-finish","excellent");
+						status = "excellent";
 					
 					else
-						callOther("general","notification","exam-finish","very-good");
+						status = "very-good";
 
 				}
 				else
-					callOther("general","notification","exam-finish","good");
+					status = "good";
 			}
 			else
 			{
 				if(correct_count<3)
 				{
 					if(correct_count<1)
-						callOther("general","notification","exam-finish","so-bad");
+						status = "so-bad";
 					
 					else
-						callOther("general","notification","exam-finish","bad");					
+						status = "bad";					
 				}
 				else
-					callOther("general","notification","exam-finish","low-good");				
+					status = "low-good";				
 			}
 			
 
@@ -622,13 +640,15 @@ $(document).ready(function()
 			{
 
 				loading_next.hide();
-				window.location = "main.html";
+				window.location = "main.html#exam-finish&"+status;
 
-			},1500);
+			},3500);
 
 		}
 		else
 		{
+			grade = JSON.parse(exam_data.grade);
+			step  = JSON.parse(exam_data.step);
 			bonus = JSON.parse(grade)*2+18 + JSON.parse(step);
 			combo = JSON.parse(grade)*2+10;
 
@@ -758,7 +778,7 @@ $(document).ready(function()
 			xMax = words[lang].length;
 			xMin = words[lang].length - 20;
 		}
-		console.log(xMin+"-"+xMax);
+		
 		
 		if(e=="min")
 			return xMin;

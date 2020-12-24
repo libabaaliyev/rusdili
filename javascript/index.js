@@ -59,6 +59,20 @@ $(document).ready(function()
 	if(hash){
 		if(heart == 0)
 			callOther("general","notification",hash);
+		else
+		{
+			if(hash != 'notenoughHeart')
+			{
+				spliting = hash.split("&");
+				if(spliting[0] == 'exam-finish'){
+					status = spliting[1];
+					console.log(status)
+					callOther("general","notification",spliting[0],status);
+				}
+			}
+		}
+
+
 	}
 	
 	lesson.click(function(e)
@@ -377,67 +391,19 @@ $(document).ready(function()
 			for (var k = 1; k < k_max; k++)
 			{
 
-				if (k == 1)
-					count_lesson = 3;
-				else
-					count_lesson  = k+1
-
-				if(count_lesson >5)
-					count_lesson = 4;
-				
-				countCrown = '';
-				crownCss = '';
-				if(plan.length>0)
-				{
-					isHave = search_plan(i,k);
-
-					if(isHave != -1){
-						cGrade= isHave.grade;
-						cStep = isHave.step;
-						cExam = isHave.exam;
-						if(cExam != 0){
-							crownCss = 'gold'
-							countCrown = cExam;
-						}
-					}					
-					
-				}
-				else{
-					cGrade = -1;
-					cStep  = -1;
-					
-				}
-
-				if(k == cStep && i == cGrade)
-					activation = "bg-active"
-				
-				else
-					activation = "bg-passive";
-				if(countCrown !=0){
-					progress_percent = 100 * (JSON.parse(countCrown)/count_lesson);
-
-					if(Math.round(progress_percent)>=33&&Math.round(progress_percent)<40)
-						progress_percent = 30;
-					else if(Math.round(progress_percent)>=66&&Math.round(progress_percent)<70)
-						progress_percent = 60;
-
-					
-					progress_css = "progress-"+progress_percent;
-				}
-				else
-					progress_css = 'progress-0';
-				
-				
 				twice = '';
 				if(k % 8 == 0)
 					twice = "twice";
 
-				limitCrown = crown_limit(i);
+				count_lesson = count_l(k);
+				crownData 	 = find_crown(i,k,count_lesson);
+				countCrown 	 = crownData.count_crown;
+				crownCss 	 = crownData.crown_css;
+				activation	 = crownData.activation;
+				progress_css = crownData.progress_css;			
+				limitCrown 	 = crownData.limit_crown;	
+				openingCss 	 = crownData.opening_css;
 
-				if(crown <= limitCrown)
-					openingCss = 'bg-p';
-				else
-					openingCss = '';
 
 				castles = `<li class="`+activation+` `+twice+` level-query-li" data-count="`+count_lesson+`" data-grade="`+i+`" data-step="`+k+`">
 								<div class="castle-border `+progress_css+`"></div>
@@ -460,6 +426,84 @@ $(document).ready(function()
 		}
 	}
 	
+	function count_l(k)
+	{
+		if (k == 1)
+			x = 3;
+		else
+			x  = k + 1;
+
+		if(x > 5)
+			x = 4;
+
+		return x;
+	}
+
+	function find_crown(i,k,count_lesson)
+	{
+		countCrown = '';
+		crownCss = '';
+
+		if(plan.length>0)
+		{
+			isHave = search_plan(i,k);
+
+			if(isHave != -1){
+				cGrade= isHave.grade;
+				cStep = isHave.step;
+				cExam = isHave.exam;
+				if(cExam != 0){
+					crownCss = 'gold'
+					countCrown = cExam;
+				}
+			}					
+			
+		}
+		else{
+			cGrade = -1;
+			cStep  = -1;
+			
+		}
+
+		if(k == cStep && i == cGrade)
+			activation = "bg-active"
+		
+		else
+			activation = "bg-passive";
+		if(countCrown !=0){
+			progress_percent = 100 * (JSON.parse(countCrown)/count_lesson);
+
+			if(Math.round(progress_percent)>=33&&Math.round(progress_percent)<40)
+				progress_percent = 30;
+			else if(Math.round(progress_percent)>=66&&Math.round(progress_percent)<70)
+				progress_percent = 60;
+
+			
+			progress_css = "progress-"+progress_percent;
+		}
+		else
+			progress_css = 'progress-0';
+
+
+
+		limitCrown = crown_limit(i);
+
+		if(crown <= limitCrown)
+			openingCss = 'bg-p';
+		else
+			openingCss = '';
+
+		return {
+					'crown_css'		: crownCss,
+					'count_crown'	: countCrown,
+					'activation'	: activation,
+					'progress_css'	: progress_css,
+					'limit_crown'	: limitCrown,
+					'opening_css'	: openingCss
+
+				}
+	}
+
 	function search_plan(e,v)
 	{
 		for (var i = 0; i < plan.length; i++) {			
@@ -489,11 +533,11 @@ $(document).ready(function()
 		return Math.floor(Math.random()*(max-min+1)+min);
 	}
 
-	function callOther(loc,func,funcData)
+	function callOther(loc,func,funcData,funcData_1)
 	{
 		$.getScript("javascript/"+loc+".js",function(e)
 		{					
-			window[func](funcData);				
+			window[func](funcData,funcData_1);				
 		});
 	}
 

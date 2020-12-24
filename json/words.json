@@ -6095,7 +6095,7 @@
                 },
                 {
                   "orgn": "стоить",
-                  "trns": "qiymət olmaq"
+                  "trns": "dəyər(red: bu işi görməyə dəyər)"
                 },
                 {
                   "orgn": "ошибка",
@@ -7050,8 +7050,8 @@
                   "trns": "qitə, torpaq"
                 },
                 {
-                  "orgn": "seyf",
-                  "trns": "kasa"
+                  "orgn": "сейф",
+                  "trns": "seyf"
                 },
                 {
                   "orgn": "кошелёк",
@@ -7063,7 +7063,7 @@
                 },
                 {
                   "orgn": "звезда",
-                  "trns": "star"
+                  "trns": "ulduz"
                 },
                 {
                   "orgn": "самолёт",
@@ -7083,7 +7083,7 @@
                 },
                 {
                   "orgn": "полка",
-                  "trns": "rack"
+                  "trns": "rəf"
                 },
                 {
                   "orgn": "диван",
@@ -7115,7 +7115,7 @@
                 },
                 {
                   "orgn": "всё время",
-                  "trns": "davamlı"
+                  "trns": "bütün zamanlar"
                 },
                 {
                   "orgn": "показывать / показать кого? что? кому?",
@@ -7712,7 +7712,7 @@
                 },
                 {
                   "orgn": "растительное масло",
-                  "trns": "oil"
+                  "trns": "bitki yağı"
                 },
                 {
                   "orgn": "варенье",

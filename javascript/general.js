@@ -18,6 +18,7 @@ fullDate 	= date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear();
 /*day_aim 	= [];*/
 function notification(event,event_1)
 {
+	console.log(event_1)
 	if(event_1)
 		messageTxt = notifications[lang][event]['message']+appLanguage[lang][event_1];
 	else
@@ -305,29 +306,29 @@ function aim_setting(page)
 		}
 		else
 		{
-			day_aim.etalon = 320; //min 8 ders max 12 ders
+			day_aim.etalon = 280; //min 8 ders max 12 ders
 		}
 	}
 	else if(aim == "average")
 	{
 		if(level == "zero")
 		{
-			day_aim.etalon = 300; //min 6 ders max 12 ders
+			day_aim.etalon = 280; //min 6 ders max 12 ders
 		}
 		else
 		{
-			day_aim.etalon = 500; //min 10 ders max 16 ders
+			day_aim.etalon = 360; //min 10 ders max 16 ders
 		}
 	}
 	else if(aim == "serious")
 	{
 		if(level == "zero")
 		{
-			day_aim.etalon = 350; //min 10 ders max 15 ders
+			day_aim.etalon = 360; //min 10 ders max 15 ders
 		}
 		else
 		{
-			day_aim.etalon = 650; //min 14 ders max 23 ders
+			day_aim.etalon = 500; //min 14 ders max 23 ders
 		}
 	}
 	else if(aim == "crazy")
@@ -338,7 +339,7 @@ function aim_setting(page)
 		}
 		else
 		{
-			day_aim.etalon = 800; //min 20 ders max 33 ders
+			day_aim.etalon = 700; //min 20 ders max 33 ders
 		}
 	}
 
