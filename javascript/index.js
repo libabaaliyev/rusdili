@@ -38,7 +38,7 @@ $(document).ready(function()
 	crown 			= JSON.parse(user.crown);
 	heart 			= JSON.parse(user.heart);
 	aim 			= user.aim;
-	grade 			= user.grade;
+	grade 			= JSON.parse(user.grade);
 
 
 	exam_data = {};
@@ -51,6 +51,7 @@ $(document).ready(function()
 	callOther("general","language");
 	callOther("general","aim_setting","index");
 	callOther("general","start_page","index");
+	grade_control();
 	create_level();
 
 	lesson 	= $(".level-query-li");
@@ -60,17 +61,8 @@ $(document).ready(function()
 		if(heart == 0)
 			callOther("general","notification",hash);
 		else
-		{
 			if(hash != 'notenoughHeart')
-			{
-				spliting = hash.split("&");
-				if(spliting[0] == 'exam-finish'){
-					status = spliting[1];
-					console.log(status)
-					callOther("general","notification",spliting[0],status);
-				}
-			}
-		}
+				callOther("general","notification",hash);
 
 
 	}
@@ -129,7 +121,6 @@ $(document).ready(function()
 			
 		}
 		e.stopPropagation();
-		
 	});
 
 	skip_lesson.click(function(e)
@@ -159,7 +150,6 @@ $(document).ready(function()
 		aim_tab.removeClass("slideInRight");
 		aim_tab.addClass("slideInRight");
 		aim_tab.show();
-
 	});
 	close.click(function()
 	{
@@ -181,7 +171,6 @@ $(document).ready(function()
 		user.aim = aim;
 		save();	
 		callOther("general","aim_setting","index");
-
 	});
 
 	aim_items.click(function()
@@ -246,12 +235,12 @@ $(document).ready(function()
 
 	function crown_limit(e)
 	{
-		if(e < 5)
+		if(e < 6)
 			fk = 19*e;
-		else if(e < 10)
-			fk = 35 * e - 45;
+		else if(e < 11)
+			fk = 31 * e - 60;
 		else
-			fk = 43 * e - 172;
+			fk = 43 * e - 180;
 
 		return fk;
 	}
@@ -342,16 +331,10 @@ $(document).ready(function()
 
 	function create_level()
 	{
-		if(grade == 0){
-			f = 0;
-			g = 5;
-		}
-		else
-		{
-			f = grade-1;
-			g = grade+3;
-		}
-
+				
+		f = grade;
+		g = grade+7;
+		
 
 		for (var i = f; i < g; i++) {
 			
@@ -366,12 +349,8 @@ $(document).ready(function()
 								<label>`+i+`</label>`
 			}
 
-			if(i<5)
-				k_max = 6;
-			else if(i<10)
-				k_max = 9;
-			else
-				k_max = 12;
+			
+			k_max = count_step(i);
 
 
 			castle = `<div id="castles" class="">
@@ -426,6 +405,18 @@ $(document).ready(function()
 		}
 	}
 	
+	function count_step(i)
+	{
+		if(i<5)
+			x = 6;
+		else if(i<10)
+			x = 9;
+		else
+			x = 12;
+
+		return x;
+	}
+
 	function count_l(k)
 	{
 		if (k == 1)
@@ -465,11 +456,14 @@ $(document).ready(function()
 			
 		}
 
-		if(k == cStep && i == cGrade)
+		
+		if(i == grade)
 			activation = "bg-active"
 		
 		else
 			activation = "bg-passive";
+
+
 		if(countCrown !=0){
 			progress_percent = 100 * (JSON.parse(countCrown)/count_lesson);
 
@@ -488,7 +482,7 @@ $(document).ready(function()
 
 		limitCrown = crown_limit(i);
 
-		if(crown <= limitCrown)
+		if(crown < limitCrown)
 			openingCss = 'bg-p';
 		else
 			openingCss = '';
@@ -527,6 +521,31 @@ $(document).ready(function()
 		}		
 	}
 
+	
+	function grade_control()
+	{
+		g1 			= 0;
+		count_exam 	= 0;
+		g2 			= count_step(grade) - 1;
+
+		for (var i = 0; i < plan.length; i++) {
+			if(plan[i]['grade'] == grade){
+				count_exam += JSON.parse(plan[i]['exam']);
+				g1++;
+			}
+		}
+
+		if(g1 == g2)
+		{
+
+			if(count_exam == 19 && g2 == 5 || count_exam == 31 && g2 == 8 || count_exam == 43 && g2 == 11){
+				callOther("general","notification","full-grade");
+				grade++;
+				user.grade = grade;
+				save();
+			}
+		}
+	}
 
 	function random_number(min,max)
 	{

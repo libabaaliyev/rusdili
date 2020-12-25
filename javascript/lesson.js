@@ -30,7 +30,7 @@ $(document).ready(function()
 	skipAd 			= $(".no-thanks");
 	close 			= $(".close-lesson");
 	
-	etalon 			= 3;
+	etalon 			= 2; //default 20
 	current			= 1;
 	correct_count 	= 0;	
 	queque 			= 0;
@@ -41,7 +41,8 @@ $(document).ready(function()
 	question_que 	= 0;
 
 	hash 			= location.hash.substr(1);
-	user 			= JSON.parse(localStorage.user); 
+	user 			= JSON.parse(localStorage.user);
+	crown 			= JSON.parse(user.crown);
 	lang 			= JSON.parse(localStorage.applang); 
 	transl 			= JSON.parse(localStorage.appLanguage);
 	words 			= JSON.parse(localStorage.words);
@@ -84,11 +85,9 @@ $(document).ready(function()
 			category_e 	= exam_data.category;
 			if(category_e == 'step-by-step')
 				learning.show();
-			else if(category_e == 'open-lock')
+			else if(category_e == 'open-lock' || category_e == 'practice')
 				start();
 		}
-		
-
 
 	},200);
 
@@ -242,7 +241,7 @@ $(document).ready(function()
 				}
 				else{
 					first_value 	= 'normal';			
-					question("exam-start","trns","translate",words[lang].length);
+					question("exam-start","trns","translate",(words[lang].length - 1));
 				}
 
 				main.show();
@@ -260,6 +259,7 @@ $(document).ready(function()
 				maxQue 		= selectQue("max",grade,step,exam);
 				q 	   		= minQue				
 				word_learn(first_value,second_value);
+
 			}
 			else if(category_e == "open-lock")
 			{				
@@ -278,6 +278,30 @@ $(document).ready(function()
 				question(category_e,"trns","translate",maxQue);
 
 			}
+			else if(category_e == "practice")
+			{
+				if(grade<5)
+					step = 6;
+				else if(grade<10)
+					step = 9;
+				else
+					step = 12;
+
+
+				if (step == 1)
+					exam_c = 3;
+				else
+					exam_c  = step + 1;
+
+				if(exam_c > 5)
+					exam_c = 4;
+
+				minQue 		= selectQue("min",grade,1,1);
+				maxQue 		= selectQue("max",grade,step,exam_c);
+				q 	   		= minQue;
+				main.show();
+				question(category_e,"trns","translate",maxQue);
+			}
 			
 		}
 		else
@@ -285,11 +309,29 @@ $(document).ready(function()
 			window.location = "main.html";
 		}
 	}
+
+
+	function crown_limit(e)
+	{
+		if(e < 5)
+			fk = 19*e;
+		else if(e < 10)
+			fk = 35 * e - 45;
+		else
+			fk = 43 * e - 172;
+
+		return fk;
+	}
+
 	function lesson_setting()
 	{
 		exam_data 	= JSON.parse(localStorage.examing);
 		grade 		= JSON.parse(exam_data.grade);
-		step 		= JSON.parse(exam_data.step);			
+		step 		= JSON.parse(exam_data.step);
+
+		if(grade == -1)
+			grade = JSON.parse(user.grade);
+
 		category_e 	= exam_data.category;			
 		exam_i 		= search_plan(grade,step);
 		(exam_i == -1) ? exam = 0 : exam = plan[exam_i]['exam'];
@@ -337,32 +379,38 @@ $(document).ready(function()
 		
 		if(e == 'normal'){
 			if(v == 'word')
-				q = random_number(0,words[lang].length);
+				q = random_number(0,(words[lang].length-1));
 			else if(v == 'sentence')
-				q = random_number(0,sentences[lang][sentence_category].length);
+				q = random_number(0,(sentences[lang][sentence_category].length - 1));
+
+			preparation(v)
 		}
 		else if(e == 'easy'){
 
+			preparation(v)
 			q += 1;
 			if(q>=maxQue)
 				q = maxQue;
 		}
 		else{
 			q =	e;
+			preparation(v)
 		}
+	}
+	function preparation(v)
+	{
 
-
-			if(v == 'word')
-			{
-				newWord_orgn  	= words[lang][q]['orgn']; 
-				newWord_trns  	= words[lang][q]['trns'];
-			}
-			else
-			{
-				newWord_orgn  	= regulation(sentences[lang][sentence_category][q]['orgn']); 
-				newWord_trns  	= sentences[lang][sentence_category][q]['trns'];
-			}
-			newWord_trnsk 	= convert_latin(newWord_orgn);			
+		if(v == 'word')
+		{
+			newWord_orgn  	= words[lang][q]['orgn']; 
+			newWord_trns  	= words[lang][q]['trns'];
+		}
+		else
+		{
+			newWord_orgn  	= regulation(sentences[lang][sentence_category][q]['orgn']); 
+			newWord_trns  	= sentences[lang][sentence_category][q]['trns'];
+		}
+		newWord_trnsk 	= convert_latin(newWord_orgn);			
 		
 
 		question_data.push(q);
@@ -383,26 +431,17 @@ $(document).ready(function()
 		if(exam == "exam-start")
 		{
 			que 	= random_number(0,JSON.parse(q));
-			etalon 	= 10;
+			etalon 	= 11;
 		}
 		else if(exam == "step-by-step") 
 		{
 			question_que 	= random_number(0,(question_data.length-1));			
 			que 			= question_data[question_que];
-			etalon 			= 20;
+			
 		}
-		else if(exam == "open-lock")
-		{
+		else if(exam == "open-lock" || exam == "practice")
+			que = random_number(JSON.parse(minQue),JSON.parse(maxQue));
 
-			que = random_number(minQue,JSON.parse(maxQue));
-			etalon = 20;	
-			console.log(minQue+"--"+maxQue)		
-		}
-		else if(exam == "practice")
-		{
-			que = random_number(0,JSON.parse(q));
-			etalon *=2;
-		}
 
 		if(second_value == 'word')
 		{
@@ -453,7 +492,7 @@ $(document).ready(function()
 
 	function answers_all(q,cat,command)
 	{
-
+		console.log(q+"--"+cat+"--"+command+"--"+second_value)
 		$("#answers").html("");
 
 		qq = random_number(1,4);
@@ -461,28 +500,28 @@ $(document).ready(function()
 		for (var i = 1; i < 5; i++) {
 			
 			if(second_value == 'word')
-				que = random_number(0,words[lang].length);
+				que = random_number(0,(words[lang].length - 1));
 			else
-				que = random_number(0,sentences[lang][sentence_category].length);
+				que = random_number(0,(sentences[lang][sentence_category].length-1));
 			
-			/*if(command == "translate" || command == "complete")
+			if(second_value == 'word'){
+				answ_txt 		= words[lang][que][cat];
+				correct_answ 	= q[cat];
+			}
+			else
 			{
-				*/if(second_value == 'word'){
-					answ_txt 		= words[lang][que][cat];
+				if(cat == 'orgn')
+				{
+					answ_txt 		= regulation(sentences[lang][sentence_category][que][cat]);
+					correct_answ 	= regulation(q[cat]);	
+				}
+				else
+				{
+					answ_txt 		= sentences[lang][sentence_category][que][cat];
 					correct_answ 	= q[cat];
 				}
-				else{
-					if(cat == 'orgn'){
-						answ_txt 		= regulation(sentences[lang][sentence_category][que][cat]);
-						correct_answ 	= regulation(q[cat]);	
-					}
-					else{
-						answ_txt 		= sentences[lang][sentence_category][que][cat];
-						correct_answ 	= q[cat];
-					}
-				}						
-			/*}*/
-
+			}						
+		
 			if(i == qq)
 				answ_html = `<span class="form-button text-dark question-answer" data-answer="true">`+correct_answ+`</span>`;
 			else
@@ -530,20 +569,23 @@ $(document).ready(function()
 		answer_tab.addClass("bg-"+answ);
 
 		if(!answ){
-			if(heart>0){
-				heart-=1;			
-				user.heart = heart;
-				localStorage.user = JSON.stringify(user);
-				
-			}
-			else
+			if(!hash)
 			{
-				localStorage.isPage = 'shopping';
-				setTimeout(function()
+				if(heart>0){
+					heart-=1;			
+					user.heart = heart;
+					localStorage.user = JSON.stringify(user);
+					
+				}
+				else
 				{
-					window.location 	= "main.html#notenoughHeart";
-				},500)
-				
+					localStorage.isPage = 'shopping';
+					setTimeout(function()
+					{
+						window.location 	= "main.html#notenoughHeart";
+					},500)
+					
+				}
 			}
 		}
 		callOther("general","start_page","index","lesson");
@@ -553,94 +595,102 @@ $(document).ready(function()
 
 	function next()
 	{
-		if(correcting)
+		if(hash)
 			current++;
+		else
+			if(correcting)
+				current++;
 		percent = (current/etalon)*100;
 
 		progressBar.css("width",percent+"%");
 
 		if(percent >= 100)
 			finish();
-
-		
-		$(".question-answer").removeClass("selected");
-
-		answer_tab.fadeOut();
-
-		
-		if(hash == "exam-get-start")
-		{
-			if(userLevel == "zero"){
-				
-				max = grade*10+100;
-				
-			}
-			else
-			{
-				max = grade*10+200;
-
-			}
-
-			if(words.length<max)
-				max = words[lang].length;
-		}
 		else
-			max = words[lang].length;
-		
-
-		if(current%2 == 0){
-			if(current%3 == 0)
-				question(category_e,"orgn","translate",max);
-			else
-				question(category_e,"orgn","complete",max);				
+		{
+			$(".question-answer").removeClass("selected");
+			answer_tab.fadeOut();
 			
+			if(hash == "exam-get-start")
+			{
+				if(userLevel == "zero")
+					max = grade*10+100;				
+				else
+					max = grade*10+200;
+
+				if(words.length<max)
+					max = words[lang].length - 1;
+			}
+			else
+				max = words[lang].length - 1;			
+
+			if(current %2 == 0)
+			{
+				if(current %3 == 0)
+					question(category_e,"orgn","translate",max);
+				else
+					question(category_e,"orgn","complete",max);				
+			}
+			else
+				question(category_e,"trns","translate",max);
 		}
-		else{
-			question(category_e,"trns","translate",max);
-		}		
 	}
 
 	function finish()
 	{
 		if(hash == "exam-get-start")
 		{
-			console.log(hash)
 			loading_next.show();
 
 			if(correct_count>5)
 			{
 				if(correct_count>8){
 
-					if(correct_count == 10)
-						status = "excellent";
+					if(correct_count == 10){
+						grade 	= 5;												
+						status 	= "excellent";
+					}
 					
-					else
-						status = "very-good";
+					else{
+						grade 	= 4;
+						status 	= "very-good";
+					}
 
 				}
-				else
-					status = "good";
+				else{
+					grade 	= 3;
+					status 	= "good";
+				}
 			}
 			else
 			{
 				if(correct_count<3)
 				{
-					if(correct_count<1)
+					if(correct_count<1){
+						grade 	= 0;
 						status = "so-bad";
+					}
 					
-					else
-						status = "bad";					
+					else{
+						grade 	= 1;
+						status 	= "bad";					
+					}
 				}
-				else
-					status = "low-good";				
+				else{
+					grade 	= 2;
+					status 	= "low-good";				
+				}
 			}
-			
+			crown 				= grade*19;
+			user.grade 			= grade;
+			user.crown 			= crown;
+			localStorage.user 	= JSON.stringify(user);
 
 			setTimeout(function()
 			{
 
 				loading_next.hide();
-				window.location = "main.html#exam-finish&"+status;
+				window.location = "main.html#exam-"+status;
 
 			},3500);
 
@@ -752,20 +802,25 @@ $(document).ready(function()
 
 	function search_plan(e,v)
 	{
-		for (var i = 0; i < plan.length; i++) {
-			
-			if(plan[i]['grade'] == e && plan[i]['step'] == v)
-				return i;
-			else{
-				if(i == (plan.length - 1))
-				{
-					k = -1;
-					return k;
+		if(plan.length>0)
+		{
+			for (var i = 0; i < plan.length; i++) {
+				
+				if(plan[i]['grade'] == e && plan[i]['step'] == v)
+					return i;
+				else{
+					if(i == (plan.length - 1))
+					{
+						k = -1;
+						return k;
+					}
+
 				}
 
 			}
-
 		}
+		else
+			return -1;
 	}
 
 	function selectQue(e,g,s,ex)
@@ -775,7 +830,7 @@ $(document).ready(function()
 		xMax = xMin+10;
 		
 		if(xMax > words[lang].length){
-			xMax = words[lang].length;
+			xMax = words[lang].length - 1;
 			xMin = words[lang].length - 20;
 		}
 		
@@ -788,7 +843,6 @@ $(document).ready(function()
 
 	function callOther(loc,func,funcData,funcData_1,funcData_2)
 	{
-
 		$.getScript("javascript/"+loc+".js",function(e)
 		{
 			window[func](funcData,funcData_1,funcData_2);				

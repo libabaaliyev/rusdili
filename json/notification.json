@@ -45,13 +45,26 @@
 
 		"level-select"		: {"message"	: "Choose your level of Russian", "info": "info"},
 
-		"exam-finish" 		: {"message"	: "Level exam is over. Exam result:", "info": "info"},
+		"exam-so-bad"		: {"message"	: "Level exam is over. You will start from zero.", "info": "info"},
+
+		"exam-bad" 			: {"message"	: "Level exam is over. You will start at checkpoint number 1", "info": "info"},
+
+		"exam-low-good" 	: {"message"	: "Level exam is over. You will start at checkpoint number 2", "info": "info"},
+
+		"exam-good" 		: {"message"	: "Level exam is over. You will start at checkpoint number 3", "info": "info"},
+
+		"exam-very-good" 	: {"message"	: "Level exam is over. You will start at checkpoint number 4", "info": "info"},
+
+		"exam-excellent" 	: {"message"	: "Level exam is over. You will start at checkpoint number 5", "info": "info"},
+
 
 		"full-aim"			: {"message"	: "Congratulations, you have reached the daily goal !!!", "info": "success"},
 
 		"lock-castle"		: {"message"	: "The lesson is locked for now because you don't have enough crowns.", "info": "error"},
 
-		"go-test"			: {"message"	: "Let's consolidate what we have learned !!!", "info": "info"}
+		"go-test"			: {"message"	: "Let's consolidate what we have learned !!!", "info": "info"},
+
+		"full-grade"		: {"message"	: "Congratulations, you have reached the new checkpoint !!!", "info": "success"}
 
 
 
@@ -59,20 +72,31 @@
 	"tr":
 	{
 		"confirmText"		: "Tamam",
+
 		"cancel"			: "İptal",
+
 		"confirmDelete"		: "Eminim, sil!",
 
 		"empty-input"		: {"message"	: "Tüm alanları doldurun",	"info": "error"},
 
 		"notUserMail"		: {"message"	: "Yanlış e-posta veya şifre.", "info": "error"},
+
 		"notUser"			: {"message"	: "Yanlış kullanıcı adı veya şifre.", "info": "error"},
+
 		"yesUser"			: {"message"	: "Giriş başarılı !!!", "info": "success"},
+
 		"registryOk"		: {"message"	: "Tebrikler, hesabınız başarıyla oluşturuldu.", "info": "success"},
+
 		"registryError"		: {"message"	: "Kayıt işlemi sırasında bir şeyler ters gitti. Lütfen tekrar deneyin.", "info": "error"},
+
 		"existUsername"		: {"message"	: "Üzgünüz, kullanıcı adı zaten mevcut. Lütfen başka bir kullanıcı adı girin.", "info": "error"},
+
 		"existingEmail"		: {"message"	: "Üzgünüz, e-posta zaten var. Lütfen başka bir e-posta girin.", "info": "error"},
+
 		"emailvalidate"		: {"message"	: "Geçersiz bir e-posta adresi girdiniz. Lütfen tekrar deneyin.", "info": "error"},
+
 		"password-validate"	: {"message"	: "En az 8,en fazla 20 karakter kullanmalısınız, ayrıca boşluk kullanılamaz.", "info": "info"},
+
 
 		"username-validate"	: {"message"	: "En az 5,en fazla 14 karakter kullanmalısınız, ayrıca boşluk kullanılamaz.", "info": "info"},
 
@@ -94,40 +118,62 @@
 
 		"level-select"		: {"message"	: "Rusça seviyenizi seçin", "info": "info"},
 
-		"exam-finish" 		: {"message"	: "Seviye sınavı bitdi. Sınav sonucu: ", "info": "info"},
+
+		"exam-so-bad"		: {"message"	: "Seviye sınavı bitdi. Derslere başlama seviyeniz 0", "info": "info"},
+
+		"exam-bad" 			: {"message"	: "Seviye sınavı bitdi. Derslere başlama seviyeniz 1", "info": "info"},
+
+		"exam-low-good" 	: {"message"	: "Seviye sınavı bitdi. Derslere başlama seviyeniz 2", "info": "info"},
+
+		"exam-good" 		: {"message"	: "Seviye sınavı bitdi. Derslere başlama seviyeniz 3", "info": "info"},
+
+		"exam-very-good" 	: {"message"	: "Seviye sınavı bitdi. Derslere başlama seviyeniz 4", "info": "info"},
+
+		"exam-excellent" 	: {"message"	: "Seviye sınavı bitdi. Derslere başlama seviyeniz 5", "info": "info"},
+
 
 		"full-aim"			: {"message"	: "Tebrikler, günlük hedefe ulaştınız !!!", "info": "success"},
 
 		"lock-castle"		: {"message"	: "Yeterli sayıda taçınız olmadığından ders şu anlık kilitli.", "info": "error"},
 
-		"go-test"			: {"message"	: "Öğrendiklerimizi pekiştirelim!!!", "info": "info"}
+		"go-test"			: {"message"	: "Öğrendiklerimizi pekiştirelim!!!", "info": "info"},
+
+		"full-grade"		: {"message"	: "Tebrikler, yeni kontrol noktasına ulaştınız !!!", "info": "success"}
 
 	},
 	"az":
 	{
 		"confirmText"		: "Tamam",
+
 		"cancel"			: "İmtina",
+
 		"confirmDelete"		: "Əminəm, sil!",
 
 		"empty-input"		: {"message"	: "Bütün xanaları doldurun",	"info": "error"},
 
 		"notUserMail"		: {"message"	: "Yanlış e-poçt və ya şifrə.", "info": "error"},
+
 		"notUser"			: {"message"	: "Yanlış istifadəçi adı və ya şifrə.", "info": "error"},
+
 		"yesUser"			: {"message"	: "Giriş uğurla həyata keçirildi !!!", "info": "success"},
+
 		"registryOk"		: {"message"	: "Təbrik edirik, hesabınız uğurla yaradıldı.", "info": "success"},
+
 		"registryError"		: {"message"	: "Qeydiyyatı zamanı bir şey səhv oldu. Xahiş edirik yenidən cəhd edin.", "info": "error"},
+
 		"existUsername"		: {"message"	: "Bağışlayın, istifadəçi adı artıq mövcuddur. Xahiş edirik başqa istifadəçi adı daxil edin.", "info": "error"},
+
 		"existEmail"		: {"message"	: "Bağışlayın, e-poçt artıq mövcuddur. Xahiş edirik başqa bir e-poçt daxil edin.", "info": "error"},
+
 		"emailvalidate"		: {"message"	: "Yanlış bir e-poçt ünvanı daxil etmisiniz. Yenidən cəhd edin.", "info": "error"},
 		
-
 		"password-validate" : {"message"	: "Şifrənizdə ən az 8,ən çox 20 simvoldan istifadə edə bilərsiniz. Şifrədə boşluqdan istifadə etmək olmaz.", "info": "info"},
 
 		"username-validate" : {"message"	: "Ən az 5,ən çox 14 simvoldan istifadə edə bilərsiniz və boşluqdan istifadə etmək olmaz.", "info": "info"},
 
 		"updateOk"			: {"message"	: "Təbriklər, düzəlişlər uğurla həyata keçirildi.", "info": "success"},
 
-		"updateError"		: {"message"	: "Düzəliş zamanı xəta baş verdi. Xahiş edirik yenidən cəhd edin.", "info": "error"},		
+		"updateError"		: {"message"	: "Düzəliş zamanı xəta baş verdi. Xahiş edirik yenidən cəhd edin.", "info": "error"},
 
 		"choose-something"	: {"message"	: "Birini seçməlisiniz.",	"info": "error"},
 
@@ -143,13 +189,27 @@
 
 		"level-select"		: {"message"	: "Bilgi səviyənizi seçin", "info": "info"},
 
-		"exam-finish" 		: {"message"	: "Səviyyə imtahanı bitdi. imtahan nəticəsi: ", "info": "info"},
+
+		"exam-so-bad"		: {"message"	: "Səviyyə imtahanı bitdi. Sıfırdan başlayacaqsınız.", "info": "info"},
+
+		"exam-bad" 			: {"message"	: "Səviyyə imtahanı bitdi. 1 nömrəli keçid məntəqəsindən başlayacaqsınız", "info": "info"},
+
+		"exam-low-good" 	: {"message"	: "Səviyyə imtahanı bitdi. 2 nömrəli keçid məntəqəsindən başlayacaqsınız", "info": "info"},
+
+		"exam-good" 		: {"message"	: "Səviyyə imtahanı bitdi. 3 nömrəli keçid məntəqəsindən başlayacaqsınız", "info": "info"},
+
+		"exam-very-good" 	: {"message"	: "Səviyyə imtahanı bitdi. 4 nömrəli keçid məntəqəsindən başlayacaqsınız", "info": "info"},
+
+		"exam-excellent" 	: {"message"	: "Səviyyə imtahanı bitdi. 5 nömrəli keçid məntəqəsindən başlayacaqsınız", "info": "info"},
+
 
 		"full-aim"			: {"message"	: "Təbriklər, günlük hədəfə çatdınız !!!", "info": "success"},
 
 		"lock-castle"		: {"message"	: "Yetərli sayda tacınız olmadığından dərs bağlıdır.", "info": "error"},
 
-		"go-test"			: {"message"	: "Öyrəndiklərimizi təkrarlayaq!!!", "info": "info"}
+		"go-test"			: {"message"	: "Öyrəndiklərimizi təkrarlayaq!!!", "info": "info"},
+
+		"full-grade"		: {"message"	: "Təbriklər, yeni keçid məntəqəsinə çatdınız !!!", "info": "success"}
 
 	},
 	"ru":
@@ -192,13 +252,29 @@
 
 		"level-select"		: {"message"	: "Выбери свой уровень русского", "info": "info"},
 
-		"exam-finish" 		: {"message"	: "Контрольный экзамен окончен. Результат экзамена: ", "info": "info"},
+
+
+		"exam-so-bad"		: {"message"	: "Контрольный экзамен окончен. Вы начнете с нуля.", "info": "info"},
+
+		"exam-bad" 			: {"message"	: "Контрольный экзамен окончен. Вы начнете на Контрольно Пропускной Пункт № 1.", "info": "info"},
+
+		"exam-low-good" 	: {"message"	: "Контрольный экзамен окончен. Вы начнете на Контрольно Пропускной Пункт № 2.", "info": "info"},
+
+		"exam-good" 		: {"message"	: "Контрольный экзамен окончен. Вы начнете на Контрольно Пропускной Пункт № 3.", "info": "info"},
+
+		"exam-very-good" 	: {"message"	: "Контрольный экзамен окончен. Вы начнете на Контрольно Пропускной Пункт № 4.", "info": "info"},
+
+		"exam-excellent" 	: {"message"	: "Контрольный экзамен окончен. Вы начнете на Контрольно Пропускной Пункт № 5.", "info": "info"},
+
+
 
 		"full-aim"			: {"message"	: "Поздравляем, вы достигли ежедневной цели !!!", "info": "success"},
 
 		"lock-castle"		: {"message"	: "Урок пока заблокирован, потому что у вас недостаточно корон.", "info": "error"},
 
-		"go-test"			: {"message"	: "Давайте закрепим то, что мы узнали !!!", "info": "info"}
+		"go-test"			: {"message"	: "Давайте закрепим то, что мы узнали !!!", "info": "info"},
+
+		"full-grade"		: {"message"	: "Поздравляем, вы достигли нового контрольно-пропускной пункт !!!", "info": "success"}
 
 	}
 

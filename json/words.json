@@ -4465,7 +4465,7 @@
                 },
                 {
                   "orgn": "извинять / извинить",
-                  "trns": "bağışlamaq"
+                  "trns": "bəhanə"
                 },
                 {
                   "orgn": "кафе",
@@ -4696,10 +4696,7 @@
                   "orgn": "на нём",
                   "trns": "sizin üzərinizdə"
                 },
-                {
-                  "orgn": "им",
-                  "trns": "bununla bağlı bir şey et"
-                },
+                
                 {
                   "orgn": "с ним",
                   "trns": "onunla olmaq"
@@ -4942,7 +4939,7 @@
                 },
                 {
                   "orgn": "сумка",
-                  "trns": "bag"
+                  "trns": "çanta"
                 },
                 {
                   "orgn": "море",
@@ -5230,7 +5227,7 @@
                 },
                 {
                   "orgn": "до свидания",
-                  "trns": "veda"
+                  "trns": "sağol(vidalaşmaq mənasında)"
                 },
                 {
                   "orgn": "конечно",
@@ -5310,7 +5307,7 @@
                 },
                 {
                   "orgn": "жена",
-                  "trns": "mənfəət"
+                  "trns": "arvad(həyat yoldaşı)"
                 },
                 {
                   "orgn": "мать",

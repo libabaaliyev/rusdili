@@ -2249,7 +2249,7 @@
 
             {
                "trns": "Bana yardımcı olurmusunuz, lütfen?",
-               "orgn" : "Вы не могли бы мне помочь, пожалуйста? (Vy ne mogli by mne pomoch-, pozhaluysta?)",
+               "orgn" : "Вы не могли бы мне помочь, пожалуйста? (Vy ne mogli by Мне pomoch-, pozhaluysta?)",
                "mng" : "Yardım isteme"
             },
             {
@@ -2334,7 +2334,7 @@
             },
             {
                "trns": "Ben ... yaşındayım.",
-               "orgn" : "Мне...лет. (Mne...let.)",
+               "orgn" : "Мне...лет. (Мне...let.)",
                "mng" : "Yaşın hakkında cevap verme"
             },
             {
@@ -2520,17 +2520,17 @@
          
             {
                "trns": "Hastaneye gitmem lazım.",
-               "orgn" : "Мне нужно в больницу. (Mne nuzhno v bol-nitsu.)",
+               "orgn" : "Мне нужно в больницу. (Мне nuzhno v bol-nitsu.)",
                "mng" : "Hastaneye götürülmek isteme"
             },
             {
                "trns": "Hastayım.",
-               "orgn" : "Мне плохо. (Mne ploho.)",
+               "orgn" : "Мне плохо. (Мне ploho.)",
                "mng" : "Travel...Health...Emergency...2...desc"
             },
             {
                "trns": "Derhal doktoru görmem gerekiyor!",
-               "orgn" : "Мне срочно нужно к врачу! (Mne srochno nuzhno k vrachu!)",
+               "orgn" : "Мне срочно нужно к врачу! (Мне srochno nuzhno k vrachu!)",
                "mng" : "Acil tıbbi müdahale isteme"
             },
             {
@@ -2705,7 +2705,7 @@
             },
             {
                "trns": "Bunu günde kaç defa almam gerekiyor?",
-               "orgn" : "Сколько раз в день мне нужно это принимать? (Skol-ko raz v den- mne nuzhno eto prinimat-?)",
+               "orgn" : "Сколько раз в день мне нужно это принимать? (Skol-ko raz v den- Мне nuzhno eto prinimat-?)",
                "mng" : "İlacın dozajı hakkında sorma"
             },
             {
@@ -2715,7 +2715,7 @@
             },
             {
                "trns": "Güneşte kababilir/ yüzmeye gidebilir/ spor yapabilir/ alkol alabilir miyim?",
-               "orgn" : "Мне можно находиться на солнце/плавать/заниматься спортом/употреблять алкоголь? (Mne mozhno nakhodit-sya na solntse/plavat-/zanimat-sya sportom/upotreblyat- alkogol-?)",
+               "orgn" : "Мне можно находиться на солнце/плавать/заниматься спортом/употреблять алкоголь? (Мне mozhno nakhodit-sya na solntse/plavat-/zanimat-sya sportom/upotreblyat- alkogol-?)",
                "mng" : "Hastalığına rağmen bir takım aktivitelere devam edip edemeyeceğini sorma"
             },
             {
@@ -2975,12 +2975,12 @@
             },
             {
                "trns": "Fiş alabilir miyim lütfen?",
-               "orgn" : "Можно мне чек, пожалуйста? (Mozhno mne chek, pozhaluysta?)",
+               "orgn" : "Можно мне чек, пожалуйста? (Mozhno Мне chek, pozhaluysta?)",
                "mng" : "Fiş sorma"
             },
             {
                "trns": "Bir poşet alabilir miyim lütfen?",
-               "orgn" : "Можно мне пакет, пожалуйста? (Mozhno mne paket, pozhaluysta?)",
+               "orgn" : "Можно мне пакет, пожалуйста? (Mozhno Мне paket, pozhaluysta?)",
                "mng" : "Bir poşet sorma"
             },
             {
@@ -3040,7 +3040,7 @@
             },
             {
                "trns": "Bu bende güzel duruyor mu?",
-               "orgn" : "Мне это идёт? (Mne eto idot?)",
+               "orgn" : "Мне это идёт? (Мне eto idot?)",
                "mng" : "Elbisenin parçasının dıuruşu hakkında fikir danışma"
             },
             {
@@ -3723,7 +3723,7 @@
             },
             {
                "trns": "Lütfen başka bir battaniye/yastık/havlu getirebilir misiniz?",
-               "orgn" : "Не могли бы Вы мне принести еще одно/одну одеяло/подушку/полотенце? (Ne mogli by Vy mne prinesti yeshche odno/odnu odeyalo/podushku/polotentse?)",
+               "orgn" : "Не могли бы Вы мне принести еще одно/одну одеяло/подушку/полотенце? (Ne mogli by Vy Мне prinesti yeshche odno/odnu odeyalo/podushku/polotentse?)",
                "mng" : "İlave malzeme isteme"
             },
             {
@@ -3803,7 +3803,7 @@
             },
             {
                "trns": "Uyandırma hizmeti yapılmadı.",
-               "orgn" : "Мне не позвонили, чтобы разбудить. (Mne ne pozvonili, chtoby razbudit-.)",
+               "orgn" : "Мне не позвонили, чтобы разбудить. (Мне ne pozvonili, chtoby razbudit-.)",
                "mng" : "Şikayet"
             },
             {
@@ -4053,7 +4053,7 @@
             },
             {
                "trns": "Onun haritada nerede olduğunu bana gösterir misiniz?",
-               "orgn" : "Можете показать мне это на карте? (Mozhete pokazat- mne eto na karte?)",
+               "orgn" : "Можете показать мне это на карте? (Mozhete pokazat- Мне eto na karte?)",
                "mng" : "Haritada belli bir yer sorma"
             },
             {
@@ -4123,7 +4123,7 @@
             },
             {
                "trns": "...ye nasıl varırım?",
-               "orgn" : "Как мне добраться до...? (Kak mne dobrat-sya do ...?)",
+               "orgn" : "Как мне добраться до...? (Kak Мне dobrat-sya do ...?)",
                "mng" : "Belli bir yere yön sorma"
             },
             {
@@ -4393,7 +4393,7 @@
             },
             {
                "trns": "...[yer]... -e gitmem gerekiyor.",
-               "orgn" : "Мне нужно доехать до ...[место]... (Mne nuzhno doyekhat- do ...[mesto]...)",
+               "orgn" : "Мне нужно доехать до ...[место]... (Мне nuzhno doyekhat- do ...[mesto]...)",
                "mng" : "Taksiciye nereye gitmek istediğini söyleme"
             },
             {
@@ -4433,7 +4433,7 @@
             },
             {
                "trns": "Sigortaya ihtiyacım yok.",
-               "orgn" : "Мне не нужна страховка (Mne ne nuzhna strakhovka)",
+               "orgn" : "Мне не нужна страховка (Мне ne nuzhna strakhovka)",
                "mng" : "Hiç sigorta istememe"
             },
             {
@@ -4516,7 +4516,7 @@
             },
             {
                "trns": "Benim evime mi yoksa senin evine mi gidelim?",
-               "orgn" : "Ко мне или к тебе? (Ko mne ili k tebe?)",
+               "orgn" : "Ко мне или к тебе? (Ko Мне ili k tebe?)",
                "mng" : "Birine geceyi nerede geçirmek istediğini sorma"
             },
             {
@@ -8275,7 +8275,7 @@
             },
             {
                "trns": "Mən ... yaşındayam.",
-               "orgn": "Мне ... лет. (Mne...let.)",
+               "orgn": "Мне ... лет. (Мне...let.)",
                "mng": "Yaşınıza cavab verməyin"
             },
             {
@@ -8471,7 +8471,7 @@
             },
             {
                "trns": "Dərhal həkimə müraciət etməliyəm!",
-               "orgn": "Мне срочно нужно к врачу! (Mne srochno nuzhno k vrachu!)",
+               "orgn": "Мне срочно нужно к врачу! (Мне srochno nuzhno k vrachu!)",
                "mng": "Təcili tibbi yardım axtarırıq"
             },
             {
@@ -8577,7 +8577,7 @@
             },
             {
                "trns": "Gündə neçə dəfə bunu qəbul etməliyəm?",
-               "orgn": "Сколько раз в день мне нужно это принимать? (Skol-ko raz v den- mne nuzhno eto prinimat-?)",
+               "orgn": "Сколько раз в день мне нужно это принимать? (Skol-ko raz v den- Мне nuzhno eto prinimat-?)",
                "mng": "Dərmanın dozası barədə soruşmayın"
             },
             {
@@ -8587,7 +8587,7 @@
             },
             {
                "trns": "Günəş vannası ala bilərəm / üzgüçülük edə bilərəmmi / idman edə bilərəmmi? spirtli içki içə bilərəmmi?",
-               "orgn": "Mne можно находиться на солнце / плавать / заниматься спортом / употреблять алкоголь? (Mne mozhno nakhodit-sya na solntse / plavat- / zanimat- sya spor?)",
+               "orgn": "Мне можно находиться на солнце / плавать / заниматься спортом / употреблять алкоголь?",
                "mng": "Xəstəliyinizə baxmayaraq bəzi fəaliyyətlərə davam edib etməyəcəyinizi soruşmayın"
             },
             {
@@ -8725,7 +8725,7 @@
             },
             {
                "trns": "süd / laktoza / süd məhsulu",
-               "orgn": "молоко / лактоза / молочные produkty (moloko / lactoza / molochnyye produkty)",
+               "orgn": "молоко / лактоза /молочные продукты",
                "mng": "Qida allergiyası"
             },
             {
@@ -8815,12 +8815,12 @@
             },
             {
                "trns": "Xahiş edirəm qəbz ala bilərəm?",
-               "orgn": "Можно мне чек, пожалуйста? (Mozhno mne chek, pozhaluysta?)",
+               "orgn": "Можно мне чек, пожалуйста? (Mozhno Мне chek, pozhaluysta?)",
                "mng": "Qəbz istəmə"
             },
             {
                "trns": "Xahiş edirəm bir çantam ola bilər?",
-               "orgn": "Можно мне пакет, пожалуйста? (Mozhno mne paket, pozhaluysta?)",
+               "orgn": "Можно мне пакет, пожалуйста? (Mozhno Мне paket, pozhaluysta?)",
                "mng": "Çanta istəmə"
             },
             {
@@ -8860,7 +8860,7 @@
             },
             {
                "trns": "Bu, mənə yaxşı görünürmü?",
-               "orgn": "Мне это идёт? (Mne eto idot?)",
+               "orgn": "Мне это идёт? (Мне eto idot?)",
                "mng": "Geyim parçasının dünyaya gəlməsi ilə bağlı məsləhətləşmə"
             },
             {
@@ -8939,34 +8939,24 @@
                "mng": "Halal yeməklərin olub olmadığını soruşmaq"
             },
             {
-               "trns": "Maç oynayırsınız? ... matçı izləmək istəyirik.",
-               "orgn": "Вы показываете спортивные события? Mənim otelim geri qayıtdıqdan sonra ... oyun. (Vy pokazyvayete sportivnyye sobytiya? My by khoteli posmotret- ... igru.",
+               "trns": "İdman tədbirlərin göstərirsiniz?",
+               "orgn": "Вы показываете спортивные события? ",
                "mng": "Yemək yeyərkən və ya yeməkdən sonra bir oyun izləmək istəyirsən"
             },
             {
                "trns": "Xahiş edirəm menyunu görə bilərəmmi?",
-               "orgn": "Можно посмотреть меню, пожалуйста? (Mozhno posmotret- menyu, pozhaluysta?)",
+               "orgn": "Можно посмотреть меню, пожалуйста? ",
                "mng": "Menyunu görmək istəmirəm"
             },
             {
-               "trns": "Bağışlayın. Sifariş etmək istəyirik, xahiş edirik.",
-               "orgn": "Извините, mы by хотели сделать заказ. (İzvinite, my by khoteli sdelat- zakaz.)",
+               "trns": "Bağışlayın, biz sifariş etmək istəyirik.",
+               "orgn": "Извините, мы хотим заказать.",
                "mng": "Garsona sifariş verməyə hazır olduğunuzu deməyin"
             },
             {
                "trns": "Menyuda nə tövsiyə edərdiniz?",
-               "orgn": "Что бы Вы посоветовали из меню? (Chto by Vy posovetovali iz menyu?)",
+               "orgn": "Что бы Вы посоветовали из меню? ",
                "mng": "Garsondan menyudan bir şey tövsiyə edə biləcəyini soruşma"
-            },
-            {
-               "trns": "Bir ixtisasınız var?",
-               "orgn": "Есть ли у заведения фирменное блюдо? (Yestli u zavedeniya firmennoye blyudo?)",
-               "mng": "Restoranın bir ixtisasının olub olmadığını soruşmaq"
-            },
-            {
-               "trns": "Yerli bir ixtisasınız varmı?",
-               "orgn": "Estь li mestnoe firmennoe blydo? (Yest- li mestnoye firmennoye blyudo?)",
-               "mng": "Restoranın yerli bir ixtisası olub olmadığını soruşmaq"
             },
             {
                "trns": "...e qarşı allergiyam var. Buraya ... da daxildir?",
@@ -8995,7 +8985,7 @@
             },
             {
                "trns": "salat",
-               "orgn": "salat (salat)",
+               "orgn": "салат",
                "mng": "boşqab"
             },
             {
@@ -9024,8 +9014,8 @@
                "mng": "ət növü"
             },
             {
-               "trns": "Etimin orta / orta / yaxşı bişmiş olmasını istəyirəm.",
-               "orgn": "Yay otel, myoso nedojarennım / средней готовности / xoroşo projarennım. (YA by khotel moyo myaso nedozharennym / sredney gotovnosti / khoroshorennym)",
+               "trns": "Ətimin orta / orta / yaxşı bişmiş olmasını istəyirəm.",
+               "orgn": "Я хочу, чтобы мясо было средне / хорошо прожаренным.",
                "mng": "Garsona ətinizin necə hazırlanmasını istədiyinizi bildirmək"
             },
             {
@@ -9104,7 +9094,7 @@
                "mng": "Yeməyi sevməyin"
             },
             {
-               "trns": "İltifatlarımı rəisə verin.",
+               "trns": "İltifatlarımı rəisə çatdırın.",
                "orgn": "Передайте мою похвалу шефу! (Peredayte moyu pokhvalu shefu!)",
                "mng": "Yeməyi sevməyin"
             },
@@ -9124,7 +9114,7 @@
                "mng": "Pişirmə müddəti çox uzun"
             },
             {
-               "trns": "Buna sifariş vermədim, ... sifariş etdim.",
+               "trns": "Bunu sifariş vermədim, ... sifariş etdim.",
                "orgn": "Я не заказывал ... Я заказывал.",
                "mng": "Verilən boşqabın sifariş etdiyiniz plaka olmadığını ifadə etmək"
             },
@@ -9411,7 +9401,7 @@
             },
             {
                "trns": "Uyanma xidməti mövcud deyil.",
-               "orgn": "Мне не позвонили, чтобы разбудить. (Mne ne pozvonili, chtoby razbudit-.)",
+               "orgn": "Мне не позвонили, чтобы разбудить. (Мне ne pozvonili, chtoby razbudit-.)",
                "mng": "Şikayət"
             },
             {
@@ -9661,7 +9651,7 @@
             },
             {
                "trns": "Xəritədə harada olduğunu göstərə bilərsinizmi?",
-               "orgn": "Mojete показать мне это на карте? (Mozhete pokazat- mne eto na karte?)",
+               "orgn": "Mojete показать мне это на карте? (Mozhete pokazat- Мне eto na karte?)",
                "mng": "Xəritədə müəyyən bir yer istəməyin"
             },
             {
@@ -9929,7 +9919,7 @@
             },
             {
                "trns": "Mənim evimə və ya sizin evinizə gedək?",
-               "orgn": "Ко мне или к тебе? (Ko mne ili k tebe?)",
+               "orgn": "Ко мне или к тебе? (Ko Мне ili k tebe?)",
                "mng": "Gecəni harada keçirmək istədiyinizi soruşmaq"
             },
             {
@@ -10819,8 +10809,8 @@
                "mng": "Kurs növü"
             },
             {
-               "trns": "onlayn",
-               "orgn": "onlayn обучение",
+               "trns": "onlayn təlim",
+               "orgn": "онлайн обучение",
                "mng": "Kurs növü"
             },
             {
@@ -15273,7 +15263,7 @@
          
          {
             "trns": "Can you help me, please?",
-            "orgn" : "Вы не могли бы мне помочь, пожалуйста? (Vy ne mogli by mne pomoch', pozhaluysta?)",
+            "orgn" : "Вы не могли бы мне помочь, пожалуйста? (Vy ne mogli by Мне pomoch', pozhaluysta?)",
             "mng" : "Asking for help"
          },
          {
@@ -15358,7 +15348,7 @@
          },
          {
             "trns": "I am...years old.",
-            "orgn" : "Мне...лет. (Mne...let.)",
+            "orgn" : "Мне...лет. (Мне...let.)",
             "mng" : "Answering about your age"
          },
          {
@@ -15545,17 +15535,17 @@
             
          {
             "trns": "I need to go to the hospital.",
-            "orgn" : "Мне нужно в больницу. (Mne nuzhno v bol'nitsu.)",
+            "orgn" : "Мне нужно в больницу. (Мне nuzhno v bol'nitsu.)",
             "mng" : "Asking to be brought to the hospital"
          },
          {
             "trns": "I feel sick.",
-            "orgn" : "Мне плохо. (Mne ploho.)",
+            "orgn" : "Мне плохо. (Мне ploho.)",
             "mng" : ""
          },
          {
             "trns": "I need to see a doctor immediately!",
-            "orgn" : "Мне срочно нужно к врачу! (Mne srochno nuzhno k vrachu!)",
+            "orgn" : "Мне срочно нужно к врачу! (Мне srochno nuzhno k vrachu!)",
             "mng" : "Asking for immediate medical care"
          },
          {
@@ -15660,7 +15650,7 @@
          },
          {
             "trns": "How many times a day should I take this?",
-            "orgn" : "Сколько раз в день мне нужно это принимать? (Skol'ko raz v den' mne nuzhno eto prinimat'?)",
+            "orgn" : "Сколько раз в день мне нужно это принимать? (Skol'ko raz v den' Мне nuzhno eto prinimat'?)",
             "mng" : "Asking about the dosage of the medicine"
          },
          {
@@ -15670,7 +15660,7 @@
          },
          {
             "trns": "Can I stay in the sun/go swimming/do sports/drink alcohol?",
-            "orgn" : "Мне можно находиться на солнце/плавать/заниматься спортом/употреблять алкоголь? (Mne mozhno nakhodit'sya na solntse/plavat'/zanimat'sya sportom/upotreblyat' alkogol'?)",
+            "orgn" : "Мне можно находиться на солнце/плавать/заниматься спортом/употреблять алкоголь? (Мне mozhno nakhodit'sya na solntse/plavat'/zanimat'sya sportom/upotreblyat' alkogol'?)",
             "mng" : "Asking if you can continue with certain activities despite your illness"
          },
          {
@@ -15685,7 +15675,7 @@
          },
          {
             "trns": "I need a sick note.",
-            "orgn" : "Мне нужна медицинская справка. (Mne nuzhna meditsinskaya spravka.)",
+            "orgn" : "Мне нужна медицинская справка. (Мне nuzhna meditsinskaya spravka.)",
             "mng" : "Asking the doctor for a note stating that you are sick"
          },
          {
@@ -15695,7 +15685,7 @@
          },
          {
             "trns": "It has gotten worse.",
-            "orgn" : "Мне стало только хуже. (Mne stalo tol'ko khuzhe.)",
+            "orgn" : "Мне стало только хуже. (Мне stalo tol'ko khuzhe.)",
             "mng" : "Informing that your condition has gotten worse"
          },
          {
@@ -15930,12 +15920,12 @@
          },
          {
             "trns": "Fiş alabilir miyim lütfen?",
-            "orgn" : "Можно мне чек, пожалуйста? (Mozhno mne chek, pozhaluysta?)",
+            "orgn" : "Можно мне чек, пожалуйста? (Mozhno Мне chek, pozhaluysta?)",
             "mng" : "Fiş sorma"
          },
          {
             "trns": "Bir poşet alabilir miyim lütfen?",
-            "orgn" : "Можно мне пакет, пожалуйста? (Mozhno mne paket, pozhaluysta?)",
+            "orgn" : "Можно мне пакет, пожалуйста? (Mozhno Мне paket, pozhaluysta?)",
             "mng" : "Bir poşet sorma"
          },
          {
@@ -15995,7 +15985,7 @@
          },
          {
             "trns": "Bu bende güzel duruyor mu?",
-            "orgn" : "Мне это идёт? (Mne eto idot?)",
+            "orgn" : "Мне это идёт? (Мне eto idot?)",
             "mng" : "Elbisenin parçasının dıuruşu hakkında fikir danışma"
          },
          {
@@ -16091,12 +16081,12 @@
          },
          {
             "trns": "May I have the receipt, please?",
-            "orgn" : "Можно мне чек, пожалуйста? (Mozhno mne chek, pozhaluysta?)",
+            "orgn" : "Можно мне чек, пожалуйста? (Mozhno Мне chek, pozhaluysta?)",
             "mng" : "Asking for a receipt"
          },
          {
             "trns": "May I have a bag, please?",
-            "orgn" : "Можно мне пакет, пожалуйста? (Mozhno mne paket, pozhaluysta?)",
+            "orgn" : "Можно мне пакет, пожалуйста? (Mozhno Мне paket, pozhaluysta?)",
             "mng" : "Asking for a bag"
          },
          {
@@ -16156,7 +16146,7 @@
          },
          {
             "trns": "Does this look good on me?",
-            "orgn" : "Мне это идёт? (Mne eto idot?)",
+            "orgn" : "Мне это идёт? (Мне eto idot?)",
             "mng" : "Asking for an opinion on the looks of the piece of clothing"
          },
          {
@@ -16766,7 +16756,7 @@
          },
          {
             "trns": "Could you please bring another blanket/pillow/towel?",
-            "orgn" : "Не могли бы Вы мне принести еще одно/одну одеяло/подушку/полотенце? (Ne mogli by Vy mne prinesti yeshche odno/odnu odeyalo/podushku/polotentse?)",
+            "orgn" : "Не могли бы Вы мне принести еще одно/одну одеяло/подушку/полотенце? (Ne mogli by Vy Мне prinesti yeshche odno/odnu odeyalo/podushku/polotentse?)",
             "mng" : "Asking for additional items"
          },
          {
@@ -16846,7 +16836,7 @@
          },
          {
             "trns": "I did not receive my wake-up call.",
-            "orgn" : "Мне не позвонили, чтобы разбудить. (Mne ne pozvonili, chtoby razbudit'.)",
+            "orgn" : "Мне не позвонили, чтобы разбудить. (Мне ne pozvonili, chtoby razbudit'.)",
             "mng" : "Complaint"
          },
          {
@@ -17091,7 +17081,7 @@
          },
          {
             "trns": "Can you show me where it is on the map?",
-            "orgn" : "Можете показать мне это на карте? (Mozhete pokazat' mne eto na karte?)",
+            "orgn" : "Можете показать мне это на карте? (Mozhete pokazat' Мне eto na karte?)",
             "mng" : "Asking for a specific location on a map"
          },
          {
@@ -17161,7 +17151,7 @@
          },
          {
             "trns": "How do I get to...?",
-            "orgn" : "Как мне добраться до...? (Kak mne dobrat'sya do ...?)",
+            "orgn" : "Как мне добраться до...? (Kak Мне dobrat'sya do ...?)",
             "mng" : "Asking for directions to a specific place"
          },
          {
@@ -17421,7 +17411,7 @@
          },
          {
             "trns": "I need to go to ..[location]...",
-            "orgn" : "Мне нужно доехать до ..[место]... (Mne nuzhno doyekhat' do ..[mesto]...)",
+            "orgn" : "Мне нужно доехать до ..[место]... (Мне nuzhno doyekhat' do ..[mesto]...)",
             "mng" : "Telling the taxi driver where you want to go"
          },
          {
@@ -17461,7 +17451,7 @@
          },
          {
             "trns": "I do not need insurance.",
-            "orgn" : "Мне не нужна страховка (Mne ne nuzhna strakhovka)",
+            "orgn" : "Мне не нужна страховка (Мне ne nuzhna strakhovka)",
             "mng" : "Getting no insurance at all"
          },
          {
@@ -17545,7 +17535,7 @@
          },
          {
             "trns": "My place or yours?",
-            "orgn" : "Ко мне или к тебе? (Ko mne ili k tebe?)",
+            "orgn" : "Ко мне или к тебе? (Ko Мне ili k tebe?)",
             "mng" : "Asking a person where you will spend the night together"
          },
          {
@@ -17620,12 +17610,12 @@
          },
          {
             "trns": "It's been really nice talking to you!",
-            "orgn" : "Мне понравилось с тобой общаться! (Mne ponravilos' s toboy obshchat'sya!)",
+            "orgn" : "Мне понравилось с тобой общаться! (Мне ponravilos' s toboy obshchat'sya!)",
             "mng" : "Complimenting at the end of a conversation"
          },
          {
             "trns": "I'm not interested.",
-            "orgn" : "Мне не интересно. (Mne ne interesno.)",
+            "orgn" : "Мне не интересно. (Мне ne interesno.)",
             "mng" : "Polite way of declining"
          },
          {

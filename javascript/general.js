@@ -18,7 +18,7 @@ fullDate 	= date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear();
 /*day_aim 	= [];*/
 function notification(event,event_1)
 {
-	console.log(event_1)
+
 	if(event_1)
 		messageTxt = notifications[lang][event]['message']+appLanguage[lang][event_1];
 	else
@@ -125,7 +125,7 @@ function importBase(base,userData,act)
 		contentType: false,
 	    processData: false,
 	    success: function(data,status)
-	    {console.log(data)
+	    {
 
 	    	loading.hide();
 	    	if(status == "success")
@@ -236,7 +236,6 @@ function start_page(page,page_1)
 			count_heart_html.html(heart);
 
 		$(".gem-count").html(gem);
-
 		
 		set_day_aim(page_1);
 
@@ -294,7 +293,7 @@ function aim_setting(page)
 
 	aim 	= user.aim;
 	level 	= user.level;
-	console.log(aim)		
+		
 	$(".aim ul li").removeClass("active");
 	$("#"+aim+"-x").addClass("active");
 
