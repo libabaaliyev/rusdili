@@ -1,13 +1,167 @@
 {
 
 	"az":{
-		"grade-master" 		: {},
-		"crown-master" 		: {},
-		"unerror" 			: {},
+		
+		"grade-master" 		: {
+			"name"	: "Çalışqan",
+			"desc"	: "Yeni məntəqəyə çat",
+			"limit"	: 1,
+			"reward": 100
+		},
+
+		"crown-master" 		: {
+			"name"	: "Fateh",
+			"desc"	: "Tacları topla",
+			"limit"	: 19,
+			"reward": 120,
+		},
+		"unerror" 			: {
+			"name"	: "Bilgə",
+			"desc"	: "Səhv etmədən sualları cavablandır.",
+			"limit"	: 10,
+			"reward": 100,			
+		},
+		"friendly"			: {
+			"name"	: "Dost sevər",
+			"desc"	: "Dostlarını dəvət et.",
+			"limit"	: 5,
+			"reward": 50,			
+		},
+		"week"	 			: {
+			"name"	: "Həftəlik",
+			"desc"	: "Bir həftə ara vermədən çalış.",
+			"limit"	: 7,
+			"reward": 140,			
+		},
+		"full-aim" 			: {
+			"name"	: "Əzmkar",
+			"desc"	: "Günlük hədəfə çat",
+			"limit"	: "full",
+			"reward": 100,			
+		},
+		"month" 			: {
+			"name"	: "Aylıq",
+			"desc"	: "Bir ay ara vermədən çalış.",
+			"limit"	: 30,
+			"reward": 300,			
+		},
+		"knight" 			: {
+			"name"	: "Cəngavər",
+			"desc"	: "Beş mərhələni tamamla.",
+			"limit"	: 5,
+			"reward": 200,			
+		}
+
+	},
+	"tr":{
+
+		"grade-master" 		: {
+			"name"	: "Çalışkan",
+			"desc"	: "Yeni kaleye ulaş",
+			"limit"	: 1,
+			"reward": 100
+		},
+
+		"crown-master" 		: {
+			"name"	: "Fatih",
+			"desc"	: "Taçları topla",
+			"limit"	: 19,
+			"reward": 120,
+		},
+		"unerror" 			: {
+			"name"	: "Bilge",
+			"desc"	: "Yalnış yapmadan soruları cevapla.",
+			"limit"	: 10,
+			"reward": 100,			
+		},
+		"friendly"			: {
+			"name"	: "Arkadaş canlısı",
+			"desc"	: "Arkadaşlarını davet et",
+			"limit"	: 5,
+			"reward": 50,			
+		},
+		"week"	 			: {
+			"name"	: "Haftalık",
+			"desc"	: "Bir hafta ara vermeden çalış.",
+			"limit"	: 7,
+			"reward": 140,			
+		},
+		"full-aim" 			: {
+			"name"	: "Bilgin",
+			"desc"	: "Günlük hedefi tamamla",
+			"limit"	: "full",
+			"reward": 100,			
+		},
+		"month" 			: {
+			"name"	: "Aylık",
+			"desc"	: "Bir ay ara vermeden çalış.",
+			"limit"	: 30,
+			"reward": 300,			
+		},
+		"knight" 			: {
+			"name"	: "Şovalye",
+			"desc"	: "Beş kaleyi fethedin.",
+			"limit"	: 5,
+			"reward": 200,			
+		}
+
+	},
+	"en":{
+
+
+		"grade-master" 		: {
+			"name"	: "Diligent",
+			"desc"	: "Reach new checkpoint",
+			"limit"	: 1,
+			"reward": 100
+		},
+
+		"crown-master" 		: {
+			"name"	: "Conqueror",
+			"desc"	: "Collect crowns",
+			"limit"	: 19,
+			"reward": 120,
+		},
+		"unerror" 			: {
+			"name"	: "Wise",
+			"desc"	: "Answer the questions without making it wrong.",
+			"limit"	: 10,
+			"reward": 100,			
+		},
+		"friendly"			: {
+			"name"	: "Arkadaş canlısı",
+			"desc"	: "Arkadaşlarını davet et",
+			"limit"	: 5,
+			"reward": 50,			
+		},
+		"week"	 			: {
+			"name"	: "Haftalık",
+			"desc"	: "Bir hafta ara vermeden çalış.",
+			"limit"	: 7,
+			"reward": 140,			
+		},
+		"full-aim" 			: {
+			"name"	: "Bilgin",
+			"desc"	: "Günlük hedefi tamamla",
+			"limit"	: "full",
+			"reward": 100,			
+		},
+		"month" 			: {
+			"name"	: "Aylık",
+			"desc"	: "Bir ay ara vermeden çalış.",
+			"limit"	: 30,
+			"reward": 300,			
+		},
+		"knight" 			: {
+			"name"	: "Şovalye",
+			"desc"	: "Beş kaleyi fethedin.",
+			"limit"	: 5,
+			"reward": 200,			
+		}
+
+	},
 
 
 	},
-	"tr":{},
-	"en":{},
 	"ru":{}
 }
