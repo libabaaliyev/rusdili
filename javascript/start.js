@@ -31,26 +31,25 @@ $(document).ready(function()
 
 			$.getJSON("json/words.json", function(data){
 				
-				
 				localStorage.words 	= JSON.stringify(data);
 				
 			});
 
 			$.getJSON("json/sentence.json", function(data){
-				
-				
+								
 				localStorage.sentences 	= JSON.stringify(data);
 				
 			});
 
-			$.getJSON("json/stories.json", function(data){
+			$.getJSON("json/stories.json", function(data){				
 				
-				
-				localStorage.stories 	= JSON.stringify(data);
-				
+				localStorage.stories 	= JSON.stringify(data);				
 			});
 
-			
+			$.getJSON("json/achievements.json", function(data){				
+				
+				localStorage.achievements 	= JSON.stringify(data);				
+			});
 
 
 			
@@ -100,8 +99,10 @@ $(document).ready(function()
 	if(localStorage.getItem("user")===null)
 	{
 		startFunc.language();
-		plan 				= [];
-		localStorage.plan 	= JSON.stringify(plan);
+		plan 					= [];
+		day_use 				= [];
+		localStorage.plan 		= JSON.stringify(plan);
+		localStorage.day_use 	= JSON.stringify(day_use);
 	}
 	else
 	{

@@ -15,8 +15,9 @@ $(document).ready(function()
 	  console.log(`${key}: ${value}`)
 	}*/
 
-	bonus = 101;
-	(bonus > 100) ? alert("salam"):alert("salam1");
-	
-
+	$.getJSON("json/achievements.json", function(data){				
+				
+		console.log(data)
+		
+	});
 });

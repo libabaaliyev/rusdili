@@ -72,6 +72,10 @@
 {
   background: #ccc !important;
 }
+.bg-0
+{
+  background: #4fc3f7 !important;
+}
 
 .bg-1,.bg-false
 {
@@ -97,6 +101,22 @@
 {
 	background: #6D4C41 !important;
 }
+
+.bg-6
+{
+  background: #00695C !important;
+}
+
+.bg-7
+{
+  background: #FB8C00 !important;
+}
+
+.bg-8
+{
+  background: #B388FF !important;
+}
+
 .progress-0
 {
   background: linear-gradient(to top, #adb2b4 100%, #7CB342 0%);

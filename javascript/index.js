@@ -30,6 +30,9 @@ $(document).ready(function()
 
 	//localStorages
 	notifications 	= JSON.parse(localStorage.notifications);
+	day_aim 		= JSON.parse(localStorage.day_aim);
+	day_use 		= JSON.parse(localStorage.day_use);
+	achievements 	= JSON.parse(localStorage.achievements);
 	lang 			= JSON.parse(localStorage.applang);
 	words 			= JSON.parse(localStorage.appLanguage);
 	user 			= JSON.parse(localStorage.user);
@@ -63,8 +66,6 @@ $(document).ready(function()
 		else
 			if(hash != 'notenoughHeart')
 				callOther("general","notification",hash);
-
-
 	}
 	
 	lesson.click(function(e)
@@ -151,6 +152,7 @@ $(document).ready(function()
 		aim_tab.addClass("slideInRight");
 		aim_tab.show();
 	});
+
 	close.click(function()
 	{
 		aim_tab.removeClass("slideInRight");
@@ -219,7 +221,9 @@ $(document).ready(function()
 		user.heart = heart;
 		save();
 		ads('reward');
-	})
+	});
+
+	
 
 	function save()
 	{
@@ -405,6 +409,96 @@ $(document).ready(function()
 		}
 	}
 	
+	achieve_tag = ["grade-master","crown-master","unerror","friendly","week","full-aim","month","knight"];
+	create_achievement();
+	function create_achievement()
+	{
+	
+		for (var i = 0; i < achieve_tag.length; i++) {
+			
+			tag 		= achieve_tag[i];
+			standart 	= achievements[lang][tag]['limit'];
+			rewardAch 	= achievements[lang][tag]['reward'];
+			nameAch		= achievements[lang][tag]['name']; 
+			descAch 	= achievements[lang][tag]['desc'];	
+			ex_current 	= 0;
+			percent 	= 0;
+			
+			
+			if(tag == 'grade-master')
+			{
+
+			}
+			else if(tag == 'crown-master')
+			{
+				standart 	= crown_limit((grade+1));
+				ex_current 	= crown;
+
+			}
+			else if(tag == 'unerror')
+			{
+
+			}
+			else if(tag == 'friendly')
+			{
+
+			}
+			else if(tag == 'week')
+			{
+				
+			}
+			else if(tag == 'full-aim')
+			{
+				standart = JSON.parse(day_aim.etalon);
+				ex_current = JSON.parse(day_aim.getting);
+			}
+			else if(tag == 'month')
+			{
+				
+			}
+			else if(tag == 'knight')
+			{
+
+			}
+
+
+			if(ex_current!=0)
+				percent 	= (ex_current/standart)*100;
+
+			progress_btn = `<span>`+ex_current+`/`+standart+`</span>
+							<div class="progress-bar">
+								<div class="progress-bar-active" style="width: `+percent+`%">
+									
+								</div>
+							</div>`
+
+			btn 	= `<label class="form-button btn-pr" data-add="`+rewardAch+`"><i class="fas fa-gem fa-beat"></i></label>`;
+
+			if(percent >= 100)
+				progress_btn = btn;
+
+			achieve = `<li>
+							<section class="archive">
+								<figure class="archive-img bg-`+i+`">
+									<img src="img/achievement/`+tag+`.png">
+								</figure>
+								<div class="archive-data">									
+										<div class="info-head">
+											<h4 class="text-left">` + nameAch + `</h4>											
+										</div>
+										<div class="info-head">
+											<span class="weight-normal">` + descAch + `</span>
+										</div>
+										<div class="info-body">`+progress_btn+`</div>
+								</div>
+							</section>
+						</li>`
+
+			$(achieve).appendTo("#achievements");
+		}
+
+	}
+
 	function count_step(i)
 	{
 		if(i<5)
