@@ -278,7 +278,7 @@
 						</a>
 					</li>
 					<li>
-						<i class="fas fa-gem text-primary"></i> <span class="text-primary gem-count"></span>
+						<i class="fas fa-gem text-primary" style="padding: 7px 0"></i> <label class="text-primary gem-count"></label>
 					</li>
 					
 				</ul>
@@ -301,6 +301,12 @@
 				<ul id="achievements">					
 				</ul>
 			</section>
+
+			<div class="skills">
+				<ul id="skills">
+					
+				</ul>
+			</div>
 		</div>
 
 		<div class="tab-pane fade" id="score">
@@ -430,11 +436,10 @@
 
 		<div class="tab-pane fade" id="shopping">
 			<header class="main-header">
-				<ul id="setting">
-					<li>						
-						<i class="fas fa-gem gem"></i> <label class="gem gem-count">350</label>					
-					</li>
-					
+				<ul id="shopping-que">
+					<li>			
+						<i class="fas fa-gem gem"></i> <label class="gem gem-count"></label>				
+					</li>					
 				</ul>
 				<div class="header-name">
 					<label id="shop"><!-- Mağaza --></label>
@@ -452,7 +457,7 @@
 					<a class="form-button text-primary upgrade" href=""><!-- Yükselt --></a>
 				</div>
 
-				<div class="card">
+				<div class="card card-market" data-category="shield" data-gem="200">
 					<figure class="card-img">
 						<img src="img/icons/shield.png">
 					</figure>
@@ -471,7 +476,7 @@
 					</div>
 				</div>
 
-				<div class="card">
+				<div class="card card-market" data-category="add-heart" data-gem="100">
 					<figure class="card-img add-heart">
 						<div class="special-items-icon">
 							<i class="red fas fa-heart fa-beat"></i>
@@ -486,13 +491,13 @@
 								<!-- Derslerde hata yapmaktak korma! -->
 							</span>
 						</div>
-						<div class="info-body get-ads">
+						<div class="info-body">
 							<span class="text-primary"><!-- Reklam izle --></span>
 						</div>
 					</div>
 				</div>
 
-				<div class="card">
+				<div class="card card-market" data-category="double" data-gem="120">
 					<figure class="card-img">
 						<img src="img/icons/2x.png">
 					</figure>
@@ -512,7 +517,7 @@
 				</div>
 
 
-				<div class="card">
+				<div class="card card-market" data-category="plus" data-gem="plus">
 					<figure class="card-img sp-active border-none">
 						<div class="special-items-icon">
 							<i class="red fas fa-heart fa-beat"></i>
@@ -539,6 +544,9 @@
 		</div>
 
 	</div>
+
+
+
 	<footer class="footer">
 		<ul id="footer">
 			<li data-toggle="tab" href="#main" data-tab="main" id="f-main">

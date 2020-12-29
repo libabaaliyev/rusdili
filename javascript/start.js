@@ -102,9 +102,10 @@ $(document).ready(function()
 		plan 					= [];
 		day_use 				= [];
 		
-		localStorage.plan 		= JSON.stringify(plan);
-		localStorage.day_use 	= JSON.stringify(day_use);
-		localStorage.achieve 	= JSON.stringify({	"grade-master": 0,	"crown-master": 0,	"full-aim": 0, "unerror": 0, "friendly": 0, "knight": 0	, "week": true	, "month": true});
+		localStorage.plan 	 = JSON.stringify(plan);
+		localStorage.day_use = JSON.stringify(day_use);
+		localStorage.achieve = JSON.stringify({	"grade-master": 0,	"crown-master": 0,	"full-aim": 0, "unerror": 0, "friendly": 0, "knight": 0	, "week": true	, "month": true});
+		localStorage.market  = JSON.stringify({"shield"	: 0,	"double" : 0});
 	}
 	else
 	{

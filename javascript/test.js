@@ -1,23 +1,9 @@
 $(document).ready(function()
 {
-	/*var fd = new FormData(),
-    key;
-
-	// poulate with dummy data
-	fd.append("key1", "alibaba");
-	fd.append("key2", "alskdjflasj");
-
-	// does not do anything useful
-	
-
-	// does not do anything useful   
-	for (let [key, value] of fd) {
-	  console.log(`${key}: ${value}`)
-	}*/
-
-	$.getJSON("json/achievements.json", function(data){				
-				
-		console.log(data)
-		
-	});
+	f = [];
+	for (var i = 1; i < 30; i++) {
+		x = {'year':2020,'month':12,'day': i}
+		f.push(x);
+		localStorage.day_use = JSON.stringify(f);
+	}
 });

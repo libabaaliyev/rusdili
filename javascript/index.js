@@ -22,6 +22,7 @@ $(document).ready(function()
 	addHeart 		= $(".add-heart");
 	invite 			= $("#invite");
 	gemCount		= $(".gem-count");
+	card_market		= $(".card-market");
 
 	bodyHeight 		= $(window).height();
 	windowWidth		= $(window).width();
@@ -36,6 +37,7 @@ $(document).ready(function()
 	day_use 		= JSON.parse(localStorage.day_use);
 	achieveData		= JSON.parse(localStorage.achieve);
 	achievements 	= JSON.parse(localStorage.achievements);
+	marketData		= JSON.parse(localStorage.market);
 	lang 			= JSON.parse(localStorage.applang);
 	words 			= JSON.parse(localStorage.appLanguage);
 	user 			= JSON.parse(localStorage.user);
@@ -74,16 +76,17 @@ $(document).ready(function()
 
 	if(hash){
 		if(heart == 0)
-			callOther("general","notification",hash);
+			callOther("general","notification",hash);	//will be sound
 		else
 			if(hash != 'notenoughHeart')
-				callOther("general","notification",hash);
+				callOther("general","notification",hash); //will be sound
 	}
 
 	invite.click(function()
 	{		
 		achieveData['friendly'] = JSON.parse(achieveData['friendly']) + 1;
 		save();
+		create_achievement();
 	});
 
 	$(document).on('click', '.collect-gems', function()
@@ -147,7 +150,7 @@ $(document).ready(function()
 			if(crown >= limitCrown)
 				func_lesson_info("open",y_lesson,objectLeft);
 			else
-				callOther("general","notification","lock-castle");
+				callOther("general","notification","lock-castle"); //will be sound
 			
 			
 		}
@@ -220,10 +223,14 @@ $(document).ready(function()
 	practice.click(function()
 	{
 		mission 			= 'test';
-		user.heart 			= JSON.parse(user.heart) - 1;
-		save();
-		goLesson(mission,'practice');
-
+		if(user.heart>0)
+		{
+			user.heart		= JSON.parse(user.heart) - 1; 			//will be sound
+			save();
+			goLesson(mission,'practice');
+		}
+		else
+			callOther("general","notification","notenoughHeart");	//will be sound
 	});
 
 	open_lock_gem.click(function(e)
@@ -239,32 +246,59 @@ $(document).ready(function()
 			goLesson("start","open-lock");
 		}
 		else
-			callOther("general","notification","notenoughCoin");
-
+			callOther("general","notification","notenoughCoin");	//will be sound
 	});
 
 	addHeart.click(function()
 	{
-		if(heart<5)
-			heart++;
-		user.heart = heart;
-		save();
 		ads('reward');
 	});
 
-	
+	card_market.click(function()
+	{
+		m_category 	= $(this).data("category");
+		price 		= $(this).data("gem");
 
+		if(m_category == "reward")
+			ads('reward');
+
+		else if(m_category == "plus")
+			console.log("go to plus");
+		else
+		{
+			if(gems > price){ //will be sound
+				gems -=price;
+				user.gem = gems;
+				gemCount.html(gems);
+				marketData[m_category] = JSON.parse(marketData[m_category]) + 1;
+				save();
+			}
+			else
+				callOther("general","notification","notenoughCoin");
+		}
+
+	});
+
+	
 	function save()
 	{
 		localStorage.achieve 	= JSON.stringify(achieveData);
 		localStorage.plan 		= JSON.stringify(plan);
 		localStorage.user 		= JSON.stringify(user);
+		localStorage.market		= JSON.stringify(marketData);
 		callOther("general","start_page","index");
 	}
 
 	function ads(e)
 	{
-		console.log(e);
+		if(e == 'reward')
+		{
+			if(heart<5)
+			heart++;
+			user.heart = heart;
+			save();
+		}
+		
 	}
 
 	function crown_limit(e)
@@ -458,8 +492,11 @@ $(document).ready(function()
 			}			
 			else if(tag == 'week')
 			{
+
 				if(achieveData[tag] == true)
 					ex_current = day_count(7);
+
+				
 			}
 			else if(tag == 'full-aim')
 			{
@@ -509,26 +546,80 @@ $(document).ready(function()
 
 			$(achieve).appendTo("#achievements");
 		}
+	}
 
+	skills();
+	function skills()
+	{
+		shield = `<li>
+					<img src="img/icons/shield.png">
+					<label>` + marketData['shield'] + `</label>
+				  </li>`;
+		double = `<li>
+					<img src="img/icons/2x.png">
+					<label>` + marketData['double'] + `</label>
+				  </li>`;
+
+		skill_n = '';
+		if(marketData['shield'] != 0)
+			skill_n += shield;
+
+		if(marketData['double'] != 0)
+			skill_n += double;
+
+
+		$(skill_n).appendTo("#skills");
 	}
 
 	function day_count(c)
 	{
-		x = 1;
+		x = 0;
 		if(day_use.length > 0)
 		{
 			for (var f = 0; f < c; f++)
 			{
 				day_x 		= JSON.parse(currentDay) - f;
-				controlDay 	= day_control(currentYear,currentMonth,day_x);
+				if(day_x<1)
+				{
+					if(currentMonth>1){
+						month_x = currentMonth - 1;
+						if(month_x == 1 || month_x == 3 || month_x == 5 || month_x == 7 || month_x == 8 || month_x == 10)
+							day_x = 31 + day_x;
+						else if(month_x == 2)
+						{
+							if(currentYear % 4 == 0)
+								day_x = 29 + day_x;
+							else
+								day_x = 28 + day_x;
+						}
+						else
+							day_x = 30 + day_x;
+					}
+					else{
+						year_x = currentYear - 1;
+						month_x = 12; 
+						day_x = 31 + day_x;
+					}
+
+				}
+				else
+				{
+					year_x 	= currentYear;
+					month_x = currentMonth;
+				}
+
 				
-				if(controlDay!=-1)
+				controlDay 	= day_control(year_x,month_x,day_x);
+				
+				if(controlDay!=-1)					
 					x++;
 
 			}
 		}
+		else
+			x = 0;
 
-		return x
+		return x;
 	}
 
 	function day_control(y,m,d)
@@ -681,7 +772,7 @@ $(document).ready(function()
 		{
 
 			if(count_exam == 19 && g2 == 5 || count_exam == 31 && g2 == 8 || count_exam == 43 && g2 == 11){
-				callOther("general","notification","full-grade");
+				callOther("general","notification","full-grade"); 	//will be sound
 				grade++;
 				achieveData['grade-master'] = JSON.parse(achieveData['grade-master']) + 1;
 				achieveData['knight'] = JSON.parse(achieveData['knight']) + 1;
@@ -694,7 +785,7 @@ $(document).ready(function()
 	e1 = 0;
 	function addGems(e)
 	{
-		
+		//will be sound
 		setTimeout(function()
 		{
 			e1++;
