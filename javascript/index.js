@@ -20,6 +20,8 @@ $(document).ready(function()
 	open_lock_gem	= $("#open-lock-with-gem");
 	practice 		= $(".practice");
 	addHeart 		= $(".add-heart");
+	invite 			= $("#invite");
+	gemCount		= $(".gem-count");
 
 	bodyHeight 		= $(window).height();
 	windowWidth		= $(window).width();
@@ -32,6 +34,7 @@ $(document).ready(function()
 	notifications 	= JSON.parse(localStorage.notifications);
 	day_aim 		= JSON.parse(localStorage.day_aim);
 	day_use 		= JSON.parse(localStorage.day_use);
+	achieveData		= JSON.parse(localStorage.achieve);
 	achievements 	= JSON.parse(localStorage.achievements);
 	lang 			= JSON.parse(localStorage.applang);
 	words 			= JSON.parse(localStorage.appLanguage);
@@ -42,6 +45,14 @@ $(document).ready(function()
 	heart 			= JSON.parse(user.heart);
 	aim 			= user.aim;
 	grade 			= JSON.parse(user.grade);
+	achieve_tag 	= ["grade-master","crown-master","unerror","friendly","week","full-aim","month","knight"];
+
+	date  			= new Date();
+	currentYear		= date.getFullYear();
+	currentMonth 	= date.getMonth()+1;
+	currentDay 		= date.getDate();
+
+	currentDate		= currentDay + "." + currentMonth + "." + currentYear;
 
 
 	exam_data = {};
@@ -56,6 +67,7 @@ $(document).ready(function()
 	callOther("general","start_page","index");
 	grade_control();
 	create_level();
+	create_achievement();
 
 	lesson 	= $(".level-query-li");
 	hash 	= location.hash.substr(1);
@@ -67,6 +79,24 @@ $(document).ready(function()
 			if(hash != 'notenoughHeart')
 				callOther("general","notification",hash);
 	}
+
+	invite.click(function()
+	{		
+		achieveData['friendly'] = JSON.parse(achieveData['friendly']) + 1;
+		save();
+	});
+
+	$(document).on('click', '.collect-gems', function()
+	{
+		count_add_gems 		= $(this).data("add");
+		tag 				= $(this).data("tag");
+		achieveData[tag] 	= 0;
+
+
+		addGems(count_add_gems)
+		save();
+		create_achievement();
+	});
 	
 	lesson.click(function(e)
 	{
@@ -129,7 +159,6 @@ $(document).ready(function()
 
 		opening = false;
 		darkness.show();
-
 		skip_tab.removeClass("slideOutDown");
 		skip_tab.removeClass("slideInUp");
 		skip_tab.addClass("slideInUp");
@@ -227,6 +256,7 @@ $(document).ready(function()
 
 	function save()
 	{
+		localStorage.achieve 	= JSON.stringify(achieveData);
 		localStorage.plan 		= JSON.stringify(plan);
 		localStorage.user 		= JSON.stringify(user);
 		callOther("general","start_page","index");
@@ -314,15 +344,13 @@ $(document).ready(function()
 
 	function goLesson(e,category)
 	{
-
 		if(e=="reset")
 		{
 			isHave 				= search_plan(selectGrade,selectStep);
 			h 					= isHave.i;
 			countExam 			= JSON.parse(plan[h]['exam']);
 			user.crown 			= crown - countExam;
-			plan[h]['exam'] 	= 0;
-			
+			plan[h]['exam'] 	= 0;			
 			save();
 		}
 
@@ -337,8 +365,7 @@ $(document).ready(function()
 	{
 				
 		f = grade;
-		g = grade+7;
-		
+		g = grade+7;	
 
 		for (var i = f; i < g; i++) {
 			
@@ -409,11 +436,10 @@ $(document).ready(function()
 		}
 	}
 	
-	achieve_tag = ["grade-master","crown-master","unerror","friendly","week","full-aim","month","knight"];
-	create_achievement();
+	
 	function create_achievement()
 	{
-	
+		$("#achievements li").remove();
 		for (var i = 0; i < achieve_tag.length; i++) {
 			
 			tag 		= achieve_tag[i];
@@ -425,54 +451,41 @@ $(document).ready(function()
 			percent 	= 0;
 			
 			
-			if(tag == 'grade-master')
+			if(tag == 'crown-master')
 			{
-
-			}
-			else if(tag == 'crown-master')
-			{
-				standart 	= crown_limit((grade+1));
-				ex_current 	= crown;
-
-			}
-			else if(tag == 'unerror')
-			{
-
-			}
-			else if(tag == 'friendly')
-			{
-
-			}
+				standart 	= crown_limit((grade + 1)) - crown_limit((grade));
+				ex_current 	= achieveData[tag];
+			}			
 			else if(tag == 'week')
 			{
-				
+				if(achieveData[tag] == true)
+					ex_current = day_count(7);
 			}
 			else if(tag == 'full-aim')
 			{
-				standart = JSON.parse(day_aim.etalon);
-				ex_current = JSON.parse(day_aim.getting);
+				standart 	= JSON.parse(day_aim.etalon);
+				ex_current 	= achieveData[tag];
 			}
 			else if(tag == 'month')
+			{									
+				if(achieveData[tag] == true)
+					ex_current = day_count(30);				
+			}			
+			else
 			{
-				
+				ex_current = achieveData[tag];
 			}
-			else if(tag == 'knight')
-			{
-
-			}
-
 
 			if(ex_current!=0)
 				percent 	= (ex_current/standart)*100;
 
 			progress_btn = `<span>`+ex_current+`/`+standart+`</span>
 							<div class="progress-bar">
-								<div class="progress-bar-active" style="width: `+percent+`%">
-									
+								<div class="progress-bar-active" style="width: `+percent+`%">									
 								</div>
 							</div>`
 
-			btn 	= `<label class="form-button btn-pr" data-add="`+rewardAch+`"><i class="fas fa-gem fa-beat"></i></label>`;
+			btn 	= `<label class="form-button btn-pr collect-gems" data-tag="` + tag + `" data-add="` + rewardAch + `"><i class="fas fa-gem fa-beat"></i></label>`;
 
 			if(percent >= 100)
 				progress_btn = btn;
@@ -487,7 +500,7 @@ $(document).ready(function()
 											<h4 class="text-left">` + nameAch + `</h4>											
 										</div>
 										<div class="info-head">
-											<span class="weight-normal">` + descAch + `</span>
+											<span class="weight-normal f-s-12 light-f">` + descAch + `</span>
 										</div>
 										<div class="info-body">`+progress_btn+`</div>
 								</div>
@@ -497,6 +510,41 @@ $(document).ready(function()
 			$(achieve).appendTo("#achievements");
 		}
 
+	}
+
+	function day_count(c)
+	{
+		x = 1;
+		if(day_use.length > 0)
+		{
+			for (var f = 0; f < c; f++)
+			{
+				day_x 		= JSON.parse(currentDay) - f;
+				controlDay 	= day_control(currentYear,currentMonth,day_x);
+				
+				if(controlDay!=-1)
+					x++;
+
+			}
+		}
+
+		return x
+	}
+
+	function day_control(y,m,d)
+	{
+		for (var i = 0; i < day_use.length; i++) {
+			if(day_use[i]['year'] == y && day_use[i]['month'] == m && day_use[i]['day'] == d){
+		
+				return i;
+				break;
+			}
+			else{
+				if(i == (day_use.length - 1))
+					return -1;
+
+			}
+		}
 	}
 
 	function count_step(i)
@@ -635,10 +683,31 @@ $(document).ready(function()
 			if(count_exam == 19 && g2 == 5 || count_exam == 31 && g2 == 8 || count_exam == 43 && g2 == 11){
 				callOther("general","notification","full-grade");
 				grade++;
+				achieveData['grade-master'] = JSON.parse(achieveData['grade-master']) + 1;
+				achieveData['knight'] = JSON.parse(achieveData['knight']) + 1;
 				user.grade = grade;
 				save();
 			}
 		}
+	}
+
+	e1 = 0;
+	function addGems(e)
+	{
+		
+		setTimeout(function()
+		{
+			e1++;
+			user.gem = JSON.parse(user.gem) + 1;
+			gemCount.html(user.gem);
+			if(e1 != e)
+				addGems(e);
+			else{
+				e1=0;
+				save();
+			}
+
+		},(150/(e1+1)));
 	}
 
 	function random_number(min,max)

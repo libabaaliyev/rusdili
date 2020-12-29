@@ -229,6 +229,14 @@ h2,h4,h6{
   float: left;
   padding: 7px;
 }
+#setting li:last-child
+{
+  float: right;
+}
+#setting span
+{
+  padding-top: 10px !important;
+}
 .bar
 {
   position: fixed;
@@ -668,6 +676,8 @@ h2,h4,h6{
 {
   margin-bottom: 100px;
 }
+
+
 .profile-info ul
 {
   display: block;
@@ -841,6 +851,36 @@ h2,h4,h6{
 {
   text-align: center !important;
 }
+.f-s-10
+{
+  font-size: 10px !important;
+}
+
+.f-s-12
+{
+  font-size: 12px !important;
+}
+
+.f-s-14
+{
+  font-size: 14px !important;
+}
+
+.f-s-16
+{
+  font-size: 16px !important;
+}
+
+.f-s-18
+{
+  font-size: 18px !important;
+}
+
+.f-s-20
+{
+  font-size: 20px !important;
+}
+
 .line-h-1
 {
   line-height: 16px !important;

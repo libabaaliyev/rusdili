@@ -13,6 +13,7 @@ notifications 		= JSON.parse(localStorage.notifications);
 lang 				= JSON.parse(localStorage.applang);
 appLanguage			= JSON.parse(localStorage.appLanguage);
 
+
 date  		= new Date();
 fullDate 	= date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear();
 /*day_aim 	= [];*/
@@ -250,7 +251,7 @@ function set_day_aim(page)
 {
 	if(localStorage.getItem("day_aim") && page != "lesson"){
 
-
+		
 		limit.html(day_aim.getting+"/"+day_aim.etalon);
 		percent = (JSON.parse(day_aim.getting)/JSON.parse(day_aim.etalon))*100;
 		$("#progress-aim").css("width",percent+"%");
@@ -285,6 +286,9 @@ function aim_setting(page)
 			day_aim.time 		= fullDate;
 			user.heart 			= 5;
 			localStorage.user 	= JSON.stringify(user);
+
+			achieveData['week'] 	= true;
+			localStorage.achieve 	= JSON.stringify(achieveData);
 
 			set_day_aim("index");
 		}

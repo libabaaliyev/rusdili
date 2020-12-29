@@ -101,8 +101,10 @@ $(document).ready(function()
 		startFunc.language();
 		plan 					= [];
 		day_use 				= [];
+		
 		localStorage.plan 		= JSON.stringify(plan);
 		localStorage.day_use 	= JSON.stringify(day_use);
+		localStorage.achieve 	= JSON.stringify({	"grade-master": 0,	"crown-master": 0,	"full-aim": 0, "unerror": 0, "friendly": 0, "knight": 0	, "week": true	, "month": true});
 	}
 	else
 	{

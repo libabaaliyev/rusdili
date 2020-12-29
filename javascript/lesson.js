@@ -41,6 +41,16 @@ $(document).ready(function()
 	question_que 	= 0;
 
 	hash 			= location.hash.substr(1);
+	date  			= new Date();
+	
+	currentYear		= date.getFullYear();
+	currentMonth 	= date.getMonth()+1;
+	currentDay 		= date.getDate();
+
+	currentDate		= currentDay + "." + currentMonth + "." + currentYear;
+
+	day_use			= JSON.parse(localStorage.day_use);
+	achieveData		= JSON.parse(localStorage.achieve);
 	user 			= JSON.parse(localStorage.user);
 	crown 			= JSON.parse(user.crown);
 	lang 			= JSON.parse(localStorage.applang); 
@@ -51,6 +61,7 @@ $(document).ready(function()
 	plan 			= JSON.parse(localStorage.plan);
 	etalon_aim 		= JSON.parse(day_aim.etalon);
 	getting_aim		= JSON.parse(day_aim.getting);
+	unerror			= true;
 	userLevel		= user.level;	
 	rus_latin 		= 
 	{
@@ -551,7 +562,7 @@ $(document).ready(function()
 			
 		if(regularFind==-1)
 		{
-
+			console.log(s)
 			return s;
 		}
 		else
@@ -569,6 +580,8 @@ $(document).ready(function()
 		answer_tab.addClass("bg-"+answ);
 
 		if(!answ){
+
+			unerror = false;
 			if(!hash)
 			{
 				if(heart>0){
@@ -716,7 +729,8 @@ $(document).ready(function()
 				$(".combo-bonus").html("+" + combo);
 				
 				day_aim.getting 		= getting_aim;
-				addCrown = 1;
+				achieveData['full-aim'] = getting_aim;
+				addCrown 				= 1;
 
 				if(category_e == 'open-lock')
 				{
@@ -778,8 +792,8 @@ $(document).ready(function()
 						
 					}
 
-				console.log(addCrown);
-				user.crown 	= JSON.parse(user.crown)+addCrown;
+				user.crown 					= JSON.parse(user.crown) + addCrown;
+				achieveData['crown-master'] = JSON.parse(achieveData['crown-master']) + addCrown;
 
 				
 			}
@@ -789,15 +803,54 @@ $(document).ready(function()
 				$(".combo-bonus").html("+0");
 			}
 
+			controling_day 				= control_day(currentDay,currentMonth,currentYear);
+
+			if(!controling_day){
+
+				addDate 				= {'year': currentYear,	'month': currentMonth,	'day': currentDay};
+
+				day_use.push(addDate);
+
+				localStorage.day_use 	= JSON.stringify(day_use);
+			}
+
+			if(unerror)
+				achieveData['unerror'] = JSON.parse(achieveData['unerror']) + 1;
+
 			user.gem				= JSON.parse(user.gem) + (bonus+combo);
 			localStorage.day_aim 	= JSON.stringify(day_aim);
 			localStorage.plan 		= JSON.stringify(plan);
 			localStorage.user 		= JSON.stringify(user);
+			localStorage.achieve	= JSON.stringify(achieveData);
+
 			percent 				= (getting_aim/etalon_aim)*100;
 			progressAim.css("width",percent+"%");
 			main.fadeOut();
 			lesson_success.fadeIn();
 		}
+	}
+
+	function control_day(d,m,y)
+	{
+		if (day_use.length>0)
+		{
+			for (var i = 0; i < day_use.length; i++) {
+				
+				if(day_use[i]['year'] == y && day_use[i]['month'] == m && day_use[i]['day'] == d){
+
+					return true;
+					break;
+				}
+				else{
+					if(i == (day_use.length - 1))
+						return false;
+
+				}
+
+			}
+		}
+		else
+			return false;
 	}
 
 	function search_plan(e,v)
