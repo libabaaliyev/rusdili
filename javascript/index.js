@@ -70,6 +70,7 @@ $(document).ready(function()
 	grade_control();
 	create_level();
 	create_achievement();
+	skills();
 
 	lesson 	= $(".level-query-li");
 	hash 	= location.hash.substr(1);
@@ -89,12 +90,36 @@ $(document).ready(function()
 		create_achievement();
 	});
 
-	$(document).on('click', '.collect-gems', function()
+	$(document).on('click', '.collect-gems', function(e)
 	{
 		count_add_gems 		= $(this).data("add");
 		tag 				= $(this).data("tag");
 		achieveData[tag] 	= 0;
+		element				= $(this).offset();
+		y 					= element.top - 245;
 
+		count_add_gems_x 	= count_add_gems;
+		if(marketData['double'] > 0)
+		{
+			count_add_gems = count_add_gems * 2;
+			count_text = '+ 2x ';
+			marketData['double'] = JSON.parse(marketData['double']) - 1;
+			skills();
+		}
+		else
+		{
+			count_text = '+';
+		}
+		
+		adding = `<label class="adding-text text-primary f-s-14" style="top:`+y+`px;">`+count_text+count_add_gems_x+`</label>`;
+		$(adding).appendTo("#achievements");
+
+		$(".adding-text").fadeOut(2200);
+		setTimeout(function()
+		{
+			$(".adding-text").remove();
+		},2000)
+		
 
 		addGems(count_add_gems)
 		save();
@@ -271,6 +296,7 @@ $(document).ready(function()
 				user.gem = gems;
 				gemCount.html(gems);
 				marketData[m_category] = JSON.parse(marketData[m_category]) + 1;
+				skills();
 				save();
 			}
 			else
@@ -548,9 +574,10 @@ $(document).ready(function()
 		}
 	}
 
-	skills();
+	
 	function skills()
 	{
+		$("#skills li").remove();
 		shield = `<li>
 					<img src="img/icons/shield.png">
 					<label>` + marketData['shield'] + `</label>

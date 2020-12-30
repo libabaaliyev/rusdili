@@ -1844,7 +1844,7 @@ h2,h4,h6{
   float: left;
   width: 40px;
   height: 40px;
-  margin: 5px 0;
+  margin: 7px 0;
   border-radius: 5px;
   background: #2196F3;
   box-shadow: 6px 7px 5px -5px rgba(0,0,0,0.5);
@@ -1864,10 +1864,14 @@ h2,h4,h6{
   position: absolute;
   width: 20px;
   height: 20px;
-  font-size: 18px;
-  right: -14px;
-  top: -14px;
-  color: #FF5500;
+  font-size: 12px;
+  right: -8px;
+  top: -8px;
+  padding-top: 2px;
+  color: #fff;
+  background: #FF5500;
+  border-radius: 50%;
+  text-align: center;
 }
 
 .float-right
@@ -1878,6 +1882,12 @@ h2,h4,h6{
 .reset-lesson
 {
   display: none;
+}
+
+.adding-text
+{
+  position: absolute;
+  right: 50px;
 }
 
 ::-webkit-scrollbar {

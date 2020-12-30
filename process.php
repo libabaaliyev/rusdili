@@ -5,7 +5,7 @@
 	$data = json_decode($_POST['data'],true);
 
 	if($info == "import-base")
-		import_user($data,$db,'without-plan','-');
+		import_user($data,$db,'without-plan','-','-','-');
 
 	else if($info == "login-base")
 		login_user($data,$db);
@@ -14,7 +14,7 @@
 	{
 		$id = $data['id'];		
 		if($id == "not-registr")
-			import_user($data,$db,'without-plan','-');
+			import_user($data,$db,'without-plan','-','-','-');
 		
 		else
 			update_user($data,$db,'without-plan','-');
@@ -24,17 +24,19 @@
 	{
 		$id 		= $data['id'];
 		$plan 		= $_POST['plan'];
+		$achieve 	= $_POST['achieve'];
+		$skills		= $_POST['skills'];
 
 		if($id == "not-registr")
-			import_user($data,$db,'with-plan',$plan);
+			import_user($data,$db,'with-plan',$plan,$achieve,$skills);
 		else
-			update_user($data,$db,'with-plan',$plan);
+			update_user($data,$db,'with-plan',$plan,$achieve,$skills);
 	
 	}
 
 
 
-	function import_user($data,$db,$with,$plan)
+	function import_user($data,$db,$with,$plan,$achieve,$skills)
 	{
 		$name 		= ucwords($data['name']);
 		$username 	= strtolower($data['username']);
@@ -88,7 +90,7 @@
 
 		if($with == "with-plan")
 		{
-			update_plan($id,$plan,$db,$result);
+			update_plan($id,$plan,$db,$result,$achieve,$skills);
 		}
 		else
 			echo json_encode($result);
@@ -118,13 +120,13 @@
 			$planX 	= $db->query("SELECT * FROM learning WHERE user_id = '$id'")->fetch(PDO::FETCH_ASSOC);
 			$plan 	= json_decode($planX['plan']);
 
-			$result = ['result'=>'yesUser',"user"=>$user,"plan"=>$plan];
+			$result = ['result'=>'yesUser',"user"=>$user,"plan"=>$planX];
 		}
 
 		echo json_encode($result);
 	}
 
-	function update_user($data,$db,$with,$plan)
+	function update_user($data,$db,$with,$plan,$achieve,$skills)
 	{
 		$id 		= $data['id'];
 		$name 		= ucwords($data['name']);
@@ -208,17 +210,17 @@
 
 		if($with == "with-plan")
 		{
-			update_plan($id,$plan,$db,$result);
+			update_plan($id,$plan,$db,$result,$achieve,$skills);
 		}
 		else
 			echo json_encode($result);
 	}
 
-	function update_plan($id,$plan,$db,$rs)
+	function update_plan($id,$plan,$db,$rs,$achieve,$skills)
 	{
 		$detectSql 		= "SELECT count(*) FROM learning WHERE user_id = '$id'";
-		$insertsql 		= "INSERT INTO learning (user_id,plan) VALUES(?,?)";
-		$update 		= "UPDATE learning SET plan = ? WHERE user_id = ?";
+		$insertsql 		= "INSERT INTO learning (user_id,plan,achieve,skills) VALUES(?,?,?,?)";
+		$update 		= "UPDATE learning SET plan = ? , achieve = ? , skills = ? WHERE user_id = ?";
 
 		$search 		= $db->prepare($detectSql); 	$search->execute();
 		$count 			= $search->fetchColumn(); 
@@ -226,7 +228,7 @@
 		if($count == 0){
 			
 				$inserting = $db->prepare($insertsql);
-				$insert = $inserting->execute([$id,$plan]);
+				$insert = $inserting->execute([$id,$plan,$achieve,$skills]);
 
 				if($insert)					
 					$result = ['result'=>'plan-add','user-result'=>$rs];
@@ -238,7 +240,7 @@
 		else{
 
 			$updating 	= $db->prepare($update);
-			$update_ok 	= $updating->execute([$plan,$id]);
+			$update_ok 	= $updating->execute([$plan,$achieve,$skills,$id]);
 			$finding 	= $db->query("SELECT * FROM learning WHERE user_id='$id'")->fetch(PDO::FETCH_ASSOC);
 
 			if($update_ok)

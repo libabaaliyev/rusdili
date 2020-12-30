@@ -64,7 +64,10 @@
 
 		"go-test"			: {"message"	: "Let's consolidate what we have learned !!!", "info": "info"},
 
-		"full-grade"		: {"message"	: "Congratulations, you have reached the new checkpoint !!!", "info": "success"}
+		"full-grade"		: {"message"	: "Congratulations, you have reached the new checkpoint !!!", "info": "success"},
+
+		"shield-protected"	: {"message"	: "The shield protected you from error !!!", "info": "info"}
+
 
 
 
@@ -138,7 +141,9 @@
 
 		"go-test"			: {"message"	: "Öğrendiklerimizi pekiştirelim!!!", "info": "info"},
 
-		"full-grade"		: {"message"	: "Tebrikler, yeni kontrol noktasına ulaştınız !!!", "info": "success"}
+		"full-grade"		: {"message"	: "Tebrikler, yeni kontrol noktasına ulaştınız !!!", "info": "success"},
+
+		"shield-protected"	: {"message"	: "Hatasız Seri Kalkan sizi korudu !!!", "info": "info"}
 
 	},
 	"az":
@@ -209,7 +214,9 @@
 
 		"go-test"			: {"message"	: "Öyrəndiklərimizi təkrarlayaq!!!", "info": "info"},
 
-		"full-grade"		: {"message"	: "Təbriklər, yeni keçid məntəqəsinə çatdınız !!!", "info": "success"}
+		"full-grade"		: {"message"	: "Təbriklər, yeni keçid məntəqəsinə çatdınız !!!", "info": "success"},
+
+		"shield-protected"	: {"message"	: "Qalxan sizi serianı dağılmaqdan qorudu !!!", "info": "info"}
 
 	},
 	"ru":
@@ -274,7 +281,9 @@
 
 		"go-test"			: {"message"	: "Давайте закрепим то, что мы узнали !!!", "info": "info"},
 
-		"full-grade"		: {"message"	: "Поздравляем, вы достигли нового контрольно-пропускной пункт !!!", "info": "success"}
+		"full-grade"		: {"message"	: "Поздравляем, вы достигли нового контрольно-пропускной пункт !!!", "info": "success"},
+
+		"shield-protected"	: {"message"	: "Щит защитил вас от ошибки !!!", "info": "info"}
 
 	}
 

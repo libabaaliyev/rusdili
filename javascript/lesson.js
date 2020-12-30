@@ -51,6 +51,7 @@ $(document).ready(function()
 
 	day_use			= JSON.parse(localStorage.day_use);
 	achieveData		= JSON.parse(localStorage.achieve);
+	skills 			= JSON.parse(localStorage.market);
 	user 			= JSON.parse(localStorage.user);
 	crown 			= JSON.parse(user.crown);
 	lang 			= JSON.parse(localStorage.applang); 
@@ -382,6 +383,8 @@ $(document).ready(function()
 		base.append("info","update-datas");
 		base.append("data",JSON.stringify(user));
 		base.append("plan",JSON.stringify(plan));
+		base.append("achieve",JSON.stringify(achieveData));
+		base.append("skills",JSON.stringify(skills));
 		callOther("general","importBase",base,user,"update");
 	}
 	
@@ -581,7 +584,14 @@ $(document).ready(function()
 
 		if(!answ){
 
-			unerror = false;
+			if(skills['shield'] == 0)
+				unerror = false;
+			else
+			{
+				skills['shield'] = JSON.parse(skills['shield']) - 1;
+				localStorage.market = JSON.stringify(skills);
+				callOther("general","notification","shield-protected");
+			}
 			if(!hash)
 			{
 				if(heart>0){

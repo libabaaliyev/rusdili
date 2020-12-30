@@ -149,10 +149,19 @@ function importBase(base,userData,act)
 		    			start_page();
 		    		else if(act == "login"){
 
-		    			plan = dataLogin['plan'];
+		    			learning = dataLogin['plan'];
+		    			plan = JSON.parse(learning['plan']);
+		    			achieve = JSON.parse(learning['achieve']);
+		    			skill = JSON.parse(learning['skills']);
 		    	
 		    			if(plan)
 		    				localStorage.plan = JSON.stringify(plan);
+
+		    			if(achieve)
+		    				localStorage.achieve = JSON.stringify(achieve);
+
+		    			if(skill)
+		    				localStorage.market = JSON.stringify(skill);
 		    		}
 		    	}
 		    	else if(result == 'plan-add')
