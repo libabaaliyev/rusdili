@@ -17,7 +17,7 @@
 			import_user($data,$db,'without-plan','-','-','-');
 		
 		else
-			update_user($data,$db,'without-plan','-');
+			update_user($data,$db,'without-plan','-','-','-');
 		
 	}
 	else if($info == "update-datas")
@@ -33,8 +33,27 @@
 			update_user($data,$db,'with-plan',$plan,$achieve,$skills);
 	
 	}
+	else if($info == "score-board")
+	{
+		$lang 		= $_POST['lang'];
+		$id 		= $_POST['id'];
+		$getting 	= $data['getting'];
+		$sql 		= "SELECT users.id,users.name,users.photo,day_aim.getting FROM day_aim INNER JOIN users ON users.id = day_aim.user_id WHERE day_aim.lang = '$lang' and day_aim.time_aim = CURDATE() ORDER BY day_aim.getting DESC LIMIT 20";
+		$users 		= $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+		$result 	= ['result' => $users];
+		
+		import_aim($db,$lang,$id,$getting,$result);
+				
+	}
+	else if($info == "import-scoreboard") {
 
+		$lang 		= $_POST['lang'];
+		$id 		= $_POST['id'];		
+		$getting 	= $data['getting'];
+		
+		import_aim($db,$lang,$id,$getting,'import');
 
+	}
 
 	function import_user($data,$db,$with,$plan,$achieve,$skills)
 	{
@@ -139,8 +158,9 @@
 		$heart 		= $data['heart'];
 		$crown 		= $data['crown'];
 		$league		= $data['league'];
+		$lang 		= $data['using_lang'];
 
-		$sql 			= "UPDATE users SET username = ? , name = ? , email = ? , password = ? , photo = ? , grade = ? , heart = ? , crown = ? , gem = ? , league = ? WHERE id = ?";
+		$sql 			= "UPDATE users SET username = ? , name = ? , email = ? , password = ? , photo = ? , grade = ? , heart = ? , crown = ? , gem = ? , league = ? , using_lang = ? WHERE id = ?";
 
 		$findingUpdate 	= "SELECT * FROM users WHERE id = '$id'";
 
@@ -192,7 +212,7 @@
 			if(filter_var($email, FILTER_VALIDATE_EMAIL))
 			{
 				$update = $db->prepare($sql);
-				$update_ok = $update->execute([$username,$name,$email,$password,$photo,$grade,$heart,$crown,$gem,$league,$id]);
+				$update_ok = $update->execute([$username,$name,$email,$password,$photo,$grade,$heart,$crown,$gem,$league,$lang,$id]);
 
 
 
@@ -250,6 +270,43 @@
 
 		}
 		echo json_encode($result);
+	}
+
+	function import_aim($db,$lang,$id,$getting,$action)
+	{
+		$time 		= date("y-m-d");
+		$detect 	= "SELECT COUNT(*) FROM day_aim WHERE time_aim = CURDATE() and user_id = '$id'";
+		$import 	= "INSERT INTO day_aim (user_id,getting,time_aim,lang) VALUES(?,?,?,?)";
+		$update 	= "UPDATE day_aim SET getting = ? WHERE time_aim = CURDATE() and user_id = ?";
+
+		$detecting 	= $db->prepare($detect);
+		$detecting->execute();
+		$count = $detecting->fetchColumn();
+		if($count == 0)
+		{
+			$importing = $db->prepare($import);
+			$insert = $importing->execute([$id,$getting,$time,$lang]);
+
+			if($insert)
+				$result = ['result' => 'updateOk'];
+			else
+				$result = ['result' => 'errorsomething'];
+		}
+		else
+		{
+			$updating = $db->prepare($update);
+			$updateX = $updating->execute([$getting,$id]);
+
+			if($updateX)
+				$result = ['result' => 'updateOk'];
+			else
+				$result = ['result' => 'errorsomething'];
+
+		}
+		if($action == "import")
+			echo json_encode($result);
+		else
+			echo json_encode($action);
 	}
 
 ?>

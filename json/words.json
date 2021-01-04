@@ -1734,7 +1734,7 @@
                 },
                 {
                   "orgn": "размер ",
-                  "trns": "beden"
+                  "trns": "ölçü"
                 },
                 {
                   "orgn": "натуральный ",
@@ -4400,7 +4400,7 @@
                 },
                 {
                   "orgn": "бабушка",
-                  "trns": "nənə, nənə, nənə"
+                  "trns": "nənə"
                 },
                 {
                   "orgn": "ваш",
@@ -4436,7 +4436,7 @@
                 },
                 {
                   "orgn": "ладно",
-                  "trns": "ok"
+                  "trns": "oldu,tamam"
                 },
                 {
                   "orgn": "магази́н",
@@ -4474,7 +4474,7 @@
 
                 {
                   "orgn": "мешать / помешать",
-                  "trns": "blok et, narahat et"
+                  "trns": "müdaxilə etmək / mane olmaq"
                 },
                 {
                   "orgn": "рабо́та",
@@ -4538,7 +4538,7 @@
                 },
                 {
                   "orgn": "читатель",
-                  "trns": "oxucu, oxuyur"
+                  "trns": "oxucu"
                 },
                 {
                   "orgn": "книга",
@@ -4590,7 +4590,7 @@
                 },
                 {
                   "orgn": "жизнь",
-                  "trns": "həyat, həyat"
+                  "trns": "həyat"
                 },
                 {
                   "orgn": "журнал",
@@ -4711,7 +4711,7 @@
                 },
                 {
                   "orgn": "повторять / повторить",
-                  "trns": "təkrarlamaq, təkrarlamaq"
+                  "trns": "təkrarlamaq"
                 },
                 {
                   "orgn": "урок",
@@ -4847,7 +4847,7 @@
                 },
                 {
                   "orgn": "кот",
-                  "trns": "tomcat"
+                  "trns": "pişik"
                 },
                 {
                   "orgn": "молоко",
@@ -4919,11 +4919,11 @@
                 },
                 {
                   "orgn": "завод",
-                  "trns": "öz enerjisini istehsal edən fabrik"
+                  "trns": "zavod"
                 },
                 {
                   "orgn": "группа",
-                  "trns": "qrup, sinif"
+                  "trns": "qrup"
                 },
                 {
                   "orgn": "сын",
@@ -4987,7 +4987,7 @@
                 },
                 {
                   "orgn": "стюардесса",
-                  "trns": "sahibə"
+                  "trns": "stüardessa"
                 },
                 {
                   "orgn": "актёр / актриса",
@@ -5003,11 +5003,11 @@
                 },
                 {
                   "orgn": "знать / узнать",
-                  "trns": "bilmək / öyrənmək; bilmək"
+                  "trns": "bilmək / öyrənmək"
                 },
                 {
                   "orgn": "много",
-                  "trns": "çox (məbləğ üçün danışılan)"
+                  "trns": "çox"
                 },
                 {
                   "orgn": "рабо́тать",
@@ -5023,7 +5023,7 @@
                 },
                 {
                   "orgn": "обедать / пообедать",
-                  "trns": "nahar yeyin"
+                  "trns": "nahar etmək"
                 },
                 {
                   "orgn": "обед",
@@ -5043,7 +5043,7 @@
                 },
                 {
                   "orgn": "игра",
-                  "trns": "oynamaq, oynamaq"
+                  "trns": "oyun"
                 },
                 {
                   "orgn": "завтракать / позавтракать",
@@ -5079,11 +5079,11 @@
                 },
                 {
                   "orgn": "отдыхать / отдохнуть",
-                  "trns": "istirahət etmək, tətil etmək, istirahət etmək"
+                  "trns": "istirahət etmək, tətil etmək"
                 },
                 {
                   "orgn": "отдых",
-                  "trns": "istirahət, tətil, istirahət"
+                  "trns": "istirahət, tətil"
                 },
                 {
                   "orgn": "понимать / понять",
@@ -5191,7 +5191,7 @@
                 },
                 {
                   "orgn": "приятный",
-                  "trns": "gözəl, səmimi, şirin, şirin"
+                  "trns": "gözəl, səmimi, şirin"
                 },
                 {
                   "orgn": "приятно",
@@ -5279,7 +5279,7 @@
                 },
                 {
                   "orgn": "год",
-                  "trns": "il, il"
+                  "trns": "il"
                 },
                 {
                   "orgn": "чёрт",
@@ -5326,7 +5326,7 @@
                   "trns": "ad"
                 },
                 {
-                  "orgn": "фамига",
+                  "orgn": "фамилия",
                   "trns": "soyad"
                 },
                 {
@@ -5339,7 +5339,7 @@
                 },
                 {
                   "orgn": "сутки",
-                  "trns": "bütün gün, 24 saat"
+                  "trns": "sutka"
                 },
                 {
                   "orgn": "неделя",
@@ -5348,10 +5348,6 @@
                 {
                   "orgn": "месяц",
                   "trns": "ay"
-                },
-                {
-                  "orgn": "год",
-                  "trns": "il, il"
                 },
                 {
                   "orgn": "осень",
@@ -5467,7 +5463,7 @@
                 },
                 {
                   "orgn": "дeд / дедушка",
-                  "trns": "baba, baba"
+                  "trns": "baba"
                 },
                 {
                   "orgn": "портрет",
@@ -5475,7 +5471,7 @@
                 },
                 {
                   "orgn": "внук / внучка",
-                  "trns": "nəvə / nəvə"
+                  "trns": "nəvə "
                 },
                 {
                   "orgn": "телефон",
@@ -5547,11 +5543,11 @@
                 },
                 {
                   "orgn": "концерт",
-                  "trns": "konsert, resital"
+                  "trns": "konsert"
                 },
                 {
                   "orgn": "Место",
-                  "trns": "yer, nəqliyyat vasitəsindəki oturacaq, baqajdakı parça"
+                  "trns": "yer"
                 },
                 {
                   "orgn": "класс",
@@ -5582,8 +5578,8 @@
                   "trns": "ölkə"
                 },
                 {
-                  "orgn": "родина / Родина",
-                  "trns": "vətən / vətən"
+                  "orgn": "родина",
+                  "trns": "vətən"
                 },
                 {
                   "orgn": "деревня",
@@ -5603,7 +5599,7 @@
                 },
                 {
                   "orgn": "куртка",
-                  "trns": "palto, palto"
+                  "trns": "palto"
                 },
                 {
                   "orgn": "чемодан",
@@ -5660,7 +5656,7 @@
                 },
                 {
                   "orgn": "раньше",
-                  "trns": "əvvəllər, əvvəllər"
+                  "trns": "əvvəllər"
                 },
                 {
                   "orgn": "больница",
@@ -5684,7 +5680,7 @@
                 },
                 {
                   "orgn": "путешествие",
-                  "trns": "səyahət, səyahət"
+                  "trns": "səyahət"
                 },
                 {
                   "orgn": "брать / взять",
@@ -6108,7 +6104,7 @@
                 },
                 {
                   "orgn": "размер",
-                  "trns": "bədən"
+                  "trns": "ölçü"
                 },
                 {
                   "orgn": "натуральный",
@@ -10503,7 +10499,7 @@
                 },
                 {
                   "orgn": "размер",
-                  "trns": "body"
+                  "trns": "size"
                 },
                 {
                   "orgn": "натуральный",

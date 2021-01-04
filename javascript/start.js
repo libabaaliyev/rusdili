@@ -1,6 +1,6 @@
 $(document).ready(function()
 {
-	//localStorage.clear();
+	/*localStorage.clear();*/
 	title = 
 	{
 		az : "Rus dili tədrisi",
@@ -110,8 +110,7 @@ $(document).ready(function()
 	else
 	{
 		lang 		= JSON.parse(localStorage.applang);
-		appLanguage = JSON.parse(localStorage.appLanguage);
-		
+		appLanguage = JSON.parse(localStorage.appLanguage);		
 		$("#app-name").html(appLanguage[lang]['app-name']);
 		startFunc.jsonfiles("main"); //burani duzeldecem
 	}

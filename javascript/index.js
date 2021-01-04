@@ -23,6 +23,7 @@ $(document).ready(function()
 	invite 			= $("#invite");
 	gemCount		= $(".gem-count");
 	card_market		= $(".card-market");
+	pro 			= $(".pro");
 
 	bodyHeight 		= $(window).height();
 	windowWidth		= $(window).width();
@@ -45,18 +46,15 @@ $(document).ready(function()
 	gems 			= JSON.parse(user.gem);
 	crown 			= JSON.parse(user.crown);
 	heart 			= JSON.parse(user.heart);
+	version 		= user.version;
 	aim 			= user.aim;
 	grade 			= JSON.parse(user.grade);
 	achieve_tag 	= ["grade-master","crown-master","unerror","friendly","week","full-aim","month","knight"];
-
 	date  			= new Date();
 	currentYear		= date.getFullYear();
 	currentMonth 	= date.getMonth()+1;
 	currentDay 		= date.getDate();
-
 	currentDate		= currentDay + "." + currentMonth + "." + currentYear;
-
-
 	exam_data = {};
 
 	body.click(function()
@@ -66,12 +64,13 @@ $(document).ready(function()
 
 	callOther("general","language");
 	callOther("general","aim_setting","index");
-	callOther("general","start_page","index");
+	callOther("general","start_page","index");	
 	grade_control();
 	create_level();
 	create_achievement();
 	skills();
 
+	
 	lesson 	= $(".level-query-li");
 	hash 	= location.hash.substr(1);
 
@@ -97,19 +96,16 @@ $(document).ready(function()
 		achieveData[tag] 	= 0;
 		element				= $(this).offset();
 		y 					= element.top - 245;
-
 		count_add_gems_x 	= count_add_gems;
-		if(marketData['double'] > 0)
+
+		if(marketData['double'] != 0)
 		{
 			count_add_gems = count_add_gems * 2;
 			count_text = '+ 2x ';
-			marketData['double'] = JSON.parse(marketData['double']) - 1;
 			skills();
 		}
 		else
-		{
 			count_text = '+';
-		}
 		
 		adding = `<label class="adding-text text-primary f-s-14" style="top:`+y+`px;">`+count_text+count_add_gems_x+`</label>`;
 		$(adding).appendTo("#achievements");
@@ -250,7 +246,9 @@ $(document).ready(function()
 		mission 			= 'test';
 		if(user.heart>0)
 		{
-			user.heart		= JSON.parse(user.heart) - 1; 			//will be sound
+			if(version == "simple")
+				user.heart		= JSON.parse(user.heart) - 1; 			//will be sound
+			
 			save();
 			goLesson(mission,'practice');
 		}
@@ -276,7 +274,7 @@ $(document).ready(function()
 
 	addHeart.click(function()
 	{
-		ads('reward');
+		callOther("general","ads","interstitial");
 	});
 
 	card_market.click(function()
@@ -285,25 +283,59 @@ $(document).ready(function()
 		price 		= $(this).data("gem");
 
 		if(m_category == "reward")
-			ads('reward');
+			callOther("general","ads","reward");
 
 		else if(m_category == "plus")
-			console.log("go to plus");
+			callOther("general","pro_edition");
 		else
 		{
 			if(gems > price){ //will be sound
-				gems -=price;
-				user.gem = gems;
-				gemCount.html(gems);
-				marketData[m_category] = JSON.parse(marketData[m_category]) + 1;
-				skills();
-				save();
+
+				if(m_category == 'add-heart')
+				{
+					if(heart<5)
+					{
+						gems -=price;						
+						heart ++;
+						user.gem = gems;
+						user.heart = heart;
+						gemCount.html(gems);
+						save();
+					}
+					else
+						callOther("general","notification","enough-heart");
+				}
+				else
+				{
+					if(marketData[m_category] == 0){
+						gems -=price;
+						user.gem = gems;
+						gemCount.html(gems);
+
+						newTime = new Date();
+						newTime.setHours(newTime.getHours() + 1);
+		         	
+						marketData[m_category] = newTime;
+						skills();
+						save();
+						$(".price-"+m_category).hide();
+
+					}
+					else
+						callOther("general","notification","enough-"+m_category);
+				}
 			}
 			else
 				callOther("general","notification","notenoughCoin");
 		}
-
 	});
+
+	pro.click(function()
+	{
+		callOther("general","pro_edition");
+	});
+
+
 
 	
 	function save()
@@ -312,19 +344,14 @@ $(document).ready(function()
 		localStorage.plan 		= JSON.stringify(plan);
 		localStorage.user 		= JSON.stringify(user);
 		localStorage.market		= JSON.stringify(marketData);
-		callOther("general","start_page","index");
-	}
 
-	function ads(e)
-	{
-		if(e == 'reward')
-		{
-			if(heart<5)
-			heart++;
-			user.heart = heart;
-			save();
-		}
-		
+		gems 	= JSON.parse(user.gem);
+		crown 	= JSON.parse(user.crown);
+		heart 	= JSON.parse(user.heart);
+		aim 	= user.aim;
+
+
+		callOther("general","start_page","index");
 	}
 
 	function crown_limit(e)
@@ -394,10 +421,10 @@ $(document).ready(function()
 		}
 		else
 		{
-				opening = false;
-				lesson_info.fadeOut();
-				selectStep 	= -1;
-				selectGrade = -1;
+			opening = false;
+			lesson_info.fadeOut();
+			selectStep 	= -1;
+			selectGrade = -1;
 			
 		}
 	}
@@ -487,12 +514,8 @@ $(document).ready(function()
 									<h4><span class="step"><!-- Adım --></span> `+k+`</h4>
 								</div>
 							</li>`
-
 				$(castles).appendTo("#query"+i);
-
 			}
-
-
 		}
 	}
 	
@@ -518,11 +541,8 @@ $(document).ready(function()
 			}			
 			else if(tag == 'week')
 			{
-
 				if(achieveData[tag] == true)
-					ex_current = day_count(7);
-
-				
+					ex_current = day_count(7);				
 			}
 			else if(tag == 'full-aim')
 			{
@@ -574,28 +594,75 @@ $(document).ready(function()
 		}
 	}
 
-	
 	function skills()
 	{
 		$("#skills li").remove();
-		shield = `<li>
+		
+
+
+		shield = `<li id="shield-skill">
 					<img src="img/icons/shield.png">
-					<label>` + marketData['shield'] + `</label>
+					<label class="skill-shield"></label>
 				  </li>`;
-		double = `<li>
+		double = `<li id="double-skill">
 					<img src="img/icons/2x.png">
-					<label>` + marketData['double'] + `</label>
+					<label class="skill-double"></label>
 				  </li>`;
 
 		skill_n = '';
-		if(marketData['shield'] != 0)
+		if(marketData['shield'] != 0){
 			skill_n += shield;
+			countTime(marketData['shield'],'shield');
+			$(".price-shield").hide();
+		}
 
-		if(marketData['double'] != 0)
+
+		if(marketData['double'] != 0){
+
 			skill_n += double;
-
+			countTime(marketData['double'],'double');
+			$(".price-double").hide();
+		}
 
 		$(skill_n).appendTo("#skills");
+	}
+
+	function countTime(t,e)
+	{
+		var countDownDate = new Date(t).getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function()
+		{
+
+		  // Get today's date and time
+		  var now = new Date().getTime();
+		    
+		  // Find the distance between now and the count down date
+		  var distance = countDownDate - now;
+		    
+		  // Time calculations for days, hours, minutes and seconds
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		    
+		  // Output the result in an element with id="demo"
+		  returnValue = minutes + " : " + seconds;
+		  $(".skill-"+e).html(returnValue);
+
+		  // If the count down is over, write some text 
+		  if (distance < 0) {
+		    clearInterval(x);
+		    returnValue = 0;
+		    marketData[e] = 0;
+		    save();
+		    skills();
+		  }
+
+
+
+		}, 1000);
 	}
 
 	function day_count(c)
@@ -837,9 +904,9 @@ $(document).ready(function()
 	{
 		$.getScript("javascript/"+loc+".js",function(e)
 		{					
-			window[func](funcData,funcData_1);				
+			window[func](funcData,funcData_1);	
+
 		});
 	}
-
 
 });

@@ -20,6 +20,7 @@
 </head>
 <body>
 	<div class="tab-content">
+
 		<div class="tab-pane fade" id="main">
 			<header class="main-header">
 				<ul id="menu">
@@ -34,8 +35,12 @@
 						<img src="img/icons/treasure.png">
 						<!-- <i class="metalic fas fa-feather"> </i>-->
 					</li>
-					<li data-value="heart">
+					<li class="heart-tab" style="display: none;" data-value="heart">
 						<i class="red fas fa-heart fa-beat"></i> <label class="count-heart"></label>
+					</li>
+
+					<li class="gem-tab" style="display: none;" data-value="diamond">
+						<i class="text-primary fas fa-gem"></i> <label class="gem-count f-s-12"></label>
 					</li>
 				</ul>
 
@@ -100,19 +105,21 @@
 									</div>							
 								</li>
 
-								<li class="add-heart" >
+								<li class="add-heart card-market" data-category="add-heart" data-gem="200">
 									<div class="special-items-icon">
 										<i class="red fas fa-heart fa-beat"></i>
 									</div>
 									<div class="special-items-info">
 										<h4 class="get-health"><!-- Can Kazan --></h4>
 									</div>
-									<div class="special-items-info get-ads">
-										<span><!-- Reklam izle --></span>
+									<div class="special-items-info">
+										
+										<i class="fas fa-gem text-primary"></i> <span class="text-primary">200</span>
+										
 									</div>							
 								</li>
 
-								<li class="sp-active">
+								<li class="sp-active pro">
 									<div class="special-item">
 										<span class="plus"><!-- Plus --></span>
 									</div>
@@ -147,10 +154,10 @@
 					</a>
 				</header>
 				<ul>
-					<li><a href="setting.html"><i class="fas fa-cog "></i> 	<span class="settings"><!-- Settings --></span></a></li>
-					<li><a href=""><i class="fas fa-envelope"></i> 			<span id="contact-us"><!-- Email Us --></span></a></li>
-					<li><a ><i class="fas fa-user-plus"></i> 		<span id="invite"><!-- Invite Friends --></span></a></li>
-					<li><a href=""><i class="fas fa-star"></i> 				<span id="rate"><!-- Rate Us --></span></a></li>
+					<li><a href="setting.html"><i class="fas fa-cog "></i> <span class="settings"><!-- Settings --></span></a></li>
+					<li><a href="mailto:aliyev.alibaba@hotmail.com"><i class="fas fa-envelope"></i> <span id="contact-us"><!-- Email Us --></span></a></li>
+					<li><a ><i class="fas fa-user-plus"></i><span id="invite"><!-- Invite Friends --></span></a></li>
+					<li><a href="https://play.google.com/store/apps/details?id=com.alibabastudio.rusdilioyun"><i class="fas fa-star"></i> <span id="rate"><!-- Rate Us --></span></a></li>
 				</ul>
 			</nav>
 
@@ -189,7 +196,7 @@
 
 					<section class="special-body">
 						<ul>
-							<li id="open-lock-with-gem" data-gem="10">
+							<li id="open-lock-with-gem" data-gem="50">
 								<div class="special-items-icon">
 									<i class="gem fas fa-gem"></i>
 								</div>
@@ -201,7 +208,7 @@
 								</div>							
 							</li>
 
-							<li class="sp-active">
+							<li class="sp-active pro">
 								<div class="special-item">
 									<span class="plus"><!-- Plus --></span>
 								</div>
@@ -303,136 +310,21 @@
 
 
 			</section>
-
-			<div class="skills">
-				<ul id="skills">
-					
-				</ul>
-			</div>
 		</div>
 
 		<div class="tab-pane fade" id="score">
+			<header class="main-header">
+				<div class="header-name">
+					<label id="score-head"><!-- Score --></label>
+				</div>
+			</header>
 			<section class="score-table">
-				<ul id="levels">
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
-
-					<li class="checked">
-						<i class="fas fa-feather"></i>
-						
-					</li>
+				<img class="empty-table" src="img/gif/others/resting.gif">
+				<ul id="users">
+					
+					
 				</ul>
-				
+				<!-- <img class="side-gif" src="img/gif/success/happy-5.gif"> -->
 			</section>
 		</div>
 
@@ -456,7 +348,7 @@
 					<div class="info-body">
 						<span id="get-plus-shop"><!-- Reklamsız, sınırsız eğitim selam söyle !!! --></span>
 					</div>
-					<a class="form-button text-primary upgrade" href=""><!-- Yükselt --></a>
+					<label class="form-button text-primary upgrade pro"><!-- Yükselt --></label>
 				</div>
 
 				<div class="card card-market" data-category="shield" data-gem="200">
@@ -472,13 +364,13 @@
 								<!-- Bir hafta kullanmayı unutduğun serini koruyabilirsin. -->
 							</span>
 						</div>
-						<div class="info-body">
+						<div class="info-body price-shield">
 							<i class="fas fa-gem text-primary"></i> <span class="text-primary">200</span>
 						</div>
 					</div>
 				</div>
 
-				<div class="card card-market" data-category="add-heart" data-gem="100">
+				<div class="card card-market" data-category="add-heart" data-gem="200">
 					<figure class="card-img add-heart">
 						<div class="special-items-icon">
 							<i class="red fas fa-heart fa-beat"></i>
@@ -494,11 +386,11 @@
 							</span>
 						</div>
 						<div class="info-body">
-							<span class="text-primary"><!-- Reklam izle --></span>
+							<i class="fas fa-gem text-primary"></i> <span class="text-primary">200</span>
 						</div>
 					</div>
 				</div>
-
+ 
 				<div class="card card-market" data-category="double" data-gem="420">
 					<figure class="card-img">
 						<img src="img/icons/2x.png">
@@ -512,14 +404,14 @@
 								<!-- 7 günlük seriyi tamamladığın zaman kazancını ikiye katla. -->
 							</span>
 						</div>
-						<div class="info-body">
+						<div class="info-body price-double">
 							<i class="fas fa-gem text-primary"></i> <span class="text-primary">420</span>
 						</div>
 					</div>
 				</div>
 
 
-				<div class="card card-market" data-category="plus" data-gem="plus">
+				<div class="card card-market pro" data-category="plus" data-gem="plus">
 					<figure class="card-img sp-active border-none">
 						<div class="special-items-icon">
 							<i class="red fas fa-heart fa-beat"></i>
@@ -547,6 +439,11 @@
 
 	</div>
 
+	<div class="skills">
+		<ul id="skills">
+			
+		</ul>
+	</div>
 
 
 	<footer class="footer">

@@ -27,6 +27,7 @@
 		"username"				: "Username",
 		"email"					: "Email",
 		"password"				: "Password",
+		"language"				: "Language",
 		"name-input"			: "Enter a name ...",
 		"username-input"		: "Enter a username ...",
 		"email-input"			: "Type e-mail address ...",
@@ -47,7 +48,7 @@
 		"a-health"				: "A Heart",
 		"get-practice"			: "Practice",
 		"get-health"			: "Get Heart",
-		"plus"					: "Plus",
+		"plus"					: "PRO",
 		"unlimited"				: "Unlimited",
 		"get-plus"				: "Upgrade",
 		"zero-level"			: "Beginner",
@@ -61,12 +62,14 @@
 		"start"					: "Start",
 		"reset"					: "Reset",
 		"skip-level-txt"		: "start the test to skip!",
-		"skip-level-span"		: "Use gems or try Plus to get unlimited test rights",
+		"skip-level-span"		: "Use gems or try PRO to get unlimited test rights",
 		"use-gem"				: "Use jewelry",
 		"unlimited-test"		: "Unlimited test right",
 		"no-thanks"				: "No Thanks",
 		"profile"				: "Profile",
 		"finish-league"			: "finished ...",
+
+		"score-head"			: "Daily scoreboard",
 		"shop"					: "Shop",
 		"get-plus-shop"			: "Say hi to ad-free and unlimited education !!!",
 		"upgrade"				: "Upgrade",
@@ -78,7 +81,7 @@
 		"double-skill-title"	: "Double up",
 		"double-skill-txt"		: "Double the time earnings on completing the task.",
 		"unlimited-health"		: "Unlimited Health",
-		"buy-plus"				: "BUY PLUS",
+		"buy-plus"				: "BUY PRO",
 		"done"					: "Done",
 		"select-picture"		: "Select picture",
 		"true-answer"			: "Correct answer",
@@ -105,7 +108,8 @@
 		"bad"					: "Bad",
 		"good"					: "Good",		
 		"very-good"				: "Very good",
-		"excellent"				: "Excellent"
+		"excellent"				: "Excellent",
+		"point"					: "points"
 
 
 	},
@@ -138,6 +142,7 @@
 		"username"				: "Kullanıcı adı",
 		"email"					: "E-posta",
 		"password"				: "Şifre",
+		"language"				: "Dil",
 		"name-input"			: "Bir isim girin...",
 		"username-input"		: "Bir kullanıcı ismi girin...",
 		"email-input"			: "E-posta adresi yazın...",
@@ -158,9 +163,9 @@
 		"a-health"				: "1 Can",
 		"get-practice"			: "Pratik yap",
 		"get-health"			: "Can Kazan",
-		"plus"					: "Plus",
+		"plus"					: "PRO",
 		"unlimited"				: "Sınırsız",
-		"get-plus"				: "Plus`a geç",
+		"get-plus"				: "PRO`a geç",
 		"zero-level"			: "Başlangıç düzey",
 		"elementary-level"		: "İleri seviyye",
 
@@ -174,14 +179,14 @@
 		"start"					: "Başla",
 		"reset"					: "Sıfırla",
 		"skip-level-txt"		: "atlamak için teste gir!",
-		"skip-level-span"		: "Sınırsız test hakkı almak için mücevher kullan veya Plus`ı dene",
+		"skip-level-span"		: "Sınırsız test hakkı almak için mücevher kullan veya PRO`u dene",
 		"use-gem"				: "Mücevher kullan",
 		"unlimited-test"		: "Sınırsız test hakkı",
 		"no-thanks"				: "Hayır, Teşekkürler",
 
 		"profile"				: "Profil",
 		"finish-lig"			: " tamamladınız...",
-
+		"score-head"			: "Günlük puan tablosu",
 		"shop"					: "Mağaza",
 		"get-plus-shop"			: "Reklamsız ve sınırsız eğitim selam söyle !!!",
 		"upgrade"				: "Yükselt",
@@ -195,7 +200,7 @@
 		"double-skill-title"	: "İkiye katla",
 		"double-skill-txt"		: "Görevi tamamladığın zaman kazancını ikiye katla.",
 		"unlimited-health"		: "Sınırsız Can",
-		"buy-plus"				: "PLUS SATIN AL",
+		"buy-plus"				: "PRO SATIN AL",
 		"done"					: "Bitti",
 		"select-picture"		: "Resim seç",
 		"true-answer"			: "Doğru cevap",
@@ -206,7 +211,7 @@
 		"double-skill-ads"		: "Ödülünüzü ikiye katlamak için bir reklam izleyin.",
 		"double-reward"			: "Çifte Ödül",
 		"ads-txt"				: "Bu reklam sayesinde size ücretsiz eğitim sağlamaya devam edebiliyoruz.",
-		"buy-plus-txt"			: "Reklamları kaldır - Plus`a geç",
+		"buy-plus-txt"			: "Reklamları kaldır - PRO`a geç",
 
 		"know" 					: "Öğrendim",
 		"later" 				: "Daha sonra",
@@ -222,7 +227,8 @@
 		"bad"					: "Kötü",
 		"good"					: "İyi",		
 		"very-good"				: "Çok iyi",
-		"excellent"				: "Muhteşem"
+		"excellent"				: "Muhteşem",
+		"point"					: "puan"
 		
 
 	},
@@ -253,6 +259,7 @@
 		"username"				: "İstifadəçi adı",
 		"email"					: "E-poçt",
 		"password"				: "Şifrə",
+		"language"				: "Dil",
 		"name-input"			: "Bir ad yazın...",
 		"username-input"		: "Bir istifadəçi ismi yazın...",
 		"email-input"			: "E-poçt adresi yazın...",
@@ -273,9 +280,9 @@
 		"a-health"				: "1 Can",
 		"get-practice"			: "Test et",
 		"get-health"			: "Can Qazan",
-		"plus"					: "Plus",
+		"plus"					: "PRO",
 		"unlimited"				: "Limitsiz",
-		"get-plus"				: "Plus`a keç",
+		"get-plus"				: "PRO`a keç",
 		"zero-level"			: "Başlanğıç səviyyə",
 		"elementary-level"		: "Yüksək səviyyə",
 		"settings"				: "Tənzimləmələr",
@@ -287,12 +294,13 @@
 		"start"					: "Başla",
 		"reset"					: "Sıfırla",
 		"skip-level-txt"		: "imtahana gir",
-		"skip-level-span"		: "İmtahan haqqı almaq üçün xəzinədən istidafə et və ya Plus`a keç",
+		"skip-level-span"		: "İmtahan haqqı almaq üçün xəzinədən istidafə et və ya PRO`a keç",
 		"use-gem"				: "Briliantdan istifadə et",
 		"unlimited-test"		: "Limitsiz imtahan haqqı",
 		"no-thanks"				: "Xeyr, Təşəkkürlər",
 		"profile"				: "Profil",
 		"finish-lig"			: " tamamladınız...",
+		"score-head"			: "Günlük nəticə cədvəli",
 		"shop"					: "Market",
 		"get-plus-shop"			: "Reklamsız və limitsiz təhsilə salam söylə !!!",
 		"upgrade"				: "Yüksəlt",
@@ -304,7 +312,7 @@
 		"double-skill-title"	: "İkiqat",
 		"double-skill-txt"		: "Tapşırığı tamamladıqda qazancını ikiqat et.",
 		"unlimited-health"		: "Limitsiz Can",
-		"buy-plus"				: "PLUS SATIN AL",
+		"buy-plus"				: "PRO SATIN AL",
 		"done"					: "Saxla",
 		"select-picture"		: "Şəkil seç",
 
@@ -316,7 +324,7 @@
 		"double-skill-ads"		: "Mükafatınızı ikiqat etmək üçün reklam izləyin.",
 		"double-reward"			: "İkiqat mükafat",
 		"ads-txt"				: "Bu reklam sayəsində sizə ödənişsiz və davamlı təhsil verməyə davam edə bilirik.",
-		"buy-plus-txt"			: "Reklamları yığışdır - Plus`a keç",
+		"buy-plus-txt"			: "Reklamları yığışdır - PRO`a keç",
 
 		"know" 					: "Öyrəndim",
 		"later" 				: "Daha sonra",
@@ -334,7 +342,8 @@
 		"bad"					: "Pis",
 		"good"					: "Yaxşı",		
 		"very-good"				: "Çox yaxşı",
-		"excellent"				: "Əla"
+		"excellent"				: "Əla",
+		"point"					: "xal"
 
 
 	},
@@ -364,7 +373,8 @@
 		"name"					: "Имя",
 		"username"				: "Имя пользователя",
 		"email"					: "Электронная почта",
-		"пароль"				: "Пароль",
+		"password"				: "Пароль",
+		"language"				: "Язык",
 		"name-input"			: "Введите имя ...",
 		"username-input"		: "Введите имя пользователя ...",
 		"email-input"			: "Введите адрес электронной почты ...",
@@ -385,26 +395,28 @@
 		"a-health"				: "1 сердце",
 		"get-practice"			: "Практика",
 		"get-health"			: "Может Казань",
-		"plus"					: "Плюс",
+		"plus"					: "PRO",
 		"unlimited"				: "Безлимитный",
-		"get-plus"				: "Перейти на плюс",
+		"get-plus"				: "Перейти на PRO",
 		"zero-level"			: "Начальный уровень",
 		"elementary-level"		: "Продвинутый уровень",
 		"settings"				: "Настройки",
 		"contact-us"			: "Свяжитесь с нами",
-		"пригласить"			: "Порекомендовать друзьям",
+		"invite"				: "Порекомендовать друзьям",
 		"rate"					: "Оценить",		
 		"step"					: "Шаг",		
 		"level"					: "Уровень",
 		"start"					: "Старт",
 		"reset"					: "Сброс",
 		"skip-level-txt"		: "пройдите тест, чтобы прыгать!",
-		"skip-level-span"		: "Используйте драгоценные камни или попробуйте Plus, чтобы получить неограниченные права на тестирование",
+		"skip-level-span"		: "Используйте драгоценные камни или попробуйте PRO, чтобы получить неограниченные права на тестирование",
 		"use-gem"				: "Использовать бриллиантов",
 		"unlimited-test"		: "Право на неограниченное тестирование",
 		"no-thanks"				: "Нет, спасибо",
 		"profile"				: "Профиль",
 		"finish-league"			: "завершено ...",
+
+		"score-head"			: "Ежедневное табло",
 		"shop"					: "Магазин",
 		"get-plus-shop"			: "Без рекламы и неограниченное образование, привет !!!",
 		"upgrade"				: "Обновить",
@@ -418,7 +430,7 @@
 
 		"unlimited-health"		: "Неограниченное сердце",
 		
-		"buy-plus"				: "КУПИТЬ ПЛЮС",
+		"buy-plus"				: "КУПИТЬ PRO",
 		"done"					: "Готово",
 		"select-picture"		: "Выбрать картинку",
 		"true-answer"			: "Правильный ответ",
@@ -430,7 +442,7 @@
 		"double-skill-ads"		: "Посмотрите рекламу, чтобы удвоить вознаграждение.",
 		"double-reward"			: "Двойная награда",
 		"ads-txt"				: "Благодаря этому объявлению мы можем продолжать предоставлять вам бесплатное обучение.",
-		"buy-plus-txt"			: "Убрать рекламу - перейти на Plus",
+		"buy-plus-txt"			: "Убрать рекламу - перейти на PRO",
 
 		"know" 					: "Я узнал",
 		"later" 				: "Позже",
@@ -446,7 +458,8 @@
 		"bad"					: "Плохо",
 		"good"					: "Хорошо",		
 		"very-good"				: "Очень хорошо",
-		"excellent"				: "Превосходно"
+		"excellent"				: "Превосходно",
+		"point"					: "oчко"
 
 	}
 

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Anamakine: 127.0.0.1
--- Üretim Zamanı: 11 Ara 2020, 13:45:09
--- Sunucu sürümü: 5.7.17
--- PHP Sürümü: 5.6.30
+-- Anamakine: 127.0.0.1:3308
+-- Üretim Zamanı: 02 Oca 2021, 18:14:41
+-- Sunucu sürümü: 8.0.18
+-- PHP Sürümü: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Veritabanı: `lang_edu`
+-- Veritabanı: `rusdili`
 --
 
 -- --------------------------------------------------------
@@ -28,8 +28,9 @@ SET time_zone = "+00:00";
 -- Tablo için tablo yapısı `users`
 --
 
-CREATE TABLE `users` (
-  `id` bigint(255) NOT NULL,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` bigint(255) NOT NULL AUTO_INCREMENT,
   `username` varchar(100) NOT NULL,
   `name` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
@@ -37,33 +38,27 @@ CREATE TABLE `users` (
   `photo` varchar(100) NOT NULL DEFAULT 'p1.png',
   `aim` varchar(100) NOT NULL DEFAULT 'easy',
   `level` varchar(100) NOT NULL,
-  `grade` int(255) NOT NULL DEFAULT '0',
+  `grade` bigint(255) NOT NULL DEFAULT '0',
   `learning` varchar(100) NOT NULL,
   `using_lang` varchar(100) NOT NULL,
-  `league` varchar(100) NOT NULL DEFAULT 'starter'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `league` varchar(100) NOT NULL DEFAULT 'starter',
+  `crown` bigint(255) NOT NULL DEFAULT '0',
+  `heart` int(255) NOT NULL DEFAULT '5',
+  `gem` bigint(255) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
--- Dökümü yapılmış tablolar için indeksler
+-- Tablo döküm verisi `users`
 --
 
---
--- Tablo için indeksler `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`),
-  ADD UNIQUE KEY `email` (`email`);
-
---
--- Dökümü yapılmış tablolar için AUTO_INCREMENT değeri
---
-
---
--- Tablo için AUTO_INCREMENT değeri `users`
---
-ALTER TABLE `users`
-  MODIFY `id` bigint(255) NOT NULL AUTO_INCREMENT;COMMIT;
+INSERT INTO `users` (`id`, `username`, `name`, `password`, `email`, `photo`, `aim`, `level`, `grade`, `learning`, `using_lang`, `league`, `crown`, `heart`, `gem`) VALUES
+(1, 'alibabaaliyev', 'Alibaba', 'azerbaycan1', 'aliyev.alibaba@hotmail.com', 'p3.png', 'average', 'zero', 2, 'ru', '\"az\"', 'starter', 47, 4, 332),
+(16, 'alibaba12', 'Alibaba', 'azerbaycan1', 'alibaba.alibaba@al.com', 'p1.png', 'average', 'zero', 0, 'ru', '\"tr\"', 'starter', 0, 5, 0),
+(15, 'alibaba123', 'Alibaba', 'azerbaycan1', 'alibabaalibaba@ali.com', 'p1.png', 'serious', 'elementary', 0, 'ru', '\"az\"', 'starter', 8, 5, 2367);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -31,7 +31,9 @@ $(document).ready(function()
 	close 			= $(".close-lesson");
 	
 	etalon 			= 2; //default 20
+	cQuestions 		= 10;
 	current			= 1;
+	bonus_gem 		= 20;
 	correct_count 	= 0;	
 	queque 			= 0;
 	queLater 		= 0;
@@ -41,8 +43,7 @@ $(document).ready(function()
 	question_que 	= 0;
 
 	hash 			= location.hash.substr(1);
-	date  			= new Date();
-	
+	date  			= new Date();	
 	currentYear		= date.getFullYear();
 	currentMonth 	= date.getMonth()+1;
 	currentDay 		= date.getDate();
@@ -77,12 +78,13 @@ $(document).ready(function()
 	s_category 		= 
 	[
 	
-		"presentation",	"application",	"science",	"order",	"date",	"own",	"travel",	"health",	"shopping",	"eating",	"camp",	"time",	"walking",	"meeting",	"documents",	"working",	"education",	"shelter",	"compensation",	"animals"
+		"application",	"science",	"order",	"date",	"own",	"travel",	"health",	"shopping",	"eating",	"camp",	"time",	"walking",	"meeting",	"documents",	"working",	"education",	"shelter",	"compensation"
 	
 	]	
 	
 	callOther("general","start_page","index","lesson");
 	callOther("general","language");
+	TimeShield();
 
 	setTimeout(function()
 	{
@@ -210,14 +212,20 @@ $(document).ready(function()
 	continue_succes.click(function()
 	{
 		success_body.hide();
-		if(getting_aim >= etalon_aim)		
-			success_gem.show();
-		else
-			adsense_tab.show();
+		/*if(checkConnection() == "none")
+			window.location = "main.html";	
+		else{*/
+			if(getting_aim >= etalon_aim)		
+				success_gem.show();
+			else
+				adsense_tab.show();			
+		/*}*/
+		
 	});
 
 	rewardBtn.click(function()
 	{
+		callOther("general","ads","reward",bonus_gem);
 		//reklam funksiyasindan save verecik
 		save();
 	});
@@ -226,12 +234,18 @@ $(document).ready(function()
 	{
 		lesson_success.hide();
 		success_gem.hide();
-		adsense_tab.show();
+		/*if(checkConnection() == "none")
+			window.location = "main.html";	
+		else*/
+			adsense_tab.show();
 	});
 
 	close.click(function()
-	{			
-		save();
+	{		
+		/*if(checkConnection() == "none")
+			window.location = "main.html#internet-error";
+		else*/
+			save();
 	});
 
 	continue_lesson.click(function()
@@ -271,6 +285,7 @@ $(document).ready(function()
 				maxQue 		= selectQue("max",grade,step,exam);
 				q 	   		= minQue				
 				word_learn(first_value,second_value);
+				console.log(minQue+"-"+maxQue);
 
 			}
 			else if(category_e == "open-lock")
@@ -308,10 +323,20 @@ $(document).ready(function()
 				if(exam_c > 5)
 					exam_c = 4;
 
-				minQue 		= selectQue("min",grade,1,1);
-				maxQue 		= selectQue("max",grade,step,exam_c);
+				if(second_value == "word")
+				{
+					minQue 		= selectQue("min",grade,1,1);
+					maxQue 		= selectQue("max",grade,step,exam_c);
+				}
+				else
+				{
+					minQue = 0;
+					maxQue = sentences[lang][sentence_category].length - 1;
+				}
+				
 				q 	   		= minQue;
 				main.show();
+
 				question(category_e,"trns","translate",maxQue);
 			}
 			
@@ -321,7 +346,6 @@ $(document).ready(function()
 			window.location = "main.html";
 		}
 	}
-
 
 	function crown_limit(e)
 	{
@@ -355,10 +379,8 @@ $(document).ready(function()
 		}
 		else if(grade >=5 && grade < 15)
 		{
-			first_value 		= 'normal';
-			
+			first_value 		= 'normal';			
 			if(grade % 5 == 0){
-
 				x 					= random_number(0,(s_category.length - 1));
 				sentence_category 	= s_category[x];				
 				second_value 		= 'sentence';
@@ -378,7 +400,6 @@ $(document).ready(function()
 
 	function save()
 	{
-
 		base = new FormData();
 		base.append("info","update-datas");
 		base.append("data",JSON.stringify(user));
@@ -386,6 +407,20 @@ $(document).ready(function()
 		base.append("achieve",JSON.stringify(achieveData));
 		base.append("skills",JSON.stringify(skills));
 		callOther("general","importBase",base,user,"update");
+
+		$.post("process.php",
+        {
+            info: "import-scoreboard",
+            data: JSON.stringify(day_aim),
+            id: user.id,
+            lang: 'ru'     
+        },
+        function(data)
+        {
+        	obj = JSON.parse(data);
+        	result = obj.result;       	
+        	
+        });
 	}
 	
 	function word_learn(e,v)
@@ -411,6 +446,7 @@ $(document).ready(function()
 			preparation(v)
 		}
 	}
+
 	function preparation(v)
 	{
 
@@ -464,6 +500,7 @@ $(document).ready(function()
 		}
 		else
 		{
+
 			if(cat == 'orgn')
 				question_t 			= regulation(sentences[lang][sentence_category][que][cat]);
 			
@@ -506,12 +543,12 @@ $(document).ready(function()
 
 	function answers_all(q,cat,command)
 	{
-		console.log(q+"--"+cat+"--"+command+"--"+second_value)
 		$("#answers").html("");
 
 		qq = random_number(1,4);
+		iMax = 5;
 
-		for (var i = 1; i < 5; i++) {
+		for (var i = 1; i < iMax; i++) {
 			
 			if(second_value == 'word')
 				que = random_number(0,(words[lang].length - 1));
@@ -536,12 +573,20 @@ $(document).ready(function()
 				}
 			}						
 		
-			if(i == qq)
+			if(i == qq){
 				answ_html = `<span class="form-button text-dark question-answer" data-answer="true">`+correct_answ+`</span>`;
-			else
+				$(answ_html).appendTo("#answers");
+			}
+			else if(answ_txt!=correct_answ){
 				answ_html = `<span class="form-button text-dark question-answer" data-answer="false">`+answ_txt+`</span>`;
+				$(answ_html).appendTo("#answers");
+			}
+			else if(answ_txt == correct_answ){
+				i--;
+				alert("eyni")
+			}
 
-			$(answ_html).appendTo("#answers");
+			
 
 		}
 	}
@@ -588,10 +633,10 @@ $(document).ready(function()
 				unerror = false;
 			else
 			{
-				skills['shield'] = JSON.parse(skills['shield']) - 1;
 				localStorage.market = JSON.stringify(skills);
 				callOther("general","notification","shield-protected");
 			}
+
 			if(!hash)
 			{
 				if(heart>0){
@@ -827,7 +872,7 @@ $(document).ready(function()
 			if(unerror)
 				achieveData['unerror'] = JSON.parse(achieveData['unerror']) + 1;
 
-			user.gem				= JSON.parse(user.gem) + (bonus+combo);
+			user.gem				= JSON.parse(user.gem) + bonus_gem;
 			localStorage.day_aim 	= JSON.stringify(day_aim);
 			localStorage.plan 		= JSON.stringify(plan);
 			localStorage.user 		= JSON.stringify(user);
@@ -889,8 +934,8 @@ $(document).ready(function()
 	function selectQue(e,g,s,ex)
 	{
 		
-		xMin = g*190 + (s-1)*30 + ex*10;
-		xMax = xMin+10;
+		xMin = cQuestions * (g*16 + (s-1)*3 + ex);
+		xMax = xMin + cQuestions;
 		
 		if(xMax > words[lang].length){
 			xMax = words[lang].length - 1;
@@ -915,6 +960,54 @@ $(document).ready(function()
 	function random_number(min,max)
 	{
 		return Math.floor(Math.random()*(max-min+1)+min);
+	}
+
+	function TimeShield()
+	{
+		if(skills['shield'] != 0)
+		{
+
+			var countDownDate = new Date(skills['shield']).getTime();
+
+			var x = setInterval(function()
+			{
+
+			  var now = new Date().getTime();
+			  var distance = countDownDate - now;
+			    
+			  // Time calculations for days, hours, minutes and seconds
+			  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			    
+			  	if (distance < 0) {
+				    clearInterval(x);
+				    returnValue = 0;
+				    skills['shield'] = 0;
+				    localStorage.market = JSON.stringify(skills);
+				}
+
+
+
+			}, 1000);
+		}
+	}
+
+	function checkConnection()
+	{
+	    var networkState = navigator.connection.type;
+
+	    var states = {};
+	    states[Connection.UNKNOWN]  = 'Unknown connection';
+	    states[Connection.ETHERNET] = 'Ethernet connection';
+	    states[Connection.WIFI]     = 'WiFi connection';
+	    states[Connection.CELL_2G]  = 'Cell 2G connection';
+	    states[Connection.CELL_3G]  = 'Cell 3G connection';
+	    states[Connection.CELL_4G]  = 'Cell 4G connection';
+	    states[Connection.CELL]     = 'Cell generic connection';
+	    states[Connection.NONE]     = 'none';
+	    return states[networkState];	    
 	}
 
 

@@ -8264,7 +8264,7 @@
                "mng": "Birinin mənşəyini soruşma"
             },
             {
-               "trns": "Mən.",
+               "trns": "Mən ...",
                "orgn": "Я из ... (YA iz...)",
                "mng": "Mənşəyiniz haqqında cavab vermək"
             },
@@ -8305,7 +8305,7 @@
             },
             {
                "trns": "Çox sağ olun.",
-               "orgn": "Spasibo çox olacaq. (Spasibo bol-shoye.)",
+               "orgn": "Большое спасибо.",
                "mng": "Birinə çox səmimi olaraq təşəkkür etməyin"
             },
             {
@@ -8390,7 +8390,7 @@
             },
             {
                "trns": "Pulumu geri qaytarmaq istəyirəm!",
-               "orgn": "Ya xçu vernutь свои деньги! (YA hochu vernut- svoi den-gi!)",
+               "orgn": "Я хочу вернуть свои деньги!",
                "mng": "Geri ödəmə tələb edin"
             },
             {
@@ -8399,13 +8399,13 @@
                "mng": "Uzun gözləmə vaxtından şikayət etməyin"
             },
             {
-               "trns": "Bu yemək bok kimidir!",
+               "trns": "Bu yemək pox kimidir!",
                "orgn": "Эта еда просто дерьмо! ",
                "mng": "Yeməyinizdən narazılığınızı göstərmək üçün kobud bir yol"
             },
             {
-               "trns": "Bu içki işəmək kimidir!",
-               "orgn": "Etot napitok na vkus kak моча!", 
+               "trns": "Bu içki sidik kimidir!",
+               "orgn": "Этот напиток похож на мочу!", 
                "mng": "İçkiyə görə narazılığınızı göstərmək üçün kobud bir yol"
             },
             {
@@ -9326,7 +9326,7 @@
             },
             {
                "trns": "Xahiş edirəm otağımı təmizləyə bilərsiniz?",
-               "orgn": "Mogli by Вы убрать мою комнату, пожалуйста? (Mogli by Vy ubrat- moyu komnatu, pozhaluysta?)",
+               "orgn": "Вы можете убрать мою комнату, пожалуйста?",
                "mng": "Otağı təmizləməyi xahiş etməyin"
             },
             {
@@ -10789,8 +10789,8 @@
                "mng": "Kurs növü"
             },
             {
-               "trns": "Aspirant",
-               "orgn": "aspirantura",
+               "trns": "Aspirantura",
+               "orgn": "Аспирант",
                "mng": "Kurs növü"
             },
             {

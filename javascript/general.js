@@ -6,22 +6,24 @@ email_input 		= $(".email-input");
 password_input 		= $(".password-input");
 count_crown_html 	= $(".count-crown");
 count_heart_html 	= $(".count-heart");
+language_input 		= $(".language-input");
 limit 				= $("#limits");
 
 
 notifications 		= JSON.parse(localStorage.notifications);
 lang 				= JSON.parse(localStorage.applang);
 appLanguage			= JSON.parse(localStorage.appLanguage);
+appWords 			= appLanguage[lang];
 
 
 date  		= new Date();
-fullDate 	= date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear();
+fullDate 	= date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear();
 /*day_aim 	= [];*/
 function notification(event,event_1)
 {
 
 	if(event_1)
-		messageTxt = notifications[lang][event]['message']+appLanguage[lang][event_1];
+		messageTxt = notifications[lang][event]['message']+appWords[event_1];
 	else
 		messageTxt = notifications[lang][event]['message'];
 
@@ -40,6 +42,53 @@ function notification(event,event_1)
 	});
 	
 }
+
+function ads(e)
+{
+	if(checkConnection() == 'none')
+		notification("internet-error");
+	else
+	{
+		if(e == 'reward')
+		{
+			alert(e)
+		}
+		else if(e == "interstitial")
+		{
+			alert(e);
+		}
+	}		
+}
+
+function pro_edition()
+{
+	if(checkConnection() == 'none')
+		notification("internet-error");
+	else
+	{
+		//pro isleri
+		user.version = "pro";
+		localStorage.user = user;
+		start_page("index"); 
+		
+	}
+}
+
+function checkConnection()
+{
+    var networkState 			= navigator.connection.type;
+    var states 					= {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.CELL]     = 'Cell generic connection';
+    states[Connection.NONE]     = 'none';
+    return states[networkState];
+    
+} 
 
 function filterInput(user_data,act)
 {
@@ -64,7 +113,7 @@ function filterInput(user_data,act)
         			user_data.username 	= username;
         			user_data.password 	= password;
 
-        			if(navigator.onLine)//burda network kodlari olacaq
+        			if(/*checkConnection() != 'none'*/navigator.onLine)//burda network kodlari olacaq
         			{ 
         				
         				import_data = new FormData();
@@ -145,8 +194,10 @@ function importBase(base,userData,act)
 		    		localStorage.connection = "registr-ok";
 		    		aim_setting();
 
-		    		if(act == "update")
+		    		if(act == "update"){
 		    			start_page();
+		    			language();
+		    		}
 		    		else if(act == "login"){
 
 		    			learning = dataLogin['plan'];
@@ -195,9 +246,84 @@ function importBase(base,userData,act)
 	    	}
 	    	else
 	    		internet_error(userData,act);		    	
+	    },
+	    error: function()
+	    {
+	    	internet_error(userData,act);
 	    }
 
+
 	});
+}
+
+function scoreboard()
+{
+	if(user.id == "not-registr")
+	{
+		base = new FormData();
+		base.append("info","update-datas");
+		base.append("data",JSON.stringify(user));
+		importBase(base,user,"import");
+		
+		scoreboard();
+	}		
+	else
+	{
+		$.post("process.php",
+	    {
+	        info: "score-board",
+	        id: user.id,
+	        data: JSON.stringify(day_aim),
+	        lang: 'ru'     
+	    },
+	    function(data,status)
+	    {
+	    	if(status == "success"){
+	    		$("#users li").remove();
+		    	obj 	= JSON.parse(data);
+		    	result 	= obj.result;
+
+		    	if(result.length == 0){
+		    		$(".side-gif").hide();
+		    		$(".empty-table").show();
+		    	}
+		    	else
+		    	{
+		    		$(".empty-table").hide();
+		    		$(".side-gif").show();
+
+		    		for (var i = 0; i < result.length; i++)
+		    		{
+		    			que 	= i + 1;
+		    			users 	= result[i];
+
+		    			if(users.id == user.id)
+		    				active = "active";
+		    			else
+		    				active = "";
+
+
+		    			user_li = `<li class="` + active + `">
+									<span>` + que + `.</span>
+									<figure>
+										<img src="img/profiles/` + users.photo + `">
+									</figure>
+									
+									<h4>` + users.name + `</h4>
+									<span>` + users.getting + ` `+appWords['point']+`</span>
+								</li>`
+
+
+						$(user_li).appendTo("#users");
+
+		    		}
+
+		    	}
+	    	}
+	    	else
+	    		notification("errorsomething");
+	    });
+	}
 }
 
 function internet_error(data,act)
@@ -226,6 +352,8 @@ function start_page(page,page_1)
 		email_input.val(user.email);
 		password_input.val(user.password);
 
+		$("#"+lang).attr("selected","selected");
+
 		photo_panel.removeClass("slideOutRight");
 		photo_panel.removeClass("slideInRight");
 		photo_panel.addClass("slideOutRight");
@@ -239,13 +367,25 @@ function start_page(page,page_1)
 		grade 	= JSON.parse(user.grade);
 		gem 	= JSON.parse(user.gem);
 
+		$(".gem-count").html(gem);
+
 		if(crown>0)
 			count_crown_html.html(crown);
-		
-		if(heart>=0)
-			count_heart_html.html(heart);
 
-		$(".gem-count").html(gem);
+		if(user.version == "simple")
+		{
+			$(".heart-tab").show();
+			if(heart>=0)
+				count_heart_html.html(heart);		
+		}
+		else
+		{
+			count_heart_html.html("&#8734;");
+			$(".heart-tab").remove();
+			$(".gem-tab").show();
+		}
+
+		
 		
 		set_day_aim(page_1);
 
@@ -386,9 +526,9 @@ function language()
 		user = JSON.parse(localStorage.user);
 		stlevel = user.level+'-level';
 		if(JSON.parse(user.heart) == 5)
-			heart_info = appLanguage[lang]['health-all'];
+			heart_info = appWords['health-all'];
 		else
-			heart_info = appLanguage[lang]['health-lost'];
+			heart_info = appWords['health-lost'];
 
 	}
 	else{
@@ -396,165 +536,162 @@ function language()
 		heart_info = '';
 	}
 
-	$("#app-name").html(appLanguage[lang]['app-name']);
-	$("#free-learn").html(appLanguage[lang]['free-learn']);
-	$("#get-start").html(appLanguage[lang]['get-start']);
-	$(".already-start").html(appLanguage[lang]['already-start']);
-	$("#day-aim-title").html(appLanguage[lang]['day-aim-title']);
-	$("#easy").html(appLanguage[lang]['easy']);
-	$("#easy-time").html(appLanguage[lang]['easy-time']);
-	$("#average").html(appLanguage[lang]['average']);
-	$("#average-time").html(appLanguage[lang]['average-time']);
-	$("#serious").html(appLanguage[lang]['serious']);
-	$("#serious-time").html(appLanguage[lang]['serious-time']);
+	$("#app-name").html(appWords['app-name']);
+	$("#free-learn").html(appWords['free-learn']);
+	$("#get-start").html(appWords['get-start']);
+	$(".already-start").html(appWords['already-start']);
+	$("#day-aim-title").html(appWords['day-aim-title']);
+	$("#easy").html(appWords['easy']);
+	$("#easy-time").html(appWords['easy-time']);
+	$("#average").html(appWords['average']);
+	$("#average-time").html(appWords['average-time']);
+	$("#serious").html(appWords['serious']);
+	$("#serious-time").html(appWords['serious-time']);
 
-	$("#exam-time").html(appLanguage[lang]['exam-time']);
-	$("#exam-span").html(appLanguage[lang]['exam-span']);
-	$("#go-exam").html(appLanguage[lang]['go-exam']);
+	$("#exam-time").html(appWords['exam-time']);
+	$("#exam-span").html(appWords['exam-span']);
+	$("#go-exam").html(appWords['go-exam']);
 	
 
-	$("#crazy").html(appLanguage[lang]['crazy']);
-	$("#crazy-time").html(appLanguage[lang]['crazy-time']);
+	$("#crazy").html(appWords['crazy']);
+	$("#crazy-time").html(appWords['crazy-time']);
 
-	$(".save").html(appLanguage[lang]['save']);
-	$("#select-level").html(appLanguage[lang]['select-level']);
-	$("#start-zero").html(appLanguage[lang]['start-zero']);
-	$("#start-elementary").html(appLanguage[lang]['start-elementary']);
-	$("#create-profile").html(appLanguage[lang]['create-profile']);
-	$("#create-profile-txt").html(appLanguage[lang]['create-profile-txt']);
-	$("#create-profile-btn").html(appLanguage[lang]['create-profile-btn']);
-	$("#registration").html(appLanguage[lang]['registration']);
-	$(".name").html(appLanguage[lang]['name']);
-	$(".username").html(appLanguage[lang]['username']);
-	$(".email").html(appLanguage[lang]['email']);
-	$(".password").html(appLanguage[lang]['password']);
+	$(".save").html(appWords['save']);
+	$("#select-level").html(appWords['select-level']);
+	$("#start-zero").html(appWords['start-zero']);
+	$("#start-elementary").html(appWords['start-elementary']);
+	$("#create-profile").html(appWords['create-profile']);
+	$("#create-profile-txt").html(appWords['create-profile-txt']);
+	$("#create-profile-btn").html(appWords['create-profile-btn']);
+	$("#registration").html(appWords['registration']);
+	$(".name").html(appWords['name']);
+	$(".username").html(appWords['username']);
+	$(".email").html(appWords['email']);
+	$(".password").html(appWords['password']);
+	$(".language").html(appWords['language']);
 
-	$(".name-input").attr("placeholder",appLanguage[lang]['name-input']);
-	$(".username-input").attr("placeholder",appLanguage[lang]['username-input']);
-	$(".email-input").attr("placeholder",appLanguage[lang]['email-input']);
-	$(".password-input").attr("placeholder",appLanguage[lang]['pass-input']);
+	$(".name-input").attr("placeholder",appWords['name-input']);
+	$(".username-input").attr("placeholder",appWords['username-input']);
+	$(".email-input").attr("placeholder",appWords['email-input']);
+	$(".password-input").attr("placeholder",appWords['pass-input']);
 
-	$("#privacy").html(appLanguage[lang]['privacy']);
-	$(".login").html(appLanguage[lang]['login']);
+	$("#privacy").html(appWords['privacy']);
+	$(".login").html(appWords['login']);
 
 
 
-	$("#crown-l").html(appLanguage[lang]['crown']);
+	$("#crown-l").html(appWords['crown']);
 
-	$("#crown-txt").html(appLanguage[lang]['crown-txt']);
+	$("#crown-txt").html(appWords['crown-txt']);
 
-	$(".day-aim-title").html(appLanguage[lang]['day-aim-title']);
+	$(".day-aim-title").html(appWords['day-aim-title']);
 
-	$("#update").html(appLanguage[lang]['update']);
+	$("#update").html(appWords['update']);
 	
 	$("#health-info").html(heart_info); // can sistemi duzelende bu serte gore deyisecek
 	
-	$("#health-txt").html(appLanguage[lang]['health-txt']);
+	$("#health-txt").html(appWords['health-txt']);
 	
-	$("#a-health").html(appLanguage[lang]['a-health']);
+	$("#a-health").html(appWords['a-health']);
 	
-	$(".get-practice").html(appLanguage[lang]['get-practice']);
+	$(".get-practice").html(appWords['get-practice']);
 	
-	$(".get-health").html(appLanguage[lang]['get-health']);
+	$(".get-health").html(appWords['get-health']);
 	
-	$(".plus").html(appLanguage[lang]['plus']);
+	$(".plus").html(appWords['plus']);
 	
-	$(".unlimited").html(appLanguage[lang]['unlimited']);
+	$(".unlimited").html(appWords['unlimited']);
 	
-	$(".get-plus").html(appLanguage[lang]['get-plus']);
+	$(".get-plus").html(appWords['get-plus']);
 	
 
-	$(".level-step").html(appLanguage[lang][stlevel]); 
+	$(".level-step").html(appWords[stlevel]); 
 
 
-	$("#contact-us").html(appLanguage[lang]['contact-us']);
+	$("#contact-us").html(appWords['contact-us']);
 
-	$("#invite").html(appLanguage[lang]['invite']);
+	$("#invite").html(appWords['invite']);
 
-	$("#rate").html(appLanguage[lang]['rate']);
+	$("#rate").html(appWords['rate']);
 
-	$(".settings").html(appLanguage[lang]['settings']);
+	$(".settings").html(appWords['settings']);
 
 
-	$(".step").html(appLanguage[lang]['step']);
+	$(".step").html(appWords['step']);
 
-	$(".level-txt").html(appLanguage[lang]['level']);
+	$(".level-txt").html(appWords['level']);
 
-	$(".start-lesson").html(appLanguage[lang]['start']);
+	$(".start-lesson").html(appWords['start']);
 
-	//$(".reset-lesson").html(appLanguage[lang]['reset']);
+	//$(".reset-lesson").html(appWords['reset']);
 
-	$(".skip-level-txt").html(appLanguage[lang]['skip-level-txt']);
+	$(".skip-level-txt").html(appWords['skip-level-txt']);
 
-	$(".skip-level-span").html(appLanguage[lang]['skip-level-span']);
+	$(".skip-level-span").html(appWords['skip-level-span']);
 
-	$(".use-gem").html(appLanguage[lang]['use-gem']);
+	$(".use-gem").html(appWords['use-gem']);
 
-	$(".unlimited-test").html(appLanguage[lang]['unlimited-test']);
+	$(".unlimited-test").html(appWords['unlimited-test']);
 
-	$(".no-thanks-l").html(appLanguage[lang]['no-thanks']);
+	$(".no-thanks-l").html(appWords['no-thanks']);
 
 
 	
-	$("#profile-title").html(appLanguage[lang]['profile']);
+	$("#profile-title").html(appWords['profile']);
 
-	$("#finish-lig").html(appLanguage[lang]['finish-lig']);
+	$("#finish-lig").html(appWords['finish-lig']);
 
-	$("#shop").html(appLanguage[lang]['shop']);
+	$("#score-head").html(appWords['score-head']);
 
-	$(".app-name").html(appLanguage[lang]['app-name']);
+	$("#shop").html(appWords['shop']);
 
-	$("#get-plus-shop").html(appLanguage[lang]['get-plus-shop']);
+	$(".app-name").html(appWords['app-name']);
 
-	$(".upgrade").html(appLanguage[lang]['upgrade']);
+	$("#get-plus-shop").html(appWords['get-plus-shop']);
 
-	$("#get-shielt-title").html(appLanguage[lang]['get-shielt-title']);
+	$(".upgrade").html(appWords['upgrade']);
 
-	$("#get-shielt-txt").html(appLanguage[lang]['get-shielt-txt']);
+	$("#get-shielt-title").html(appWords['get-shielt-title']);
 
-	$("#health-update").html(appLanguage[lang]['health-update']);
+	$("#get-shielt-txt").html(appWords['get-shielt-txt']);
 
-	$("#health-update-txt").html(appLanguage[lang]['health-update-txt']);
+	$("#health-update").html(appWords['health-update']);
 
-	$(".get-ads span").html(appLanguage[lang]['get-ads']);
+	$("#health-update-txt").html(appWords['health-update-txt']);
 
-
-	$("#double-skill-title").html(appLanguage[lang]['double-skill-title']);
-
-	$("#double-skill-txt").html(appLanguage[lang]['double-skill-txt']);
-
-	$("#unlimited-health").html(appLanguage[lang]['unlimited-health']);
-
-	$("#buy-plus").html(appLanguage[lang]['buy-plus']);
+	$(".get-ads span").html(appWords['get-ads']);
 
 
-	$("#ready-question").html(appLanguage[lang]['ready']);
+	$("#double-skill-title").html(appWords['double-skill-title']);
 
-	$(".yes-ready").html(appLanguage[lang]['yes-ready']);
+	$("#double-skill-txt").html(appWords['double-skill-txt']);
 
-	$(".no-ready").html(appLanguage[lang]['later']);
+	$("#unlimited-health").html(appWords['unlimited-health']);
 
-	$("#know").html(appLanguage[lang]['know']);
-
-
+	$("#buy-plus").html(appWords['buy-plus']);
 
 
-	$(".continue").html(appLanguage[lang]['continue']); 
+	$("#ready-question").html(appWords['ready']);
 
-	$(".lesson-completed").html(appLanguage[lang]['lesson-completed']);
+	$(".yes-ready").html(appWords['yes-ready']);
 
-	$("#combo").html(appLanguage[lang]['combo']);
+	$(".no-ready").html(appWords['later']);
 
-	$("#double-skill-ads").html(appLanguage[lang]['double-skill-ads']);
+	$("#know").html(appWords['know']);
 
-	$(".reward").html(appLanguage[lang]['double-reward']);
+	$(".continue").html(appWords['continue']); 
 
-	$("#ads-txt").html(appLanguage[lang]['ads-txt']);
+	$(".lesson-completed").html(appWords['lesson-completed']);
 
-	$("#buy-plus-txt").html(appLanguage[lang]['buy-plus-txt']);
+	$("#combo").html(appWords['combo']);
 
-	$("#select-picture").html(appLanguage[lang]['select-picture']);
+	$("#double-skill-ads").html(appWords['double-skill-ads']);
 
+	$(".reward").html(appWords['double-reward']);
 
+	$("#ads-txt").html(appWords['ads-txt']);
+
+	$("#buy-plus-txt").html(appWords['buy-plus-txt']);
+
+	$("#select-picture").html(appWords['select-picture']);
 }
-

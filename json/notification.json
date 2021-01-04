@@ -66,10 +66,13 @@
 
 		"full-grade"		: {"message"	: "Congratulations, you have reached the new checkpoint !!!", "info": "success"},
 
-		"shield-protected"	: {"message"	: "The shield protected you from error !!!", "info": "info"}
+		"shield-protected"	: {"message"	: "The shield protected you from error !!!", "info": "info"},
 
+		"enough-shield"		: {"message"	: "Shield feature has not expired yet", "info": "info"},
 
+		"enough-double"		: {"message"	: "2X feature is not expired yet", "info": "info"},
 
+		"enough-heart"		: {"message"	: "Canınız azalmamıştır. Cana ihtiyaç yoktur.", "info": "info"}
 
 	},
 	"tr":
@@ -143,7 +146,13 @@
 
 		"full-grade"		: {"message"	: "Tebrikler, yeni kontrol noktasına ulaştınız !!!", "info": "success"},
 
-		"shield-protected"	: {"message"	: "Hatasız Seri Kalkan sizi korudu !!!", "info": "info"}
+		"shield-protected"	: {"message"	: "Hatasız Seri Kalkan sizi korudu !!!", "info": "info"},
+
+		"enough-shield"		: {"message"	: "Kalkanın süresi daha bitmedi", "info": "info"},
+
+		"enough-double"		: {"message"	: "2X özelliğinin süresi daha bitmedi", "info": "info"},
+
+		"enough-heart"		: {"message"	: "Heart is not low. There is no need heart.", "info": "info"}
 
 	},
 	"az":
@@ -216,7 +225,13 @@
 
 		"full-grade"		: {"message"	: "Təbriklər, yeni keçid məntəqəsinə çatdınız !!!", "info": "success"},
 
-		"shield-protected"	: {"message"	: "Qalxan sizi serianı dağılmaqdan qorudu !!!", "info": "info"}
+		"shield-protected"	: {"message"	: "Qalxan sizi serianı dağılmaqdan qorudu !!!", "info": "info"},
+
+		"enough-shield"		: {"message"	: "Qalxan özəlliyinin vaxtı hələ bitməyib", "info": "info"},
+
+		"enough-double"		: {"message"	: "2X özəlliyinin vaxtı hələ bitməyib", "info": "info"},
+
+		"enough-heart"		: {"message"	: "Can hesabınız tamdır. Yeni cana ehtiyac yoxdur", "info": "info"}
 
 	},
 	"ru":
@@ -283,7 +298,13 @@
 
 		"full-grade"		: {"message"	: "Поздравляем, вы достигли нового контрольно-пропускной пункт !!!", "info": "success"},
 
-		"shield-protected"	: {"message"	: "Щит защитил вас от ошибки !!!", "info": "info"}
+		"shield-protected"	: {"message"	: "Щит защитил вас от ошибки !!!", "info": "info"},
+
+		"enough-shield"		: {"message"	: "Срок действия функции щита еще не истек", "info": "info"},
+
+		"enough-double"		: {"message"	: "Срок действия функции 2X еще не истек", "info": "info"},
+
+		"enough-heart"		: {"message"	: "Сердце не низкое. Нет нужды в сердце", "info": "info"}
 
 	}
 

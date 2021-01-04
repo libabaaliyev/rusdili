@@ -22,7 +22,7 @@ body
   position: relative;
   width: 100%;
 
-  background: #edf9fe !important;
+  background: #fff !important;
   font-family: kanit-r !important;
   overflow: auto;
 }
@@ -169,6 +169,7 @@ h2,h4,h6{
   display: inline-block;
   float: left;
   min-width: 50px;
+
   height: 50px;
   font-size: 14px;
   color: #546E7A;
@@ -176,6 +177,10 @@ h2,h4,h6{
   margin: 0 10px;  
   margin-right: 11px;
   z-index: 3;
+}
+.footer ul li
+{
+  width: calc(100% / 4 - 20px);
 }
 .main-header ul li a
 {
@@ -207,6 +212,7 @@ h2,h4,h6{
   padding: 5px;
   font-size: 20px;
 }
+
 .footer i
 {
   display: inline-block;
@@ -785,67 +791,92 @@ h2,h4,h6{
   margin: 0;
   padding: 10px;
 }
+.side-gif
+{
+  position: absolute;
+  top: 30%;
+  right: 0;
+  width: 200px;
+}
+.empty-table
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 40%;
+  height: auto;
+  display: none;
+}
 .score-table ul
 {
   display: block;
   float: left;
-  width: 100%;
-  height: calc(100vh - 50px);
-  
+  width: 500px;
+  max-width: 100%;
+  height: calc(100vh - 50px);  
   overflow: auto;
   padding: 50px 0;
-  padding-top: 10px; 
-  border-bottom: 1px solid #B0BEC5;
 }
 .score-table ul li
 {
   display: inline-block;
   float: left;
-  width: 42px;
-  height: 48px;
-  background: #D2E0EB;
-  border-radius: 10px 10px 40% 40%;
-  border-bottom: 3px solid #AAC1D4;
-  text-align: center;
-  margin: 10px;
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  margin: 5px 0;
 }
-
-.score-table ul li i
+.score-table ul li.active
 {
-  display: table;
-  margin: auto;
-  margin-top: 4px;
-  width: 34px;
-  height: 38px;
-  font-size: 22px;
-  color: #92A8BA;
-  background: #C2D1DD;
-  border-radius: 8px 8px 40% 40%;
-  padding-top: 10px; 
+  background: #B7FF6A;
 }
-.checked
+.score-table ul li span
 {
-  /*margin-top: 5px !important;
-  margin-bottom: 5px !important;*/
-  width: 54px !important;
-  min-height: 66px !important;
-  background: #E8BA8F !important;
-  border-bottom: 5px solid #C88E57 !important;
-}
-.checked i
-{
-  margin-top: 6px !important;
-  width: 44px !important;
-  height: 50px !important;
-  font-size: 26px !important;
-  color: #B07032 !important;
-  background: #CF9C6D !important;
-}
-.checked h4
-{
-  min-height: 30px;
+  display: block;
+  float: left;
   font-size: 14px;
-  padding: 5px 0;
+  height: 40px;
+  padding: 10px 0;
+  text-align: center;
+  
+}
+.score-table ul li span:first-child
+{
+  width: 40px;
+  
+}
+.score-table ul li span:last-child
+{
+  width: 80px;
+}
+.score-table ul li figure
+{
+  display: block;
+  float: left;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50%;
+
+}
+.score-table ul li img
+{
+ 
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+
+}
+.score-table ul li h4
+{
+  display: block;
+  float: left;
+  width: calc(100% - 160px);
+  height: 40px;
+  font-size: 16px;
+  padding: 10px;
+  margin: 0;
 }
 .text-center
 {
@@ -1077,21 +1108,21 @@ h2,h4,h6{
   width: 100%;
   border-radius: 7px;
   margin-bottom: 7px;
-  background: #B0BEC5;
+  background: #DBECF3;
   z-index: 1;
   padding-bottom: 40px;
 }
 .level
 {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
-  background: #B0BEC5; /**/
+  background: #DBECF3; /**/
   top: -50px;
   left: calc(50% - 50px);
-  padding: 10px 5px;
-  border: 6px solid #edf9fe;
+  padding: 15px 5px;
+  border: 6px solid #fff;
   overflow: hidden;
 
 }
@@ -1099,7 +1130,7 @@ h2,h4,h6{
 {
   display: table;
   margin: auto;
-  height: 65px;
+  height: 70px;
   width: auto;
   object-fit: cover;
 }
@@ -1107,8 +1138,7 @@ h2,h4,h6{
 {
   position: absolute;
   width: 100%;
-
-  bottom: 20px;
+  bottom: 25px;
   left: 0;
   font-size: 16px;
   color: #fff;
@@ -1122,7 +1152,7 @@ h2,h4,h6{
   float: left;
   width: 100%;
   padding: 15px;
-  margin-top: 50px;
+  margin-top: 70px;
 
 }
 .castles ul li
@@ -1130,21 +1160,21 @@ h2,h4,h6{
   position: relative;
   display: inline-block;
   float: left;
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   border-radius: 100%;
   background: #d7d8dd;
-  margin: 50px calc(25% - 35px);
+  margin: 50px calc(25% - 38px);
 
   
 }
 .castle-border
 {
   position: absolute;
-  left: -5px;
-  top: -5px;
-  width: 70px;
-  height: 70px;
+  left: -6px;
+  top: -6px;
+  width: 88px;
+  height: 88px;
   background: #edf9fe;
   border-radius: 100%;
   z-index: -1;
@@ -1164,18 +1194,18 @@ h2,h4,h6{
 .query-into
 {
   position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 52px;
-  height: 52px;
-  padding: 16px 12px;
+  top: 5px;
+  left: 5px;
+  width: 65px;
+  height: 65px;
+  padding: 20px 16px;
   border-radius: 50%;
   background: #1976D2;
 }
 
 .query-into i
 {  
-  font-size: 20px;
+  font-size: 26px;
   color: #edf9fe;  
 }
 .query-info
@@ -1198,23 +1228,23 @@ h2,h4,h6{
 .query-crown
 {
   position: absolute;
-  right: -5px;
+  right: -8px;
   bottom: -10px;
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   padding: 4px;
 }
 .query-crown i
 {
-  font-size: 20px;
+  font-size: 24px;
   color: #ccc;
 }
 .query-crown span
 {
   position: absolute;
-  top: 8px;
-  left: 15px;
-  font-size: 10px;
+  top: 9px;
+  left: 16px;
+  font-size: 12px;
   color: #000;
   text-align: center;
 }
@@ -1441,6 +1471,7 @@ h2,h4,h6{
   box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.5);
   border: 1px solid #ccc;
 }
+
 .card-top
 {
   width: 100%;
@@ -1449,6 +1480,7 @@ h2,h4,h6{
   display: block;
   float: left;
 }
+
 .card-left,.card-right
 {
   display: inline-block;
@@ -1459,6 +1491,7 @@ h2,h4,h6{
   float: left;
   margin: 0;
 }
+
 .questions .card-left,.questions .card-right
 {
   min-height: 20px;
@@ -1468,11 +1501,13 @@ h2,h4,h6{
 {
   padding: 10px 10px 10px 30px;
 }
+
 .card-right
 {
   position: relative;
   width: 100px;
 }
+
 .card-top .card-right i
 {
   position: absolute;
@@ -1482,6 +1517,7 @@ h2,h4,h6{
   font-size: 30px;
 
 }
+
 .card-btn
 {
   width: 100%;
@@ -1490,16 +1526,15 @@ h2,h4,h6{
   float: left;
 }
 
-
 .card-btn .card-left,.card-btn .card-right
 {
   display: inline-block;
-  width: 150px;  
+  width: 50%;  
   padding: 15px 10px;
   float: left;
   margin: 0;
-
 }
+
 .card-btn .card-right 
 {
   float: right;
@@ -1514,6 +1549,7 @@ h2,h4,h6{
   text-align: left;
   font-weight: 800;
 }
+
 .trns,.trnsk
 {
   padding: 5px 15px;
@@ -1650,11 +1686,21 @@ h2,h4,h6{
 }
 .ads
 {
+  position: relative;
   display: block;
   float: left;
   width: 100%;
   height: 250px;
-  background: grey;
+}
+.ads img
+{
+  position: absolute;
+  height: 200px;
+  width: auto;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 .hr
 {
@@ -1821,7 +1867,6 @@ h2,h4,h6{
 .skills
 {
   position: fixed;
-  width: 50px;
   height: auto; 
   right: 0;
   bottom: 70px;
@@ -1833,7 +1878,7 @@ h2,h4,h6{
   position: relative;
   display: block;
   float: left;
-  width: 40px;
+  width: 50px;
   padding: 0;
   margin: 0;
 }
@@ -1844,7 +1889,7 @@ h2,h4,h6{
   float: left;
   width: 40px;
   height: 40px;
-  margin: 7px 0;
+  margin: 10px 0;
   border-radius: 5px;
   background: #2196F3;
   box-shadow: 6px 7px 5px -5px rgba(0,0,0,0.5);
@@ -1862,15 +1907,16 @@ h2,h4,h6{
 .skills ul li label
 {
   position: absolute;
-  width: 20px;
+  min-width: 70px !important;
   height: 20px;
   font-size: 12px;
-  right: -8px;
-  top: -8px;
+  
+  bottom: -20px;
+  left: -30px;
   padding-top: 2px;
   color: #fff;
   background: #FF5500;
-  border-radius: 50%;
+  border-radius: 2;
   text-align: center;
 }
 
@@ -1908,6 +1954,18 @@ h2,h4,h6{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #A8D0E2; 
+}
+
+@media(max-width: 690px)
+{
+  .score-table ul
+  {
+    width: 100%;
+  }
+  .side-gif
+  {
+    display: none;
+  }
 }
 
 @media(min-width: 380px)

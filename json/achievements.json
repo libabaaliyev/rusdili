@@ -129,32 +129,85 @@
 			"reward": 100		
 		},
 		"friendly"			: {
-			"name"	: "Arkadaş canlısı",
-			"desc"	: "Arkadaşlarını davet et",
+			"name"	: "Friendly",
+			"desc"	: "Invite your friends",
 			"limit"	: 5,
 			"reward": 50			
 		},
 		"week"	 			: {
-			"name"	: "Haftalık",
-			"desc"	: "Bir hafta ara vermeden çalış.",
+			"name"	: "Weekly",
+			"desc"	: "Work for a week without a break.",
 			"limit"	: 7,
 			"reward": 140		
 		},
 		"full-aim" 			: {
-			"name"	: "Bilgin",
-			"desc"	: "Günlük hedefi tamamla",
+			"name"	: "Hardworking",
+			"desc"	: "Complete the daily aim",
 			"limit"	: "full",
 			"reward": 100		
 		},
 		"month" 			: {
-			"name"	: "Aylık",
-			"desc"	: "Bir ay ara vermeden çalış.",
+			"name"	: "Monthly",
+			"desc"	: "Work for a month without a break.",
 			"limit"	: 30,
 			"reward": 300		
 		},
 		"knight" 			: {
-			"name"	: "Şovalye",
-			"desc"	: "Beş kaleyi fethedin.",
+			"name"	: "Knight",
+			"desc"	: "Conquer five castles.",
+			"limit"	: 5,
+			"reward": 200		
+		}
+
+	},
+
+	"ru":{
+		"grade-master" 		: {
+			"name"	: "Прилежный",
+			"desc"	: "Добраться до новой контрольной точки",
+			"limit"	: 1,
+			"reward": 100
+		},
+
+		"crown-master" 		: {
+			"name"	: "Завоеватель",
+			"desc"	: "Собирать короны",
+			"limit"	: 19,
+			"reward": 120
+		},
+		"unerror" 			: {
+			"name"	: "Мудрый",
+			"desc"	: "Отвечайте на вопросы, не ошибаясь.",
+			"limit"	: 10,
+			"reward": 100		
+		},
+		"friendly"			: {
+			"name"	: "Дружелюбный",
+			"desc"	: "Пригласить друзей",
+			"limit"	: 5,
+			"reward": 50			
+		},
+		"week"	 			: {
+			"name"	: "Еженедельно",
+			"desc"	: "Работаем неделю без перерыва.",
+			"limit"	: 7,
+			"reward": 140		
+		},
+		"full-aim" 			: {
+			"name"	: "Тяжело трудящийся",
+			"desc"	: "Выполните ежедневную цель",
+			"limit"	: "full",
+			"reward": 100		
+		},
+		"month" 			: {
+			"name"	: "Ежемесячно",
+			"desc"	: "Работаем месяц без перерыва.",
+			"limit"	: 30,
+			"reward": 300		
+		},
+		"knight" 			: {
+			"name"	: "Рыцарь",
+			"desc"	: "Покорите пять замков.",
 			"limit"	: 5,
 			"reward": 200		
 		}

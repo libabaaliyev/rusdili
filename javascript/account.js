@@ -31,7 +31,8 @@ $(document).ready(function()
 		"league" 	: "starter",
 		"heart"		: 5,
 		"crown" 	: 0,
-		"use_lang"	: JSON.stringify(lang)
+		"use_lang"	: JSON.stringify(lang),
+		"version"	: "simple"
 
 	}
 	
@@ -165,9 +166,6 @@ $(document).ready(function()
 		
 		
 		start_value++;
-
-		console.log(start_value);
-		
 		if(start_value<6){
 			$("#get-start-"+start_value).addClass("slideInRight");
 			$("#get-start-"+start_value).fadeIn();

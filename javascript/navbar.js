@@ -19,8 +19,16 @@ $(document).ready(function()
 
 	if(localStorage.getItem("isPage")===null)
 		localStorage.isPage = isPage;
-	else
+	else{
 		isPage = localStorage.isPage;
+
+		if(isPage == "score"){
+			if(navigator.onLine)
+				callOther("general","scoreboard","score");
+			else
+				callOther("general","notification","internet-error");
+		}
+	}
 
 
 	$("#"+isPage).addClass("in active");
@@ -32,8 +40,11 @@ $(document).ready(function()
 			menuToggle(menu_opening,"all");
 		else
 		{
-			menu_value = $(this).data("value");		
-			menuToggle(menu_opening,menu_value);
+			menu_value = $(this).data("value");	
+			if(menu_value != "diamond")	
+				menuToggle(menu_opening,menu_value);
+			else
+				menuToggle(menu_opening,"all");
 		}
 	});
 
@@ -51,6 +62,15 @@ $(document).ready(function()
 	{
 		isPage = $(this).data("tab");
 		localStorage.isPage = isPage;
+
+		if(isPage == "score"){
+			if(navigator.onLine)
+				callOther("general","scoreboard","score");
+			else
+				callOther("general","notification","internet-error");
+		}
+		
+
 		allClose();
 	});
 
@@ -99,7 +119,10 @@ $(document).ready(function()
 			}
 			else{
 				bar.fadeIn();
+				
 				$("#"+value).show();
+				
+
 			}
 
 			darkness.show();
