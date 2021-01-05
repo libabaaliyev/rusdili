@@ -124,15 +124,13 @@ $(document).ready(function()
 	
 	lesson.click(function(e)
 	{
-		//console.log("klik lesson");
+		
 		count_l 	= $(this).data("count");
 		if(selectStep == $(this).data("step") && selectGrade == $(this).data("grade")){
 			func_lesson_info("close");
-			//console.log("close");
 		}
 		else
 		{
-			//console.log("open");
 			selectGrade = JSON.parse($(this).data("grade"));
 			selectStep 	= $(this).data("step");
 			y_lesson 	= $(this).offset().top;
@@ -144,7 +142,6 @@ $(document).ready(function()
 					currentExam = isHave.exam;
 				else
 					currentExam = 0;
-
 			}
 			else
 				currentExam = 0;
@@ -180,14 +177,20 @@ $(document).ready(function()
 
 	skip_lesson.click(function(e)
 	{
-
-		opening = false;
-		darkness.show();
-		skip_tab.removeClass("slideOutDown");
-		skip_tab.removeClass("slideInUp");
-		skip_tab.addClass("slideInUp");
-		skip_tab.show();
-		e.stopPropagation();
+		if(version == "simple")
+		{
+			opening = false;
+			darkness.show();
+			skip_tab.removeClass("slideOutDown");
+			skip_tab.removeClass("slideInUp");
+			skip_tab.addClass("slideInUp");
+			skip_tab.show();
+			e.stopPropagation();
+		}
+		else if(version == "pro")
+		{
+			goLesson("start","open-lock");
+		}
 	});
 
 	not_skip.click(function()
@@ -334,9 +337,6 @@ $(document).ready(function()
 	{
 		callOther("general","pro_edition");
 	});
-
-
-
 	
 	function save()
 	{

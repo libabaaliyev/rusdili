@@ -180,7 +180,7 @@ h2,h4,h6{
 }
 .footer ul li
 {
-  width: calc(100% / 4 - 20px);
+  width: calc(100% / 5 - 20px);
 }
 .main-header ul li a
 {
@@ -218,7 +218,7 @@ h2,h4,h6{
   display: inline-block;
   float: left;
   padding: 7px 10px;
-  font-size: 25px !important;
+  font-size: 20px !important;
 }
 .main-header ul li img,.footer ul li img
 {
@@ -782,7 +782,7 @@ h2,h4,h6{
 
 /*score table*/
 
-.score-table,.shopping,.lessons,.lesson,.lesson-success,.adsense,.day-aim,.select-level,.get-start,.account,.registration
+.score-table,.shopping,.lessons,.lesson,.lesson-success,.adsense,.day-aim,.select-level,.get-start,.account,.registration,.sentences
 {
   position: relative;
   display: block;
@@ -987,7 +987,7 @@ h2,h4,h6{
 {
   border: none !important;
 }
-.shopping
+.shopping,.sentences
 {
   margin-top: 50px;
   margin-bottom: 50px;

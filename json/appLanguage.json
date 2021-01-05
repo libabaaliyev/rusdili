@@ -109,7 +109,66 @@
 		"good"					: "Good",		
 		"very-good"				: "Very good",
 		"excellent"				: "Excellent",
-		"point"					: "points"
+		"point"					: "points",
+
+		"sentences-title"		: "Sentence patterns",
+		"application"			: "application",
+		"science" 				: "science",
+		"order" 				: "order",
+		"date" 					: "date",
+		"own" 					: "own",
+		"travel" 				: "travel",
+		"health" 				: "health",
+		"shopping" 				: "shopping",
+		"eating" 				: "eating",
+		"camp" 					: "camp",
+		"time" 					: "time",
+		"walking" 				: "walking",
+		"meeting" 				: "meeting",
+		"documents" 			: "documents",
+		"working" 				: "working",
+		"education" 			: "education",
+		"shelter" 				: "shelter",
+		"compensation" 			: "compensation",
+
+
+		"application"			: "Application",
+		"science" 				: "Science",
+		"order" 				: "Order",
+		"date" 					: "Date",
+		"own" 					: "Own",
+		"travel" 				: "Travel",
+		"health" 				: "Health",
+		"shopping" 				: "Shopping",
+		"eating" 				: "Eating",
+		"camp" 					: "Camp",
+		"time" 					: "Time",
+		"walking" 				: "Walking",
+		"meeting" 				: "Meeting",
+		"documents" 			: "Documents",
+		"working" 				: "Working",
+		"education" 			: "Education",
+		"shelter" 				: "Shelter",
+		"compensation" 			: "Compensation",
+
+		"application-txt"		: "Application-time sentence patterns",
+		"science-txt"			: "Sentence patterns used in scientific fields",
+		"order-txt"				: "Phrases used in invoice and order time",
+		"date-txt"				: "Sentence patterns used in appointment",
+		"own-txt"				: "Sentence patterns that use personal transactions time",
+		"travel-txt"			: "Phrases using travel time",
+		"health-txt"			: "Health check time used sentence patterns",
+		"shopping-txt"			: "Phrases used at shopping time",
+		"eating-txt"			: "Sentence patterns used while eating",
+		"camp-txt"				: "Phrases used during accommodation",
+		"time-txt"				: "Sentence patterns used for dates and time understanding",
+		"walking-txt"			: "Phrases with circulation time",
+		"meeting-txt"			: "Sentence patterns used in meeting",
+		"documents-txt"			: "Phrases used in document operations",
+		"working-txt"			: "Working-time sentence patterns",
+		"education-txt"			: "Phrases used in university",
+		"shelter-txt": "Phrases used for housing",
+		"compensation-txt": "Phrases used for compensation"
 
 
 	},
@@ -228,7 +287,47 @@
 		"good"					: "İyi",		
 		"very-good"				: "Çok iyi",
 		"excellent"				: "Muhteşem",
-		"point"					: "puan"
+		"point"					: "puan",
+
+		"application"			: "Başvuru",
+		"science" 				: "Bilimsel",
+		"order" 				: "Fatura ve Sipariş",
+		"date" 					: "Randevu",
+		"own" 					: "Kişisel",
+		"travel" 				: "Seyahat",
+		"health" 				: "Sağlık",
+		"shopping" 				: "Alışveriş",
+		"eating" 				: "Yemek",
+		"camp" 					: "Konaklama",
+		"time" 					: "Tarihler ve zaman",
+		"walking" 				: "Dolaşım",
+		"meeting" 				: "Buluşma",
+		"documents" 			: "Belge işlemleri",
+		"working" 				: "Çalışma",
+		"education" 			: "Üniversite",
+		"shelter" 				: "Barınma",
+		"compensation" 			: "Tazminat",
+
+
+
+		"application-txt" 		: "Başvuru zamanı kullanılan cümle kalıpları",
+		"science-txt" 			: "Bilimsel alanlarda kullanılan cümle kalıpları",
+		"order-txt" 			: "Fatura ve Sipariş zamanı kullanılan cümle kalıpları",
+		"date-txt" 				: "Randevuda kullanılan cümle kalıpları",
+		"own-txt" 				: "Kişisel işlemler zamanı kullanılan cümle kalıpları",
+		"travel-txt" 			: "Seyahat zamanı kullanılan cümle kalıpları",
+		"health-txt" 			: "Sağlık kontrolu zamanı kullanılan cümle kalıpları",
+		"shopping-txt" 			: "Alışveriş zamanı kullanılan cümle kalıpları",
+		"eating-txt" 			: "Yemekdeyken kullanılan cümle kalıpları",
+		"camp-txt" 				: "Konaklama zamanı kullanılan cümle kalıpları",
+		"time-txt" 				: "Tarihler ve zaman anlayışları için kullanılan cümle kalıpları",
+		"walking-txt" 			: "Dolaşım zamanı kullanılan cümle kalıpları",
+		"meeting-txt" 			: "Buluşmada kullanılan cümle kalıpları",
+		"documents-txt" 		: "Belge işlemleri zamanı kullanılan cümle kalıpları",
+		"working-txt" 			: "Çalışma zamanı kullanılan cümle kalıpları",
+		"education-txt" 		: "Üniversitede kullanılan cümle kalıpları",
+		"shelter-txt" 			: "Barınma için kullanılan cümle kalıpları",
+		"compensation-txt" 		: "Tazminat için kullanılan cümle kalıpları"
 		
 
 	},
@@ -343,7 +442,30 @@
 		"good"					: "Yaxşı",		
 		"very-good"				: "Çox yaxşı",
 		"excellent"				: "Əla",
-		"point"					: "xal"
+		"point"					: "xal",
+
+
+
+
+
+		"application-txt": "Tətbiq vaxtı cümlə nümunələri",
+		"science-txt": "Elmi sahələrdə istifadə olunan cümlə nümunələri",
+		"order-txt": "Faktura və sifariş vaxtında istifadə olunan ifadələr",
+		"date-txt": "Randevuda istifadə olunan cümlələr",
+		"own-txt": "Fərdi əməliyyatlar vaxtından istifadə edən cümlələr",
+		"travel-txt": "Səyahət vaxtından istifadə edən ifadələr",
+		"health-txt": "Sağlamlıq müayinəsi zamanı istifadə olunan cümlə nümunələri",
+		"shopping-txt": "Alış-veriş zamanı istifadə edilən ifadələr",
+		"eating-txt": "Yemək zamanı istifadə edilən cümlə nümunələri",
+		"camp-txt": "Konaklama zamanı istifadə edilən ifadələr",
+		"time-txt": "Tarixlər və vaxt anlayışı üçün istifadə edilən cümlələr",
+		"walking-txt": "tiraj müddəti ilə ifadələr",
+		"meeting-txt": "İclasda istifadə olunan cümlə nümunələri",
+		"documents-txt": "Sənəd əməliyyatlarında istifadə olunan ifadələr",
+		"working-txt": "İş vaxtı cümlə nümunələri",
+		"education-txt": "Universitetdə istifadə olunan ifadələr",
+		"shelter-txt": "Sığınacaq üçün istifadə edilən ifadələr",
+		"compensation-txt": "Kompensasiya üçün istifadə edilən ifadələr"
 
 
 	},
@@ -459,7 +581,28 @@
 		"good"					: "Хорошо",		
 		"very-good"				: "Очень хорошо",
 		"excellent"				: "Превосходно",
-		"point"					: "oчко"
+		"point"					: "oчко",
+
+
+
+		"application-txt": "Шаблоны предложений времени приложения",
+		"science-txt": "Шаблоны предложений, используемые в научных областях",
+		"order-txt": "Фразы, используемые в счете и времени заказа",
+		"date-txt": "Шаблоны предложений, используемые при встрече",
+		"own-txt": "Шаблоны предложений, использующие время личных транзакций",
+		"travel-txt": "Фразы, использующие время в пути",
+		"health-txt": "Время проверки работоспособности использовало шаблоны предложений",
+		"shopping-txt": "Фразы, используемые во время покупок",
+		"eat-txt": "Шаблоны предложений, используемые во время еды",
+		"camp-txt": "Фразы, используемые во время проживания",
+		"time-txt": "Шаблоны предложений, используемые для определения даты и времени",
+		"walking-txt": "Фразы со временем обращения",
+		"meeting-txt": "Шаблоны предложений, используемые во время встречи",
+		"documents-txt": "Фразы, используемые в операциях с документами",
+		"working-txt": "Шаблоны предложений рабочего времени",
+		"education-txt": "Фразы, используемые в университете",
+		"shelter-txt": "Фразы, используемые для приюта",
+		"compensation-txt": "Фразы, используемые для компенсации"
 
 	}
 

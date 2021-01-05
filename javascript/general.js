@@ -361,7 +361,6 @@ function start_page(page,page_1)
 	}
 	else if(page == "index")
 	{
-
 		heart 	= JSON.parse(user.heart);			
 		crown 	= JSON.parse(user.crown);
 		grade 	= JSON.parse(user.grade);
@@ -383,6 +382,9 @@ function start_page(page,page_1)
 			count_heart_html.html("&#8734;");
 			$(".heart-tab").remove();
 			$(".gem-tab").show();
+
+			$(".shopping-plus").hide();
+
 		}
 
 		

@@ -212,7 +212,7 @@ $(document).ready(function()
 	continue_succes.click(function()
 	{
 		success_body.hide();
-		/*if(checkConnection() == "none")
+		/*if(checkConnection() == "none" || version == "pro")
 			window.location = "main.html";	
 		else{*/
 			if(getting_aim >= etalon_aim)		
@@ -298,8 +298,19 @@ $(document).ready(function()
 				if(exam_c > 5)
 					exam_c = 4;
 
-				minQue 		= selectQue("min",grade,step,exam);
-				maxQue 		= selectQue("max",grade,step,exam_c);
+
+				if(second_value == "word")
+				{
+					minQue 		= selectQue("min",grade,step,exam);
+					maxQue 		= selectQue("max",grade,step,exam_c);
+				}
+				else
+				{
+					minQue = 0;
+					maxQue = sentences[lang][sentence_category].length - 1;
+				}
+
+				
 				q 	   		= minQue;
 				main.show();
 				question(category_e,"trns","translate",maxQue);
@@ -379,7 +390,7 @@ $(document).ready(function()
 		}
 		else if(grade >=5 && grade < 15)
 		{
-			first_value 		= 'normal';			
+			first_value 		= 'normal';
 			if(grade % 5 == 0){
 				x 					= random_number(0,(s_category.length - 1));
 				sentence_category 	= s_category[x];				
@@ -640,9 +651,13 @@ $(document).ready(function()
 			if(!hash)
 			{
 				if(heart>0){
-					heart-=1;			
-					user.heart = heart;
-					localStorage.user = JSON.stringify(user);
+
+					if(user.version == "simple")
+					{
+						heart-=1;			
+						user.heart = heart;
+						localStorage.user = JSON.stringify(user);
+					}
 					
 				}
 				else

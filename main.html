@@ -312,6 +312,40 @@
 			</section>
 		</div>
 
+		<div class="tab-pane fade" id="sentences">
+			<header class="main-header">				
+				<div class="header-name">
+					<label id="sentences-title"><!-- Cümle kalıpları --></label>
+				</div>
+
+
+
+			</header>
+
+			<section class="sentences">
+				
+				<div class="card sentences-item" data-category="shield" data-gem="200">
+					<figure class="card-img">
+						<img src="img/icons/shield.png">
+					</figure>
+					<div class="card-info">
+						<header>
+							<h5 id=""><!-- Seri koruma kalkanı --></h5>
+						</header>
+						<div class="info-body">
+							<span id="">
+								<!-- Bir hafta kullanmayı unutduğun serini koruyabilirsin. -->
+							</span>
+						</div>
+						
+					</div>
+				</div>
+
+	
+			</section>
+
+		</div>
+
 		<div class="tab-pane fade" id="score">
 			<header class="main-header">
 				<div class="header-name">
@@ -341,7 +375,7 @@
 			</header>
 
 			<section class="shopping">
-				<div class="card-special">
+				<div class="card-special shopping-plus">
 					<header>
 						<h2 class="app-name"><!-- Rusça eğitim seti --></h2><span class="plus" style="text-transform: uppercase;"><!-- PLUS --></span>
 					</header>
@@ -370,7 +404,7 @@
 					</div>
 				</div>
 
-				<div class="card card-market" data-category="add-heart" data-gem="200">
+				<div class="card card-market shopping-plus" data-category="add-heart" data-gem="200">
 					<figure class="card-img add-heart">
 						<div class="special-items-icon">
 							<i class="red fas fa-heart fa-beat"></i>
@@ -410,8 +444,7 @@
 					</div>
 				</div>
 
-
-				<div class="card card-market pro" data-category="plus" data-gem="plus">
+				<div class="card card-market pro shopping-plus" data-category="plus" data-gem="plus">
 					<figure class="card-img sp-active border-none">
 						<div class="special-items-icon">
 							<i class="red fas fa-heart fa-beat"></i>
@@ -432,8 +465,25 @@
 					</div>
 				</div>
 
-				
-				
+				<!-- <div class="card card-market" data-category="triple" data-gem="1000">
+					<figure class="card-img">
+						<img src="img/icons/3x.png">
+					</figure>
+					<div class="card-info">
+						<header>
+							<h5 id="triple-skill-title"></h5>
+						</header>
+						<div class="info-body">
+							<span id="triple-skill-txt">
+								
+							</span>
+						</div>
+						<div class="info-body price-triple">
+							<i class="fas fa-gem text-primary"></i> <span class="text-primary">1000</span>
+						</div>
+					</div>
+				</div> -->
+	
 			</section>
 		</div>
 
@@ -454,8 +504,11 @@
 			<li data-toggle="tab" href="#profile" data-tab="profile" id="f-profile">
 				<i class="fas fa-dragon"></i>				
 			</li>
+			<li data-toggle="tab" href="#sentences"  data-tab="sentences" id="f-sentences">
+				<i class="fas fa-book-open"></i>
+			</li>
 			<li data-toggle="tab" href="#score"  data-tab="score" id="f-score">
-				<i class="fas fa-shield-alt"></i>
+				<i class="fas fa-trophy"></i>
 			</li>
 			<li data-toggle="tab" href="#shopping" data-tab="shopping" id="f-shopping">
 				<i class="fas fa-store"></i>
