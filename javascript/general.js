@@ -14,10 +14,8 @@ notifications 		= JSON.parse(localStorage.notifications);
 lang 				= JSON.parse(localStorage.applang);
 appLanguage			= JSON.parse(localStorage.appLanguage);
 appWords 			= appLanguage[lang];
-
-
-date  		= new Date();
-fullDate 	= date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear();
+date  				= new Date();
+fullDate 			= date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear();
 /*day_aim 	= [];*/
 function notification(event,event_1)
 {

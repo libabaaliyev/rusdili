@@ -13,7 +13,6 @@ $(document).ready(function()
 	knowing			= $(".know");
 	lesson 			= $(".lesson");
 	play_txt 		= $(".play-text");
-
 	continue_lesson = $(".continue-lesson");
 	lesson_success	= $(".lesson-success");
 	success_body	= $(".success-body")
@@ -127,7 +126,7 @@ $(document).ready(function()
 			nWord = question_txt.html();
 
 		callOther("general","sounding",nWord);
-	})
+	});
 	
 	knowing.click(function()
 	{

@@ -318,11 +318,10 @@ $(document).ready(function()
 						gems 	-= price;
 						user.gem = gems;
 						gemCount.html(gems);
-
 						save();
-
 					}
-
+					
+					goLesson('lesson','sentences',s_category);
 				}
 				else
 				{
@@ -344,8 +343,19 @@ $(document).ready(function()
 						callOther("general","notification","enough-"+m_category);
 				}
 			}
-			else
-				callOther("general","notification","notenoughCoin");
+			else{
+				if(m_category == "sentences")
+				{
+					s_category = $(this).data("tag");
+
+					if(sData.indexOf(s_category) == -1)
+						callOther("general","notification","notenoughCoin");
+					else
+						goLesson('lesson','sentences',s_category);					
+				}
+				else
+					callOther("general","notification","notenoughCoin");
+			}
 		}
 	});
 
@@ -445,7 +455,7 @@ $(document).ready(function()
 		}
 	}
 
-	function goLesson(e,category)
+	function goLesson(e,category,category_1)
 	{
 		if(e=="reset")
 		{
@@ -460,6 +470,9 @@ $(document).ready(function()
 		exam_data.grade 		= selectGrade;
 		exam_data.step 			= selectStep;
 		exam_data.category 		= category;
+		if(category_1)
+			exam_data.category_1= category_1; 
+
 		localStorage.examing 	= JSON.stringify(exam_data);
 		window.location 		= "lessons.html";
 	}
