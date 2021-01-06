@@ -592,7 +592,7 @@ function language()
 	
 	$("#health-info").html(heart_info); // can sistemi duzelende bu serte gore deyisecek
 	
-	$("#health-txt").html(appWords['health-txt']);
+	$("#heart-txt").html(appWords['heart-txt']);
 	
 	$("#a-health").html(appWords['a-health']);
 	
@@ -625,7 +625,7 @@ function language()
 
 	$(".start-lesson").html(appWords['start']);
 
-	//$(".reset-lesson").html(appWords['reset']);
+
 
 	$(".skip-level-txt").html(appWords['skip-level-txt']);
 
@@ -644,6 +644,8 @@ function language()
 	$("#finish-lig").html(appWords['finish-lig']);
 
 	$("#score-head").html(appWords['score-head']);
+
+	$("#sentences-title").html(appWords['sentences-title']);
 
 	$("#shop").html(appWords['shop']);
 

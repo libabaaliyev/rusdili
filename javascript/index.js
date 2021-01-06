@@ -22,7 +22,7 @@ $(document).ready(function()
 	addHeart 		= $(".add-heart");
 	invite 			= $("#invite");
 	gemCount		= $(".gem-count");
-	card_market		= $(".card-market");
+	
 	pro 			= $(".pro");
 
 	bodyHeight 		= $(window).height();
@@ -39,6 +39,7 @@ $(document).ready(function()
 	achieveData		= JSON.parse(localStorage.achieve);
 	achievements 	= JSON.parse(localStorage.achievements);
 	marketData		= JSON.parse(localStorage.market);
+	sData 			= JSON.parse(localStorage.buy_s);
 	lang 			= JSON.parse(localStorage.applang);
 	words 			= JSON.parse(localStorage.appLanguage);
 	user 			= JSON.parse(localStorage.user);
@@ -69,10 +70,11 @@ $(document).ready(function()
 	create_level();
 	create_achievement();
 	skills();
+	sentences();	
+	lesson 			= $(".level-query-li");
+	card_market		= $(".card-market");
 
-	
-	lesson 	= $(".level-query-li");
-	hash 	= location.hash.substr(1);
+	hash 			= location.hash.substr(1);
 
 	if(hash){
 		if(heart == 0)
@@ -287,7 +289,6 @@ $(document).ready(function()
 
 		if(m_category == "reward")
 			callOther("general","ads","reward");
-
 		else if(m_category == "plus")
 			callOther("general","pro_edition");
 		else
@@ -307,6 +308,21 @@ $(document).ready(function()
 					}
 					else
 						callOther("general","notification","enough-heart");
+				}
+				else if(m_category == "sentences")
+				{
+					s_category = $(this).data("tag");
+					if(sData.indexOf(s_category) == -1)
+					{
+						sData.push(s_category);
+						gems 	-= price;
+						user.gem = gems;
+						gemCount.html(gems);
+
+						save();
+
+					}
+
 				}
 				else
 				{
@@ -340,15 +356,15 @@ $(document).ready(function()
 	
 	function save()
 	{
-		localStorage.achieve 	= JSON.stringify(achieveData);
-		localStorage.plan 		= JSON.stringify(plan);
-		localStorage.user 		= JSON.stringify(user);
-		localStorage.market		= JSON.stringify(marketData);
-
-		gems 	= JSON.parse(user.gem);
-		crown 	= JSON.parse(user.crown);
-		heart 	= JSON.parse(user.heart);
-		aim 	= user.aim;
+		localStorage.achieve = JSON.stringify(achieveData);
+		localStorage.plan 	 = JSON.stringify(plan);
+		localStorage.user 	 = JSON.stringify(user);
+		localStorage.market	 = JSON.stringify(marketData);
+		localStorage.buy_s	 = JSON.stringify(sData);
+		gems 				 = JSON.parse(user.gem);
+		crown 				 = JSON.parse(user.crown);
+		heart 				 = JSON.parse(user.heart);
+		aim 				 = user.aim;
 
 
 		callOther("general","start_page","index");
@@ -518,8 +534,7 @@ $(document).ready(function()
 			}
 		}
 	}
-	
-	
+		
 	function create_achievement()
 	{
 		$("#achievements li").remove();
@@ -626,6 +641,45 @@ $(document).ready(function()
 
 		$(skill_n).appendTo("#skills");
 	}
+
+	//elave
+	function sentences()
+	{
+		s_category 	= 
+		[	
+			"application",	"science",	"order",	"date",	"own",	"travel",	"health",	"shopping",	"eating",	"camp",	"time",	"walking",	"meeting",	"documents",	"working",	"education",	"shelter",	"compensation"
+		]
+
+		for (var i = 0; i < s_category.length; i++) {
+			
+			s_tag 	= s_category[i];
+			w 		= words[lang];
+
+			s = `<div class="card card-market" data-category="sentences" data-tag="`+s_tag+`" data-gem="50">
+					<figure class="card-img">
+						<img src="img/sentences_icon/`+s_tag+`.png">
+					</figure>
+					<div class="card-info">
+						<header>
+							<h5 id="` + s_tag + `">` + w[s_tag] + `</h5>
+						</header>
+						<div class="info-body">
+							<span id="">
+								`+ w[s_tag+"-txt"] +`
+							</span>
+						</div>
+						<div class="info-body">
+							<i class="fas fa-gem text-primary"></i> <span class="text-primary">50</span>
+						</div>
+					</div>
+				</div>`;
+
+			$(s).appendTo(".sentences");
+		}
+
+	}
+	//elave
+
 
 	function countTime(t,e)
 	{
@@ -847,7 +901,6 @@ $(document).ready(function()
 			}
 		}		
 	}
-
 	
 	function grade_control()
 	{

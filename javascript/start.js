@@ -99,21 +99,36 @@ $(document).ready(function()
 	if(localStorage.getItem("user")===null)
 	{
 		startFunc.language();
-		plan 					= [];
-		day_use 				= [];
-		
-		localStorage.plan 	 = JSON.stringify(plan);
-		localStorage.day_use = JSON.stringify(day_use);
+			
+		localStorage.plan 	 = JSON.stringify([]);
+		localStorage.day_use = JSON.stringify([]);
+		localStorage.buy_s 	 = JSON.stringify([]);
 		localStorage.achieve = JSON.stringify({	"grade-master": 0,	"crown-master": 0,	"full-aim": 0, "unerror": 0, "friendly": 0, "knight": 0	, "week": true	, "month": true});
 		localStorage.market  = JSON.stringify({"shield"	: 0,	"double" : 0});
+		
 	}
 	else
 	{
 		lang 		= JSON.parse(localStorage.applang);
 		appLanguage = JSON.parse(localStorage.appLanguage);		
 		$("#app-name").html(appLanguage[lang]['app-name']);
-		startFunc.jsonfiles("main"); //burani duzeldecem
-	}
+		startFunc.jsonfiles("main"); 
+
+		if(localStorage.getItem("plan") === null)
+			localStorage.plan 	 = JSON.stringify([]);
+
+		if(localStorage.getItem("day_use") === null)
+			localStorage.day_use 	 = JSON.stringify([]);
+
+		if(localStorage.getItem("buy_s") === null)
+			localStorage.buy_s 	 = JSON.stringify([]);
+
+		if(localStorage.getItem("achieve") === null)
+			localStorage.achieve 	 = JSON.stringify({	"grade-master": 0,	"crown-master": 0,	"full-aim": 0, "unerror": 0, "friendly": 0, "knight": 0	, "week": true	, "month": true});
+
+		if(localStorage.getItem("market") === null)
+			localStorage.market 	 = JSON.stringify({"shield"	: 0,	"double" : 0});
+	}	
 	
 
 });

@@ -76,10 +76,8 @@ $(document).ready(function()
 	};
 
 	s_category 		= 
-	[
-	
+	[	
 		"application",	"science",	"order",	"date",	"own",	"travel",	"health",	"shopping",	"eating",	"camp",	"time",	"walking",	"meeting",	"documents",	"working",	"education",	"shelter",	"compensation"
-	
 	]	
 	
 	callOther("general","start_page","index","lesson");
