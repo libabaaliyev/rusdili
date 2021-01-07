@@ -94,7 +94,7 @@ $(document).ready(function()
 		{
 			exam_data 	= JSON.parse(localStorage.examing);
 			category_e 	= exam_data.category;
-			if(category_e == 'step-by-step')
+			if(category_e == 'step-by-step' || category_e == 'sentences')
 				learning.show();
 			else if(category_e == 'open-lock' || category_e == 'practice')
 				start();
@@ -130,13 +130,15 @@ $(document).ready(function()
 	
 	knowing.click(function()
 	{
+
 		action = $(this).data("action");
 		if(action == 'later')
 		{
 			if(queque<10){
-				later.push((q));
+				later.push((q-1));
 				queque++;
 				word_learn(first_value,second_value);
+
 			}
 			else{
 
@@ -146,7 +148,8 @@ $(document).ready(function()
 					callOther("general","notification","go-test");
 					learning.hide();
 					main.show();
-					question('step-by-step',"trns","translate",maxQue);
+					question_data = shuffle(question_data);
+					question(category_e,"trns","translate",maxQue);
 				}
 				else{
 					word_learn(later[qx],second_value);
@@ -154,33 +157,34 @@ $(document).ready(function()
 				}
 				
 			}
+
+
 		}
 		else
 		{
-			if(queque >= 9)
+			if(queque >= cQuestions)
 			{
 				if(later.length > 0)
-				{
-					
+				{					
 					if(qx>=later.length)
 					{
-
 						callOther("general","notification","go-test");
 						learning.hide();
 						main.show();
+						question_data = shuffle(question_data);
 						question('step-by-step',"trns","translate",maxQue);
 					}
 					else
 					{						
 						word_learn(later[qx],second_value);
 						qx++;
-					}
-					
+					}					
 				}
 				else{
 					callOther("general","notification","go-test");
 					learning.hide();
 					main.show();
+					question_data = shuffle(question_data);
 					question('step-by-step',"trns","translate",maxQue);
 				}
 			}
@@ -274,7 +278,7 @@ $(document).ready(function()
 		else if(localStorage.getItem("examing"))
 		{
 
-			lesson_setting();
+			lesson_setting(category_e);
 
 			if(category_e == "step-by-step")
 			{
@@ -282,8 +286,17 @@ $(document).ready(function()
 				maxQue 		= selectQue("max",grade,step,exam);
 				q 	   		= minQue				
 				word_learn(first_value,second_value);
-				console.log(minQue+"-"+maxQue);
+				
 
+			}
+			else if(category_e == "sentences")
+			{
+				learn_sentences = JSON.parse(localStorage.learn_sentences);	
+				minQue 			= learn_sentences[sentence_category];
+				maxQue 			= minQue + cQuestions;
+				q 	   			= minQue;
+
+				word_learn(first_value,second_value);
 			}
 			else if(category_e == "open-lock")
 			{				
@@ -367,7 +380,7 @@ $(document).ready(function()
 		return fk;
 	}
 
-	function lesson_setting()
+	function lesson_setting(e)
 	{
 		exam_data 	= JSON.parse(localStorage.examing);
 		grade 		= JSON.parse(exam_data.grade);
@@ -380,29 +393,39 @@ $(document).ready(function()
 		exam_i 		= search_plan(grade,step);
 		(exam_i == -1) ? exam = 0 : exam = plan[exam_i]['exam'];
 
-		if (grade < 5)
-		{
-			first_value 	= 'easy';
-			second_value 	= 'word';					
-		}
-		else if(grade >=5 && grade < 15)
+		if(e == "sentences")
 		{
 			first_value 		= 'normal';
-			if(grade % 5 == 0){
-				x 					= random_number(0,(s_category.length - 1));
-				sentence_category 	= s_category[x];				
-				second_value 		= 'sentence';
-			}
-			else{
-				second_value 	= 'word';
-			}
+			second_value 		= 'sentence';
+			sentence_category 	= exam_data.category_1;
+
 		}
 		else
 		{
-			first_value 		= 'normal';
-							x 	= random_number(0,(s_category.length - 1));
-			sentence_category 	= s_category[x];				
-			second_value 		= 'sentence';
+			if (grade < 5)
+			{
+				first_value 	= 'easy';
+				second_value 	= 'word';					
+			}
+			else if(grade >=5 && grade < 15)
+			{
+				first_value 		= 'normal';
+				if(grade % 5 == 0){
+					x 					= random_number(0,(s_category.length - 1));
+					sentence_category 	= s_category[x];				
+					second_value 		= 'sentence';
+				}
+				else{
+					second_value 	= 'word';
+				}
+			}
+			else
+			{
+				first_value 		= 'normal';
+								x 	= random_number(0,(s_category.length - 1));
+				sentence_category 	= s_category[x];				
+				second_value 		= 'sentence';
+			}
 		}
 	}
 
@@ -429,18 +452,53 @@ $(document).ready(function()
         	result = obj.result;       	
         	
         });
+
+		if(category_e == "sentences"){
+			learn_sentences.sentence_category 	= maxQue;
+			localStorage.learn_sentences 		= JSON.stringify(learn_sentences);
+		}
+
+
+        localStorage.removeItem("examing");
 	}
 	
 	function word_learn(e,v)
 	{
 		
 		if(e == 'normal'){
-			if(v == 'word')
-				q = random_number(0,(words[lang].length-1));
-			else if(v == 'sentence')
-				q = random_number(0,(sentences[lang][sentence_category].length - 1));
+			
+			if(v == 'word'){
 
-			preparation(v)
+				if(maxQue >= words[lang].length){
+					q = random_number(0,(words[lang].length-1));
+					preparation(v)
+				}
+				else
+				{
+					preparation(v)
+					q += 1;
+					if(q >= maxQue)
+						q = maxQue;
+				}
+
+				
+			}
+			else if(v == 'sentence'){
+
+				if(maxQue >= sentences[lang][sentence_category].length){
+					q = random_number(0,(sentences[lang][sentence_category].length-1));
+					preparation(v)	
+				}
+				else
+				{
+					preparation(v)
+					q += 1;
+					if(q >= maxQue)
+						q = maxQue;
+				}
+				
+			}
+			
 		}
 		else if(e == 'easy'){
 
@@ -453,6 +511,7 @@ $(document).ready(function()
 			q =	e;
 			preparation(v)
 		}
+
 	}
 
 	function preparation(v)
@@ -465,13 +524,15 @@ $(document).ready(function()
 		}
 		else
 		{
+			
 			newWord_orgn  	= regulation(sentences[lang][sentence_category][q]['orgn']); 
 			newWord_trns  	= sentences[lang][sentence_category][q]['trns'];
 		}
 		newWord_trnsk 	= convert_latin(newWord_orgn);			
 		
 
-		question_data.push(q);
+		if(question_data.indexOf(q) == -1)
+			question_data.push(q);
 		
 		callOther("general","sounding",newWord_orgn);
 
@@ -482,7 +543,6 @@ $(document).ready(function()
 	
 	function question(exam,cat,comm,q)
 	{
-		
 		question_categ.html(transl[lang][comm]);
 		
 		//buralari duzeldecem
@@ -491,10 +551,16 @@ $(document).ready(function()
 			que 	= random_number(0,JSON.parse(q));
 			etalon 	= 11;
 		}
-		else if(exam == "step-by-step") 
+		else if(exam == "step-by-step" || exam == "sentences") 
 		{
-			question_que 	= random_number(0,(question_data.length-1));			
+				
 			que 			= question_data[question_que];
+			question_que++;
+
+			if(question_que == question_data.length)
+				question_que = 0;
+
+			etalon 			= 2 * cQuestions + 1;
 			
 		}
 		else if(exam == "open-lock" || exam == "practice")
@@ -601,9 +667,19 @@ $(document).ready(function()
 
 	function convert_latin(word)
 	{
+		word = word.toLowerCase();
 		str_array = word.split('');
         for(var i=0; i < str_array.length; i++) {
-            str_array[i] = rus_latin[ str_array[i] ] || str_array[i];
+        	if(i == 0){
+        		if(str_array[i] == "е")
+        			str_array[i] = 'ye';
+        	}
+        	else{
+        		if(str_array[i] == "г" && str_array[i-1] == "е")
+        			str_array[i] = 'yev';
+        		else
+		            str_array[i] = rus_latin[ str_array[i] ] || str_array[i];
+        	}
         }
 
         str = str_array.join('');
@@ -616,14 +692,12 @@ $(document).ready(function()
 		regularFind = s.indexOf("(");
 
 			
-		if(regularFind==-1)
+		if(regularFind == -1)
 		{
-			console.log(s)
 			return s;
 		}
 		else
 		{
-			console.log(s)
 			return s.substr(0, regularFind);
 			
 		}
@@ -1004,6 +1078,11 @@ $(document).ready(function()
 
 			}, 1000);
 		}
+	}
+
+	function shuffle(array) {
+	  array.sort(() => Math.random() - 0.5);
+	  return array;
 	}
 
 	function checkConnection()

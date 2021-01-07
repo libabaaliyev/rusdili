@@ -21,10 +21,8 @@ $(document).ready(function()
 	practice 		= $(".practice");
 	addHeart 		= $(".add-heart");
 	invite 			= $("#invite");
-	gemCount		= $(".gem-count");
-	
+	gemCount		= $(".gem-count");	
 	pro 			= $(".pro");
-
 	bodyHeight 		= $(window).height();
 	windowWidth		= $(window).width();
 	bodyWidth		= $("body").width();
@@ -56,7 +54,7 @@ $(document).ready(function()
 	currentMonth 	= date.getMonth()+1;
 	currentDay 		= date.getDate();
 	currentDate		= currentDay + "." + currentMonth + "." + currentYear;
-	exam_data = {};
+	exam_data 		= {};
 
 	body.click(function()
 	{

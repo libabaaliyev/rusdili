@@ -1,6 +1,7 @@
 $(document).ready(function()
 {
 	/*localStorage.clear();*/
+	control_storage();
 	title = 
 	{
 		az : "Rus dili tədrisi",
@@ -98,14 +99,7 @@ $(document).ready(function()
 
 	if(localStorage.getItem("user")===null)
 	{
-		startFunc.language();
-			
-		localStorage.plan 	 = JSON.stringify([]);
-		localStorage.day_use = JSON.stringify([]);
-		localStorage.buy_s 	 = JSON.stringify([]);
-		localStorage.achieve = JSON.stringify({	"grade-master": 0,	"crown-master": 0,	"full-aim": 0, "unerror": 0, "friendly": 0, "knight": 0	, "week": true	, "month": true});
-		localStorage.market  = JSON.stringify({"shield"	: 0,	"double" : 0});
-		
+		startFunc.language();		
 	}
 	else
 	{
@@ -113,7 +107,14 @@ $(document).ready(function()
 		appLanguage = JSON.parse(localStorage.appLanguage);		
 		$("#app-name").html(appLanguage[lang]['app-name']);
 		startFunc.jsonfiles("main"); 
+		
+		
+	}	
+	
 
+
+	function control_storage(e)
+	{
 		if(localStorage.getItem("plan") === null)
 			localStorage.plan 	 = JSON.stringify([]);
 
@@ -128,7 +129,9 @@ $(document).ready(function()
 
 		if(localStorage.getItem("market") === null)
 			localStorage.market 	 = JSON.stringify({"shield"	: 0,	"double" : 0});
-	}	
-	
+
+		if(localStorage.getItem("learn_sentences") === null)
+			localStorage.learn_sentences 	 = JSON.stringify({"application" : 0,	"science" : 0,	"order" : 0,	"date" : 0,	"own" : 0,	"travel" : 0,	"health" : 0,	"shopping" : 0,	"eating" : 0,	"camp" : 0,	"time" : 0,	"walking" : 0,	"meeting" : 0,	"documents" : 0,	"working" : 0,	"education" : 0,	"shelter" : 0,	"compensation" : 0});
+	}
 
 });

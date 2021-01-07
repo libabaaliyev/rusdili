@@ -38,7 +38,7 @@
 		$lang 		= $_POST['lang'];
 		$id 		= $_POST['id'];
 		$getting 	= $data['getting'];
-		$sql 		= "SELECT users.id,users.name,users.photo,day_aim.getting FROM day_aim INNER JOIN users ON users.id = day_aim.user_id WHERE day_aim.lang = '$lang' and day_aim.time_aim = CURDATE() ORDER BY day_aim.getting DESC LIMIT 20";
+		$sql 		= "SELECT users.id,users.name,users.photo,day_aim.getting FROM day_aim INNER JOIN users ON users.id = day_aim.user_id WHERE day_aim.lang = '$lang' and day_aim.getting > 0 and day_aim.time_aim = CURDATE() ORDER BY day_aim.getting DESC LIMIT 20";
 		$users 		= $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 		$result 	= ['result' => $users];
 		
