@@ -669,17 +669,9 @@ $(document).ready(function()
 	{
 		word = word.toLowerCase();
 		str_array = word.split('');
-        for(var i=0; i < str_array.length; i++) {
-        	if(i == 0){
-        		if(str_array[i] == "е")
-        			str_array[i] = 'ye';
-        	}
-        	else{
-        		if(str_array[i] == "г" && str_array[i-1] == "е")
-        			str_array[i] = 'yev';
-        		else
-		            str_array[i] = rus_latin[ str_array[i] ] || str_array[i];
-        	}
+        for(var i=0; i < str_array.length; i++)
+        {        	
+		    str_array[i] = rus_latin[ str_array[i] ] || str_array[i];        	
         }
 
         str = str_array.join('');
@@ -721,24 +713,24 @@ $(document).ready(function()
 
 			if(!hash)
 			{
-				if(heart>0){
-
-					if(user.version == "simple")
-					{
+				if(user.version == "simple")
+				{
+					if(heart>0){
+						
 						heart-=1;			
 						user.heart = heart;
-						localStorage.user = JSON.stringify(user);
+						localStorage.user = JSON.stringify(user);						
+						
 					}
-					
-				}
-				else
-				{
-					localStorage.isPage = 'shopping';
-					setTimeout(function()
+					else
 					{
-						window.location 	= "main.html#notenoughHeart";
-					},500)
-					
+						localStorage.isPage = 'shopping';
+						setTimeout(function()
+						{
+							window.location 	= "main.html#notenoughHeart";
+						},500);
+						
+					}
 				}
 			}
 		}

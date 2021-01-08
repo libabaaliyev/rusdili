@@ -58,18 +58,36 @@ function ads(e)
 	}		
 }
 
-function pro_edition()
+function pro_edition(e)
 {
-	if(checkConnection() == 'none')
+	/*if(checkConnection() == 'none')
 		notification("internet-error");
 	else
-	{
-		//pro isleri
-		user.version = "pro";
-		localStorage.user = user;
-		start_page("index"); 
+	{*/
+
 		
-	}
+		
+/*		
+		user.version = "pro";
+		$.post("process.php",
+        {
+            info: "import-scoreboard",
+            data: JSON.stringify(day_aim),
+            id: user.id,
+            lang: 'ru'     
+        },
+        function(data)
+        {
+        	obj = JSON.parse(data);
+        	result = obj.result;
+
+
+        	localStorage.user = user;
+			start_page("index");     	
+        	
+        });*/
+		
+	/*}*/
 }
 
 function checkConnection()

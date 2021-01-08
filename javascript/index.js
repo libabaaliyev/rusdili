@@ -23,12 +23,17 @@ $(document).ready(function()
 	invite 			= $("#invite");
 	gemCount		= $(".gem-count");	
 	pro 			= $(".pro");
+	pro_e 			= $(".pro-edition");
+	pro_item 		= $(".item");
+	get_pro 		= $(".get-pro");
+	
 	bodyHeight 		= $(window).height();
 	windowWidth		= $(window).width();
 	bodyWidth		= $("body").width();
 	opening 		= false;
 	selectStep 		= -1;
 	selectGrade 	= -1;
+	pro_cat 		= 1;
 
 	//localStorages
 	notifications 	= JSON.parse(localStorage.notifications);
@@ -215,6 +220,7 @@ $(document).ready(function()
 		aim_tab.removeClass("slideOutRight");
 		aim_tab.addClass("slideOutRight");
 		aim_tab.fadeOut(1000);
+		pro_e.fadeOut();
 		aim = user.aim;
 
 		callOther("general","aim_setting","index");
@@ -288,7 +294,8 @@ $(document).ready(function()
 		if(m_category == "reward")
 			callOther("general","ads","reward");
 		else if(m_category == "plus")
-			callOther("general","pro_edition");
+			pro_e.fadeIn();
+			
 		else
 		{
 			if(gems > price){ //will be sound
@@ -359,7 +366,20 @@ $(document).ready(function()
 
 	pro.click(function()
 	{
-		callOther("general","pro_edition");
+		pro_e.fadeIn();
+		
+	});
+
+	pro_item.click(function()
+	{
+		pro_item.removeClass("active");
+		$(this).addClass("active");
+		pro_cat = $(this).data("cat");
+	});
+
+	get_pro.click(function()
+	{
+		callOther("general","pro_edition",pro_cat);
 	});
 	
 	function save()
