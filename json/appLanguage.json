@@ -80,6 +80,9 @@
 		"get-ads"				: "Watch ad",
 		"double-skill-title"	: "Double up",
 		"double-skill-txt"		: "Double the time earnings on completing the task.",
+		"triple-skill-title"	: "Triple up",
+		"triple-skill-txt"		: "Triple the time earnings on completing the task.",
+
 		"unlimited-health"		: "Unlimited Health",
 		"buy-plus"				: "BUY PRO",
 		"done"					: "Done",
@@ -238,6 +241,10 @@
 
 		"double-skill-title"	: "İkiye katla",
 		"double-skill-txt"		: "Görevi tamamladığın zaman kazancını ikiye katla.",
+
+		"triple-skill-title"	: "Üçe katla",
+		"triple-skill-txt"		: "Görevi tamamladığın zaman kazancını üçe katla.",
+
 		"unlimited-health"		: "Sınırsız Can",
 		"buy-plus"				: "PRO SATIN AL",
 		"done"					: "Bitti",
@@ -391,6 +398,10 @@
 		"get-ads"				: "Reklam izlə",
 		"double-skill-title"	: "İkiqat",
 		"double-skill-txt"		: "Tapşırığı tamamladıqda qazancını ikiqat et.",
+
+		"triple-skill-title"	: "Üç qat",
+		"triple-skill-txt"		: "Tapşırığı tamamladıqda qazancını ikiqat et.",
+
 		"unlimited-health"		: "Limitsiz Can",
 		"buy-plus"				: "PRO SATIN AL",
 		"done"					: "Saxla",
@@ -545,8 +556,11 @@
 		"health-update"			: "Право на обновление сердце",
 		"health-update-txt"		: "Не бойтесь ошибаться на уроках!",
 		"get-ads"				: "Посмотреть рекламу",
-		"double-skill-title"	: "Двойное-skill-title",
+		"double-skill-title"	: "Двойное",
 		"double-skill-txt"		: "Удвойте время заработка на выполнение задания.",
+
+		"triple-skill-title"	: "Тройной",
+		"triple-skill-txt"		: "Утроить время заработка на выполнение задания.",
 
 		"unlimited-health"		: "Неограниченное сердце",
 		

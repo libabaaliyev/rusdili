@@ -1804,7 +1804,7 @@
             },
             {
                "trns": "...-da ... tarihinde, ... ve ... olarak sizi düğünümüzde görmekten mutluluk duyarız.",
-               "orgn" : "Поскольку ты сыграл(а) важную роль в наших жизнях, ... и ... хотели бы, чтобы ты присутствовал(а) на их свадьбе ... числа, в...",
+               "orgn" : "Поскольку ты сыграл[a] важную роль в наших жизнях, ... и ... хотели бы, чтобы ты присутствовал[a] на их свадьбе ... числа, в...",
                "mng" : "Yakın arkadaşları düğüne çağırırken kullanılır"
             },
             {
@@ -3914,17 +3914,17 @@
             },
             {
                "trns": "saniye(ler)",
-               "orgn" : "секунд(а)/(ы) (sekund(a)/(y))",
+               "orgn" : "секунд[a]/[ы] (sekund[a]/(y))",
                "mng" : "Zaman birimi"
             },
             {
                "trns": "dakika(lar)",
-               "orgn" : "минут(а)/(ы) (minut(a)/(y))",
+               "orgn" : "минут[a]/[ы] (minut[a]/(y))",
                "mng" : "Zaman birimi"
             },
             {
                "trns": "saat(ler)",
-               "orgn" : "Час(ы) (Chas(y))",
+               "orgn" : "Час[ы] (Chas(y))",
                "mng" : "Zaman birimi"
             },
             {
@@ -3934,17 +3934,17 @@
             },
             {
                "trns": "hafta(lar)",
-               "orgn" : "Недел(я)/(и) (Nedel(ya)/(i))",
+               "orgn" : "Недел[я]/(и) (Nedel(ya)/(i))",
                "mng" : "Zaman birimi"
             },
             {
                "trns": "ay(lar)",
-               "orgn" : "Месяц(ы) (Mesyats(y))",
+               "orgn" : "Месяц[ы] (Mesyats(y))",
                "mng" : "Zaman birimi"
             },
             {
                "trns": "yıl(lar)",
-               "orgn" : "Год(а) (God(a))",
+               "orgn" : "Год[a] (God[a])",
                "mng" : "Zaman birimi"
             },
             {
@@ -4531,7 +4531,7 @@
             },
             {
                "trns": "Benimle bazen öğlen yemeği/akşam yemeği yemek ister miydin?",
-               "orgn" : "Ты бы хотел(а) пообедать/поужинать со мной как-нибудь? (Ty by hotel(a) poobedat-/pouzhinat- so mnoy kak-nibud-?)",
+               "orgn" : "Ты бы хотел[a] пообедать/поужинать со мной как-нибудь? (Ty by hotel[a] poobedat-/pouzhinat- so mnoy kak-nibud-?)",
                "mng" : "Buluşma teklif etme"
             },
             {
@@ -4546,7 +4546,7 @@
             },
             {
                "trns": "Tekrar buluşabilir miyiz?",
-               "orgn" : "Ты бы хотел(а) встретиться снова? ",
+               "orgn" : "Ты бы хотел[a] встретиться снова? ",
                "mng" : "Başka bir buluşma isteme"
             },
             {
@@ -4774,12 +4774,12 @@
             },
             {
                "trns": "Ailemi yanıma almak istiyorum.",
-               "orgn" : "Я бы хотел(а) объединиться с моей семьей.",
+               "orgn" : "Я бы хотел[a] объединиться с моей семьей.",
                "mng" : "Aile birleşmesi istediğinizi belirtmek"
             },
             {
                "trns": "Şehirde ikamet kaydı yaptırmak istiyorum.",
-               "orgn" : "Я бы хотел(а) зарегистрироваться в городе",
+               "orgn" : "Я бы хотел[a] зарегистрироваться в городе",
                "mng" : "Şehirde ikamet kaydı yaptırmak istediğinizi belirtmek"
             },
             {
@@ -4889,7 +4889,7 @@
             },
             {
                "trns": "Arabamı kaydettirmek istiyorum?",
-               "orgn" : "Я бы хотел(а) зарегистрировать свою машину.",
+               "orgn" : "Я бы хотел[a] зарегистрировать свою машину.",
                "mng" : "Arabanızı kaydettirmek istediğinizi belirtmek"
             },
             {
@@ -4899,12 +4899,12 @@
             },
             {
                "trns": "Geçici ehliyet belgesi almak istiyorum.",
-               "orgn" : "Я бы хотел(а) подать заявку на временное водительское удостоверение.",
+               "orgn" : "Я бы хотел[a] подать заявку на временное водительское удостоверение.",
                "mng" : "Geçici ehliyet başvurusu yapmak"
             },
             {
                "trns": "... için kayıt olmak istiyorum.",
-               "orgn" : "Я бы хотел(а) забронировать...",
+               "orgn" : "Я бы хотел[a] забронировать...",
                "mng" : "Ehliyet sınavınız için kayıt olmak istediğinizi belirtmek"
             },
             {
@@ -4919,7 +4919,7 @@
             },
             {
                "trns": "Ehliyetimdeki ... bilgisini değiştirmek istiyorum.",
-               "orgn" : "Я бы хотел(а) поменять...в моем водительском удостоверении.",
+               "orgn" : "Я бы хотел[a] поменять...в моем водительском удостоверении.",
                "mng" : "Ehliyetinizdeki bazı bilgileri değiştirmek istediğinizi belirtmek"
             },
             {
@@ -4939,17 +4939,17 @@
             },
             {
                "trns": "Ehliyetime daha yüksek kategoriler eklemek istiyorum",
-               "orgn" : "Я бы хотел(а) добавить более высокие категории к моему водительскому удостоверению",
+               "orgn" : "Я бы хотел[a] добавить более высокие категории к моему водительскому удостоверению",
                "mng" : "Ehliyetinize daha yüksek kategoriler eklemek istediğinizi belirtmek"
             },
             {
                "trns": "Ehliyetimi yenilemek istiyorum.",
-               "orgn" : "Я бы хотел(а) обновить мое водительское удостоверение.",
+               "orgn" : "Я бы хотел[a] обновить мое водительское удостоверение.",
                "mng" : "Ehliyetinizi yenilemek istediğinizi belirtmek"
             },
             {
                "trns": "Bir ... ehliyeti değiştirmek istiyorum.",
-               "orgn" : "Я бы хотел(а) заменить мое водительское удостоверение...",
+               "orgn" : "Я бы хотел[a] заменить мое водительское удостоверение...",
                "mng" : "Ehliyetinizi değiştirmek istediğinizi belirtmek"
             },
             {
@@ -4969,12 +4969,12 @@
             },
             {
                "trns": "Ehliyetimin iptal edilmesine itiraz etmek istiyorum.",
-               "orgn" : "Я бы хотел(а) обжаловать приостановку моей лицензии.",
+               "orgn" : "Я бы хотел[a] обжаловать приостановку моей лицензии.",
                "mng" : "Araç kullanma yasağınıza itiraz etmek istediğinizi belirtmek"
             },
             {
                "trns": "[ülke sıfatı] vatandaşlığı için başvurmak istiyorum.",
-               "orgn" : "Я бы хотел(а) подать заявку на [страна-прилагательное] гражданство.",
+               "orgn" : "Я бы хотел[a] подать заявку на [страна-прилагательное] гражданство.",
                "mng" : "Vatandaşlık isteğinde bulunmak istediğinizi belirtmek"
             },
             {
@@ -4994,7 +4994,7 @@
             },
             {
                "trns": "[ülke] yaşamıyla ilgili genel bilgi sınavı için kayıt yaptırmak istiyorum",
-               "orgn" : "Я бы хотел(а) заказать тест на общее знание жизни в [страна].",
+               "orgn" : "Я бы хотел[a] заказать тест на общее знание жизни в [страна].",
                "mng" : "O ülkedeki yaşamla ilgili genel bilgi sınavı için kayıt yaptırmak istediğinizi belirtmek"
             },
             {
@@ -5004,7 +5004,7 @@
             },
             {
                "trns": "Eşim [milliyet sıfatı] vatandaşıdır.",
-               "orgn" : "Мо(й/я) супруг(а) - граждан(ин/ка) [страна-прилагательное].",
+               "orgn" : "Мо(й/я) супруг[a] - граждан(ин/ка) [страна-прилагательное].",
                "mng" : "Eşinizin milliyetini belirtmek"
             },
             {
@@ -5019,12 +5019,12 @@
             },
             {
                "trns": "Banka hesabı açmak istiyorum.",
-               "orgn" : "Я бы хотел(а) открыть банковский счет.",
+               "orgn" : "Я бы хотел[a] открыть банковский счет.",
                "mng" : "Banka hesabı açma isteğinizi belirtmek"
             },
             {
                "trns": "Banka hesabımı kapatmak istiyorum.",
-               "orgn" : "Я бы хотел(а) закрыть банковский счет.",
+               "orgn" : "Я бы хотел[a] закрыть банковский счет.",
                "mng" : "Banka hesabınızı kapatma isteğinizi belirtmek."
             },
             {
@@ -5119,7 +5119,7 @@
             },
             {
                "trns": "Kredi kartımı kaybettim.",
-               "orgn" : "Я потерял(а) кредитную карту.",
+               "orgn" : "Я потерял[a] кредитную карту.",
                "mng" : "Kredi kartınızı kaybettiğinizi belirtmek"
             },
             {
@@ -5139,7 +5139,7 @@
             },
             {
                "trns": "Krediler hakkında bilgi edinmek istiyorum.",
-               "orgn" : "Я бы хотел(а) узнать кое-какую информацию о кредитах.",
+               "orgn" : "Я бы хотел[a] узнать кое-какую информацию о кредитах.",
                "mng" : "Krediler hakkında bilgi edinmek"
             },
             {
@@ -5149,12 +5149,12 @@
             },
             {
                "trns": "İpotekler hakkında bilgi sahibi olmak istiyorum.",
-               "orgn" : "Я бы хотел(а) узнать об ипотеке.",
+               "orgn" : "Я бы хотел[a] узнать об ипотеке.",
                "mng" : "İpotekler hakkında bilgi edinmek"
             },
             {
                "trns": "Bir ipotek danışmanıyla konuşmak istiyorum.",
-               "orgn" : "Я бы хотел(а) поговорить с консультантом по ипотеке",
+               "orgn" : "Я бы хотел[a] поговорить с консультантом по ипотеке",
                "mng" : "İpotek danışmanıyla konuşma isteğinde bulunmak"
             },
             {
@@ -5169,7 +5169,7 @@
             },
             {
                "trns": "Yeniden ipotek ettirmek istiyorum.",
-               "orgn" : "Я бы хотел(а) перезаложить имущество.",
+               "orgn" : "Я бы хотел[a] перезаложить имущество.",
                "mng" : "Yeniden ipotek ettirme isteğinde bulunmak"
             },
             {
@@ -5189,7 +5189,7 @@
             },
             {
                "trns": "Sigorta yaptırmak istiyorum.",
-               "orgn" : "Я бы хотел(а) приобрести страховку.",
+               "orgn" : "Я бы хотел[a] приобрести страховку.",
                "mng" : "Sigortayla ilgilendiğinizi belirtmek"
             },
             {
@@ -5259,7 +5259,7 @@
             },
             {
                "trns": "Kaç ay boyunca sigortalı olacağım?",
-               "orgn" : "В течение скольки месяцев я буду покрыт(а) страховкой?",
+               "orgn" : "В течение скольки месяцев я буду покрыт[a] страховкой?",
                "mng" : "Sigortanızın kaç aylık bir süreyi kapsadığı hakkında bilgi almak"
             },
             {
@@ -5332,7 +5332,7 @@
             },
             {
                "trns": "Serbest çalışan olarak kayıt olmak istiyorum.",
-               "orgn" : "Я бы хотел(а) зарегистрироваться как внештатный профессионал.",
+               "orgn" : "Я бы хотел[a] зарегистрироваться как внештатный профессионал.",
                "mng" : "danışman"
             },
             {
@@ -5377,7 +5377,7 @@
             },
             {
                "trns": "... için başvurmak istiyorum.",
-               "orgn" : "Я бы хотел(а) попросить о....",
+               "orgn" : "Я бы хотел[a] попросить о....",
                "mng" : "İşten izin almak"
             },
             {
@@ -5402,17 +5402,17 @@
             },
             {
                "trns": "Vergilerle ilgili bilgi almak istiyorum.",
-               "orgn" : "Я бы хотел(а) узнать о налогах",
+               "orgn" : "Я бы хотел[a] узнать о налогах",
                "mng" : "Vergiler hakkında bilgi almak"
             },
             {
                "trns": "Kazancımı beyan etmek istiyorum.",
-               "orgn" : "Я бы хотел(а) доложить о моих доходах.",
+               "orgn" : "Я бы хотел[a] доложить о моих доходах.",
                "mng" : "Kazancınızı beyan edeceğinizi belirtmek"
             },
             {
                "trns": "Vergi beyanıma yardım etmesi için bir muhasebeciyle anlaşacağım.",
-               "orgn" : "Я бы хотел(а) нанять бухгалтера для помощи с моей налоговой декларацией.",
+               "orgn" : "Я бы хотел[a] нанять бухгалтера для помощи с моей налоговой декларацией.",
                "mng" : "Vergi beyanınıza yardımcı olması için bir muhasebeciyle anlaşacağınızı belirtmek"
             },
             {
@@ -5445,7 +5445,7 @@
        [
             {
                "trns": "Bir üniversiteye kaydolmak istiyorum.",
-               "orgn" : "Я бы хотел(а) зачислиться в университет",
+               "orgn" : "Я бы хотел[a] зачислиться в университет",
                "mng" : "Kaydolmak istediğinizi belirtmek"
             },
             {
@@ -5700,7 +5700,7 @@
             },
             {
                "trns": "Diplomamı [ülke] için onaylatmak istiyorum",
-               "orgn" : "Я бы хотел(а) подтвердить действительность моего диплома в [страна].",
+               "orgn" : "Я бы хотел[a] подтвердить действительность моего диплома в [страна].",
                "mng" : "Diplomanızı o ülkede onaylatmak istediğinizi belirtmek"
             },
             {
@@ -5718,7 +5718,7 @@
        [      
             {
                "trns": "Bir ... kiralamak istiyorum.",
-               "orgn" : "Я бы хотел(а) снимать...",
+               "orgn" : "Я бы хотел[a] снимать...",
                "mng" : "Bir şey kiralamak istediğinizi belirtmek"
             },
             {
@@ -6558,12 +6558,12 @@
             },
             {
                "trns": "... vaxt məhdud işlərdə davamlı yüksək keyfiyyətli iş istehsal edir.",
-               "orgn": "Постоянно показывает высокое качество iş və ümenie распределять время.",
+               "orgn": "... производит неизменно высокое качество работы на ограниченных по времени работах.",
                "mng": "Namizəd haqqında müsbət qiymətləndirərkən istifadə olunur"
             },
             {
                "trns": "Performansındakı yeganə zəif nöqtə ...",
-               "orgn": "Единственной слабостью ..., tərcümə olunan bir şey var ...",
+               "orgn": "Единственный зоиф некто в его исполнении ...",
                "mng": "Namizədi qiymətləndirərkən mənfi bir atribut vermək üçün istifadə olunur"
             },
             {
@@ -7801,7 +7801,7 @@
             
             {
                "trns": "Sizi toyumuzda ... on ... on ... və ... kimi görməkdən xoşbəxtik",
-               "orgn": "Поскольку ты сыграл (а) vəжную роль в наших жизнях, ... и ... mehmanxanalar, çobы ты присутствовал (а) на их свадьбе ... числа, ...",
+               "orgn": "Поскольку ты сыграл [a] vəжную роль в наших жизнях, ... и ... mehmanxanalar, çobы ты присутствовал [a] на их свадьбе ... числа, ...",
                "mng": "Toyu yaxın dostlara dəvət edərkən istifadə olunur"
             },
             
@@ -8079,7 +8079,7 @@
             },
             {
                "trns": "Son karyera addımınızda sizə uğurlar diləyirik.",
-               "orgn": "Jelaem удачи на в твоей новой ступеньке карьерной лестницы",
+               "orgn": "Желаем удачи на в твоей новой ступеньке карьерной лестницы",
                "mng": "Keçmiş həmkarlar kiməsə yeni işlərində uğurlar diləyəndə"
             },
             {
@@ -8944,7 +8944,7 @@
                "mng": "Yemək yeyərkən və ya yeməkdən sonra bir oyun izləmək istəyirsən"
             },
             {
-               "trns": "Xahiş edirəm menyunu görə bilərəmmi?",
+               "trns": "Menyunu görə bilərəm,zəhmət olmasa?",
                "orgn": "Можно посмотреть меню, пожалуйста? ",
                "mng": "Menyunu görmək istəmirəm"
             },
@@ -9512,17 +9512,17 @@
             },
             {
                "trns": "saniyə(lər)",
-               "orgn": "секунд(а)/(ы)",
+               "orgn": "секунд[a]/[ы]",
                "mng": "Vaxt vahidi"
             },
             {
                "trns": "dəqiqə (lər)",
-               "orgn": "dəqiqə (а) / (ы) (minut (a) / (y))",
+               "orgn": "dəqiqə [a] / [ы] (minut [a] / (y))",
                "mng": "Vaxt vahidi"
             },
             {
                "trns": "saat (lar)",
-               "orgn": "Час (ы) (Chas (y))",
+               "orgn": "Час [ы] (Chas (y))",
                "mng": "Vaxt vahidi"
             },
             {
@@ -9532,17 +9532,17 @@
             },
             {
                "trns": "həftə (lər)",
-               "orgn": "Недел (я) / (и) (Nedel (ya) / (i))",
+               "orgn": "Недел [я] / (и) (Nedel (ya) / (i))",
                "mng": "Vaxt vahidi"
             },
             {
                "trns": "ay (lar)",
-               "orgn": "Месяц (ы) (Mesyats (y))",
+               "orgn": "Месяц [ы] (Mesyats (y))",
                "mng": "Vaxt vahidi"
             },
             {
                "trns": "il (lər)",
-               "orgn": "Год (а) (Tanrı (a))",
+               "orgn": "Год [a] (Tanrı [a])",
                "mng": "Vaxt vahidi"
             },
             {
@@ -9934,7 +9934,7 @@
             },
             {
                "trns": "Bəzən mənimlə nahar / şam yeməyi yemək istəyirsən?",
-               "orgn": "Ты бы хотел (а) пообедать / поужинать со мной как-нибудь? (Ty by hotel (a) poobedat- / pouzhinat- so mnoy kak-nibud-?)",
+               "orgn": "Ты бы хотел [a] пообедать / поужинать со мной как-нибудь? (Ty by hotel [a] poobedat- / pouzhinat- so mnoy kak-nibud-?)",
                "mng": "Bir tarix təklif etməyin"
             },
             {
@@ -9949,7 +9949,7 @@
             },
             {
                "trns": "Yenidən görüşə bilərikmi?",
-               "orgn": "Ты бы хотел(а) встретиться снова?",
+               "orgn": "Ты бы хотел[a] встретиться снова?",
                "mng": "Başqa görüş istəyirik"
             },
             {
@@ -10163,12 +10163,12 @@
             },
             {
                "trns": "Ailəmi özümlə aparmaq istəyirəm.",
-               "orgn": "Я бы хотел(a) объединиться с моей семьей.",
+               "orgn": "Я бы хотел[a] объединиться с моей семьей.",
                "mng": "Ailənin birləşməsini istədiyinizi ifadə etmək"
             },
             {
                "trns": "Şəhərdə yaşamaq üçün qeydiyyatdan keçmək istəyirəm.",
-               "orgn": "Я бы хотел(а) зарегистрироваться в городе",
+               "orgn": "Я бы хотел[a] зарегистрироваться в городе",
                "mng": "Bir şəhər sakini qeydiyyatdan keçirmək istədiyinizi bildirmək"
             },
             {
@@ -10278,7 +10278,7 @@
             },
             {
                "trns": "Maşınımı qeydiyyatdan keçirmək istəyirəm?",
-               "orgn": "Я бы хотел (а) зарегистрировать свою машину.",
+               "orgn": "Я бы хотел [a] зарегистрировать свою машину.",
                "mng": "Avtomobilinizi qeydiyyatdan keçirmək istədiyinizi bildirmək"
             },
             {
@@ -10288,12 +10288,12 @@
             },
             {
                "trns": "Geçici ehliyet belgesi almak istiyorum.",
-               "orgn" : "Я бы хотел(а) подать заявку на временное водительское удостоверение.",
+               "orgn" : "Я бы хотел[a] подать заявку на временное водительское удостоверение.",
                "mng" : "Geçici ehliyet başvurusu yapmak"
             },
             {
                "trns": "... üçün qeydiyyatdan keçmək istəyirəm",
-               "orgn": "Я бы хотел (а) забронировать ...",
+               "orgn": "Я бы хотел [a] забронировать ...",
                "mng": "Sürücülük vəsiqəsi imtahanına yazılmaq istədiyinizi bildirmək"
             },
             {
@@ -10308,22 +10308,22 @@
             },
             {
                "trns": "Sürücülük vəsiqəm haqqında ... məlumatları dəyişdirmək istəyirəm.",
-               "orgn": "Я бы хотел (а) поменять ... в моем водительском удостоверении.",
+               "orgn": "Я бы хотел [a] поменять ... в моем водительском удостоверении.",
                "mng": "Sürücülük vəsiqənizdəki bəzi məlumatları dəyişdirmək istədiyiniz"
             },
             {
                "trns": "Sürücülük vəsiqəmə daha yüksək kateqoriyalar əlavə etmək istəyirəm",
-               "orgn": "Я бы хотел(а) добавить более высокие категории к моему водительскому удостоверению",
+               "orgn": "Я бы хотел[a] добавить более высокие категории к моему водительскому удостоверению",
                "mng": "Sürücülük vəsiqənizə daha yüksək kateqoriyalar əlavə etmək istədiyinizi"
             },
             {
                "trns": "Lisenziyamı yeniləmək istəyirəm.",
-               "orgn": "Я бы хотел (а) обновить мое водительское удостоверение.",
+               "orgn": "Я бы хотел [a] обновить мое водительское удостоверение.",
                "mng": "Sürücülük vəsiqənizi təzələmək istədiyiniz"
             },
             {
                "trns": "Sürücülük vəsiqəsini dəyişdirmək istəyirəm.",
-               "orgn": "Я бы хотел(а) заменить мое водительское удостоверение...",
+               "orgn": "Я бы хотел[a] заменить мое водительское удостоверение...",
                "mng": "Lisenziyanı dəyişdirmək istədiyinizi bildirmək"
             },
             {
@@ -10343,12 +10343,12 @@
             },
             {
                "trns": "Lisenziyamın ləğv edilməsinə etiraz etmək istəyirəm.",
-               "orgn": "Я бы хотел (а) обжаловать приостановку моей лицензии.",
+               "orgn": "Я бы хотел [a] обжаловать приостановку моей лицензии.",
                "mng": "Sürücülük qadağanına etiraz etmək istədiyinizi bildirmək"
             },
             {
                "trns": "[ölkə sifəti] vətəndaşlıq üçün müraciət etmək istəyirəm.",
-               "orgn": "Я бы хотел(а) подать заявку на [страна-прилагательное] гражданство.",
+               "orgn": "Я бы хотел[a] подать заявку на [страна-прилагательное] гражданство.",
                "mng": "Vətəndaşlıq istəmək istədiyinizi ifadə etmək"
             },
             {
@@ -10368,7 +10368,7 @@
             },
             {
                "trns": "[ölkədəki] həyat haqqında ümumi bilik imtahanına yazılmaq istəyirəm",
-               "orgn": "Я бы хотел(а) заказать тест на общее знание жизни в [страна].",
+               "orgn": "Я бы хотел[a] заказать тест на общее знание жизни в [страна].",
                "mng": "O ölkədəki həyat haqqında ümumi bir məlumat imtahanına qeydiyyatdan keçmək istədiyiniz"
             },
             {
@@ -10378,7 +10378,7 @@
             },
             {
                "trns": "Həyat yoldaşım [milliyyət sifəti] vətəndaşıdır.",
-               "orgn": "Мо (й / я) супруг (а) - граждан (ин / ка) [страна-прилагательное].",
+               "orgn": "Мо (й / я) супруг [a] - граждан (ин / ка) [страна-прилагательное].",
                "mng": "Həyat yoldaşınızın milliyyətini ifadə etmək"
             },
             {
@@ -10393,12 +10393,12 @@
             },
             {
                "trns": "Bir bank hesabı açmaq istəyirəm.",
-               "orgn": "Я бы хотел (а) открыть банковский счет.",
+               "orgn": "Я бы хотел [a] открыть банковский счет.",
                "mng": "Bank hesabı açmaq üçün sorğunuzun göstərilməsi"
             },
             {
                "trns": "Bank hesabımı bağlamaq istəyirəm.",
-               "orgn": "Я бы хотел (а) закрыть банковский счет.",
+               "orgn": "Я бы хотел [a] закрыть банковский счет.",
                "mng": "Bank hesabınızı bağlamaq istəyinizi bildirmək."
             },
             {
@@ -10493,7 +10493,7 @@
             },
             {
                "trns": "Kredit kartımı itirdim.",
-               "orgn": "Я потерял (а) кредитную карту.",
+               "orgn": "Я потерял [a] кредитную карту.",
                "mng": "Kredit kartınızı itirdiyinizi ifadə etmək"
             },
             {
@@ -10513,7 +10513,7 @@
             },
             {
                "trns": "Kreditlər haqqında öyrənmək istəyirəm.",
-               "orgn": "Я бы хотел(а) узнать кое-какую информацию о кредитах.",
+               "orgn": "Я бы хотел[a] узнать кое-какую информацию о кредитах.",
                "mng": "Kreditlər haqqında məlumat almaq"
             },
             {
@@ -10523,12 +10523,12 @@
             },
             {
                "trns": "Mən ipoteka haqqında bilmək istəyirəm.",
-               "orgn": "Я бы хотел (а) узнать об ипотеке.",
+               "orgn": "Я бы хотел [a] узнать об ипотеке.",
                "mng": "İpoteka haqqında məlumat"
             },
             {
                "trns": "Mən ipoteka məsləhətçisi ilə danışmaq istəyirəm.",
-               "orgn": "Я бы хотел(а) поговорить с консультантом по ипотеке",
+               "orgn": "Я бы хотел[a] поговорить с консультантом по ипотеке",
                "mng": "ipoteka müşaviri ilə danışmaq istənir"
             },
             {
@@ -10543,7 +10543,7 @@
             },
             {
                "trns": "Yenidən ipoteka etmək istəyirəm.",
-               "orgn": "Я бы хотел (а) перезаложить имущество.",
+               "orgn": "Я бы хотел [a] перезаложить имущество.",
                "mng": "Yenidən ipoteka üçün müraciət"
             },
             {
@@ -10563,7 +10563,7 @@
             },
             {
                "trns": "Sığortalamaq istəyirəm.",
-               "orgn": "Я бы хотел (а) приобрести страховку.",
+               "orgn": "Я бы хотел [a] приобрести страховку.",
                "mng": "Sığorta ilə maraqlandığınızı bildirmək"
             },
             {
@@ -10633,7 +10633,7 @@
             },
             {
                "trns": "Neçə ay sığortalanacağam?",
-               "orgn": "В течение скольки месяцев ya покрыт (а) страховкой?",
+               "orgn": "В течение скольки месяцев ya покрыт [a] страховкой?",
                "mng": "Sığortanın neçə ayı əhatə etdiyi barədə məlumat almaq"
             },
             {
@@ -10682,7 +10682,7 @@
             },
             {
                "trns": "Sərbəst olaraq qeydiyyatdan keçmək istəyirəm.",
-               "orgn": "Я бы хотел(а) зарегистрироваться как внештатный профессионал.",
+               "orgn": "Я бы хотел[a] зарегистрироваться как внештатный профессионал.",
                "mng": "məsləhətçi"
             },
             {
@@ -10712,7 +10712,7 @@
             },
             {
                "trns": "... üçün müraciət etmək istəyirəm.",
-               "orgn": "Я бы хотел (а) попросить о ....",
+               "orgn": "Я бы хотел [a] попросить о ....",
                "mng": "İşdən vaxt almaq"
             },
             {
@@ -10732,17 +10732,17 @@
             },
             {
                "trns": "Vergilər haqqında məlumat almaq istəyirəm.",
-               "orgn": "Я бы хотел (а) узнать о налогах",
+               "orgn": "Я бы хотел [а] узнать о налогах",
                "mng": "Vergilər haqqında məlumat almaq"
             },
             {
                "trns": "Gəlirimi bildirmək istəyirəm.",
-               "orgn": "Я бы хотел (а) доложить о моих доходах.",
+               "orgn": "Я бы хотел [а] доложить о моих доходах.",
                "mng": "Qazancınızı elan edəcəyinizi ifadə etmək"
             },
             {
                "trns": "Vergi bəyannaməmdə kömək üçün mühasib tutacağam.",
-               "orgn": "Я бы хотел(а) нанять бухгалтера для помощи с моей налоговой декларацией.",
+               "orgn": "Я бы хотел[а] нанять бухгалтера для помощи с моей налоговой декларацией.",
                "mng": "Vergi bəyannamənizə kömək etmək üçün mühasib tutacağınızı bildirmək."
             },
             {
@@ -10775,7 +10775,7 @@
        [
             {
                "trns": "Bir universitetə ​​yazılmaq istəyirəm.",
-               "orgn": "Я бы хотел (а) зачислиться в университет",
+               "orgn": "Я бы хотел [a] зачислиться в университет",
                "mng": "Qeydiyyatdan keçmək istədiyinizi göstərir"
             },
             {
@@ -11002,7 +11002,7 @@
             },
             {
                "trns": "Diplomumu [ölkə] üçün təsdiqləmək istəyirəm",
-               "orgn": "Я бы хотел(а) подтвердить действительность моего диплома в [страна].",
+               "orgn": "Я бы хотел[a] подтвердить действительность моего диплома в [страна].",
                "mng": "Diplomunuzun həmin ölkədə təsdiqlənməsini istədiyinizi bildirmək"
             },
             {
@@ -11020,7 +11020,7 @@
        [
             {
                "trns": "Kirayə vermək istəyirəm ...",
-               "orgn": "Я бы хотел (а) снимать ...",
+               "orgn": "Я бы хотел [a] снимать ...",
                "mng": "Bir şey icarəyə götürmək istədiyinizi bildirmək"
             },
             {
@@ -14381,12 +14381,12 @@
          },
          {
             "trns": "It was good to hear from you again.",
-            "orgn" : "Рад(а) был(а) снова услышать о тебе.",
+            "orgn" : "Рад[a] был[a] снова услышать о тебе.",
             "mng" : "Used when replying to correspondence"
          },
          {
             "trns": "I am very sorry I haven't written for so long.",
-            "orgn" : "Извини, что так долго не писал(а)",
+            "orgn" : "Извини, что так долго не писал[a]",
             "mng" : "Used when writing to an old friend you haven't contacted for a while"
          },
          {
@@ -14571,12 +14571,12 @@
          },
          {
             "trns": "It was good to hear from you again.",
-            "orgn" : "Рад(а) был(а) снова услышать о тебе.",
+            "orgn" : "Рад[a] был[a] снова услышать о тебе.",
             "mng" : "Used when replying to correspondence"
          },
          {
             "trns": "I am very sorry I haven't written for so long.",
-            "orgn" : "Извини, что так долго не писал(а)",
+            "orgn" : "Извини, что так долго не писал[a]",
             "mng" : "Used when writing to an old friend you haven't contacted for a while"
          },
          {
@@ -14818,7 +14818,7 @@
          },
          {
             "trns": "Because you have been very important in their lives, …and…request your presence at their wedding on…at…",
-            "orgn" : "Поскольку ты сыграл(а) важную роль в наших жизнях, ... и ... хотели бы, чтобы ты присутствовал(а) на их свадьбе ... числа, в...",
+            "orgn" : "Поскольку ты сыграл[a] важную роль в наших жизнях, ... и ... хотели бы, чтобы ты присутствовал[a] на их свадьбе ... числа, в...",
             "mng" : "Used by the couple when inviting close friends to their wedding"
          },
          {
@@ -16941,17 +16941,17 @@
          },
          {
             "trns": "second (s)",
-            "orgn": "секунд (а) / (ы) (sekund (a) / (y))",
+            "orgn": "секунд [a] / [ы] (sekund [a] / (y))",
             "mng": "Time unit"
          },
          {
             "trns": "minute (s)",
-            "orgn": "минут (а) / (ы) (minut (a) / (y))",
+            "orgn": "минут [a] / [ы] (minut [a] / (y))",
             "mng": "Time unit"
          },
          {
             "trns": "hour (s)",
-            "orgn": "Час (ы) (Chas (y))",
+            "orgn": "Час [ы] (Chas (y))",
             "mng": "Time unit"
          },
          {
@@ -16961,17 +16961,17 @@
          },
          {
             "trns": "week (s)",
-            "orgn": "Недел (я) / (и) (Nedel (ya) / (i))",
+            "orgn": "Недел [я] / (и) (Nedel (ya) / (i))",
             "mng": "Time unit"
          },
          {
             "trns": "month (s)",
-            "orgn": "Месяц (ы) (Mesyats (y))",
+            "orgn": "Месяц [ы] (Mesyats (y))",
             "mng": "Time unit"
          },
          {
             "trns": "year (s)",
-            "orgn": "Год (а) (God (a))",
+            "orgn": "Год [a] (God [a])",
             "mng": "Time unit"
          },
          {
@@ -17550,7 +17550,7 @@
          },
          {
             "trns": "Would you like to have lunch/dinner with me sometime?",
-            "orgn" : "Ты бы хотел(а) пообедать/поужинать со мной как-нибудь? (Ty by hotel(a) poobedat'/pouzhinat' so mnoy kak-nibud'?)",
+            "orgn" : "Ты бы хотел[a] пообедать/поужинать со мной как-нибудь? (Ty by hotel[a] poobedat'/pouzhinat' so mnoy kak-nibud'?)",
             "mng" : "Asking for a date"
          },
          {
@@ -17565,7 +17565,7 @@
          },
          {
             "trns": "Would you like to meet again?",
-            "orgn" : "Ты бы хотел(а) встретиться снова? (Ty by hotel(a) vstretit'sya snova?)",
+            "orgn" : "Ты бы хотел[a] встретиться снова? (Ty by hotel[a] vstretit'sya snova?)",
             "mng" : "Asking for another date"
          },
          {
@@ -17794,12 +17794,12 @@
          },
          {
             "trns": "I would like to reunite with my family.",
-            "orgn" : "Я бы хотел(а) объединиться с моей семьей.",
+            "orgn" : "Я бы хотел[a] объединиться с моей семьей.",
             "mng" : "Stating your intention to reunite with your family"
          },
          {
             "trns": "I would like to register in the city.",
-            "orgn" : "Я бы хотел(а) зарегистрироваться в городе",
+            "orgn" : "Я бы хотел[a] зарегистрироваться в городе",
             "mng" : "Stating that you would like to register in the city"
          },
          {
@@ -17909,7 +17909,7 @@
          },
          {
             "trns": "I would like to register my vehicle.",
-            "orgn" : "Я бы хотел(а) зарегистрировать свою машину.",
+            "orgn" : "Я бы хотел[a] зарегистрировать свою машину.",
             "mng" : "Stating that you would like to register your vehicle"
          },
          {
@@ -17919,12 +17919,12 @@
          },
          {
             "trns": "I would like to apply for a provisional driving license.",
-            "orgn" : "Я бы хотел(а) подать заявку на временное водительское удостоверение.",
+            "orgn" : "Я бы хотел[a] подать заявку на временное водительское удостоверение.",
             "mng" : "Applying for a provisional driving license"
          },
          {
             "trns": "I would like to book my ...........",
-            "orgn" : "Я бы хотел(а) забронировать..........",
+            "orgn" : "Я бы хотел[a] забронировать..........",
             "mng" : "Stating that you would like to book your driving license test"
          },
          {
@@ -17939,7 +17939,7 @@
          },
          {
             "trns": "I would like to change the ...on my driving license.",
-            "orgn" : "Я бы хотел(а) поменять...в моем водительском удостоверении.",
+            "orgn" : "Я бы хотел[a] поменять...в моем водительском удостоверении.",
             "mng" : "Stating that you would like to change some details on your driving license"
          },
          {
@@ -17959,17 +17959,17 @@
          },
          {
             "trns": "I would like to add higher categories to my driving license.",
-            "orgn" : "Я бы хотел(а) добавить более высокие категории к моему водительскому удостоверению",
+            "orgn" : "Я бы хотел[a] добавить более высокие категории к моему водительскому удостоверению",
             "mng" : "Stating that you would like to add higher categories to your driving license"
          },
          {
             "trns": "I would like to renew my driving license.",
-            "orgn" : "Я бы хотел(а) обновить мое водительское удостоверение.",
+            "orgn" : "Я бы хотел[a] обновить мое водительское удостоверение.",
             "mng" : "Stating that you would like to renew your driving license"
          },
          {
             "trns": "I would like to replace a ........... driving license.",
-            "orgn" : "Я бы хотел(а) заменить мое водительское удостоверение......",
+            "orgn" : "Я бы хотел[a] заменить мое водительское удостоверение......",
             "mng" : "Stating that you would like to replace a driving license"
          },
          {
@@ -17989,12 +17989,12 @@
          },
          {
             "trns": "I would like to appeal my license suspension.",
-            "orgn" : "Я бы хотел(а) обжаловать приостановку моей лицензии.",
+            "orgn" : "Я бы хотел[a] обжаловать приостановку моей лицензии.",
             "mng" : "Stating that you would like to appeal your driving ban"
          },
          {
             "trns": "I would like to apply for [country adjective] citizenship.",
-            "orgn" : "Я бы хотел(а) подать заявку на [страна-прилагательное] гражданство.",
+            "orgn" : "Я бы хотел[a] подать заявку на [страна-прилагательное] гражданство.",
             "mng" : "Stating that you would like to ask for a citizenship"
          },
          {
@@ -18014,7 +18014,7 @@
          },
          {
             "trns": "I would like to book the test about general knowledge of life in [country].",
-            "orgn" : "Я бы хотел(а) заказать тест на общее знание жизни в [страна].",
+            "orgn" : "Я бы хотел[a] заказать тест на общее знание жизни в [страна].",
             "mng" : "Stating that you would like to book the general knowledge test about life in that country"
          },
          {
@@ -18024,7 +18024,7 @@
          },
          {
             "trns": "My spouse is a [nationality adjective] citizen.",
-            "orgn" : "Мо(й/я) супруг(а) - граждан(ин/ка) [страна-прилагательное].",
+            "orgn" : "Мо(й/я) супруг[a] - граждан(ин/ка) [страна-прилагательное].",
             "mng" : "Stating the nationality of your spouse"
          },
          {
@@ -18039,12 +18039,12 @@
          },
          {
             "trns": "I would like to open a bank account.",
-            "orgn" : "Я бы хотел(а) открыть банковский счет.",
+            "orgn" : "Я бы хотел[a] открыть банковский счет.",
             "mng" : "Stating your intention to open a bank account"
          },
          {
             "trns": "I would like to close my bank account.",
-            "orgn" : "Я бы хотел(а) закрыть банковский счет.",
+            "orgn" : "Я бы хотел[a] закрыть банковский счет.",
             "mng" : "Stating your intention to close your bank account"
          },
          {
@@ -18139,7 +18139,7 @@
          },
          {
             "trns": "I lost my credit card.",
-            "orgn" : "Я потерял(а) кредитную карту.",
+            "orgn" : "Я потерял[a] кредитную карту.",
             "mng" : "Stating that you lost your credit card"
          },
          {
@@ -18159,7 +18159,7 @@
          },
          {
             "trns": "I would like to have some information about loans.",
-            "orgn" : "Я бы хотел(а) узнать кое-какую информацию о кредитах.",
+            "orgn" : "Я бы хотел[a] узнать кое-какую информацию о кредитах.",
             "mng" : "Asking for information about loans"
          },
          {
@@ -18169,12 +18169,12 @@
          },
          {
             "trns": "I would like to have some information about mortgages.",
-            "orgn" : "Я бы хотел(а) узнать об ипотеке.",
+            "orgn" : "Я бы хотел[a] узнать об ипотеке.",
             "mng" : "Asking for information about mortgages"
          },
          {
             "trns": "I would like to speak with a mortgage advisor.",
-            "orgn" : "Я бы хотел(а) поговорить с консультантом по ипотеке",
+            "orgn" : "Я бы хотел[a] поговорить с консультантом по ипотеке",
             "mng" : "Asking to speak with a mortgage advisor"
          },
          {
@@ -18189,7 +18189,7 @@
          },
          {
             "trns": "I would like to remortgage.",
-            "orgn" : "Я бы хотел(а) перезаложить имущество.",
+            "orgn" : "Я бы хотел[a] перезаложить имущество.",
             "mng" : "Stating that you would like to remortgage"
          },
          {
@@ -18209,7 +18209,7 @@
          },
          {
             "trns": "I would like to purchase insurance.",
-            "orgn" : "Я бы хотел(а) приобрести страховку.",
+            "orgn" : "Я бы хотел[a] приобрести страховку.",
             "mng" : "Stating that you are interested in insurance"
          },
          {
@@ -18279,7 +18279,7 @@
          },
          {
             "trns": "For how many months will I be covered?",
-            "orgn" : "В течение скольки месяцев я буду покрыт(а) страховкой?",
+            "orgn" : "В течение скольки месяцев я буду покрыт[a] страховкой?",
             "mng" : "Asking how many months your insurance coverage lasts"
          },
          {
@@ -18443,12 +18443,12 @@
          },
          {
             "trns": "I would like to reunite with my family.",
-            "orgn" : "Я бы хотел(а) объединиться с моей семьей.",
+            "orgn" : "Я бы хотел[a] объединиться с моей семьей.",
             "mng" : "Stating your intention to reunite with your family"
          },
          {
             "trns": "I would like to register in the city.",
-            "orgn" : "Я бы хотел(а) зарегистрироваться в городе",
+            "orgn" : "Я бы хотел[a] зарегистрироваться в городе",
             "mng" : "Stating that you would like to register in the city"
          },
          {
@@ -18558,7 +18558,7 @@
          },
          {
             "trns": "I would like to register my vehicle.",
-            "orgn" : "Я бы хотел(а) зарегистрировать свою машину.",
+            "orgn" : "Я бы хотел[a] зарегистрировать свою машину.",
             "mng" : "Stating that you would like to register your vehicle"
          },
          {
@@ -18568,12 +18568,12 @@
          },
          {
             "trns": "I would like to apply for a provisional driving license.",
-            "orgn" : "Я бы хотел(а) подать заявку на временное водительское удостоверение.",
+            "orgn" : "Я бы хотел[a] подать заявку на временное водительское удостоверение.",
             "mng" : "Applying for a provisional driving license"
          },
          {
             "trns": "I would like to book my ...........",
-            "orgn" : "Я бы хотел(а) забронировать..........",
+            "orgn" : "Я бы хотел[a] забронировать..........",
             "mng" : "Stating that you would like to book your driving license test"
          },
          {
@@ -18588,7 +18588,7 @@
          },
          {
             "trns": "I would like to change the ...on my driving license.",
-            "orgn" : "Я бы хотел(а) поменять...в моем водительском удостоверении.",
+            "orgn" : "Я бы хотел[a] поменять...в моем водительском удостоверении.",
             "mng" : "Stating that you would like to change some details on your driving license"
          },
          {
@@ -18608,17 +18608,17 @@
          },
          {
             "trns": "I would like to add higher categories to my driving license.",
-            "orgn" : "Я бы хотел(а) добавить более высокие категории к моему водительскому удостоверению",
+            "orgn" : "Я бы хотел[a] добавить более высокие категории к моему водительскому удостоверению",
             "mng" : "Stating that you would like to add higher categories to your driving license"
          },
          {
             "trns": "I would like to renew my driving license.",
-            "orgn" : "Я бы хотел(а) обновить мое водительское удостоверение.",
+            "orgn" : "Я бы хотел[a] обновить мое водительское удостоверение.",
             "mng" : "Stating that you would like to renew your driving license"
          },
          {
             "trns": "I would like to replace a ........... driving license.",
-            "orgn" : "Я бы хотел(а) заменить мое водительское удостоверение......",
+            "orgn" : "Я бы хотел[a] заменить мое водительское удостоверение......",
             "mng" : "Stating that you would like to replace a driving license"
          },
          {
@@ -18638,12 +18638,12 @@
          },
          {
             "trns": "I would like to appeal my license suspension.",
-            "orgn" : "Я бы хотел(а) обжаловать приостановку моей лицензии.",
+            "orgn" : "Я бы хотел[a] обжаловать приостановку моей лицензии.",
             "mng" : "Stating that you would like to appeal your driving ban"
          },
          {
             "trns": "I would like to apply for [country adjective] citizenship.",
-            "orgn" : "Я бы хотел(а) подать заявку на [страна-прилагательное] гражданство.",
+            "orgn" : "Я бы хотел[a] подать заявку на [страна-прилагательное] гражданство.",
             "mng" : "Stating that you would like to ask for a citizenship"
          },
          {
@@ -18663,7 +18663,7 @@
          },
          {
             "trns": "I would like to book the test about general knowledge of life in [country].",
-            "orgn" : "Я бы хотел(а) заказать тест на общее знание жизни в [страна].",
+            "orgn" : "Я бы хотел[a] заказать тест на общее знание жизни в [страна].",
             "mng" : "Stating that you would like to book the general knowledge test about life in that country"
          },
          {
@@ -18673,7 +18673,7 @@
          },
          {
             "trns": "My spouse is a [nationality adjective] citizen.",
-            "orgn" : "Мо(й/я) супруг(а) - граждан(ин/ка) [страна-прилагательное].",
+            "orgn" : "Мо(й/я) супруг[a] - граждан(ин/ка) [страна-прилагательное].",
             "mng" : "Stating the nationality of your spouse"
          },
          {
@@ -18688,12 +18688,12 @@
          },
          {
             "trns": "I would like to open a bank account.",
-            "orgn" : "Я бы хотел(а) открыть банковский счет.",
+            "orgn" : "Я бы хотел[a] открыть банковский счет.",
             "mng" : "Stating your intention to open a bank account"
          },
          {
             "trns": "I would like to close my bank account.",
-            "orgn" : "Я бы хотел(а) закрыть банковский счет.",
+            "orgn" : "Я бы хотел[a] закрыть банковский счет.",
             "mng" : "Stating your intention to close your bank account"
          },
          {
@@ -18788,7 +18788,7 @@
          },
          {
             "trns": "I lost my credit card.",
-            "orgn" : "Я потерял(а) кредитную карту.",
+            "orgn" : "Я потерял[a] кредитную карту.",
             "mng" : "Stating that you lost your credit card"
          },
          {
@@ -18808,7 +18808,7 @@
          },
          {
             "trns": "I would like to have some information about loans.",
-            "orgn" : "Я бы хотел(а) узнать кое-какую информацию о кредитах.",
+            "orgn" : "Я бы хотел[a] узнать кое-какую информацию о кредитах.",
             "mng" : "Asking for information about loans"
          },
          {
@@ -18818,12 +18818,12 @@
          },
          {
             "trns": "I would like to have some information about mortgages.",
-            "orgn" : "Я бы хотел(а) узнать об ипотеке.",
+            "orgn" : "Я бы хотел[a] узнать об ипотеке.",
             "mng" : "Asking for information about mortgages"
          },
          {
             "trns": "I would like to speak with a mortgage advisor.",
-            "orgn" : "Я бы хотел(а) поговорить с консультантом по ипотеке",
+            "orgn" : "Я бы хотел[a] поговорить с консультантом по ипотеке",
             "mng" : "Asking to speak with a mortgage advisor"
          },
          {
@@ -18838,7 +18838,7 @@
          },
          {
             "trns": "I would like to remortgage.",
-            "orgn" : "Я бы хотел(а) перезаложить имущество.",
+            "orgn" : "Я бы хотел[a] перезаложить имущество.",
             "mng" : "Stating that you would like to remortgage"
          },
          {
@@ -18858,7 +18858,7 @@
          },
          {
             "trns": "I would like to purchase insurance.",
-            "orgn" : "Я бы хотел(а) приобрести страховку.",
+            "orgn" : "Я бы хотел[a] приобрести страховку.",
             "mng" : "Stating that you are interested in insurance"
          },
          {
@@ -18928,7 +18928,7 @@
          },
          {
             "trns": "For how many months will I be covered?",
-            "orgn" : "В течение скольки месяцев я буду покрыт(а) страховкой?",
+            "orgn" : "В течение скольки месяцев я буду покрыт[a] страховкой?",
             "mng" : "Asking how many months your insurance coverage lasts"
          },
          {
@@ -18941,7 +18941,7 @@
     [
          {
             "trns": "I would like to enroll at a university.",
-            "orgn" : "Я бы хотел(а) зачислиться в университет",
+            "orgn" : "Я бы хотел[a] зачислиться в университет",
             "mng" : "Stating that you want to enroll"
          },
          {
@@ -19196,7 +19196,7 @@
          },
          {
             "trns": "I would like to validate my degree certificate in [country].",
-            "orgn" : "Я бы хотел(а) подтвердить действительность моего диплома в [страна].",
+            "orgn" : "Я бы хотел[a] подтвердить действительность моего диплома в [страна].",
             "mng" : "Stating that you would like to validate your degree certificate in that country"
          },
          {
@@ -19215,7 +19215,7 @@
          
          {
             "trns": "I am looking for a ..... to rent.",
-            "orgn" : "Я бы хотел(а) снимать.......",
+            "orgn" : "Я бы хотел[a] снимать.......",
             "mng" : "Stating that you want to rent something"
          },
          {

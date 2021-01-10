@@ -681,18 +681,36 @@ $(document).ready(function()
 
 	function regulation(s)
 	{
-		regularFind = s.indexOf("(");
+		k 		= -1;
+		s_array = s.split('');
+		z 		= s_array.length;
 
-			
-		if(regularFind == -1)
-		{
-			return s;
+
+		for (var i = 0; i < s_array.length; i++) {
+
+			if(s_array[i] == "(" || s_array[i] == "[")
+			{
+				k = i;
+				s_array[i] = '';
+				z = s_array.length;
+			}
+
+			if(s_array[i] == ")" || s_array[i] == "]")
+			{
+				z = i;
+				s_array[i] = '';
+			}			
+
+			if(i>=k && k>0 && i<z)
+			{
+				s_array[i] = '';
+			}
+
 		}
-		else
-		{
-			return s.substr(0, regularFind);
-			
-		}
+
+		str = s_array.join('');
+	    
+	 	return str;
 	}
 	
 	function control_asw(answ)
@@ -703,6 +721,7 @@ $(document).ready(function()
 
 		if(!answ){
 
+			callOther("general","soundManager","error");
 			if(skills['shield'] == 0)
 				unerror = false;
 			else
@@ -734,6 +753,9 @@ $(document).ready(function()
 				}
 			}
 		}
+		else
+			callOther("general","soundManager","success");
+
 		callOther("general","start_page","index","lesson");
 		result.html(transl[lang][answ+"-answer"]);
 		answer_tab.fadeIn();
@@ -784,6 +806,7 @@ $(document).ready(function()
 
 	function finish()
 	{
+
 		if(hash == "exam-get-start")
 		{
 			loading_next.show();
@@ -961,6 +984,8 @@ $(document).ready(function()
 			main.fadeOut();
 			lesson_success.fadeIn();
 		}
+
+		callOther("general","soundManager","info");
 	}
 
 	function control_day(d,m,y)

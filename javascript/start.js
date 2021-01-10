@@ -128,7 +128,7 @@ $(document).ready(function()
 			localStorage.achieve 	 = JSON.stringify({	"grade-master": 0,	"crown-master": 0,	"full-aim": 0, "unerror": 0, "friendly": 0, "knight": 0	, "week": true	, "month": true});
 
 		if(localStorage.getItem("market") === null)
-			localStorage.market 	 = JSON.stringify({"shield"	: 0,	"double" : 0});
+			localStorage.market 	 = JSON.stringify({"shield"	: 0,	"double" : 0,	"triple" : 0});
 
 		if(localStorage.getItem("learn_sentences") === null)
 			localStorage.learn_sentences 	 = JSON.stringify({"application" : 0,	"science" : 0,	"order" : 0,	"date" : 0,	"own" : 0,	"travel" : 0,	"health" : 0,	"shopping" : 0,	"eating" : 0,	"camp" : 0,	"time" : 0,	"walking" : 0,	"meeting" : 0,	"documents" : 0,	"working" : 0,	"education" : 0,	"shelter" : 0,	"compensation" : 0});

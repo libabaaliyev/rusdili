@@ -2,7 +2,9 @@
 	"en":
 	{
 		"confirmText"		: "Ok",
+
 		"cancel"			: "Cancel",
+
 		"confirmDelete"		: "Yes, delete it!",
 
 		"empty-input"		: {"message"	:"Fill in all the fields",	"info": "error"},
@@ -72,7 +74,11 @@
 
 		"enough-double"		: {"message"	: "2X feature is not expired yet", "info": "info"},
 
-		"enough-heart"		: {"message"	: "Canınız azalmamıştır. Cana ihtiyaç yoktur.", "info": "info"}
+		"enough-triple"		: {"message"	: "3X feature is not expired yet", "info": "info"},
+
+		"enough-heart"		: {"message"	: "There is no need for heart", "info": "info"},
+
+		"pro-ok"			: {"message"	: "Congratulations, you've switched to PRO!", "info": "info"}
 
 	},
 	"tr":
@@ -152,7 +158,11 @@
 
 		"enough-double"		: {"message"	: "2X özelliğinin süresi daha bitmedi", "info": "info"},
 
-		"enough-heart"		: {"message"	: "Heart is not low. There is no need heart.", "info": "info"}
+		"enough-triple"		: {"message"	: "3X özelliğinin süresi daha bitmedi", "info": "info"},
+
+		"enough-heart"		: {"message"	: "Cana ihtiyacınız yok.", "info": "info"},
+
+		"pro-ok"			: {"message"	: "Tebrikler,pro-a geçtiniz!", "info": "info"}
 
 	},
 	"az":
@@ -231,7 +241,11 @@
 
 		"enough-double"		: {"message"	: "2X özəlliyinin vaxtı hələ bitməyib", "info": "info"},
 
-		"enough-heart"		: {"message"	: "Can hesabınız tamdır. Yeni cana ehtiyac yoxdur", "info": "info"}
+		"enough-triple"		: {"message"	: "3X özəlliyinin vaxtı hələ bitməyib", "info": "info"},
+
+		"enough-heart"		: {"message"	: "Can hesabınız tamdır. Yeni cana ehtiyac yoxdur", "info": "info"},
+
+		"pro-ok"			: {"message"	: "Təbriklər,pro versiyaya keçdiniz!", "info": "info"}
 
 	},
 	"ru":
@@ -304,7 +318,11 @@
 
 		"enough-double"		: {"message"	: "Срок действия функции 2X еще не истек", "info": "info"},
 
-		"enough-heart"		: {"message"	: "Сердце не низкое. Нет нужды в сердце", "info": "info"}
+		"enough-triple"		: {"message"	: "Срок действия функции 3X еще не истек", "info": "info"},
+
+		"enough-heart"		: {"message"	: "Сердце не низкое. Нет нужды в сердце", "info": "info"},
+
+		"pro-ok"			: {"message"	: "Поздравляем, вы перешли на PRO!", "info": "info"}
 
 	}
 

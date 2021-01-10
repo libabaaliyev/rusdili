@@ -8,6 +8,13 @@ count_crown_html 	= $(".count-crown");
 count_heart_html 	= $(".count-heart");
 language_input 		= $(".language-input");
 limit 				= $("#limits");
+buying				= new Audio("sounds/buying.mp3");
+addgem				= new Audio("sounds/adding.wav");
+error 				= new Audio("sounds/error.wav");
+success 			= new Audio("sounds/success.mp3");
+info 				= new Audio("sounds/info.mp3");
+
+app_products = {"1": "rusca_egitim_seti_pro","6": "rusca_pro_6","12": "rusca_pro_12"};
 
 
 notifications 		= JSON.parse(localStorage.notifications);
@@ -16,17 +23,20 @@ appLanguage			= JSON.parse(localStorage.appLanguage);
 appWords 			= appLanguage[lang];
 date  				= new Date();
 fullDate 			= date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear();
-/*day_aim 	= [];*/
+
+app_version 		= "10.0.0";
+
 function notification(event,event_1)
 {
-
 	if(event_1)
 		messageTxt = notifications[lang][event]['message']+appWords[event_1];
 	else
 		messageTxt = notifications[lang][event]['message'];
 
+	soundManager(notifications[lang][event]['info']);
 
-	Swal.fire({
+	Swal.fire(
+	{
 	  position				: 'center',
 	  icon					: notifications[lang][event]['info'],
 	  title					: messageTxt,
@@ -63,32 +73,57 @@ function pro_edition(e)
 	/*if(checkConnection() == 'none')
 		notification("internet-error");
 	else
-	{*/
+	{
+		productId = app_products[e];
+		inAppPurchase
+			.buy(productId)
+		 	.then(function (data) {
+				alert(data);*/
+				buying(e);
+		    
+		  /*})
+		  .catch(function (err) {
+		    alert(err);
+		  });
+	}*/
+}
 
-		
-		
-/*		
-		user.version = "pro";
+function buying(e)
+{
 		$.post("process.php",
         {
-            info: "import-scoreboard",
-            data: JSON.stringify(day_aim),
-            id: user.id,
-            lang: 'ru'     
+            info: "upgrade-pro",
+            data: JSON.stringify(user),
+            timer: e     
         },
         function(data)
         {
+        	console.log(data)
         	obj = JSON.parse(data);
         	result = obj.result;
 
+        	notification(result);
 
-        	localStorage.user = user;
-			start_page("index");     	
+        	if(result == "pro-ok"){
+
+        		user.version = "pro";
+        		localStorage.user = JSON.stringify(user);
+
+        		base = new FormData();
+				base.append("info","update-base");
+				base.append("data",JSON.stringify(user));
+        		importBase(base,user,"update","no-notification");
+        		$(".bar").hide();
+        		$(".darkness").hide();
+        		$(".pro-edition").hide();
+        		start_page("index");
+
+        	}
+			   	
         	
-        });*/
-		
-	/*}*/
+        });
 }
+
 
 function checkConnection()
 {
@@ -182,7 +217,7 @@ function filterInput(user_data,act)
 	}
 }
 
-function importBase(base,userData,act)
+function importBase(base,userData,act,note)
 {
 	$.ajax({
 		url: "process.php",
@@ -190,78 +225,77 @@ function importBase(base,userData,act)
 		data: base,
 		contentType: false,
 	    processData: false,
-	    success: function(data,status)
+	    success: function(data)
 	    {
 
 	    	loading.hide();
-	    	if(status == "success")
-	    	{
-	    		dataLogin 	= JSON.parse(data);
-		    	result 		= dataLogin['result'];
-		    	planX 		= dataLogin['plan'];
-		    			    	
-		    	if(result!="plan-add")
+	    	
+    		dataLogin 	= JSON.parse(data);
+	    	result 		= dataLogin['result'];
+	    	planX 		= dataLogin['plan'];
+	    			    	
+	    	if(result!="plan-add")
+	    		if(!note)
 		    		notification(result);
 
-		    	if(result == "registryOk" || result == "yesUser" || result == "updateOk")
-		    	{
-		    		user 					= dataLogin['user'];
-		    		localStorage.user 		= JSON.stringify(user);
-		    		localStorage.connection = "registr-ok";
-		    		aim_setting();
+	    	if(result == "registryOk" || result == "yesUser" || result == "updateOk")
+	    	{
+	    		user 					= dataLogin['user'];
+	    		localStorage.user 		= JSON.stringify(user);
+	    		localStorage.connection = "registr-ok";
+	    		aim_setting();
 
-		    		if(act == "update"){
-		    			start_page();
-		    			language();
-		    		}
-		    		else if(act == "login"){
+	    		if(act == "update"){
+	    			start_page();
+	    			language();
+	    		}
+	    		else if(act == "login"){
 
-		    			learning = dataLogin['plan'];
-		    			plan = JSON.parse(learning['plan']);
-		    			achieve = JSON.parse(learning['achieve']);
-		    			skill = JSON.parse(learning['skills']);
-		    	
-		    			if(plan)
-		    				localStorage.plan = JSON.stringify(plan);
+	    			learning = dataLogin['plan'];
+	    			plan = JSON.parse(learning['plan']);
+	    			achieve = JSON.parse(learning['achieve']);
+	    			skill = JSON.parse(learning['skills']);
+	    	
+	    			if(plan)
+	    				localStorage.plan = JSON.stringify(plan);
 
-		    			if(achieve)
-		    				localStorage.achieve = JSON.stringify(achieve);
+	    			if(achieve)
+	    				localStorage.achieve = JSON.stringify(achieve);
 
-		    			if(skill)
-		    				localStorage.market = JSON.stringify(skill);
-		    		}
-		    	}
-		    	else if(result == 'plan-add')
-		    	{
-
-		    		result_x 	= dataLogin['user-result'];
-		    		result_u	= result_x['result'];
-		    		
-	    			if(result_u != "existUsername" && result_u != "existEmail" && result_u != "emailvalidate")
-	    			{
-	    				    				
-	    				setTimeout(function(){
-
-	    					window.location = "main.html";
-
-	    				},100);
-	    				
-	    			}
-	    			else
-	    			{
-
-
-	    				setTimeout(function(){
-
-	    					window.location = "setting.html#"+result_u;
-
-	    				},100);
-	    			}
-		    	}
-
+	    			if(skill)
+	    				localStorage.market = JSON.stringify(skill);
+	    		}
 	    	}
-	    	else
-	    		internet_error(userData,act);		    	
+	    	else if(result == 'plan-add')
+	    	{
+
+	    		result_x 	= dataLogin['user-result'];
+	    		result_u	= result_x['result'];
+	    		
+    			if(result_u != "existUsername" && result_u != "existEmail" && result_u != "emailvalidate")
+    			{
+    				    				
+    				setTimeout(function(){
+
+    					window.location = "main.html";
+
+    				},100);
+    				
+    			}
+    			else
+    			{
+
+
+    				setTimeout(function(){
+
+    					window.location = "setting.html#"+result_u;
+
+    				},100);
+    			}
+	    	}
+
+	    	
+	    			    	
 	    },
 	    error: function()
 	    {
@@ -398,13 +432,13 @@ function start_page(page,page_1)
 			count_heart_html.html("&#8734;");
 			$(".heart-tab").remove();
 			$(".gem-tab").show();
-
+			$(".add-items").show();
 			$(".shopping-plus").hide();
 
 		}
 
 		
-		
+		control_version();
 		set_day_aim(page_1);
 
 	}
@@ -536,6 +570,39 @@ function sounding(e)
 		person = 'Russian Male';
 	
 	responsiveVoice.speak(e, person);
+}
+
+function soundManager(e)
+{
+	window[e].play();
+}
+
+function control_version(e)
+{
+	
+	
+	$.post("process.php",
+    {
+        info: "control-version",
+        version: app_version,
+        data: JSON.stringify([]),
+        lang: 'ru'
+    },
+    function(data,status)
+    {
+    	if(status == "success")
+    	{
+    		obj 	= JSON.parse(data);
+    		result 	= obj['result'];
+
+    		if(!result)
+    			$(".updating").show();
+    		else
+    			$(".updating").hide();
+    	}
+
+    });
+	
 }
 
 function language()
@@ -685,6 +752,10 @@ function language()
 	$("#double-skill-title").html(appWords['double-skill-title']);
 
 	$("#double-skill-txt").html(appWords['double-skill-txt']);
+
+	$("#triple-skill-title").html(appWords['triple-skill-title']);
+
+	$("#triple-skill-txt").html(appWords['triple-skill-txt']);
 
 	$("#unlimited-health").html(appWords['unlimited-health']);
 

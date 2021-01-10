@@ -31,6 +31,7 @@ h2,h4,h6{
    font-family: kanit-r !important;
 }
 
+
 .main-page
 {
   position: fixed;
@@ -778,6 +779,14 @@ h2,h4,h6{
   display: inline-block;
   width: auto;
   padding: 10px;
+}
+
+.round-btn
+{
+  display: inline-block;
+  width: auto;
+  padding: 10px;
+  border-radius: 50%;
 }
 
 /*score table*/
@@ -1863,13 +1872,27 @@ h2,h4,h6{
   background: #edf9fe;
   padding: 16px;
 }
+.updating
+{
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  display: none;
+}
+.add-items
+{
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  display: none;
+}
 
 .skills
 {
   position: fixed;
   height: auto; 
-  right: 0;
-  bottom: 70px;
+  right: 10px;
+  bottom: 80px;
   z-index: 4;
 }
 
@@ -1887,10 +1910,10 @@ h2,h4,h6{
   position: relative;
   display: inline-block;
   float: left;
-  width: 40px;
-  height: 40px;
-  margin: 10px 0;
-  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  margin: 16px 0;
+  border-radius: 50%;
   background: #2196F3;
   box-shadow: 6px 7px 5px -5px rgba(0,0,0,0.5);
 }
@@ -1911,12 +1934,12 @@ h2,h4,h6{
   height: 20px;
   font-size: 12px;
   
-  bottom: -20px;
-  left: -30px;
+  bottom: -30px;
+  left: -20px;
   padding-top: 2px;
   color: #fff;
   background: #FF5500;
-  border-radius: 2;
+  border-radius: 2px;
   text-align: center;
 }
 
@@ -2147,6 +2170,11 @@ h2,h4,h6{
       left: calc(50% - 360px);
       border-left: 1px solid #cecece;
       border-right: 1px solid #cecece;
+    }
+
+    .add-items
+    {
+      left: calc(50% - 320px);
     }
 
     .learning-card

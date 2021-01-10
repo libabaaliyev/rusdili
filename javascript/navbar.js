@@ -68,8 +68,7 @@ $(document).ready(function()
 				callOther("general","scoreboard","score");
 			else
 				callOther("general","notification","internet-error");
-		}
-		
+		}	
 
 		allClose();
 	});

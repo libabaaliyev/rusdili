@@ -33,7 +33,7 @@ $(document).ready(function()
 	opening 		= false;
 	selectStep 		= -1;
 	selectGrade 	= -1;
-	pro_cat 		= 1;
+	pro_cat 		= 6;
 
 	//localStorages
 	notifications 	= JSON.parse(localStorage.notifications);
@@ -54,6 +54,7 @@ $(document).ready(function()
 	aim 			= user.aim;
 	grade 			= JSON.parse(user.grade);
 	achieve_tag 	= ["grade-master","crown-master","unerror","friendly","week","full-aim","month","knight"];
+	skill_x 		= ['shield','double','triple'];
 	date  			= new Date();
 	currentYear		= date.getFullYear();
 	currentMonth 	= date.getMonth()+1;
@@ -81,10 +82,10 @@ $(document).ready(function()
 
 	if(hash){
 		if(heart == 0)
-			callOther("general","notification",hash);	//will be sound
+			callOther("general","notification",hash);	
 		else
 			if(hash != 'notenoughHeart')
-				callOther("general","notification",hash); //will be sound
+				callOther("general","notification",hash);
 	}
 
 	invite.click(function()
@@ -103,7 +104,13 @@ $(document).ready(function()
 		y 					= element.top - 245;
 		count_add_gems_x 	= count_add_gems;
 
-		if(marketData['double'] != 0)
+		if(marketData['triple'] != 0)
+		{
+			count_add_gems = count_add_gems * 3;
+			count_text = '+ 3x ';
+			skills();
+		}
+		else if(marketData['double'] != 0)
 		{
 			count_add_gems = count_add_gems * 2;
 			count_text = '+ 2x ';
@@ -173,7 +180,7 @@ $(document).ready(function()
 			if(crown >= limitCrown)
 				func_lesson_info("open",y_lesson,objectLeft);
 			else
-				callOther("general","notification","lock-castle"); //will be sound
+				callOther("general","notification","lock-castle"); 
 			
 			
 		}
@@ -255,14 +262,16 @@ $(document).ready(function()
 		mission 			= 'test';
 		if(user.heart>0)
 		{
-			if(version == "simple")
-				user.heart		= JSON.parse(user.heart) - 1; 			//will be sound
+			if(version == "simple"){
+				user.heart		= JSON.parse(user.heart) - 1;
+				callOther("general","soundManager","buying");
+			}
 			
 			save();
 			goLesson(mission,'practice');
 		}
 		else
-			callOther("general","notification","notenoughHeart");	//will be sound
+			callOther("general","notification","notenoughHeart");	
 	});
 
 	open_lock_gem.click(function(e)
@@ -278,7 +287,7 @@ $(document).ready(function()
 			goLesson("start","open-lock");
 		}
 		else
-			callOther("general","notification","notenoughCoin");	//will be sound
+			callOther("general","notification","notenoughCoin");
 	});
 
 	addHeart.click(function()
@@ -291,6 +300,7 @@ $(document).ready(function()
 		m_category 	= $(this).data("category");
 		price 		= $(this).data("gem");
 
+
 		if(m_category == "reward")
 			callOther("general","ads","reward");
 		else if(m_category == "plus")
@@ -298,8 +308,9 @@ $(document).ready(function()
 			
 		else
 		{
-			if(gems > price){ //will be sound
+			if(gems > price){ 
 
+				callOther("general","soundManager","buying");
 				if(m_category == 'add-heart')
 				{
 					if(heart<5)
@@ -640,37 +651,30 @@ $(document).ready(function()
 		}
 	}
 
+	
 	function skills()
 	{
 		$("#skills li").remove();
 		
+		for (var i = 0; i < skill_x.length; i++) {
 
+			skill_n = '';
+			s = skill_x[i];
+			
+			skill_txt = `<li id="shield-skill">
+							<img src="img/icons/` + s + `.png">
+							<label class="skill-` + s + `"></label>
+						  </li>`;
 
-		shield = `<li id="shield-skill">
-					<img src="img/icons/shield.png">
-					<label class="skill-shield"></label>
-				  </li>`;
-		double = `<li id="double-skill">
-					<img src="img/icons/2x.png">
-					<label class="skill-double"></label>
-				  </li>`;
-
-		skill_n = '';
-		if(marketData['shield'] != 0){
-			skill_n += shield;
-			countTime(marketData['shield'],'shield');
-			$(".price-shield").hide();
+			if(marketData[s] != 0 )
+			{
+				skill_n += skill_txt;
+				countTime(marketData[s],s);
+				$(".price-"+s).hide();
+			}
+			$(skill_n).appendTo("#skills");
 		}
 
-
-		if(marketData['double'] != 0){
-
-			skill_n += double;
-			countTime(marketData['double'],'double');
-			$(".price-double").hide();
-		}
-
-		$(skill_n).appendTo("#skills");
 	}
 
 	//elave
@@ -950,7 +954,7 @@ $(document).ready(function()
 		{
 
 			if(count_exam == 19 && g2 == 5 || count_exam == 31 && g2 == 8 || count_exam == 43 && g2 == 11){
-				callOther("general","notification","full-grade"); 	//will be sound
+				callOther("general","notification","full-grade");
 				grade++;
 				achieveData['grade-master'] = JSON.parse(achieveData['grade-master']) + 1;
 				achieveData['knight'] = JSON.parse(achieveData['knight']) + 1;
@@ -963,7 +967,8 @@ $(document).ready(function()
 	e1 = 0;
 	function addGems(e)
 	{
-		//will be sound
+		
+		callOther("general","soundManager","addgem");
 		setTimeout(function()
 		{
 			e1++;

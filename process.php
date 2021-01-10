@@ -54,6 +54,36 @@
 		import_aim($db,$lang,$id,$getting,'import');
 
 	}
+	else if($info == "control-version")
+	{
+		$lang 		= $_POST['lang'];
+		$version 	= $_POST['version'];
+
+		$control 	= $db -> query("SELECT * FROM version WHERE lang = '$lang' and vers = '$version' ")->fetch(PDO::FETCH_ASSOC);
+
+		echo json_encode(["result" => $control]);
+
+	}
+	else if($info == "upgrade-pro")
+	{
+		$time 	= $_POST['timer'];
+		$lang 	= $data['learning'];
+		$id 	= $data['id'];
+		$pro_id = uniqid(8);
+
+		$insertsql = "INSERT INTO pro_list (user_id,lang,timer,pro_id) VALUES(?,?,?,?)";
+
+		$i = $db->prepare($insertsql);
+		$insert = $i->execute([$id,$lang,$time,$pro_id]);
+
+		//update_user($data,$db,'without-plan','-','-','-');
+
+		if($insert)
+			echo json_encode(["result" => "pro-ok"]);
+		else
+			echo json_encode(["result" => "errorsomething"]);
+
+	}
 
 	function import_user($data,$db,$with,$plan,$achieve,$skills)
 	{
@@ -159,8 +189,9 @@
 		$crown 		= $data['crown'];
 		$league		= $data['league'];
 		$lang 		= $data['using_lang'];
+		$version 	= $data['version'];
 
-		$sql 			= "UPDATE users SET username = ? , name = ? , email = ? , password = ? , photo = ? , grade = ? , heart = ? , crown = ? , gem = ? , league = ? , using_lang = ? WHERE id = ?";
+		$sql 			= "UPDATE users SET username = ? , name = ? , email = ? , password = ? , photo = ? , grade = ? , heart = ? , crown = ? , gem = ? , league = ? , using_lang = ?, version = ? WHERE id = ?";
 
 		$findingUpdate 	= "SELECT * FROM users WHERE id = '$id'";
 
@@ -212,7 +243,7 @@
 			if(filter_var($email, FILTER_VALIDATE_EMAIL))
 			{
 				$update = $db->prepare($sql);
-				$update_ok = $update->execute([$username,$name,$email,$password,$photo,$grade,$heart,$crown,$gem,$league,$lang,$id]);
+				$update_ok = $update->execute([$username,$name,$email,$password,$photo,$grade,$heart,$crown,$gem,$league,$lang,$version,$id]);
 
 
 

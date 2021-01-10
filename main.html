@@ -140,6 +140,12 @@
 					</div>
 				</div>
 			</header>
+			<div class="updating">
+				<a class="form-button btn-pr" href="https://play.google.com/store/apps/details?id=com.alibabastudio.rusdilioyun">Güncelle</a>
+			</div>
+			<div class="add-items">
+				<label class="form-button btn-pr round-btn float-right practice"><i class="f-s-18 fas fa-dumbbell"></i></label>
+			</div>
 		 
 			<nav class="navbar">
 				<header class="nav-header">
@@ -293,6 +299,7 @@
 					<label id="profile-title"><!-- Profil --></label>
 				</div>
 			</header>
+
 			<section class="profile-header">
 				<figure class="profile-photo">
 			    	<img src="" class="profile-photo-img">
@@ -301,15 +308,19 @@
 					<h4 class="nameProfile">Unnamed</h4>
 					
 				</div>
-
 			</section>
 
 			<section class="profile-info" id="profile-info">
 				<ul id="achievements">					
 				</ul>
-
-
 			</section>
+
+			<div class="skills">
+				<ul id="skills">
+					
+				</ul>
+			</div>
+
 		</div>
 
 		<div class="tab-pane fade" id="sentences">
@@ -349,7 +360,7 @@
 			</section>
 		</div>
 
-		<div class="tab-pane fade" id="shopping">
+		<div class="tab-pane fade" id="shop-tab">
 			<header class="main-header">
 				<ul id="shopping-que">
 					<li>			
@@ -414,7 +425,7 @@
  
 				<div class="card card-market" data-category="double" data-gem="420">
 					<figure class="card-img">
-						<img src="img/icons/2x.png">
+						<img src="img/icons/double.png">
 					</figure>
 					<div class="card-info">
 						<header>
@@ -427,6 +438,25 @@
 						</div>
 						<div class="info-body price-double">
 							<i class="fas fa-gem text-primary"></i> <span class="text-primary">420</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="card card-market" data-category="triple" data-gem="1000">
+					<figure class="card-img">
+						<img src="img/icons/triple.png">
+					</figure>
+					<div class="card-info">
+						<header>
+							<h5 id="triple-skill-title"><!-- İkiye katla --></h5>
+						</header>
+						<div class="info-body">
+							<span id="triple-skill-txt">
+								<!-- 7 günlük seriyi tamamladığın zaman kazancını ikiye katla. -->
+							</span>
+						</div>
+						<div class="info-body price-triple">
+							<i class="fas fa-gem text-primary"></i> <span class="text-primary">1000</span>
 						</div>
 					</div>
 				</div>
@@ -528,12 +558,6 @@
 
 	</div>
 
-	<div class="skills">
-		<ul id="skills">
-			
-		</ul>
-	</div>
-
 
 	<footer class="footer">
 		<ul id="footer">
@@ -549,7 +573,7 @@
 			<li data-toggle="tab" href="#score"  data-tab="score" id="f-score">
 				<i class="fas fa-trophy"></i>
 			</li>
-			<li data-toggle="tab" href="#shopping" data-tab="shopping" id="f-shopping">
+			<li data-toggle="tab" href="#shop-tab" data-tab="shop-tab" id="f-shopping">
 				<i class="fas fa-store"></i>
 			</li>
 		</ul>
