@@ -8,6 +8,7 @@ $(document).ready(function()
 	login_page	= $("#login");
 	close 		= $("#close-tab");
 	loading		= $(".loading");
+	skip 		= $("#skip-btn");
 	
 	start_value = 0;
 	source		= new EventSource("loginsocket.php");
@@ -22,8 +23,8 @@ $(document).ready(function()
 		"photo"		: "p1.png",
 		"aim"		: "",
 		"level" 	: "",
-		"name"		: "",
-		"username"	: "",
+		"name"		: "Unnamed",
+		"username"	: "not-registr",
 		"email"		: "",
 		"password"	: "",
 		"grade"		: 0,
@@ -31,6 +32,7 @@ $(document).ready(function()
 		"league" 	: "starter",
 		"heart"		: 5,
 		"crown" 	: 0,
+		"gem"		: 100,
 		"use_lang"	: JSON.stringify(lang),
 		"version"	: "simple"
 
@@ -148,6 +150,30 @@ $(document).ready(function()
 			callOther("general","filterInput",login_data,'login');
 		
 		
+	});
+
+	skip.click(()=>
+	{
+		date  				= new Date();
+		fullDate 			= date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear();
+		day_aim 		=
+		{
+			etalon  	: 0,
+			getting 	: 0,
+			time 		: fullDate,
+			showing		: false
+		}
+
+		jQuery.ajaxSetup({async:false});
+
+			user = user_data;
+			
+			localStorage.day_aim 	= JSON.stringify(day_aim);
+			localStorage.user 		= JSON.stringify(user_data);
+		    localStorage.connection = "not-registr";
+		    
+
+		    window.location = "lessons.html#exam-get-start";
 	});
 
 	function add_datas(event)

@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-Frame-Options" content="deny">
+	<meta http-equiv=Content-Security-Policy content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <!-- <meta http-equiv="X-Frame-Options" content="deny"> -->
     
 	<title>Start</title>
 	
@@ -94,7 +95,7 @@
 		</div>
 	</section>
 
-	<section class="account mt-50 animated" id="get-start-3">
+	<section class="account animated" id="get-start-3">
 		<div class="account-main mt-100">
 			<div class="info-head ">
 				<h4 class="text-center" id="create-profile"><!-- Profil oluşturma zamanı geldi! --></h4>
@@ -105,6 +106,8 @@
 			</div>
 		</div>
 		<button class="form-button btn-success mt-100 get-start-function"  data-action="create-profile-start" id="create-profile-btn"><!-- Profil oluştur --></button>
+
+		<button class="form-button btn-light mt-1 get-start-function"  data-action="skip" id="skip-btn"><!-- Skip --></button>
 	</section>
 
 	<div class="registration animated" id="get-start-4">

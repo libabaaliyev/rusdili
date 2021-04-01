@@ -34,6 +34,7 @@
 		"pass-input"			: "Type a password ...",
 		"privacy"				: "PRIVACY",
 		"login"					: "Login",
+		"skip"					: "Skip",
 
 		"exam-time" 			: "It's exam time!",
 		"exam-span" 			: "An exam is essential for us to know your level",
@@ -191,6 +192,7 @@
 		"pass-input"			: "Bir şifre yazın...",
 		"privacy"				: "GİZLİLİK",
 		"login"					: "Giriş yap",
+		"skip"					: "Geç",
 
 		"exam-time" 			: "Şimdi sınav zamanı!",
 		"exam-span" 			: "Başlama seviyenizi bilmemiz için sınav şart",
@@ -353,6 +355,7 @@
 		"pass-input"			: "Şifrə yazın...",
 		"privacy"				: "GİZLİLİK",
 		"login"					: "Giriş",
+		"skip"					: "Keç",
 
 		"exam-time" 			: "İndi isə imtahan vaxtıdır!",
 		"exam-span" 			: "Səviyyənizi bilmək üçün imtahana girməlisiniz",
@@ -512,6 +515,7 @@
 		"pass-input"			: "Введите пароль ...",
 		"privacy"				: "КОНФИДЕНЦИАЛЬНОСТЬ",		
 		"login"					: "Логин",
+		"skip"					: "Пропускать",
 
 		"exam-time" 			: "Время экзамена!",
 		"exam-span" 			: "Чтобы узнать ваш уровень, нам необходимо сдать экзамен",

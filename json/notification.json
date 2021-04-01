@@ -78,7 +78,9 @@
 
 		"enough-heart"		: {"message"	: "There is no need for heart", "info": "info"},
 
-		"pro-ok"			: {"message"	: "Congratulations, you've switched to PRO!", "info": "info"}
+		"pro-ok"			: {"message"	: "Congratulations, you've switched to PRO!", "info": "info"},
+
+		"not-registr"		: {"message"	: "You are not a user. Please register.", "info": "info"}
 
 	},
 	"tr":
@@ -162,7 +164,9 @@
 
 		"enough-heart"		: {"message"	: "Cana ihtiyacınız yok.", "info": "info"},
 
-		"pro-ok"			: {"message"	: "Tebrikler,pro-a geçtiniz!", "info": "info"}
+		"pro-ok"			: {"message"	: "Tebrikler,pro-a geçtiniz!", "info": "info"},
+
+		"not-registr"		: {"message"	: "Üye değilsiniz. Lütfen kaydolun.", "info": "info"}
 
 	},
 	"az":
@@ -245,7 +249,9 @@
 
 		"enough-heart"		: {"message"	: "Can hesabınız tamdır. Yeni cana ehtiyac yoxdur", "info": "info"},
 
-		"pro-ok"			: {"message"	: "Təbriklər,pro versiyaya keçdiniz!", "info": "info"}
+		"pro-ok"			: {"message"	: "Təbriklər,pro versiyaya keçdiniz!", "info": "info"},
+
+		"not-registr"		: {"message"	: "Qeydiyyatınız yoxdur. Xahiş edirik, qeydiyyatdan keçin.", "info": "info"}
 
 	},
 	"ru":
@@ -322,7 +328,9 @@
 
 		"enough-heart"		: {"message"	: "Сердце не низкое. Нет нужды в сердце", "info": "info"},
 
-		"pro-ok"			: {"message"	: "Поздравляем, вы перешли на PRO!", "info": "info"}
+		"pro-ok"			: {"message"	: "Поздравляем, вы перешли на PRO!", "info": "info"},
+
+		"not-registr"		: {"message"	: "Вы не зарегистрированы. Пожалуйста, зарегистрируйтесь.", "info": "info"}
 
 	}
 

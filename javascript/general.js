@@ -310,12 +310,12 @@ function scoreboard()
 {
 	if(user.id == "not-registr")
 	{
-		base = new FormData();
+		/*base = new FormData();
 		base.append("info","update-datas");
 		base.append("data",JSON.stringify(user));
-		importBase(base,user,"import");
+		importBase(base,user,"import");*/
 		
-		scoreboard();
+		//scoreboard();
 	}		
 	else
 	{
@@ -495,6 +495,7 @@ function aim_setting(page)
 		}
 
 	}
+	user = JSON.parse(localStorage.user);
 
 	aim 	= user.aim;
 	level 	= user.level;
@@ -580,7 +581,6 @@ function soundManager(e)
 function control_version(e)
 {
 	
-	
 	$.post("process.php",
     {
         info: "control-version",
@@ -589,7 +589,7 @@ function control_version(e)
         lang: 'ru'
     },
     function(data,status)
-    {
+    {console.log(data)
     	if(status == "success")
     	{
     		obj 	= JSON.parse(data);
@@ -636,7 +636,8 @@ function language()
 	$("#exam-time").html(appWords['exam-time']);
 	$("#exam-span").html(appWords['exam-span']);
 	$("#go-exam").html(appWords['go-exam']);
-	
+
+	$("#skip-btn").html(appWords['skip']);	
 
 	$("#crazy").html(appWords['crazy']);
 	$("#crazy-time").html(appWords['crazy-time']);

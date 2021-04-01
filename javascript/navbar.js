@@ -14,6 +14,7 @@ $(document).ready(function()
 	isPage 			= "main";	
 	menu_value 		= "menu";
 	menu_opening 	= false;
+	connection 		= localStorage.connection;
 
 	
 
@@ -22,12 +23,8 @@ $(document).ready(function()
 	else{
 		isPage = localStorage.isPage;
 
-		if(isPage == "score"){
-			if(navigator.onLine)
-				callOther("general","scoreboard","score");
-			else
-				callOther("general","notification","internet-error");
-		}
+		if(isPage == "score")
+			scoreShow();
 	}
 
 
@@ -60,15 +57,14 @@ $(document).ready(function()
 
 	footerItems.click(function()
 	{
-		isPage = $(this).data("tab");
-		localStorage.isPage = isPage;
+		isPage_x = $(this).data("tab");		
 
-		if(isPage == "score"){
-			if(navigator.onLine)
-				callOther("general","scoreboard","score");
-			else
-				callOther("general","notification","internet-error");
-		}	
+		if(isPage_x == "score")
+			scoreShow()
+		else{
+			isPage = isPage_x;
+			localStorage.isPage = isPage;
+		}
 
 		allClose();
 	});
@@ -149,6 +145,23 @@ $(document).ready(function()
 			else
 				darkness.hide();
 		},200);
+	}
+
+	function scoreShow()
+	{
+		if(connection == 'not-registr'){
+			$(".empty-table").show();
+			callOther("general","notification","not-registr");
+		}
+		else
+		{
+			localStorage.isPage = isPage_x;
+
+			if(navigator.onLine)
+				callOther("general","scoreboard","score");
+			else
+				callOther("general","notification","internet-error");
+		}
 	}
 
 	function callOther(loc,func,funcData,funcData_1)
